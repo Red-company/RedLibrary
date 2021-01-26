@@ -8,12 +8,12 @@
  * Distributed under the MIT License (MIT) (See accompanying file LICENSE.txt
  * or copy at http://opensource.org/licenses/MIT)
  */
-#include "../RedLib/RedDataBase/Database.h"
+#include "./RedDataBase/Database.h"
 
-#include "../RedLib/RedDataBase/Assertion.h"
-#include "../RedLib/RedDataBase/Backup.h"
-#include "../RedLib/RedDataBase/Exception.h"
-#include "../RedLib/RedDataBase/Statement.h"
+#include "./RedDataBase/Assertion.h"
+#include "./RedDataBase/Backup.h"
+#include "./RedDataBase/Exception.h"
+#include "./RedDataBase/Statement.h"
 
 #include <sqlite3.h>
 #include <fstream>

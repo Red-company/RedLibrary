@@ -11,7 +11,7 @@
 #ifndef RED_DATABASE_DATABASE_H
 #define RED_DATABASE_DATABASE_H
 
-#include "../RedLib/RedDataBase/Column.h"
+#include "./RedDataBase/Column.h"
 
 #include <memory>
 #include <string.h>

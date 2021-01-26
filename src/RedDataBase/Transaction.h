@@ -11,7 +11,7 @@
 #ifndef RED_DATABASE_TRANSACTION_H
 #define RED_DATABASE_TRANSACTION_H
 
-#include "../RedLib/RedDataBase/Exception.h"
+#include "./RedDataBase/Exception.h"
 
 namespace RedDataBase {
     // Forward declaration

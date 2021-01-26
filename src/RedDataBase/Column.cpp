@@ -8,7 +8,7 @@
  * Distributed under the MIT License (MIT) (See accompanying file LICENSE.txt
  * or copy at http://opensource.org/licenses/MIT)
  */
-#include "../RedLib/RedDataBase/Column.h"
+#include "./RedDataBase/Column.h"
 
 #include <sqlite3.h>
 

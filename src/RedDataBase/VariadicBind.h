@@ -11,7 +11,7 @@
 #ifndef RED_DATABASE_VARIADICBIND_H
 #define RED_DATABASE_VARIADICBIND_H
 
-#include "../RedLib/RedDataBase/Statement.h"
+#include "./RedDataBase/Statement.h"
 
 #if (__cplusplus >= 201402L) || ( defined(_MSC_VER) && (_MSC_VER >= 1900) ) // c++14: Visual Studio 2015
 #include <tuple>

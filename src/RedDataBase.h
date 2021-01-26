@@ -13,12 +13,12 @@
 #ifndef REDDATABSE_INCLUDED
 #define REDDATABSE_INCLUDED
 
-#include "../RedLib/RedDataBase/Assertion.h"
-#include "../RedLib/RedDataBase/Exception.h"
-#include "../RedLib/RedDataBase/Database.h"
-#include "../RedLib/RedDataBase/Statement.h"
-#include "../RedLib/RedDataBase/Column.h"
-#include "../RedLib/RedDataBase/Transaction.h"
+#include "./RedDataBase/Assertion.h"
+#include "./RedDataBase/Exception.h"
+#include "./RedDataBase/Database.h"
+#include "./RedDataBase/Statement.h"
+#include "./RedDataBase/Column.h"
+#include "./RedDataBase/Transaction.h"
 
 /**
  * @brief The [REDDATABASE_VERSION] C preprocessor macro in the RedDataBase.h

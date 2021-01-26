@@ -11,8 +11,8 @@
 #ifndef RED_DATABASE_COLUMN_H
 #define RED_DATABASE_COLUMN_H
 
-#include "../RedLib/RedDataBase/Statement.h"
-#include "../RedLib/RedDataBase/Exception.h"
+#include "./RedDataBase/Statement.h"
+#include "./RedDataBase/Exception.h"
 
 #include <string>
 #include <climits> // For INT_MAX

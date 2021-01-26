@@ -11,7 +11,7 @@
 #ifndef RED_DATABASE_BACKUP_H
 #define BACKUP_H
 
-#include "../RedLib/RedDataBase/Database.h"
+#include "./RedDataBase/Database.h"
 
 #include <string>
 

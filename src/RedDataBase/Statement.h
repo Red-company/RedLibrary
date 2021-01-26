@@ -11,8 +11,8 @@
 #ifndef RED_DATABASE_STATEMENT_H
 #define RED_DATABASE_STATEMENT_H
 
-#include "../RedLib/RedDataBase/Exception.h"
-#include "../RedLib/RedDataBase/Utils.h" // REDDATABASE_PURE_FUNC
+#include "./RedDataBase/Exception.h"
+#include "./RedDataBase/Utils.h" // REDDATABASE_PURE_FUNC
 
 #include <string>
 #include <map>

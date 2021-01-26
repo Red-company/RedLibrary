@@ -8,10 +8,10 @@
  * Distributed under the MIT License (MIT) (See accompanying file LICENSE.txt
  * or copy at http://opensource.org/licenses/MIT)
  */
-#include "../RedLib/RedDataBase/Transaction.h"
+#include "./RedDataBase/Transaction.h"
 
-#include "../RedLib/RedDataBase/Database.h"
-#include "../RedLib/RedDataBase/Assertion.h"
+#include "./RedDataBase/Database.h"
+#include "./RedDataBase/Assertion.h"
 
 namespace RedDataBase {
     // Begins the SQLite transaction
