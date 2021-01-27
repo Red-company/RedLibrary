@@ -1,0 +1,6 @@
+//Comment
+#start
+$valueString="Hello values"
+$valueInteger=54
+$hello="hello"
+#end

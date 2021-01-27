@@ -1,0 +1,5 @@
+#start
+$hello="hello"
+$valueInteger=24,
+$valueString="hi"
+#end
