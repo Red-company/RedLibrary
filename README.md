@@ -84,6 +84,4 @@ All examples are in "examples" folder.
   * **Convertion functions are in Hex.h.**
  * In AES and RES there are no built-in error checking or protection from out-of-bounds memory access errors as a result of malicious input.
 
-Do contact me if you have improvements to the code(contacts are in each of source files). 
-
 All material in this repository is in the public domain.
