@@ -8,16 +8,17 @@ This is a library which uses by Red projects.
 
 ## How to use it?
 
-Requires these libraries:
-
-* Boost
-* Openssl
-* Fmt
-* Sqlite3
-* Unicode(icu4c)
-* Gsasl
-
 All examples are in "examples" folder.
+
+**Notes:**
+  * Made in C++17
+  * Requires these libraries:
+    * Boost
+    * Openssl
+    * Fmt
+    * Sqlite3
+    * Unicode(icu4c)
+    * Gsasl
 
 ## What does RedLibrary consist of?
 
