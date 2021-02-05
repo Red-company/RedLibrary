@@ -14,6 +14,9 @@
 #include <string>
 #include <map>
 
+// RedLibrary.
+#include "../RedLibrary/InsensitiveMap.h"
+
 namespace Red {
     namespace RedConfig {
         // Macroses.
@@ -141,6 +144,18 @@ namespace Red {
         bool SaveValues(std::map<std::string, Variable>& variables, std::string& path, bool can_throw = REDCONFIG_THROW);
 
         /**
+         * @brief SaveValues
+         *
+         * @param variables Key-value array of variables to save.
+         * @param path      Path where new .rcfg setup will be saved.
+         * @param can_throw If true, may throw an exception,
+         *                  if false, returns false.
+         *
+         * @throw Red::RedConfig::Exceptions::can_not_create_file();
+         */
+        bool SaveValues(Red::InsensitiveMap<std::string, Variable>& variables, std::string& path, bool can_throw = REDCONFIG_THROW);
+
+        /**
          * @brief UpdateValues
          *
          * Wrapper for SaveValues
@@ -155,6 +170,20 @@ namespace Red {
         bool UpdateValues(std::map<std::string, Variable> &variables, std::string& path, bool can_throw = REDCONFIG_THROW);
 
         /**
+         * @brief UpdateValues
+         *
+         * Wrapper for SaveValues
+         *
+         * @param variables Key-value array of variables to save.
+         * @param path      Path where new .rcfg setup will be saved.
+         * @param can_throw If true, may throw an exception,
+         *                  if false, returns false.
+         *
+         * @throw Red::RedConfig::Exceptions::can_not_create_file();
+         */
+        bool UpdateValues(Red::InsensitiveMap<std::string, Variable> &variables, std::string& path, bool can_throw = REDCONFIG_THROW);
+
+        /**
          * @brief LoadValues
          *
          * @param variables Key-value array where variables will be saved.
@@ -165,6 +194,18 @@ namespace Red {
          * @throw Red::RedConfig::Exceptions::can_not_open_file();
          */
         bool LoadValues(std::map<std::string, Variable> * variables, std::string& path, bool can_throw = REDCONFIG_THROW);
+
+        /**
+         * @brief LoadValues
+         *
+         * @param variables Key-value array where variables will be saved.
+         * @param path      Path of .rcfg file which need to be loaded.
+         * @param can_throw If true, may throw an exception,
+         *                  if false, returns false.
+         *
+         * @throw Red::RedConfig::Exceptions::can_not_open_file();
+         */
+        bool LoadValues(Red::InsensitiveMap<std::string, Variable> * variables, std::string& path, bool can_throw = REDCONFIG_THROW);
     }
 }
 
