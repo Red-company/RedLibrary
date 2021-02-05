@@ -3,10 +3,10 @@
 #include <map>
 
 // Connecting lib.
-#include "../RedLib/RedConfig.h"
+#include "../RedLibrary/RedConfig.h"
 
 // For part 2.
-#include "../RedLib/RedConfig/Exceptions.h"
+#include "../RedLibrary/RedConfig/Exceptions.h"
 
 // Pathes for example.
 static std::string Open     = "/Users/vladimir/Desktop/test.rcfg";

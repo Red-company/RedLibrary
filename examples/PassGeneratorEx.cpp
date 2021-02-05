@@ -1,6 +1,6 @@
 #include <iostream>
 
-#include "../RedLib/PassGenerator.h"
+#include "../RedLibrary/PassGenerator.h"
 
 int main() {
     unsigned short int PassLength = 16;

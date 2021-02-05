@@ -1,7 +1,7 @@
 #include <iostream>
 
 // Connecting lib.
-#include "../RedLib/MemoryChecker.h"
+#include "../RedLibrary/MemoryChecker.h"
 
 int main(){
     // Ram statistics.

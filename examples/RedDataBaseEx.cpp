@@ -15,8 +15,8 @@
 #include <cstdlib>
 #include <string>
 
-#include "../RedLib/RedDataBase.h"
-#include "../RedLib/RedDataBase/VariadicBind.h"
+#include "../RedLibrary/RedDataBase.h"
+#include "../RedLibrary/RedDataBase/VariadicBind.h"
 
 /// DB path.
 std::string DBPath = "/Users/vladimir/Desktop/";

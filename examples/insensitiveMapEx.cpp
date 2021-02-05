@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string>
 
-#include "../RedLibrary/src/InsensitiveMap.h"
+#include "../RedLibrary/InsensitiveMap.h"
 
 int main() {
     Red::InsensitiveMap<std::string, std::string> im;

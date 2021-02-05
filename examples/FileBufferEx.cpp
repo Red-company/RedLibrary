@@ -1,6 +1,6 @@
 #include <iostream>
 
-#include "../RedLib/FileBuffer.h" // Connecting the lib.
+#include "../RedLibrary/FileBuffer.h" // Connecting the lib.
 
 int main() {
     system("clear");

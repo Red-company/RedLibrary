@@ -1,7 +1,7 @@
 #include <iostream>
 #include <thread>
 
-#include "../RedLib/ProgressBar.h" // Rewrite.
+#include "../RedLibrary/ProgressBar.h" // Rewrite.
 
 int main() {
     Red::ProgressBar pb;

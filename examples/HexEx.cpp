@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string>
 
-#include "../RedLib/Hex.h"
+#include "../RedLibrary/Hex.h"
 
 int main() {
     system("clear");

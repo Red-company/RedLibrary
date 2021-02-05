@@ -1,7 +1,7 @@
 #include <iostream>
 
-#include "../RedLib/RedEncryptionAlgorithms/ResECB1536.h"
-#include "../RedLib/Hex.h"
+#include "../RedLibrary/RedEncryptionAlgorithms/ResECB1536.h"
+#include "../RedLibrary/Hex.h"
 
 int main() {
     std::string key = "0123456789abcdef12345678123456780123456789abcdef12345678123456780123456789abcdef12345678123456780123456789abcdef12345678123456780123456789abcdef12345678123456780123456789abcdef1234567812345678";

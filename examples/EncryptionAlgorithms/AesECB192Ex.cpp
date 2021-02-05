@@ -1,8 +1,8 @@
 #include <iostream>
 #include <string>
 
-#include "../RedLib/EncryptionAlgorithms/AesECB192.h"
-#include "../RedLib/Hex.h"
+#include "../RedLibrary/EncryptionAlgorithms/AesECB192.h"
+#include "../RedLibrary/Hex.h"
 
 int main() {
     std::string key = "0123456789abcdef12345678";

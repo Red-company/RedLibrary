@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string>
 
-#include "../RedLib/RedEncryptionAlgorithms/Va1.h"
+#include "../RedLibrary/RedEncryptionAlgorithms/Va1.h"
 
 int main() {
     std::string Str = "Hello world!";
