@@ -1,6 +1,6 @@
 #include <iostream>
 
-#include "../RedLibrary/src/HashFunctions/Sha256.h"
+#include "../RedLib/HashFunctions/Sha256.h"
 
 int main() {
     system("clear");

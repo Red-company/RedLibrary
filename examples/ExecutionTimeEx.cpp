@@ -2,7 +2,7 @@
 #include <unistd.h>
 #include <chrono>
 
-#include "../RedLibrary/src/ExecutionTime.h"
+#include "../RedLib/ExecutionTime.h"
 
 void g() {
     sleep(2);

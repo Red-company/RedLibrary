@@ -246,7 +246,8 @@ namespace Red {
 
                     bool IsStr = false;
 
-                    if (source.at(i + it) == '\'' || source.at(i + it) == '\"') {
+                    if (source.at(i + it) == '\'' || source.at(i + it) == '\"' ||
+                        std::isalpha(source.at(i + it)) || !std::isdigit(source.at(i + it))) {
                         IsStr = true;
                         it++;
                     }
@@ -277,11 +278,6 @@ namespace Red {
 
                     if (variableType == REDCONFIG_STRING_TYPE) {
                         v.Type = REDCONFIG_STRING_TYPE;
-
-                        /*if ((variableValue[0] == '\'' && variableValue[variableValue.length() - 1] == '\'') ||
-                            (variableValue[0] == '\"' && variableValue[variableValue.length() - 1] == '\"')) {
-                            v.Data = variableValue.substr(1, variableValue.length() - 2);
-                        }*/
                     } else if (variableType == REDCONFIG_INTEGER_TYPE) {
                         v.Type = REDCONFIG_INTEGER_TYPE;
                     }

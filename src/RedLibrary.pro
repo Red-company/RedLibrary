@@ -40,6 +40,7 @@ HEADERS += \
     FileBuffer.h \
     HashFunctions/Sha256.h \
     Hex.h \
+    InsensitiveMap.h \
     Ipv4.h \
     MemoryChecker.h \
     PassGenerator.h \

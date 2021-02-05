@@ -1,7 +1,7 @@
 #include<iostream>
 
 // Connecting lib.
-#include "../RedLibrary/src/PermissionsLib.h"
+#include "../RedLib/PermissionsLib.h"
 
 int main() {
     std::cout << "Root permission: " << Red::PermissionsLib::CheckRootPermissions() << std::endl;

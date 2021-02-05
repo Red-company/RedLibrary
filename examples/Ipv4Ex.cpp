@@ -1,6 +1,6 @@
 #include <iostream>
 
-#include "../RedLibrary/src/Ipv4.h"
+#include "../RedLib/Ipv4.h"
 
 int main() {
     system("clear");
