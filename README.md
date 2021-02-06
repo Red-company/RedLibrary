@@ -80,6 +80,7 @@ All examples are in "examples" folder.
   * ExecutionTime.h
   * FileBuffer.h
   * Hex.h
+  * InsensitiveMap.h
   * Ipv4.h
   * MemoryChecker.h
   * PassGenerator.h
