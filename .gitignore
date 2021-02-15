@@ -1,3 +1,4 @@
 .qmake.stash
 .DS_Store
-
+Doxyfile
+doxygen/
