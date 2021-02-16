@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['measure_243',['Measure',['../struct_red_1_1_measure.html',1,'Red']]]
+  ['measure_243',['Measure',['../a00299.html',1,'Red']]]
 ];
