@@ -4,6 +4,8 @@
 
 ## What is it?
 
+[--Documentation--](https://red-company.github.io/RedLibrary/)
+
 This is a library which uses by Red projects.
 
 ## How to use it?
