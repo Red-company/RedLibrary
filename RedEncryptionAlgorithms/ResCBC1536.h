@@ -1,5 +1,5 @@
 /**
- * @file    ResCBC1526.h
+ * @file    ResCBC1536.h
  * @brief   Definition of Res CBC 1536 bits algorithm.
  *
  * Copyright (c) 2020-2021 Vladimir Rogozin (vladimir20040609@gmail.com)
@@ -14,7 +14,7 @@
 
 namespace Red {
     /**
-     * @brief EncryptCResBC1536
+     * @brief EncryptResCBC1536
      *
      * @param in    String to encrypt
      * @param key   Private key
@@ -29,7 +29,7 @@ namespace Red {
                              );
 
     /**
-     * @brief EncryptResCBC1536
+     * @brief DecryptResCBC1536
      *
      * @param in    String to decrypt
      * @param key   Private key

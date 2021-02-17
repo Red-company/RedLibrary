@@ -1,7 +1,7 @@
 /**
- * @file    Exceptions.cpp
+ * @file    Exceptions.h
  * @ingroup RedConfig
- * @brief   RedConfig is a lib to create/use variables preset.
+ * @brief   Definitions of RedConfig exceptions.
  *
  * Copyright (c) 2020-2021 Vladimir Rogozin (vladimir20040609@gmail.com)
  *
@@ -16,6 +16,11 @@
 namespace Red {
     namespace RedConfig {
         namespace Exceptions {
+            /**
+             * @brief can_not_open_file
+             *
+             * @throw If can't open RedConfig file.
+             */
             class can_not_open_file : public std::exception {
                 public:
                     virtual const char * what() const throw() {
@@ -23,6 +28,11 @@ namespace Red {
                     }
             };
 
+            /**
+             * @brief can_not_create_file
+             *
+             * @throw If can't create RedConfig file.
+             */
             class can_not_create_file : public std::exception {
                 public:
                     virtual const char * what() const throw() {

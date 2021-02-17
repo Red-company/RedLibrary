@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['va1decode_427',['Va1Decode',['../a00254.html#a29b1144151e4ecfd431d0ed7af9a0adf',1,'Red']]],
-  ['va1encode_428',['Va1Encode',['../a00254.html#a1e805dfcb09b4e33c038a7ff10bdd89e',1,'Red']]]
+  ['updatevalues_461',['UpdateValues',['../a00155.html#a853f48ea17c956556367e19b2e86da9e',1,'Red::RedConfig::UpdateValues(std::map&lt; std::string, Variable &gt; &amp;variables, std::string &amp;path, bool can_throw)'],['../a00155.html#ab558d6aee9df49aeb54f9abaafc68821',1,'Red::RedConfig::UpdateValues(Red::InsensitiveMap&lt; std::string, Variable &gt; &amp;variables, std::string &amp;path, bool can_throw)']]]
 ];

@@ -10,5 +10,7 @@ var searchData=
   ['column_2ecpp_37',['Column.cpp',['../a00170.html',1,'']]],
   ['column_2eh_38',['Column.h',['../a00173.html',1,'']]],
   ['commit_39',['commit',['../a00367.html#a2767912174aad1b4adc9b1450b001124',1,'RedDataBase::Transaction']]],
-  ['createfunction_40',['createFunction',['../a00347.html#a2b886db481c1c9be7b092c442b707618',1,'RedDataBase::Database']]]
+  ['configfileexists_40',['ConfigFileExists',['../a00155.html#a0db6fd11f2e7a0f0ce2034ee2a76c7c3',1,'Red::RedConfig']]],
+  ['createconfigfile_41',['CreateConfigFile',['../a00155.html#aa549937fb4016e17979ea2ed07b4ffcb',1,'Red::RedConfig']]],
+  ['createfunction_42',['createFunction',['../a00347.html#a2b886db481c1c9be7b092c442b707618',1,'RedDataBase::Database']]]
 ];
