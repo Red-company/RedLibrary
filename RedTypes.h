@@ -1,5 +1,5 @@
-#ifndef REDTYPES_H
-#define REDTYPES_H
+#ifndef RED_REDTYPES_H
+#define RED_REDTYPES_H
 
 namespace Red {
     typedef unsigned char           uint8_t;
@@ -14,4 +14,4 @@ namespace Red {
     typedef signed   long  long int int64_t;
 }
 
-#endif // REDTYPES_H
+#endif // RED_REDTYPES_H
