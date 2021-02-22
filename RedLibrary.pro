@@ -29,6 +29,7 @@ SOURCES += \
     RedEncryptionAlgorithms/Va1.cpp \
 
 HEADERS += \
+    DiffieHellman.h \
     EncryptionAlgorithms/AesCBC128.h \
     EncryptionAlgorithms/AesCBC192.h \
     EncryptionAlgorithms/AesCBC256.h \
@@ -67,6 +68,7 @@ HEADERS += \
     RedEncryptionAlgorithms/ResECB512.h \
     RedEncryptionAlgorithms/Va1.h \
     RedEncryptionAlgorithms/_private/ResDeclarations.h \
+    RedTypes.h
 
 QMAKE_CXXFLAGS += "-Wno-old-style-cast"
 
