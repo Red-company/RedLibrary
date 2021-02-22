@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Red Technologies: Red::RedConfig::Exceptions::can_not_create_file Class Reference</title>
+<title>Red Technologies: Red::_InsensitiveMap::CaseInsensitiveComparator Struct Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -62,7 +62,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><b>Red</b></li><li class="navelem"><b>RedConfig</b></li><li class="navelem"><b>Exceptions</b></li><li class="navelem"><a class="el" href="a00327.html">can_not_create_file</a></li>  </ul>
+<li class="navelem"><b>Red</b></li><li class="navelem"><b>_InsensitiveMap</b></li><li class="navelem"><a class="el" href="a00327.html">CaseInsensitiveComparator</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -70,37 +70,73 @@ $(function() {
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="a00324.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">Red::RedConfig::Exceptions::can_not_create_file Class Reference</div>  </div>
+<div class="title">Red::_InsensitiveMap::CaseInsensitiveComparator Struct Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p><a class="el" href="a00327.html" title="can_not_create_file">can_not_create_file</a>  
+<p><a class="el" href="a00327.html" title="CaseInsensitiveComparator.">CaseInsensitiveComparator</a>.  
  <a href="a00327.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="a00152_source.html">Exceptions.h</a>&gt;</code></p>
-<div class="dynheader">
-Inheritance diagram for Red::RedConfig::Exceptions::can_not_create_file:</div>
-<div class="dyncontent">
- <div class="center">
-  <img src="a00327.png" alt=""/>
- </div></div>
+<p><code>#include &lt;<a class="el" href="a00140_source.html">InsensitiveMap.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ac62862afdac735d545ca4089d0d3891e"><td class="memItemLeft" align="right" valign="top"><a id="ac62862afdac735d545ca4089d0d3891e"></a>
-virtual const char *&#160;</td><td class="memItemRight" valign="bottom"><b>what</b> () const  throw ()</td></tr>
-<tr class="separator:ac62862afdac735d545ca4089d0d3891e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a837c18fd05df4d1d35ed9ff0e7d516e1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00327.html#a837c18fd05df4d1d35ed9ff0e7d516e1">operator()</a> (const std::string &amp;a, const std::string &amp;b) const noexcept</td></tr>
+<tr class="memdesc:a837c18fd05df4d1d35ed9ff0e7d516e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">operator ()  <a href="a00327.html#a837c18fd05df4d1d35ed9ff0e7d516e1">More...</a><br /></td></tr>
+<tr class="separator:a837c18fd05df4d1d35ed9ff0e7d516e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p><a class="el" href="a00327.html" title="can_not_create_file">can_not_create_file</a> </p>
-<dl class="exception"><dt>Exceptions</dt><dd>
-  <table class="exception">
-    <tr><td class="paramname">If</td><td>can't create RedConfig file. </td></tr>
+<div class="textblock"><p><a class="el" href="a00327.html" title="CaseInsensitiveComparator.">CaseInsensitiveComparator</a>. </p>
+<p>Definition of struct which redefines ".at(...)" function into insensitive. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a837c18fd05df4d1d35ed9ff0e7d516e1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a837c18fd05df4d1d35ed9ff0e7d516e1">&#9670;&nbsp;</a></span>operator()()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Red::_InsensitiveMap::CaseInsensitiveComparator::operator() </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>operator () </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">a</td><td>First variable. </td></tr>
+    <tr><td class="paramname">b</td><td>Second Variable.</td></tr>
   </table>
   </dd>
 </dl>
-</div><hr/>The documentation for this class was generated from the following file:<ul>
-<li>/Users/vladimir/Desktop/RedLibrary/RedConfig/<a class="el" href="a00152_source.html">Exceptions.h</a></li>
+<dl class="section return"><dt>Returns</dt><dd>True if First variable equals to second one. </dd></dl>
+
+</div>
+</div>
+<hr/>The documentation for this struct was generated from the following file:<ul>
+<li>/Users/vladimir/Desktop/RedLibrary/<a class="el" href="a00140_source.html">InsensitiveMap.h</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Red Technologies: Red::RedConfig::Exceptions::can_not_open_file Class Reference</title>
+<title>Red Technologies: Sha256 Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -60,47 +60,123 @@ $(function() {
 </iframe>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><b>Red</b></li><li class="navelem"><b>RedConfig</b></li><li class="navelem"><b>Exceptions</b></li><li class="navelem"><a class="el" href="a00323.html">can_not_open_file</a></li>  </ul>
-</div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-attribs">Static Public Attributes</a> &#124;
+<a href="#pro-types">Protected Types</a> &#124;
+<a href="#pro-methods">Protected Member Functions</a> &#124;
+<a href="#pro-attribs">Protected Attributes</a> &#124;
+<a href="#pro-static-attribs">Static Protected Attributes</a> &#124;
 <a href="a00320.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">Red::RedConfig::Exceptions::can_not_open_file Class Reference</div>  </div>
+<div class="title">Sha256 Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-
-<p><a class="el" href="a00323.html" title="can_not_open_file">can_not_open_file</a>  
- <a href="a00323.html#details">More...</a></p>
-
-<p><code>#include &lt;<a class="el" href="a00152_source.html">Exceptions.h</a>&gt;</code></p>
-<div class="dynheader">
-Inheritance diagram for Red::RedConfig::Exceptions::can_not_open_file:</div>
-<div class="dyncontent">
- <div class="center">
-  <img src="a00323.png" alt=""/>
- </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ae521a5e7589ce52bd0c129b2a4a821e7"><td class="memItemLeft" align="right" valign="top"><a id="ae521a5e7589ce52bd0c129b2a4a821e7"></a>
-virtual const char *&#160;</td><td class="memItemRight" valign="bottom"><b>what</b> () const  throw ()</td></tr>
-<tr class="separator:ae521a5e7589ce52bd0c129b2a4a821e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf926e2852e11c5633506781887426f7"><td class="memItemLeft" align="right" valign="top"><a id="adf926e2852e11c5633506781887426f7"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>init</b> ()</td></tr>
+<tr class="separator:adf926e2852e11c5633506781887426f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ace99cd0967dc3fab5b86ccf02fef02fa"><td class="memItemLeft" align="right" valign="top"><a id="ace99cd0967dc3fab5b86ccf02fef02fa"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>update</b> (const unsigned char *message, unsigned int len)</td></tr>
+<tr class="separator:ace99cd0967dc3fab5b86ccf02fef02fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab3db3c7df925b76d47dc1c2bf580e3b6"><td class="memItemLeft" align="right" valign="top"><a id="ab3db3c7df925b76d47dc1c2bf580e3b6"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>final</b> (unsigned char *digest)</td></tr>
+<tr class="separator:ab3db3c7df925b76d47dc1c2bf580e3b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
+Static Public Attributes</h2></td></tr>
+<tr class="memitem:ada5e447e066f85cdce0307574b454844"><td class="memItemLeft" align="right" valign="top"><a id="ada5e447e066f85cdce0307574b454844"></a>
+static const unsigned int&#160;</td><td class="memItemRight" valign="bottom"><b>DIGEST_SIZE</b> = (256 / 8)</td></tr>
+<tr class="separator:ada5e447e066f85cdce0307574b454844"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-types"></a>
+Protected Types</h2></td></tr>
+<tr class="memitem:a31d6fbf48296a55b1975822e4eff7d32"><td class="memItemLeft" align="right" valign="top"><a id="a31d6fbf48296a55b1975822e4eff7d32"></a>
+typedef unsigned char&#160;</td><td class="memItemRight" valign="bottom"><b>uint8</b></td></tr>
+<tr class="separator:a31d6fbf48296a55b1975822e4eff7d32"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac9433d5cb3dd58977208615a40972653"><td class="memItemLeft" align="right" valign="top"><a id="ac9433d5cb3dd58977208615a40972653"></a>
+typedef unsigned int&#160;</td><td class="memItemRight" valign="bottom"><b>uint32</b></td></tr>
+<tr class="separator:ac9433d5cb3dd58977208615a40972653"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a35df96f516ba30150cec11dcb61a1aab"><td class="memItemLeft" align="right" valign="top"><a id="a35df96f516ba30150cec11dcb61a1aab"></a>
+typedef unsigned long long&#160;</td><td class="memItemRight" valign="bottom"><b>uint64</b></td></tr>
+<tr class="separator:a35df96f516ba30150cec11dcb61a1aab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+Protected Member Functions</h2></td></tr>
+<tr class="memitem:aa03ac87c426c2c23eacad2937fa476d2"><td class="memItemLeft" align="right" valign="top"><a id="aa03ac87c426c2c23eacad2937fa476d2"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>transform</b> (const unsigned char *message, unsigned int block_nb)</td></tr>
+<tr class="separator:aa03ac87c426c2c23eacad2937fa476d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
+Protected Attributes</h2></td></tr>
+<tr class="memitem:ac8deef57e0130a1ea570473382b32ded"><td class="memItemLeft" align="right" valign="top"><a id="ac8deef57e0130a1ea570473382b32ded"></a>
+unsigned int&#160;</td><td class="memItemRight" valign="bottom"><b>m_tot_len</b></td></tr>
+<tr class="separator:ac8deef57e0130a1ea570473382b32ded"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a503f1700cc57402752fc7ccba1dc38a4"><td class="memItemLeft" align="right" valign="top"><a id="a503f1700cc57402752fc7ccba1dc38a4"></a>
+unsigned int&#160;</td><td class="memItemRight" valign="bottom"><b>m_len</b></td></tr>
+<tr class="separator:a503f1700cc57402752fc7ccba1dc38a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1322aefb20f37597b4729680f413aaa5"><td class="memItemLeft" align="right" valign="top"><a id="a1322aefb20f37597b4729680f413aaa5"></a>
+unsigned char&#160;</td><td class="memItemRight" valign="bottom"><b>m_block</b> [2 *SHA224_256_BLOCK_SIZE]</td></tr>
+<tr class="separator:a1322aefb20f37597b4729680f413aaa5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a96da5743f70ba1cbff0382d7b15a0111"><td class="memItemLeft" align="right" valign="top"><a id="a96da5743f70ba1cbff0382d7b15a0111"></a>
+uint32&#160;</td><td class="memItemRight" valign="bottom"><b>m_h</b> [8]</td></tr>
+<tr class="separator:a96da5743f70ba1cbff0382d7b15a0111"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-static-attribs"></a>
+Static Protected Attributes</h2></td></tr>
+<tr class="memitem:af134c04f6e0ba45637951adb3b893c04"><td class="memItemLeft" align="right" valign="top">constexpr static uint32&#160;</td><td class="memItemRight" valign="bottom"><b>sha256_k</b> [64]</td></tr>
+<tr class="separator:af134c04f6e0ba45637951adb3b893c04"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d60171f043c851ced41efbe00c84a20"><td class="memItemLeft" align="right" valign="top"><a id="a4d60171f043c851ced41efbe00c84a20"></a>
+static const unsigned int&#160;</td><td class="memItemRight" valign="bottom"><b>SHA224_256_BLOCK_SIZE</b> = (512 / 8)</td></tr>
+<tr class="separator:a4d60171f043c851ced41efbe00c84a20"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p><a class="el" href="a00323.html" title="can_not_open_file">can_not_open_file</a> </p>
-<dl class="exception"><dt>Exceptions</dt><dd>
-  <table class="exception">
-    <tr><td class="paramname">If</td><td>can't open RedConfig file. </td></tr>
-  </table>
-  </dd>
-</dl>
-</div><hr/>The documentation for this class was generated from the following file:<ul>
-<li>/Users/vladimir/Desktop/RedLibrary/RedConfig/<a class="el" href="a00152_source.html">Exceptions.h</a></li>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="af134c04f6e0ba45637951adb3b893c04"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af134c04f6e0ba45637951adb3b893c04">&#9670;&nbsp;</a></span>sha256_k</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr static uint32 Sha256::sha256_k[64]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">constexpr</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">            0x428a2f98, 0x71374491, 0xb5c0fbcf, 0xe9b5dba5,</div>
+<div class="line">            0x3956c25b, 0x59f111f1, 0x923f82a4, 0xab1c5ed5,</div>
+<div class="line">            0xd807aa98, 0x12835b01, 0x243185be, 0x550c7dc3,</div>
+<div class="line">            0x72be5d74, 0x80deb1fe, 0x9bdc06a7, 0xc19bf174,</div>
+<div class="line">            0xe49b69c1, 0xefbe4786, 0x0fc19dc6, 0x240ca1cc,</div>
+<div class="line">            0x2de92c6f, 0x4a7484aa, 0x5cb0a9dc, 0x76f988da,</div>
+<div class="line">            0x983e5152, 0xa831c66d, 0xb00327c8, 0xbf597fc7,</div>
+<div class="line">            0xc6e00bf3, 0xd5a79147, 0x06ca6351, 0x14292967,</div>
+<div class="line">            0x27b70a85, 0x2e1b2138, 0x4d2c6dfc, 0x53380d13,</div>
+<div class="line">            0x650a7354, 0x766a0abb, 0x81c2c92e, 0x92722c85,</div>
+<div class="line">            0xa2bfe8a1, 0xa81a664b, 0xc24b8b70, 0xc76c51a3,</div>
+<div class="line">            0xd192e819, 0xd6990624, 0xf40e3585, 0x106aa070,</div>
+<div class="line">            0x19a4c116, 0x1e376c08, 0x2748774c, 0x34b0bcb5,</div>
+<div class="line">            0x391c0cb3, 0x4ed8aa4a, 0x5b9cca4f, 0x682e6ff3,</div>
+<div class="line">            0x748f82ee, 0x78a5636f, 0x84c87814, 0x8cc70208,</div>
+<div class="line">            0x90befffa, 0xa4506ceb, 0xbef9a3f7, 0xc67178f2</div>
+<div class="line">        }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
+<li>/Users/vladimir/Desktop/RedLibrary/HashFunctions/<a class="el" href="a00131.html">Sha256.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

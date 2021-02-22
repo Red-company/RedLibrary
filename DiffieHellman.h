@@ -54,7 +54,16 @@ namespace Red {
             }
 
         public:
-            // Ctor.
+            /**
+             * @brief DiffieHellman
+             *
+             * GeneratedKey = G**a mod P
+             *
+             * Where,
+             * @param ResultNum G number.
+             * @param ModificatedNum P number.
+             * @param SecretNum Secret number.
+             */
             DiffieHellman(Red::uint64_t ResultNum = 0,
                           Red::uint64_t ModificatedNum = 0,
                           Red::uint64_t SecretNum = 0)

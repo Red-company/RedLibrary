@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Red Technologies: RedDataBase::Column Class Reference</title>
+<title>Red Technologies: Red::RedConfig::Exceptions::can_not_open_file Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -62,7 +62,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><b>RedDataBase</b></li><li class="navelem"><a class="el" href="a00339.html">Column</a></li>  </ul>
+<li class="navelem"><b>Red</b></li><li class="navelem"><b>RedConfig</b></li><li class="navelem"><b>Exceptions</b></li><li class="navelem"><a class="el" href="a00339.html">can_not_open_file</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -70,436 +70,37 @@ $(function() {
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="a00336.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">RedDataBase::Column Class Reference</div>  </div>
+<div class="title">Red::RedConfig::Exceptions::can_not_open_file Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>Encapsulation of a <a class="el" href="a00339.html" title="Encapsulation of a Column in a row of the result pointed by the prepared Statement.">Column</a> in a row of the result pointed by the prepared <a class="el" href="a00359.html" title="RAII encapsulation of a prepared SQLite Statement.">Statement</a>.  
+<p><a class="el" href="a00339.html" title="can_not_open_file">can_not_open_file</a>  
  <a href="a00339.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="a00173_source.html">Column.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="a00161_source.html">Exceptions.h</a>&gt;</code></p>
+<div class="dynheader">
+Inheritance diagram for Red::RedConfig::Exceptions::can_not_open_file:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="a00339.png" alt=""/>
+ </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:af07ff00d595dcb1a29932ae8dbd09bfd"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00339.html#af07ff00d595dcb1a29932ae8dbd09bfd">Column</a> (Statement::Ptr &amp;aStmtPtr, int aIndex) noexcept</td></tr>
-<tr class="memdesc:af07ff00d595dcb1a29932ae8dbd09bfd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Encapsulation of a <a class="el" href="a00339.html" title="Encapsulation of a Column in a row of the result pointed by the prepared Statement.">Column</a> in a Row of the result.  <a href="a00339.html#af07ff00d595dcb1a29932ae8dbd09bfd">More...</a><br /></td></tr>
-<tr class="separator:af07ff00d595dcb1a29932ae8dbd09bfd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab6375144bda55cfb9050ff7f908babe1"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00339.html#ab6375144bda55cfb9050ff7f908babe1">getName</a> () const noexcept</td></tr>
-<tr class="memdesc:ab6375144bda55cfb9050ff7f908babe1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a pointer to the named assigned to this result column (potentially aliased)  <a href="a00339.html#ab6375144bda55cfb9050ff7f908babe1">More...</a><br /></td></tr>
-<tr class="separator:ab6375144bda55cfb9050ff7f908babe1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a87040e3210cbc81a1c2e606878c5a262"><td class="memItemLeft" align="right" valign="top"><a id="a87040e3210cbc81a1c2e606878c5a262"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00339.html#a87040e3210cbc81a1c2e606878c5a262">getInt</a> () const noexcept</td></tr>
-<tr class="memdesc:a87040e3210cbc81a1c2e606878c5a262"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the integer value of the column. <br /></td></tr>
-<tr class="separator:a87040e3210cbc81a1c2e606878c5a262"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4d2636b19e37e6b76a26f9c7bc8b7e38"><td class="memItemLeft" align="right" valign="top"><a id="a4d2636b19e37e6b76a26f9c7bc8b7e38"></a>
-unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00339.html#a4d2636b19e37e6b76a26f9c7bc8b7e38">getUInt</a> () const noexcept</td></tr>
-<tr class="memdesc:a4d2636b19e37e6b76a26f9c7bc8b7e38"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the 32bits unsigned integer value of the column (note that SQLite3 does not support unsigned 64bits). <br /></td></tr>
-<tr class="separator:a4d2636b19e37e6b76a26f9c7bc8b7e38"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae58324a8016e1b2cf7b7936f2d95a003"><td class="memItemLeft" align="right" valign="top"><a id="ae58324a8016e1b2cf7b7936f2d95a003"></a>
-long long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00339.html#ae58324a8016e1b2cf7b7936f2d95a003">getInt64</a> () const noexcept</td></tr>
-<tr class="memdesc:ae58324a8016e1b2cf7b7936f2d95a003"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the 64bits integer value of the column (note that SQLite3 does not support unsigned 64bits). <br /></td></tr>
-<tr class="separator:ae58324a8016e1b2cf7b7936f2d95a003"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a892980e56fcbea94d4cd8ee15cf9fbb7"><td class="memItemLeft" align="right" valign="top"><a id="a892980e56fcbea94d4cd8ee15cf9fbb7"></a>
-double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00339.html#a892980e56fcbea94d4cd8ee15cf9fbb7">getDouble</a> () const noexcept</td></tr>
-<tr class="memdesc:a892980e56fcbea94d4cd8ee15cf9fbb7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the double (64bits float) value of the column. <br /></td></tr>
-<tr class="separator:a892980e56fcbea94d4cd8ee15cf9fbb7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa2fb58bb618ae71d1c8674c5f20c126c"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00339.html#aa2fb58bb618ae71d1c8674c5f20c126c">getText</a> (const char *apDefaultValue=&quot;&quot;) const noexcept</td></tr>
-<tr class="memdesc:aa2fb58bb618ae71d1c8674c5f20c126c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a pointer to the text value (NULL terminated string) of the column.  <a href="a00339.html#aa2fb58bb618ae71d1c8674c5f20c126c">More...</a><br /></td></tr>
-<tr class="separator:aa2fb58bb618ae71d1c8674c5f20c126c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a794b86d64301cab63a175c9c6649eb09"><td class="memItemLeft" align="right" valign="top">const void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00339.html#a794b86d64301cab63a175c9c6649eb09">getBlob</a> () const noexcept</td></tr>
-<tr class="memdesc:a794b86d64301cab63a175c9c6649eb09"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a pointer to the binary blob value of the column.  <a href="a00339.html#a794b86d64301cab63a175c9c6649eb09">More...</a><br /></td></tr>
-<tr class="separator:a794b86d64301cab63a175c9c6649eb09"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a41fed9a77491cc86af5f292a69832e42"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00339.html#a41fed9a77491cc86af5f292a69832e42">getString</a> () const</td></tr>
-<tr class="memdesc:a41fed9a77491cc86af5f292a69832e42"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a std::string for a TEXT or BLOB column.  <a href="a00339.html#a41fed9a77491cc86af5f292a69832e42">More...</a><br /></td></tr>
-<tr class="separator:a41fed9a77491cc86af5f292a69832e42"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abe2b1846dc3a9eccf68ae68bfb51e3af"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00339.html#abe2b1846dc3a9eccf68ae68bfb51e3af">getType</a> () const noexcept</td></tr>
-<tr class="memdesc:abe2b1846dc3a9eccf68ae68bfb51e3af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the type of the value of the column.  <a href="a00339.html#abe2b1846dc3a9eccf68ae68bfb51e3af">More...</a><br /></td></tr>
-<tr class="separator:abe2b1846dc3a9eccf68ae68bfb51e3af"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1f85463726fa7b39f89ccf85bd0203f4"><td class="memItemLeft" align="right" valign="top"><a id="a1f85463726fa7b39f89ccf85bd0203f4"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00339.html#a1f85463726fa7b39f89ccf85bd0203f4">isInteger</a> () const noexcept</td></tr>
-<tr class="memdesc:a1f85463726fa7b39f89ccf85bd0203f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Test if the column is an integer type value (meaningful only before any conversion) <br /></td></tr>
-<tr class="separator:a1f85463726fa7b39f89ccf85bd0203f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3351f176ae05902e3cf61b95fe79cdad"><td class="memItemLeft" align="right" valign="top"><a id="a3351f176ae05902e3cf61b95fe79cdad"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00339.html#a3351f176ae05902e3cf61b95fe79cdad">isFloat</a> () const noexcept</td></tr>
-<tr class="memdesc:a3351f176ae05902e3cf61b95fe79cdad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Test if the column is a floating point type value (meaningful only before any conversion) <br /></td></tr>
-<tr class="separator:a3351f176ae05902e3cf61b95fe79cdad"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5db2e699981c4880f9d3dcb03306ee01"><td class="memItemLeft" align="right" valign="top"><a id="a5db2e699981c4880f9d3dcb03306ee01"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00339.html#a5db2e699981c4880f9d3dcb03306ee01">isText</a> () const noexcept</td></tr>
-<tr class="memdesc:a5db2e699981c4880f9d3dcb03306ee01"><td class="mdescLeft">&#160;</td><td class="mdescRight">Test if the column is a text type value (meaningful only before any conversion) <br /></td></tr>
-<tr class="separator:a5db2e699981c4880f9d3dcb03306ee01"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a27717667ac42970dd2eb74f0e3188a58"><td class="memItemLeft" align="right" valign="top"><a id="a27717667ac42970dd2eb74f0e3188a58"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00339.html#a27717667ac42970dd2eb74f0e3188a58">isBlob</a> () const noexcept</td></tr>
-<tr class="memdesc:a27717667ac42970dd2eb74f0e3188a58"><td class="mdescLeft">&#160;</td><td class="mdescRight">Test if the column is a binary blob type value (meaningful only before any conversion) <br /></td></tr>
-<tr class="separator:a27717667ac42970dd2eb74f0e3188a58"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a890f85aaf3f22ad26e575ae87c0e45fb"><td class="memItemLeft" align="right" valign="top"><a id="a890f85aaf3f22ad26e575ae87c0e45fb"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00339.html#a890f85aaf3f22ad26e575ae87c0e45fb">isNull</a> () const noexcept</td></tr>
-<tr class="memdesc:a890f85aaf3f22ad26e575ae87c0e45fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Test if the column is NULL (meaningful only before any conversion) <br /></td></tr>
-<tr class="separator:a890f85aaf3f22ad26e575ae87c0e45fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4255f7652f589a0a746db640320d0b52"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00339.html#a4255f7652f589a0a746db640320d0b52">getBytes</a> () const noexcept</td></tr>
-<tr class="memdesc:a4255f7652f589a0a746db640320d0b52"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the number of bytes used by the text (or blob) value of the column.  <a href="a00339.html#a4255f7652f589a0a746db640320d0b52">More...</a><br /></td></tr>
-<tr class="separator:a4255f7652f589a0a746db640320d0b52"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a081eb0e0f5038b84786954acfba235b1"><td class="memItemLeft" align="right" valign="top"><a id="a081eb0e0f5038b84786954acfba235b1"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00339.html#a081eb0e0f5038b84786954acfba235b1">size</a> () const noexcept</td></tr>
-<tr class="memdesc:a081eb0e0f5038b84786954acfba235b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Alias returning the number of bytes used by the text (or blob) value of the column. <br /></td></tr>
-<tr class="separator:a081eb0e0f5038b84786954acfba235b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a11ce8ec035947cd43df62a37ec8b3c37"><td class="memItemLeft" align="right" valign="top"><a id="a11ce8ec035947cd43df62a37ec8b3c37"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00339.html#a11ce8ec035947cd43df62a37ec8b3c37">operator char</a> () const</td></tr>
-<tr class="memdesc:a11ce8ec035947cd43df62a37ec8b3c37"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inline cast operator to char. <br /></td></tr>
-<tr class="separator:a11ce8ec035947cd43df62a37ec8b3c37"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0b61788862e82ef865ba1a385531846c"><td class="memItemLeft" align="right" valign="top"><a id="a0b61788862e82ef865ba1a385531846c"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00339.html#a0b61788862e82ef865ba1a385531846c">operator unsigned char</a> () const</td></tr>
-<tr class="memdesc:a0b61788862e82ef865ba1a385531846c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inline cast operator to unsigned char. <br /></td></tr>
-<tr class="separator:a0b61788862e82ef865ba1a385531846c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aebbfb0942f7495685d067ff53bc41537"><td class="memItemLeft" align="right" valign="top"><a id="aebbfb0942f7495685d067ff53bc41537"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00339.html#aebbfb0942f7495685d067ff53bc41537">operator short</a> () const</td></tr>
-<tr class="memdesc:aebbfb0942f7495685d067ff53bc41537"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inline cast operator to short. <br /></td></tr>
-<tr class="separator:aebbfb0942f7495685d067ff53bc41537"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af1e48bf4e8b1f15a0c6f8e3dcd37ddd0"><td class="memItemLeft" align="right" valign="top"><a id="af1e48bf4e8b1f15a0c6f8e3dcd37ddd0"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00339.html#af1e48bf4e8b1f15a0c6f8e3dcd37ddd0">operator unsigned short</a> () const</td></tr>
-<tr class="memdesc:af1e48bf4e8b1f15a0c6f8e3dcd37ddd0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inline cast operator to unsigned short. <br /></td></tr>
-<tr class="separator:af1e48bf4e8b1f15a0c6f8e3dcd37ddd0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a300a25514c264b709efadac5ac0c8e15"><td class="memItemLeft" align="right" valign="top"><a id="a300a25514c264b709efadac5ac0c8e15"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00339.html#a300a25514c264b709efadac5ac0c8e15">operator int</a> () const</td></tr>
-<tr class="memdesc:a300a25514c264b709efadac5ac0c8e15"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inline cast operator to int. <br /></td></tr>
-<tr class="separator:a300a25514c264b709efadac5ac0c8e15"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7c2a219cd6e95dfbc7233d5c789dc6da"><td class="memItemLeft" align="right" valign="top"><a id="a7c2a219cd6e95dfbc7233d5c789dc6da"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00339.html#a7c2a219cd6e95dfbc7233d5c789dc6da">operator unsigned int</a> () const</td></tr>
-<tr class="memdesc:a7c2a219cd6e95dfbc7233d5c789dc6da"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inline cast operator to 32bits unsigned integer. <br /></td></tr>
-<tr class="separator:a7c2a219cd6e95dfbc7233d5c789dc6da"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae8ec88f606cd5d48545a29726c65759e"><td class="memItemLeft" align="right" valign="top"><a id="ae8ec88f606cd5d48545a29726c65759e"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00339.html#ae8ec88f606cd5d48545a29726c65759e">operator long</a> () const</td></tr>
-<tr class="memdesc:ae8ec88f606cd5d48545a29726c65759e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inline cast operator to 32bits long. <br /></td></tr>
-<tr class="separator:ae8ec88f606cd5d48545a29726c65759e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abd5e7ae9f7506f489bfc1d06cb7137a2"><td class="memItemLeft" align="right" valign="top"><a id="abd5e7ae9f7506f489bfc1d06cb7137a2"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00339.html#abd5e7ae9f7506f489bfc1d06cb7137a2">operator unsigned long</a> () const</td></tr>
-<tr class="memdesc:abd5e7ae9f7506f489bfc1d06cb7137a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inline cast operator to 32bits unsigned long. <br /></td></tr>
-<tr class="separator:abd5e7ae9f7506f489bfc1d06cb7137a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af1319ede2ef4c2b0b697e091c22fb214"><td class="memItemLeft" align="right" valign="top"><a id="af1319ede2ef4c2b0b697e091c22fb214"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00339.html#af1319ede2ef4c2b0b697e091c22fb214">operator long long</a> () const</td></tr>
-<tr class="memdesc:af1319ede2ef4c2b0b697e091c22fb214"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inline cast operator to 64bits integer. <br /></td></tr>
-<tr class="separator:af1319ede2ef4c2b0b697e091c22fb214"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a848f297f4f28df10d551d1c00a4bee75"><td class="memItemLeft" align="right" valign="top"><a id="a848f297f4f28df10d551d1c00a4bee75"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00339.html#a848f297f4f28df10d551d1c00a4bee75">operator double</a> () const</td></tr>
-<tr class="memdesc:a848f297f4f28df10d551d1c00a4bee75"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inline cast operator to double. <br /></td></tr>
-<tr class="separator:a848f297f4f28df10d551d1c00a4bee75"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a68ac7d27579ac9d3ad1043da73476cbc"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00339.html#a68ac7d27579ac9d3ad1043da73476cbc">operator const char *</a> () const</td></tr>
-<tr class="memdesc:a68ac7d27579ac9d3ad1043da73476cbc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inline cast operator to char*.  <a href="a00339.html#a68ac7d27579ac9d3ad1043da73476cbc">More...</a><br /></td></tr>
-<tr class="separator:a68ac7d27579ac9d3ad1043da73476cbc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a00f1a0d89bfd92197cdd711a0f81c75f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00339.html#a00f1a0d89bfd92197cdd711a0f81c75f">operator const void *</a> () const</td></tr>
-<tr class="memdesc:a00f1a0d89bfd92197cdd711a0f81c75f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inline cast operator to void*.  <a href="a00339.html#a00f1a0d89bfd92197cdd711a0f81c75f">More...</a><br /></td></tr>
-<tr class="separator:a00f1a0d89bfd92197cdd711a0f81c75f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa2aec23ad771518e2db36d589397cf06"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00339.html#aa2aec23ad771518e2db36d589397cf06">operator std::string</a> () const</td></tr>
-<tr class="memdesc:aa2aec23ad771518e2db36d589397cf06"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inline cast operator to std::string.  <a href="a00339.html#aa2aec23ad771518e2db36d589397cf06">More...</a><br /></td></tr>
-<tr class="separator:aa2aec23ad771518e2db36d589397cf06"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae521a5e7589ce52bd0c129b2a4a821e7"><td class="memItemLeft" align="right" valign="top"><a id="ae521a5e7589ce52bd0c129b2a4a821e7"></a>
+virtual const char *&#160;</td><td class="memItemRight" valign="bottom"><b>what</b> () const  throw ()</td></tr>
+<tr class="separator:ae521a5e7589ce52bd0c129b2a4a821e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Encapsulation of a <a class="el" href="a00339.html" title="Encapsulation of a Column in a row of the result pointed by the prepared Statement.">Column</a> in a row of the result pointed by the prepared <a class="el" href="a00359.html" title="RAII encapsulation of a prepared SQLite Statement.">Statement</a>. </p>
-<p>A <a class="el" href="a00339.html" title="Encapsulation of a Column in a row of the result pointed by the prepared Statement.">Column</a> is a particular field of RedDataBase data in the current row of result of the <a class="el" href="a00359.html" title="RAII encapsulation of a prepared SQLite Statement.">Statement</a> : it points to a single cell.</p>
-<p>Its value can be expressed as a text, and, when applicable, as a numeric (integer or floating point) or a binary blob.</p>
-<p>Thread-safety: a <a class="el" href="a00339.html" title="Encapsulation of a Column in a row of the result pointed by the prepared Statement.">Column</a> object shall not be shared by multiple threads, because : 1) in the SQLite "Thread Safe" mode, "SQLite can be safely used by multiple threads
-   provided that no single database connection is used simultaneously in two or more threads." 2) the SQLite "Serialized" mode is not supported by RedDataBase, because of the way it shares the underling SQLite precompiled statement in a custom shared pointer (See the inner class "Statement::Ptr"). </p>
-</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="af07ff00d595dcb1a29932ae8dbd09bfd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af07ff00d595dcb1a29932ae8dbd09bfd">&#9670;&nbsp;</a></span>Column()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">RedDataBase::Column::Column </td>
-          <td>(</td>
-          <td class="paramtype">Statement::Ptr &amp;&#160;</td>
-          <td class="paramname"><em>aStmtPtr</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>aIndex</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Encapsulation of a <a class="el" href="a00339.html" title="Encapsulation of a Column in a row of the result pointed by the prepared Statement.">Column</a> in a Row of the result. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">aStmtPtr</td><td>Shared pointer to the prepared SQLite <a class="el" href="a00359.html" title="RAII encapsulation of a prepared SQLite Statement.">Statement</a> Object. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">aIndex</td><td>Index of the column in the row of result, starting at 0 </td></tr>
+<div class="textblock"><p><a class="el" href="a00339.html" title="can_not_open_file">can_not_open_file</a> </p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">If</td><td>can't open RedConfig file. </td></tr>
   </table>
   </dd>
 </dl>
-
-</div>
-</div>
-<h2 class="groupheader">Member Function Documentation</h2>
-<a id="a794b86d64301cab63a175c9c6649eb09"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a794b86d64301cab63a175c9c6649eb09">&#9670;&nbsp;</a></span>getBlob()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">const void * RedDataBase::Column::getBlob </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Return a pointer to the binary blob value of the column. </p>
-<dl class="section warning"><dt>Warning</dt><dd>The value pointed at is only valid while the statement is valid (ie. not finalized), thus you must copy it before using it beyond its scope (to a std::string for instance). </dd></dl>
-
-</div>
-</div>
-<a id="a4255f7652f589a0a746db640320d0b52"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4255f7652f589a0a746db640320d0b52">&#9670;&nbsp;</a></span>getBytes()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">int RedDataBase::Column::getBytes </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Return the number of bytes used by the text (or blob) value of the column. </p>
-<p>Return either :</p><ul>
-<li>size in bytes (not in characters) of the string returned by <a class="el" href="a00339.html#aa2fb58bb618ae71d1c8674c5f20c126c" title="Return a pointer to the text value (NULL terminated string) of the column.">getText()</a> without the '\0' terminator</li>
-<li>size in bytes of the string representation of the numerical value (integer or double)</li>
-<li>size in bytes of the binary blob returned by <a class="el" href="a00339.html#a794b86d64301cab63a175c9c6649eb09" title="Return a pointer to the binary blob value of the column.">getBlob()</a></li>
-<li>0 for a NULL value </li>
-</ul>
-
-</div>
-</div>
-<a id="ab6375144bda55cfb9050ff7f908babe1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab6375144bda55cfb9050ff7f908babe1">&#9670;&nbsp;</a></span>getName()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">const char * RedDataBase::Column::getName </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Return a pointer to the named assigned to this result column (potentially aliased) </p>
-<dl class="section see"><dt>See also</dt><dd>getOriginName() to get original column name (not aliased) </dd></dl>
-
-</div>
-</div>
-<a id="a41fed9a77491cc86af5f292a69832e42"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a41fed9a77491cc86af5f292a69832e42">&#9670;&nbsp;</a></span>getString()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::string RedDataBase::Column::getString </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Return a std::string for a TEXT or BLOB column. </p>
-<p>Note this correctly handles strings that contain null bytes. </p>
-
-</div>
-</div>
-<a id="aa2fb58bb618ae71d1c8674c5f20c126c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa2fb58bb618ae71d1c8674c5f20c126c">&#9670;&nbsp;</a></span>getText()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">const char * RedDataBase::Column::getText </td>
-          <td>(</td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>apDefaultValue</em> = <code>&quot;&quot;</code></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Return a pointer to the text value (NULL terminated string) of the column. </p>
-<dl class="section warning"><dt>Warning</dt><dd>The value pointed at is only valid while the statement is valid (ie. not finalized), thus you must copy it before using it beyond its scope (to a std::string for instance). </dd></dl>
-
-</div>
-</div>
-<a id="abe2b1846dc3a9eccf68ae68bfb51e3af"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abe2b1846dc3a9eccf68ae68bfb51e3af">&#9670;&nbsp;</a></span>getType()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">int RedDataBase::Column::getType </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Return the type of the value of the column. </p>
-<p>Return either RedDataBase::INTEGER, RedDataBase::FLOAT, RedDataBase::TEXT, RedDataBase::BLOB, or RedDataBase::Null.</p>
-<dl class="section warning"><dt>Warning</dt><dd>After a type conversion (by a call to a getXxx on a <a class="el" href="a00339.html" title="Encapsulation of a Column in a row of the result pointed by the prepared Statement.">Column</a> of a Yyy type), the value returned by sqlite3_column_type() is undefined. </dd></dl>
-
-</div>
-</div>
-<a id="a68ac7d27579ac9d3ad1043da73476cbc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a68ac7d27579ac9d3ad1043da73476cbc">&#9670;&nbsp;</a></span>operator const char *()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">RedDataBase::Column::operator const char * </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Inline cast operator to char*. </p>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="a00339.html#aa2fb58bb618ae71d1c8674c5f20c126c" title="Return a pointer to the text value (NULL terminated string) of the column.">getText</a> </dd></dl>
-
-</div>
-</div>
-<a id="a00f1a0d89bfd92197cdd711a0f81c75f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a00f1a0d89bfd92197cdd711a0f81c75f">&#9670;&nbsp;</a></span>operator const void *()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">RedDataBase::Column::operator const void * </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Inline cast operator to void*. </p>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="a00339.html#a794b86d64301cab63a175c9c6649eb09" title="Return a pointer to the binary blob value of the column.">getBlob</a> </dd></dl>
-
-</div>
-</div>
-<a id="aa2aec23ad771518e2db36d589397cf06"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa2aec23ad771518e2db36d589397cf06">&#9670;&nbsp;</a></span>operator std::string()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">RedDataBase::Column::operator std::string </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Inline cast operator to std::string. </p>
-<p>Handles BLOB or TEXT, which may contain null bytes within</p>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="a00339.html#a41fed9a77491cc86af5f292a69832e42" title="Return a std::string for a TEXT or BLOB column.">getString</a> </dd></dl>
-
-</div>
-</div>
-<hr/>The documentation for this class was generated from the following files:<ul>
-<li>/Users/vladimir/Desktop/RedLibrary/RedDataBase/<a class="el" href="a00173_source.html">Column.h</a></li>
-<li>/Users/vladimir/Desktop/RedLibrary/RedDataBase/<a class="el" href="a00170.html">Column.cpp</a></li>
+</div><hr/>The documentation for this class was generated from the following file:<ul>
+<li>/Users/vladimir/Desktop/RedLibrary/RedConfig/<a class="el" href="a00161_source.html">Exceptions.h</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

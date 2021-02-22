@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Red Technologies: Red::ProgressBar Class Reference</title>
+<title>Red Technologies: Red::FileBuffer Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -62,7 +62,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><b>Red</b></li><li class="navelem"><a class="el" href="a00319.html">ProgressBar</a></li>  </ul>
+<li class="navelem"><b>Red</b></li><li class="navelem"><a class="el" href="a00319.html">FileBuffer</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -70,24 +70,130 @@ $(function() {
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="a00316.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">Red::ProgressBar Class Reference</div>  </div>
+<div class="title">Red::FileBuffer Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a84124642a38354ab38299b56b829166e"><td class="memItemLeft" align="right" valign="top"><a id="a84124642a38354ab38299b56b829166e"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>Increment</b> ()</td></tr>
-<tr class="separator:a84124642a38354ab38299b56b829166e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a872409acf4c736feee2b9dd6e931ef4d"><td class="memItemLeft" align="right" valign="top"><a id="a872409acf4c736feee2b9dd6e931ef4d"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>Show</b> ()</td></tr>
-<tr class="separator:a872409acf4c736feee2b9dd6e931ef4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6a41495457d839cc39b02f879911c622"><td class="memItemLeft" align="right" valign="top"><a id="a6a41495457d839cc39b02f879911c622"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>Red_Show</b> ()</td></tr>
-<tr class="separator:a6a41495457d839cc39b02f879911c622"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ff81e009b7053f7034cb0961c1d3a2f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00319.html#a8ff81e009b7053f7034cb0961c1d3a2f">SetupBuffer</a> (const std::string_view FileAddress)</td></tr>
+<tr class="memdesc:a8ff81e009b7053f7034cb0961c1d3a2f"><td class="mdescLeft">&#160;</td><td class="mdescRight">SetupBuffer.  <a href="a00319.html#a8ff81e009b7053f7034cb0961c1d3a2f">More...</a><br /></td></tr>
+<tr class="separator:a8ff81e009b7053f7034cb0961c1d3a2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a68d6a9947a275930143fc4ff68e10e83"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00319.html#a68d6a9947a275930143fc4ff68e10e83">AddToBuf</a> (const std::string_view ToBuf)</td></tr>
+<tr class="memdesc:a68d6a9947a275930143fc4ff68e10e83"><td class="mdescLeft">&#160;</td><td class="mdescRight">AddToBuf.  <a href="a00319.html#a68d6a9947a275930143fc4ff68e10e83">More...</a><br /></td></tr>
+<tr class="separator:a68d6a9947a275930143fc4ff68e10e83"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ad1f5fdb6d606bbcb72f43d4512f54f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00319.html#a0ad1f5fdb6d606bbcb72f43d4512f54f">GetStringTo</a> (std::string *StringReturn)</td></tr>
+<tr class="memdesc:a0ad1f5fdb6d606bbcb72f43d4512f54f"><td class="mdescLeft">&#160;</td><td class="mdescRight">GetStringTo.  <a href="a00319.html#a0ad1f5fdb6d606bbcb72f43d4512f54f">More...</a><br /></td></tr>
+<tr class="separator:a0ad1f5fdb6d606bbcb72f43d4512f54f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a68d6a9947a275930143fc4ff68e10e83"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a68d6a9947a275930143fc4ff68e10e83">&#9670;&nbsp;</a></span>AddToBuf()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Red::FileBuffer::AddToBuf </td>
+          <td>(</td>
+          <td class="paramtype">const std::string_view&#160;</td>
+          <td class="paramname"><em>ToBuf</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>AddToBuf. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ToBuf</td><td>Information to be added to <a class="el" href="a00319.html">FileBuffer</a>.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>True if added successufully, false if not. </dd></dl>
+
+</div>
+</div>
+<a id="a0ad1f5fdb6d606bbcb72f43d4512f54f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0ad1f5fdb6d606bbcb72f43d4512f54f">&#9670;&nbsp;</a></span>GetStringTo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Red::FileBuffer::GetStringTo </td>
+          <td>(</td>
+          <td class="paramtype">std::string *&#160;</td>
+          <td class="paramname"><em>StringReturn</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>GetStringTo. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">StringReturn</td><td>String where be loaded information from Filebuffer.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>True if loaded successfully. </dd></dl>
+
+</div>
+</div>
+<a id="a8ff81e009b7053f7034cb0961c1d3a2f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8ff81e009b7053f7034cb0961c1d3a2f">&#9670;&nbsp;</a></span>SetupBuffer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Red::FileBuffer::SetupBuffer </td>
+          <td>(</td>
+          <td class="paramtype">const std::string_view&#160;</td>
+          <td class="paramname"><em>FileAddress</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>SetupBuffer. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">FileAddress</td><td>Path of <a class="el" href="a00319.html">FileBuffer</a>.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>True if created, false if not. </dd></dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>/Users/vladimir/Desktop/RedLibrary/<a class="el" href="a00146_source.html">ProgressBar.h</a></li>
+<li>/Users/vladimir/Desktop/RedLibrary/<a class="el" href="a00128_source.html">FileBuffer.h</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

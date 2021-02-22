@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Red Technologies: RedDataBase::Transaction Class Reference</title>
+<title>Red Technologies: RedDataBase::Database::Deleter Struct Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -62,7 +62,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><b>RedDataBase</b></li><li class="navelem"><a class="el" href="a00367.html">Transaction</a></li>  </ul>
+<li class="navelem"><b>RedDataBase</b></li><li class="navelem"><a class="el" href="a00363.html">Database</a></li><li class="navelem"><a class="el" href="a00367.html">Deleter</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -70,81 +70,19 @@ $(function() {
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="a00364.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">RedDataBase::Transaction Class Reference</div>  </div>
+<div class="title">RedDataBase::Database::Deleter Struct Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-
-<p>RAII encapsulation of a SQLite <a class="el" href="a00367.html" title="RAII encapsulation of a SQLite Transaction.">Transaction</a>.  
- <a href="a00367.html#details">More...</a></p>
-
-<p><code>#include &lt;<a class="el" href="a00200_source.html">Transaction.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a39beb60661eef501c6259726b05b7c73"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00367.html#a39beb60661eef501c6259726b05b7c73">Transaction</a> (<a class="el" href="a00347.html">Database</a> &amp;aDatabase)</td></tr>
-<tr class="memdesc:a39beb60661eef501c6259726b05b7c73"><td class="mdescLeft">&#160;</td><td class="mdescRight">Begins the SQLite transaction.  <a href="a00367.html#a39beb60661eef501c6259726b05b7c73">More...</a><br /></td></tr>
-<tr class="separator:a39beb60661eef501c6259726b05b7c73"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7f4db105ed73dc59f502e43806808e0f"><td class="memItemLeft" align="right" valign="top"><a id="a7f4db105ed73dc59f502e43806808e0f"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Transaction</b> (const <a class="el" href="a00367.html">Transaction</a> &amp;)=delete</td></tr>
-<tr class="separator:a7f4db105ed73dc59f502e43806808e0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3d58e45e3670d2afe4312f56135ecf50"><td class="memItemLeft" align="right" valign="top"><a id="a3d58e45e3670d2afe4312f56135ecf50"></a>
-<a class="el" href="a00367.html">Transaction</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (const <a class="el" href="a00367.html">Transaction</a> &amp;)=delete</td></tr>
-<tr class="separator:a3d58e45e3670d2afe4312f56135ecf50"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6d71a80b7723c1516ce6e10f3a88e33f"><td class="memItemLeft" align="right" valign="top"><a id="a6d71a80b7723c1516ce6e10f3a88e33f"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00367.html#a6d71a80b7723c1516ce6e10f3a88e33f">~Transaction</a> ()</td></tr>
-<tr class="memdesc:a6d71a80b7723c1516ce6e10f3a88e33f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Safely rollback the transaction if it has not been committed. <br /></td></tr>
-<tr class="separator:a6d71a80b7723c1516ce6e10f3a88e33f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2767912174aad1b4adc9b1450b001124"><td class="memItemLeft" align="right" valign="top"><a id="a2767912174aad1b4adc9b1450b001124"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00367.html#a2767912174aad1b4adc9b1450b001124">commit</a> ()</td></tr>
-<tr class="memdesc:a2767912174aad1b4adc9b1450b001124"><td class="mdescLeft">&#160;</td><td class="mdescRight">Commit the transaction. <br /></td></tr>
-<tr class="separator:a2767912174aad1b4adc9b1450b001124"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff834545467622d407d599bad98ae3a1"><td class="memItemLeft" align="right" valign="top"><a id="aff834545467622d407d599bad98ae3a1"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>operator()</b> (sqlite3 *apSQLite)</td></tr>
+<tr class="separator:aff834545467622d407d599bad98ae3a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>RAII encapsulation of a SQLite <a class="el" href="a00367.html" title="RAII encapsulation of a SQLite Transaction.">Transaction</a>. </p>
-<p>A <a class="el" href="a00367.html" title="RAII encapsulation of a SQLite Transaction.">Transaction</a> is a way to group multiple SQL statements into an atomic secured operation; either it succeeds, with all the changes committed to the database file, or if it fails, all the changes are rolled back to the initial state.</p>
-<p>Resource Acquisition Is Initialization (RAII) means that the <a class="el" href="a00367.html" title="RAII encapsulation of a SQLite Transaction.">Transaction</a> begins in the constructor and is rollbacked in the destructor, so that there is no need to worry about memory management or the validity of the underlying SQLite Connection.</p>
-<p>This method also offers big performances improvements compared to individually executed statements.</p>
-<p>Thread-safety: a <a class="el" href="a00367.html" title="RAII encapsulation of a SQLite Transaction.">Transaction</a> object shall not be shared by multiple threads, because : 1) in the SQLite "Thread Safe" mode, "SQLite can be safely used by multiple threads
-    provided that no single database connection is used simultaneously in two or more threads." 2) the SQLite "Serialized" mode is not supported by RedDataBase, because of the way it shares the underling SQLite precompiled statement in a custom shared pointer (See the inner class "Statement::Ptr"). </p>
-</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a39beb60661eef501c6259726b05b7c73"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a39beb60661eef501c6259726b05b7c73">&#9670;&nbsp;</a></span>Transaction()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">RedDataBase::Transaction::Transaction </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="a00347.html">Database</a> &amp;&#160;</td>
-          <td class="paramname"><em>aDatabase</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">explicit</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Begins the SQLite transaction. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">aDatabase</td><td>the SQLite <a class="el" href="a00347.html" title="RAII management of a SQLite Database Connection.">Database</a> Connection</td></tr>
-  </table>
-  </dd>
-</dl>
-<p><a class="el" href="a00355.html" title="Encapsulation of the error message from SQLite3, based on std::runtime_error.">Exception</a> is thrown in case of error, then the <a class="el" href="a00367.html" title="RAII encapsulation of a SQLite Transaction.">Transaction</a> is NOT initiated. </p>
-
-</div>
-</div>
-<hr/>The documentation for this class was generated from the following files:<ul>
-<li>/Users/vladimir/Desktop/RedLibrary/RedDataBase/<a class="el" href="a00200_source.html">Transaction.h</a></li>
-<li>/Users/vladimir/Desktop/RedLibrary/RedDataBase/<a class="el" href="a00197.html">Transaction.cpp</a></li>
+<hr/>The documentation for this struct was generated from the following files:<ul>
+<li>/Users/vladimir/Desktop/RedLibrary/RedDataBase/<a class="el" href="a00188_source.html">Database.h</a></li>
+<li>/Users/vladimir/Desktop/RedLibrary/RedDataBase/<a class="el" href="a00185.html">Database.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

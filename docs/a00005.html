@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Red Technologies: /Users/vladimir/Desktop/RedLibrary/EncryptionAlgorithms/AesCBC128.cpp File Reference</title>
+<title>Red Technologies: /Users/vladimir/Desktop/RedLibrary/EncryptionAlgorithms/_private/AesDeclarations.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -62,48 +62,124 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_6e719c719add3259d803efd8d6c9562b.html">EncryptionAlgorithms</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_6e719c719add3259d803efd8d6c9562b.html">EncryptionAlgorithms</a></li><li class="navelem"><a class="el" href="dir_8aa1b57abd84f3871a041e69f9807b48.html">_private</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Classes</a> &#124;
-<a href="#define-members">Macros</a>  </div>
+<a href="#define-members">Macros</a> &#124;
+<a href="#typedef-members">Typedefs</a> &#124;
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
-<div class="title">AesCBC128.cpp File Reference</div>  </div>
+<div class="title">AesDeclarations.h File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>Definition of Aes CBC 128 bits algorithm.  
+<p>Shared declarations for Aes.  
 <a href="#details">More...</a></p>
-<div class="textblock"><code>#include &quot;<a class="el" href="a00008_source.html">./AesCBC128.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="a00002_source.html">./_private/AesDeclarations.h</a>&quot;</code><br />
-</div><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
-Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00271.html">AES_ctx_CBC_128</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
+<div class="textblock"><code>#include &lt;stdint.h&gt;</code><br />
+<code>#include &lt;string&gt;</code><br />
+</div>
+<p><a href="a00005_source.html">Go to the source code of this file.</a></p>
+<table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:a9726707c55262c6d0d87afd3c4fb0d61"><td class="memItemLeft" align="right" valign="top"><a id="a9726707c55262c6d0d87afd3c4fb0d61"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>AES_256</b>&#160;&#160;&#160;0</td></tr>
-<tr class="separator:a9726707c55262c6d0d87afd3c4fb0d61"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7b1938df390b1afe917e8baa663c22af"><td class="memItemLeft" align="right" valign="top"><a id="a7b1938df390b1afe917e8baa663c22af"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>Nk</b>&#160;&#160;&#160;4</td></tr>
-<tr class="separator:a7b1938df390b1afe917e8baa663c22af"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9d210afc812225ee0a0bcd51bb984246"><td class="memItemLeft" align="right" valign="top"><a id="a9d210afc812225ee0a0bcd51bb984246"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>Nr</b>&#160;&#160;&#160;10</td></tr>
-<tr class="separator:a9d210afc812225ee0a0bcd51bb984246"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac81313ffb8efd4117a70a9f65649cc59"><td class="memItemLeft" align="right" valign="top"><a id="ac81313ffb8efd4117a70a9f65649cc59"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>KEY_EXP_SIZE</b>&#160;&#160;&#160;176</td></tr>
-<tr class="separator:ac81313ffb8efd4117a70a9f65649cc59"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1dd86ce8e7ff32d6456f34c281c7e2a9"><td class="memItemLeft" align="right" valign="top"><a id="a1dd86ce8e7ff32d6456f34c281c7e2a9"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>MULTIPLY_AS_A_FUNCTION</b>&#160;&#160;&#160;0</td></tr>
+<tr class="separator:a1dd86ce8e7ff32d6456f34c281c7e2a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a92b44639d58b0ce03f6a3dbf78fb7e3e"><td class="memItemLeft" align="right" valign="top"><a id="a92b44639d58b0ce03f6a3dbf78fb7e3e"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>BLOCK_BYTES_LENGTH</b>&#160;&#160;&#160;16</td></tr>
+<tr class="separator:a92b44639d58b0ce03f6a3dbf78fb7e3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1ae104196f1fc7af4751c5b9e07b1610"><td class="memItemLeft" align="right" valign="top"><a id="a1ae104196f1fc7af4751c5b9e07b1610"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>Nb</b>&#160;&#160;&#160;4</td></tr>
+<tr class="separator:a1ae104196f1fc7af4751c5b9e07b1610"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca7cce176b8cdd27f61d3dcf5910b6bd"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><b>Multiply</b>(x,  y)</td></tr>
+<tr class="separator:aca7cce176b8cdd27f61d3dcf5910b6bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+Typedefs</h2></td></tr>
+<tr class="memitem:ab941155f9d2bef9132cc093fcdd20696"><td class="memItemLeft" align="right" valign="top"><a id="ab941155f9d2bef9132cc093fcdd20696"></a>
+typedef uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>Red::Aes::state_t</b>[4][4]</td></tr>
+<tr class="separator:ab941155f9d2bef9132cc093fcdd20696"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:ad6561c170d96d2b40aee8fc3c714dba4"><td class="memItemLeft" align="right" valign="top"><a id="ad6561c170d96d2b40aee8fc3c714dba4"></a>
+uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>Red::Aes::getSBoxValue</b> (uint8_t num)</td></tr>
+<tr class="separator:ad6561c170d96d2b40aee8fc3c714dba4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad830a1c99e93961e97398b6e5ea55916"><td class="memItemLeft" align="right" valign="top"><a id="ad830a1c99e93961e97398b6e5ea55916"></a>
+uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>Red::Aes::getSBoxInvert</b> (uint8_t num)</td></tr>
+<tr class="separator:ad830a1c99e93961e97398b6e5ea55916"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e1b40aa14c57c367f9f82f9a795c827"><td class="memItemLeft" align="right" valign="top"><a id="a0e1b40aa14c57c367f9f82f9a795c827"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>Red::Aes::PaddingNulls</b> (std::string &amp;in, unsigned long long int inLen, unsigned long long int alignLen)</td></tr>
+<tr class="separator:a0e1b40aa14c57c367f9f82f9a795c827"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac61617ff8da2bd99ead3a242c40fcfc7"><td class="memItemLeft" align="right" valign="top"><a id="ac61617ff8da2bd99ead3a242c40fcfc7"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>Red::Aes::AddRoundKey</b> (uint8_t round, state_t *state, const uint8_t *RoundKey)</td></tr>
+<tr class="separator:ac61617ff8da2bd99ead3a242c40fcfc7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8cd4457ef60a037d93db17e9e5656205"><td class="memItemLeft" align="right" valign="top"><a id="a8cd4457ef60a037d93db17e9e5656205"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>Red::Aes::SubBytes</b> (state_t *state)</td></tr>
+<tr class="separator:a8cd4457ef60a037d93db17e9e5656205"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d69f65373883d6f8d0319e6c8e2e394"><td class="memItemLeft" align="right" valign="top"><a id="a5d69f65373883d6f8d0319e6c8e2e394"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>Red::Aes::ShiftRows</b> (state_t *state)</td></tr>
+<tr class="separator:a5d69f65373883d6f8d0319e6c8e2e394"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab1aad1615de75e8487c654d26193548d"><td class="memItemLeft" align="right" valign="top"><a id="ab1aad1615de75e8487c654d26193548d"></a>
+uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>Red::Aes::xtime</b> (uint8_t x)</td></tr>
+<tr class="separator:ab1aad1615de75e8487c654d26193548d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab65a4ea83412aaedcd8fe4d3e630f5a1"><td class="memItemLeft" align="right" valign="top"><a id="ab65a4ea83412aaedcd8fe4d3e630f5a1"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>Red::Aes::MixColumns</b> (state_t *state)</td></tr>
+<tr class="separator:ab65a4ea83412aaedcd8fe4d3e630f5a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e9b7fcaa8258638773196f01c9a5e9d"><td class="memItemLeft" align="right" valign="top"><a id="a2e9b7fcaa8258638773196f01c9a5e9d"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>Red::Aes::InvMixColumns</b> (state_t *state)</td></tr>
+<tr class="separator:a2e9b7fcaa8258638773196f01c9a5e9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c6b2cfc2ba8cafc5cebfa60e5cd1c4c"><td class="memItemLeft" align="right" valign="top"><a id="a5c6b2cfc2ba8cafc5cebfa60e5cd1c4c"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>Red::Aes::InvSubBytes</b> (state_t *state)</td></tr>
+<tr class="separator:a5c6b2cfc2ba8cafc5cebfa60e5cd1c4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac8ff259ab432c75e2d2e83e951b56f84"><td class="memItemLeft" align="right" valign="top"><a id="ac8ff259ab432c75e2d2e83e951b56f84"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>Red::Aes::InvShiftRows</b> (state_t *state)</td></tr>
+<tr class="separator:ac8ff259ab432c75e2d2e83e951b56f84"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1cf5dd61eaadb63f6205b24d6a1ac848"><td class="memItemLeft" align="right" valign="top"><a id="a1cf5dd61eaadb63f6205b24d6a1ac848"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>Red::Aes::XorWithIv</b> (uint8_t *buf, const uint8_t *Iv)</td></tr>
+<tr class="separator:a1cf5dd61eaadb63f6205b24d6a1ac848"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Definition of Aes CBC 128 bits algorithm. </p>
+<div class="textblock"><p>Shared declarations for Aes. </p>
 <p>Copyright (c) 2020-2021 Vladimir Rogozin (<a href="#" onclick="location.href='mai'+'lto:'+'vla'+'di'+'mir'+'20'+'040'+'60'+'9@g'+'ma'+'il.'+'co'+'m'; return false;">vladi<span style="display: none;">.nosp@m.</span>mir2<span style="display: none;">.nosp@m.</span>00406<span style="display: none;">.nosp@m.</span>09@g<span style="display: none;">.nosp@m.</span>mail.<span style="display: none;">.nosp@m.</span>com</a>)</p>
 <p>Distributed under the MIT License (MIT) (See accompanying file LICENSE.txt or copy at <a href="http://opensource.org/licenses/MIT">http://opensource.org/licenses/MIT</a>) </p>
-</div></div><!-- contents -->
+</div><h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="aca7cce176b8cdd27f61d3dcf5910b6bd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aca7cce176b8cdd27f61d3dcf5910b6bd">&#9670;&nbsp;</a></span>Multiply</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define Multiply</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">x, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">y&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">            (  ((y &amp; 1) * x) ^                              \</div>
+<div class="line">            ((y&gt;&gt;1 &amp; 1) * xtime(x)) ^                       \</div>
+<div class="line">            ((y&gt;&gt;2 &amp; 1) * xtime(xtime(x))) ^                \</div>
+<div class="line">            ((y&gt;&gt;3 &amp; 1) * xtime(xtime(xtime(x)))) ^         \</div>
+<div class="line">            ((y&gt;&gt;4 &amp; 1) * xtime(xtime(xtime(xtime(x))))))   \</div>
+</div><!-- fragment -->
+</div>
+</div>
+</div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1

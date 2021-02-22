@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Red Technologies: /Users/vladimir/Desktop/RedLibrary/RedDataBase.h Source File</title>
+<title>Red Technologies: /Users/vladimir/Desktop/RedLibrary/RedDataBase/Transaction.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -46,7 +46,6 @@ $(function() {
 });
 /* @license-end */</script>
 <div id="main-nav"></div>
-</div><!-- top -->
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -61,32 +60,51 @@ $(function() {
 </iframe>
 </div>
 
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_c817ed849eb7b23375e72b2fd3087b1f.html">RedDataBase</a></li>  </ul>
+</div>
+</div><!-- top -->
 <div class="header">
   <div class="headertitle">
-<div class="title">/Users/vladimir/Desktop/RedLibrary/RedDataBase.h</div>  </div>
+<div class="title">Transaction.h</div>  </div>
 </div><!--header-->
 <div class="contents">
 <a href="a00209.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#ifndef REDDATABSE_INCLUDED</span></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#define REDDATABSE_INCLUDED</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#ifndef RED_DATABASE_TRANSACTION_H</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#define RED_DATABASE_TRANSACTION_H</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="a00194.html">./RedDataBase/Exception.h</a>&quot;</span></div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="a00161.html">./RedDataBase/Assertion.h</a>&quot;</span></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="a00185.html">./RedDataBase/Exception.h</a>&quot;</span></div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="a00179.html">./RedDataBase/Database.h</a>&quot;</span></div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="a00194.html">./RedDataBase/Statement.h</a>&quot;</span></div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="a00173.html">./RedDataBase/Column.h</a>&quot;</span></div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="a00200.html">./RedDataBase/Transaction.h</a>&quot;</span></div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
-<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="a00209.html#a2d21a5cb2b73f3442da248b0e5a58a85">   33</a></span>&#160;<span class="preprocessor">#define REDDATABASE_VERSION           &quot;1.0.0&quot;</span>   <span class="comment">// 1.0.0</span></div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">#define REDDATABASE_VERSION_NUMBER     100    </span><span class="comment">// 1.0.0</span></div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// REDDATABSE_INCLUDED</span></div>
-<div class="ttc" id="aa00161_html"><div class="ttname"><a href="a00161.html">Assertion.h</a></div><div class="ttdoc">Definition of the REDDATABASE_ASSERT() macro.</div></div>
-<div class="ttc" id="aa00173_html"><div class="ttname"><a href="a00173.html">Column.h</a></div><div class="ttdoc">Encapsulation of a Column in a row of the result pointed by the prepared RedDataBase::Statement.</div></div>
-<div class="ttc" id="aa00179_html"><div class="ttname"><a href="a00179.html">Database.h</a></div><div class="ttdoc">Management of a SQLite Database Connection.</div></div>
-<div class="ttc" id="aa00185_html"><div class="ttname"><a href="a00185.html">Exception.h</a></div><div class="ttdoc">Encapsulation of the error message from SQLite3 on a std::runtime_error.</div></div>
-<div class="ttc" id="aa00194_html"><div class="ttname"><a href="a00194.html">Statement.h</a></div><div class="ttdoc">A prepared SQLite Statement is a compiled SQL query ready to be executed, pointing to a row of result...</div></div>
-<div class="ttc" id="aa00200_html"><div class="ttname"><a href="a00200.html">Transaction.h</a></div><div class="ttdoc">A Transaction is way to group multiple SQL statements into an atomic secured operation.</div></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">namespace </span>RedDataBase {</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="comment">// Forward declaration</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keyword">class </span>Database;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="a00383.html">   40</a></span>&#160;    <span class="keyword">class </span><a class="code" href="a00383.html">Transaction</a> {</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;            <span class="keyword">explicit</span> <a class="code" href="a00383.html#a39beb60661eef501c6259726b05b7c73">Transaction</a>(<a class="code" href="a00363.html">Database</a>&amp; aDatabase);</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;            <span class="comment">// Transaction is non-copyable</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;            <a class="code" href="a00383.html#a39beb60661eef501c6259726b05b7c73">Transaction</a>(<span class="keyword">const</span> <a class="code" href="a00383.html">Transaction</a>&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;            <a class="code" href="a00383.html">Transaction</a>&amp; operator=(<span class="keyword">const</span> <a class="code" href="a00383.html">Transaction</a>&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;            <a class="code" href="a00383.html#a6d71a80b7723c1516ce6e10f3a88e33f">~Transaction</a>();</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;            <span class="keywordtype">void</span> <a class="code" href="a00383.html#a2767912174aad1b4adc9b1450b001124">commit</a>();</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            <a class="code" href="a00363.html">Database</a>&amp;   mDatabase;  </div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;            <span class="keywordtype">bool</span>        mbCommited; </div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    };</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;}</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// RED_DATABASE_TRANSACTION_H</span></div>
+<div class="ttc" id="aa00194_html"><div class="ttname"><a href="a00194.html">Exception.h</a></div><div class="ttdoc">Encapsulation of the error message from SQLite3 on a std::runtime_error.</div></div>
+<div class="ttc" id="aa00363_html"><div class="ttname"><a href="a00363.html">RedDataBase::Database</a></div><div class="ttdoc">RAII management of a SQLite Database Connection.</div><div class="ttdef"><b>Definition:</b> Database.h:104</div></div>
+<div class="ttc" id="aa00383_html"><div class="ttname"><a href="a00383.html">RedDataBase::Transaction</a></div><div class="ttdoc">RAII encapsulation of a SQLite Transaction.</div><div class="ttdef"><b>Definition:</b> Transaction.h:40</div></div>
+<div class="ttc" id="aa00383_html_a2767912174aad1b4adc9b1450b001124"><div class="ttname"><a href="a00383.html#a2767912174aad1b4adc9b1450b001124">RedDataBase::Transaction::commit</a></div><div class="ttdeci">void commit()</div><div class="ttdoc">Commit the transaction.</div><div class="ttdef"><b>Definition:</b> Transaction.cpp:35</div></div>
+<div class="ttc" id="aa00383_html_a39beb60661eef501c6259726b05b7c73"><div class="ttname"><a href="a00383.html#a39beb60661eef501c6259726b05b7c73">RedDataBase::Transaction::Transaction</a></div><div class="ttdeci">Transaction(Database &amp;aDatabase)</div><div class="ttdoc">Begins the SQLite transaction.</div><div class="ttdef"><b>Definition:</b> Transaction.cpp:18</div></div>
+<div class="ttc" id="aa00383_html_a6d71a80b7723c1516ce6e10f3a88e33f"><div class="ttname"><a href="a00383.html#a6d71a80b7723c1516ce6e10f3a88e33f">RedDataBase::Transaction::~Transaction</a></div><div class="ttdeci">~Transaction()</div><div class="ttdoc">Safely rollback the transaction if it has not been committed.</div><div class="ttdef"><b>Definition:</b> Transaction.cpp:24</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
