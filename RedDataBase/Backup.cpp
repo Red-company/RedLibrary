@@ -38,6 +38,8 @@ namespace RedDataBase {
         if (mpSQLiteBackup) {
             sqlite3_backup_finish(mpSQLiteBackup);
         }
+
+        mpSQLiteBackup = nullptr;
     }
 
     // Execute backup step with a given number of source pages to be copied

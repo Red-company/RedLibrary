@@ -16,7 +16,6 @@
 #include "./RedDataBase/Statement.h"
 #include "./RedDataBase/VariadicBind.h"
 
-/// @cond
 #include <tuple>
 #include <utility>
 #include <initializer_list>
