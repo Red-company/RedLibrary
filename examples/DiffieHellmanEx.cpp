@@ -9,14 +9,14 @@ int main()
 
     // Both the persons will be agreed upon the
     // public keys G and P
-    P = 3231700607131100791; // A prime number P is taken
+    P = 23; // A prime number P is taken
     printf("The value of P : %lld\n", P);
 
-    G = 2; // A primitve root for P, G is taken
+    G = 9; // A primitve root for P, G is taken
     printf("The value of G : %lld\n\n", G);
 
     // Random size.
-    unsigned long long int s = 10;
+    unsigned long long int s = 16;
 
     // Generating secrets.
     a = Red::DiffieHellman::GenerateSecret(s);
