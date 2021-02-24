@@ -121,9 +121,9 @@ namespace Red {
              *
              * @return Generated key.
              */
-            static Red::uint64_t GenerateSecret(Red::uint64_t g, Red::uint64_t p) {
+            static Red::uint64_t GenerateSecret(Red::uint64_t& Srand) {
                 srand(time(0));
-                return rand() % g + 1;
+                return rand() % Srand + 1;
             }
 
             // Base dtor.
