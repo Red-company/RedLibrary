@@ -68,7 +68,9 @@ HEADERS += \
     RedEncryptionAlgorithms/ResECB512.h \
     RedEncryptionAlgorithms/Va1.h \
     RedEncryptionAlgorithms/_private/ResDeclarations.h \
-    RedTypes.h
+    RedTypes.h \
+    RedTypes/BigInt_definitions.h \
+    RedTypes/Int128_t.h
 
 QMAKE_CXXFLAGS += "-Wno-old-style-cast"
 
