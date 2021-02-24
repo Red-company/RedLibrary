@@ -8,8 +8,8 @@
  * Distributed under the MIT License (MIT) (See accompanying file LICENSE.txt
  * or copy at http://opensource.org/licenses/MIT)
  */
-#ifndef RED_DATABASE_ASSERTATION_H
-#define RED_DATABASE_ASSERTATION_H
+#ifndef RED_DATABASE_ASSERTION_H
+#define RED_DATABASE_ASSERTION_H
 
 #include <cassert>
 
@@ -41,4 +41,4 @@ namespace RedDataBase {
 #define REDDATABASE_ASSERT(expression, message)   assert(expression && message)
 #endif
 
-#endif // RED_DATABASE_ASSERTATION_H
+#endif // RED_DATABASE_ASSERTION_H
