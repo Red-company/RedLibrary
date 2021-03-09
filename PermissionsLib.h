@@ -15,7 +15,7 @@
 namespace Red {
     namespace PermissionsLib {
         #define PERMISSIONSLIB_HAS_ROOT true
-        #define PERMISSIONSLIB_HAS_NOT_ROOT false
+        #define PERMISSIONSLIB_HAS_NO_ROOT false
 
         /**
          * @brief CheckRootPermissions
