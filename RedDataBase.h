@@ -19,6 +19,7 @@
 #include "./RedDataBase/Statement.h"
 #include "./RedDataBase/Column.h"
 #include "./RedDataBase/Transaction.h"
+#include "./RedDataBase/Check.h"
 
 /**
  * @brief The [REDDATABASE_VERSION] C preprocessor macro in the RedDataBase.h

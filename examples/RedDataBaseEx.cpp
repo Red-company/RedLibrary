@@ -22,9 +22,9 @@
 std::string DBPath = "/Users/vladimir/Desktop/";
 
 /// Example Database
-static const std::string filename_example_db3 = DBPath + "example.db3";
+static std::string filename_example_db3 = DBPath + "example.db3";
 /// Image
-static const std::string filename_logo_png    = DBPath + "logo.png";
+static std::string filename_logo_png    = DBPath + "logo.png";
 
 
 /// Object Oriented Basic example
@@ -64,6 +64,9 @@ int main() {
     // Using REDDATABASE_VERSION would require #include <sqlite3.h> which we want to avoid: use RedDataBase::VERSION if possible.
     std::cout << "SQlite3 version "   << RedDataBase::VERSION << " (" << RedDataBase::getLibVersion() << ")" << std::endl;
     std::cout << "RedDataBase version " << REDDATABASE_VERSION << std::endl << std::endl;
+
+    // Check database for existence.
+    std::cout << "RedDataBase exists: " << RedDataBase::DataBaseExists(filename_example_db3) << std::endl << std::endl;
 
     ////////////////////////////////////////////////////////////////////////////
     // Inspect a database via SQLite header information

@@ -52,6 +52,7 @@ HEADERS += \
     RedDataBase.h \
     RedDataBase/Assertion.h \
     RedDataBase/Backup.h \
+    RedDataBase/Check.h \
     RedDataBase/Column.h \
     RedDataBase/Database.h \
     RedDataBase/Exception.h \
@@ -69,8 +70,6 @@ HEADERS += \
     RedEncryptionAlgorithms/Va1.h \
     RedEncryptionAlgorithms/_private/ResDeclarations.h \
     RedTypes.h \
-    RedTypes/BigInt_definitions.h \
-    RedTypes/Int128_t.h
 
 QMAKE_CXXFLAGS += "-Wno-old-style-cast"
 
