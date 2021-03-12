@@ -53,6 +53,7 @@ HEADERS += \
     RedDataBase/Assertion.h \
     RedDataBase/Backup.h \
     RedDataBase/Check.h \
+    RedDataBase/Check.h \
     RedDataBase/Column.h \
     RedDataBase/Database.h \
     RedDataBase/Exception.h \

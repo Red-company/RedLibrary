@@ -17,7 +17,7 @@
 #include <string>
 #include <climits> // For INT_MAX
 
-namespace RedDataBase {
+namespace Red::RedDataBase {
     extern const int INTEGER;   ///< REDDATABASE_INTEGER
     extern const int FLOAT;     ///< REDDATABASE_FLOAT
     extern const int TEXT;      ///< REDDATABASE_TEXT

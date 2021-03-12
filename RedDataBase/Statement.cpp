@@ -17,7 +17,7 @@
 
 #include <sqlite3.h>
 
-namespace RedDataBase {
+namespace Red::RedDataBase {
     Statement::Statement(Database &aDatabase, const char* apQuery) :
             mQuery(apQuery), mStmtPtr(aDatabase.getHandle(), mQuery), // prepare the SQL query, and ref count (needs Database friendship)
                 mColumnCount(0), mbHasRow(false), mbDone(false) {

@@ -14,7 +14,7 @@
 
 #include <sqlite3.h>
 
-namespace RedDataBase {
+namespace Red::RedDataBase {
     // Initialize resource for SQLite database backup
     Backup::Backup(Database& aDestDatabase, const char* apDestDatabaseName,
                    Database& aSrcDatabase, const char* apSrcDatabaseName) {

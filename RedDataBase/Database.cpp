@@ -23,7 +23,7 @@
 #define SQLITE_DETERMINISTIC 0x800
 #endif // SQLITE_DETERMINISTIC
 
-namespace RedDataBase {
+namespace Red::RedDataBase {
     const int   OPEN_READONLY   = SQLITE_OPEN_READONLY;
     const int   OPEN_READWRITE  = SQLITE_OPEN_READWRITE;
     const int   OPEN_CREATE     = SQLITE_OPEN_CREATE;

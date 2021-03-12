@@ -18,7 +18,7 @@
 // Forward declaration to avoid inclusion of <sqlite3.h> in a header
 struct sqlite3_backup;
 
-namespace RedDataBase {
+namespace Red::RedDataBase {
     /**
      * @brief RAII encapsulation of a RedDataBase Backup process.
      *

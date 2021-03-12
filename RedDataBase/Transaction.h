@@ -13,7 +13,7 @@
 
 #include "Exception.h"
 
-namespace RedDataBase {
+namespace Red::RedDataBase {
     // Forward declaration
     class Database;
 

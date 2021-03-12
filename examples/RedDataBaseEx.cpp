@@ -54,24 +54,24 @@ class Example {
         }
 
     private:
-        RedDataBase::Database  mDb;    ///< Database connection
-        RedDataBase::Statement mQuery; ///< Database prepared SQL query
+        Red::RedDataBase::Database  mDb;    ///< Database connection
+        Red::RedDataBase::Statement mQuery; ///< Database prepared SQL query
 };
 
 int main() {
     std::cout << std::endl;
 
     // Using REDDATABASE_VERSION would require #include <sqlite3.h> which we want to avoid: use RedDataBase::VERSION if possible.
-    std::cout << "SQlite3 version "   << RedDataBase::VERSION << " (" << RedDataBase::getLibVersion() << ")" << std::endl;
+    std::cout << "SQlite3 version "   << Red::RedDataBase::VERSION << " (" << Red::RedDataBase::getLibVersion() << ")" << std::endl;
     std::cout << "RedDataBase version " << REDDATABASE_VERSION << std::endl << std::endl;
 
     // Check database for existence.
-    std::cout << "RedDataBase exists: " << RedDataBase::DataBaseExists(filename_example_db3) << std::endl << std::endl;
+    std::cout << "RedDataBase exists: " << Red::RedDataBase::DataBaseExists(filename_example_db3) << std::endl << std::endl;
 
     ////////////////////////////////////////////////////////////////////////////
     // Inspect a database via SQLite header information
     try {
-        const RedDataBase::Header header = RedDataBase::Database::getHeaderInfo(filename_example_db3);
+        const Red::RedDataBase::Header header = Red::RedDataBase::Database::getHeaderInfo(filename_example_db3);
 
         // Print values for all header fields
         // Official documentation for fields can be found here: https://www.sqlite.org/fileformat.html#the_database_header
@@ -108,7 +108,7 @@ int main() {
     // Very basic first example (1/7) :
     try {
         // Open a database file in readonly mode
-        RedDataBase::Database    db(filename_example_db3);  // RedDataBase::OPEN_READONLY
+        Red::RedDataBase::Database    db(filename_example_db3);  // RedDataBase::OPEN_READONLY
         std::cout << "SQLite database file '" << db.getFilename().c_str() << "' opened successfully\n";
 
         // Test if the 'test' table exists
@@ -129,13 +129,13 @@ int main() {
     // Simple select query - few variations (2/7) :
     try {
         // Open a database file in readonly mode
-        RedDataBase::Database    db(filename_example_db3);  // RedDataBase::OPEN_READONLY
+        Red::RedDataBase::Database    db(filename_example_db3);  // RedDataBase::OPEN_READONLY
         std::cout << "SQLite database file '" << db.getFilename().c_str() << "' opened successfully\n";
 
         ///// a) Loop to get values of column by index, using auto cast to variable type
 
         // Compile a SQL query, containing one parameter (index 1)
-        RedDataBase::Statement   query(db, "SELECT id as test_id, value as test_val, weight as test_weight FROM test WHERE weight > ?");
+        Red::RedDataBase::Statement   query(db, "SELECT id as test_id, value as test_val, weight as test_weight FROM test WHERE weight > ?");
         std::cout << "SQLite statement '" << query.getQuery().c_str() << "' compiled (" << query.getColumnCount () << " columns in the result)\n";
         // Bind the integer value 2 to the first parameter of the SQL query
         query.bind(1, 2);
@@ -240,7 +240,7 @@ int main() {
     // The execAndGet wrapper example (4/7) :
     try {
         // Open a database file in readonly mode
-        RedDataBase::Database    db(filename_example_db3);  // RedDataBase::OPEN_READONLY
+        Red::RedDataBase::Database    db(filename_example_db3);  // RedDataBase::OPEN_READONLY
         std::cout << "SQLite database file '" << db.getFilename().c_str() << "' opened successfully\n";
 
         // WARNING: Be very careful with this dangerous method: you have to
@@ -259,7 +259,7 @@ int main() {
     // Simple batch queries example (5/7) :
     try {
         // Open a database file in create/write mode
-        RedDataBase::Database    db("test.db3", RedDataBase::OPEN_READWRITE | RedDataBase::OPEN_CREATE);
+        Red::RedDataBase::Database    db("test.db3", Red::RedDataBase::OPEN_READWRITE | Red::RedDataBase::OPEN_CREATE);
         std::cout << "SQLite database file '" << db.getFilename().c_str() << "' opened successfully\n";
 
         // Create a new table with an explicit "id" column aliasing the underlying rowid
@@ -279,7 +279,7 @@ int main() {
         std::cout << "UPDATE test SET value=\"second-updated\" WHERE id='2', returned " << nb << std::endl;
 
         // Check the results : expect two row of result
-        RedDataBase::Statement   query(db, "SELECT * FROM test");
+        Red::RedDataBase::Statement   query(db, "SELECT * FROM test");
         std::cout << "SELECT * FROM test :\n";
 
         while (query.executeStep()) {
@@ -299,7 +299,7 @@ int main() {
     // RAII transaction example (6/7) :
     try {
         // Open a database file in create/write mode
-        RedDataBase::Database    db("transaction.db3", RedDataBase::OPEN_READWRITE | RedDataBase::OPEN_CREATE);
+        Red::RedDataBase::Database    db("transaction.db3", Red::RedDataBase::OPEN_READWRITE | Red::RedDataBase::OPEN_CREATE);
         std::cout << "SQLite database file '" << db.getFilename().c_str() << "' opened successfully\n";
 
         db.exec("DROP TABLE IF EXISTS test");
@@ -307,7 +307,7 @@ int main() {
         // Exemple of a successful transaction :
         try {
             // Begin transaction
-            RedDataBase::Transaction transaction(db);
+            Red::RedDataBase::Transaction transaction(db);
 
             db.exec("CREATE TABLE test (id INTEGER PRIMARY KEY, value TEXT)");
 
@@ -324,7 +324,7 @@ int main() {
         // Exemple of a rollbacked transaction :
         try {
             // Begin transaction
-            RedDataBase::Transaction transaction(db);
+            Red::RedDataBase::Transaction transaction(db);
 
             int nb = db.exec("INSERT INTO test VALUES (NULL, \"second\")");
             std::cout << "INSERT INTO test VALUES (NULL, \"second\")\", returned " << nb << std::endl;
@@ -342,7 +342,7 @@ int main() {
         }
 
         // Check the results (expect only one row of result, as the second one has been rollbacked by the error)
-        RedDataBase::Statement   query(db, "SELECT * FROM test");
+        Red::RedDataBase::Statement   query(db, "SELECT * FROM test");
         std::cout << "SELECT * FROM test :\n";
         while (query.executeStep()) {
             std::cout << "row (" << query.getColumn(0) << ", \"" << query.getColumn(1) << "\")\n";
@@ -359,7 +359,7 @@ int main() {
     // Binary blob and in-memory database example (7/7) :
     try {
         // Open a database file in create/write mode
-        RedDataBase::Database    db(":memory:", RedDataBase::OPEN_READWRITE | RedDataBase::OPEN_CREATE);
+        Red::RedDataBase::Database    db(":memory:", Red::RedDataBase::OPEN_READWRITE | Red::RedDataBase::OPEN_CREATE);
         std::cout << "SQLite database file '" << db.getFilename().c_str() << "' opened successfully\n";
 
         db.exec("DROP TABLE IF EXISTS test");
@@ -375,7 +375,7 @@ int main() {
             std::cout << "blob size=" << size << " :\n";
 
             // Insert query
-            RedDataBase::Statement   query(db, "INSERT INTO test VALUES (NULL, ?)");
+            Red::RedDataBase::Statement   query(db, "INSERT INTO test VALUES (NULL, ?)");
             // Bind the blob value to the first parameter of the SQL query
             query.bind(1, blob, size);
             std::cout << "blob binded successfully\n";
@@ -393,10 +393,10 @@ int main() {
             const void* blob = NULL;
             size_t size;
 
-            RedDataBase::Statement   query(db, "SELECT * FROM test");
+            Red::RedDataBase::Statement   query(db, "SELECT * FROM test");
             std::cout << "SELECT * FROM test :\n";
             if (query.executeStep()) {
-                RedDataBase::Column colBlob = query.getColumn(1);
+                Red::RedDataBase::Column colBlob = query.getColumn(1);
                 blob = colBlob.getBlob ();
                 size = colBlob.getBytes ();
                 std::cout << "row (" << query.getColumn(0) << ", size=" << size << ")\n";
@@ -418,21 +418,21 @@ int main() {
     // example with C++14 variadic bind
     try {
         // Open a database file in create/write mode
-        RedDataBase::Database db(":memory:", RedDataBase::OPEN_READWRITE | RedDataBase::OPEN_CREATE);
+        Red::RedDataBase::Database db(":memory:", Red::RedDataBase::OPEN_READWRITE | Red::RedDataBase::OPEN_CREATE);
 
         db.exec("DROP TABLE IF EXISTS test");
         db.exec("CREATE TABLE test (id INTEGER PRIMARY KEY, value TEXT)");
 
         {
-            RedDataBase::Statement query(db, "INSERT INTO test VALUES (?, ?)");
+            Red::RedDataBase::Statement query(db, "INSERT INTO test VALUES (?, ?)");
 
-            RedDataBase::bind(query, 42, "fortytwo");
+            Red::RedDataBase::bind(query, 42, "fortytwo");
             // Execute the one-step query to insert the blob
             int nb = query.exec();
             std::cout << "INSERT INTO test VALUES (NULL, ?)\", returned " << nb << std::endl;
         }
 
-        RedDataBase::Statement query(db, "SELECT * FROM test");
+        Red::RedDataBase::Statement query(db, "SELECT * FROM test");
         std::cout << "SELECT * FROM test :\n";
         if (query.executeStep()) {
             std::cout << query.getColumn(0).getInt() << "\t\"" << query.getColumn(1).getText() << "\"\n";

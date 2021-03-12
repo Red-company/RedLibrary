@@ -12,7 +12,7 @@
 
 #include <sqlite3.h>
 
-namespace RedDataBase {
+namespace Red::RedDataBase {
     Exception::Exception(const char* aErrorMessage, int ret) :
         std::runtime_error(aErrorMessage), mErrcode(ret),
         mExtendedErrcode(-1) {}

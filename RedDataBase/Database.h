@@ -27,7 +27,7 @@ struct Mem;
 typedef struct Mem sqlite3_value;
 #endif
 
-namespace RedDataBase {
+namespace Red::RedDataBase {
     // Those public constants enable most usages of RedDataBase without including <sqlite3.h> in the client application.
 
     /// The database is opened in read-only mode. If the database does not already exist, an error is returned.

@@ -20,7 +20,7 @@
 #include <utility>
 #include <initializer_list>
 
-namespace RedDataBase {
+namespace Red::RedDataBase {
     /// @endcond
 
     /**

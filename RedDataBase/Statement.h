@@ -22,7 +22,7 @@
 struct sqlite3;
 struct sqlite3_stmt;
 
-namespace RedDataBase {
+namespace Red::RedDataBase {
     // Forward declaration
     class Database;
     class Column;

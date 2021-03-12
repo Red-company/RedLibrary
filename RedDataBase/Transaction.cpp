@@ -13,7 +13,7 @@
 #include "./RedDataBase/Database.h"
 #include "./RedDataBase/Assertion.h"
 
-namespace RedDataBase {
+namespace Red::RedDataBase {
     // Begins the SQLite transaction
     Transaction::Transaction(Database& aDatabase) :
         mDatabase(aDatabase), mbCommited(false) {

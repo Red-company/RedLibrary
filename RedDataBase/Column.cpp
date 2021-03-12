@@ -14,7 +14,7 @@
 
 #include <iostream>
 
-namespace RedDataBase {
+namespace Red::RedDataBase {
     const int INTEGER   = SQLITE_INTEGER;
     const int FLOAT     = SQLITE_FLOAT;
     const int TEXT      = SQLITE_TEXT;
