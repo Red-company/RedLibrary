@@ -41,7 +41,7 @@ namespace Red {
             // Private funcs.
             //
 
-            inline bool CheckBufForExistance() {
+            inline bool CheckBufForExistence() {
                 std::ifstream Check4Buf(RedBufferAddress);
                 return Check4Buf.is_open() ? true : false;
             }
@@ -128,7 +128,7 @@ namespace Red {
                 unsigned long int NumOfEndls   = 0;
                 bool              ReturnNum    = false;
 
-                if (CheckBufForExistance() == true) {
+                if (CheckBufForExistence() == true) {
                     LenOfFileBuf = Red::FileBuffer::GetLenOfFileBuffer();
                     LenOfLastStr = Red::FileBuffer::GetLenOfLastString();
 
