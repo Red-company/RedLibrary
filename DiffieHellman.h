@@ -27,7 +27,7 @@ namespace Red {
 
             /// x = G**a mod P
 
-            Red::uint64_t G, P, a;
+            Red::uint32_t G, P, a;
 
             //
             // Private functions.
@@ -44,12 +44,12 @@ namespace Red {
              *
              * @return Generated key.
              */
-            Red::uint64_t power(Red::uint64_t a, Red::uint64_t b,
-                                                 Red::uint64_t P) {
+            Red::uint32_t  power(Red::uint32_t a, Red::uint32_t b,
+                                                  Red::uint32_t P) {
                 if (b == 1) {
                     return a;
                 } else {
-                    return (((Red::uint64_t) pow(a, b)) % P);
+                    return (((Red::uint32_t) pow(a, b)) % P);
                 }
             }
 
@@ -64,9 +64,9 @@ namespace Red {
              * @param ModificatedNum P number.
              * @param SecretNum Secret number.
              */
-            DiffieHellman(Red::uint64_t ResultNum = 0,
-                          Red::uint64_t ModificatedNum = 0,
-                          Red::uint64_t SecretNum = 0)
+            DiffieHellman(Red::uint32_t ResultNum = 0,
+                          Red::uint32_t ModificatedNum = 0,
+                          Red::uint32_t SecretNum = 0)
                 : G(ResultNum), P(ModificatedNum), a(SecretNum) {}
 
             /**
@@ -78,9 +78,9 @@ namespace Red {
              * @param ResultNum G number.
              * @param ModificatedNum P number.
              */
-            void Set(Red::uint64_t ResultNum,
-                     Red::uint64_t ModificatedNum,
-                     Red::uint64_t SecretNum) {
+            void Set(Red::uint32_t ResultNum,
+                     Red::uint32_t ModificatedNum,
+                     Red::uint32_t SecretNum) {
                 G = ResultNum;
                 P = ModificatedNum;
                 a = SecretNum;
@@ -93,7 +93,7 @@ namespace Red {
              *
              * @return Key for public exchange.
              */
-            Red::uint64_t GetPublicValue() {
+            Red::uint32_t GetPublicValue() {
                 return power(G, a, P);
             }
 
@@ -106,7 +106,7 @@ namespace Red {
              *
              * @return Shared secret.
              */
-            Red::uint64_t GetSymmetricKey(Red::uint64_t x) {
+            Red::uint32_t GetSymmetricKey(Red::uint32_t x) {
                 return power(x, a, P);
             }
 
@@ -121,9 +121,9 @@ namespace Red {
              *
              * @return Generated key.
              */
-            static Red::uint64_t GenerateSecret(Red::uint64_t& Srand) {
+            static Red::uint32_t GenerateSecret(Red::uint32_t& Srand) {
                 srand(time(0));
-                return rand() % Srand + 1;
+                return (Red::uint32_t) rand() % Srand + 1;
             }
 
             // Base dtor.
