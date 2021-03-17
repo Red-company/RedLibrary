@@ -13,51 +13,49 @@
 #include <string>
 
 namespace Red {
-    namespace Hex {
-        /**
-         * @brief GetHexArray
-         *
-         * @param a String to get hex string from.
-         *
-         * @return String with hex result.
-         */
-        inline std::string GetHexArray(const std::string_view a) {
-            std::string  Result = "";
+    /**
+     * @brief GetHexArray
+     *
+     * @param a String to get hex string from.
+     *
+     * @return String with hex result.
+     */
+    inline std::string GetHexArray(const std::string_view a) {
+        std::string  Result = "";
 
-            for (unsigned long long int i = 0; i < a.length(); i++) {
-                char const hex[16] = { '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b','c','d','e','f'};
+        for (unsigned long long int i = 0; i < a.length(); i++) {
+            char const hex[16] = { '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b','c','d','e','f'};
 
-                const unsigned char ch = a[i];
-                Result.append(&hex[(ch  & 0xF0) >> 4], 1);
-                Result.append(&hex[ch & 0xF], 1);
-            }
-
-            return Result;
+            const unsigned char ch = a[i];
+            Result.append(&hex[(ch  & 0xF0) >> 4], 1);
+            Result.append(&hex[ch & 0xF], 1);
         }
 
-        /**
-         * @brief GetStrArray
-         *
-         * @param a Hex string to get string from.
-         *
-         * @return Normal string.
-         */
-        inline std::string GetStrArray(const std::string_view a) {
-            std::string Result = "";
+        return Result;
+    }
 
-            for (unsigned long long int n = 0; n < a.length(); n += 2) {
-                std::string HexByte = "";
+    /**
+     * @brief GetStrArray
+     *
+     * @param a Hex string to get string from.
+     *
+     * @return Normal string.
+     */
+    inline std::string GetStrArray(const std::string_view a) {
+        std::string Result = "";
 
-                HexByte += a[n];
-                HexByte += a[n + 1];
+        for (unsigned long long int n = 0; n < a.length(); n += 2) {
+            std::string HexByte = "";
 
-                int num = std::stoi(HexByte, nullptr, 16);
+            HexByte += a[n];
+            HexByte += a[n + 1];
 
-                Result.push_back((char) num);
-            }
+            int num = std::stoi(HexByte, nullptr, 16);
 
-            return Result;
+            Result.push_back((char) num);
         }
+
+        return Result;
     }
 }
 
