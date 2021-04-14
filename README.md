@@ -79,6 +79,7 @@ All examples are in "examples" folder.
     * ResECB512.cpp
     * Va1.h
     * Va1.cpp
+  * DiffieHellman.h
   * ExecutionTime.h
   * FileBuffer.h
   * Hex.h
@@ -91,6 +92,8 @@ All examples are in "examples" folder.
   * RedConfig.h
   * RedConfig.cpp
   * RedDataBase.h
+  * RedLog.h
+  * RedTypes.h
   
 **Notes:**
  * If you want to route result of AES / RES encryption to `std::cout`, you should convert string to hexadecimal system, in other way you will get bad output!
