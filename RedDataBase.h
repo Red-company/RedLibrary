@@ -32,6 +32,6 @@
  * numbers used in [REDDATABASE_VERSION].
  */
 #define REDDATABASE_VERSION           "1.0.0"   // 1.0.0
-#define REDDATABASE_VERSION_NUMBER     100    // 1.0.0
+#define REDDATABASE_VERSION_NUMBER     100      // 1.0.0
 
 #endif // REDDATABSE_INCLUDED

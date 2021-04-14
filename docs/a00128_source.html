@@ -74,18 +74,18 @@ $(function() {
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &lt;fstream&gt;</span></div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keyword">namespace </span>Red {</div>
-<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="a00322.html">   18</a></span>&#160;    <span class="keyword">class </span><a class="code" href="a00322.html">FileBuffer</a> {</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;            <span class="comment">//</span></div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;            <span class="comment">// Variables.</span></div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;            <span class="comment">//</span></div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;            std::string            RedBufferAddress;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;            <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span> <span class="keywordtype">int</span> NumOfString = 1;</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
-<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="a00128.html#a7ae3c37d2c5a63b8e8bb9c6bc162babb">   37</a></span>&#160;<span class="preprocessor">            #define REDFILEBUFFER_VERSION           &quot;1.0.0&quot;</span> <span class="comment">// 1.0.0</span></div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="preprocessor">            #define REDFILEBUFFER_VERSION_NUMBER     100    </span><span class="comment">// 1.0.0</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="a00128.html#a7ae3c37d2c5a63b8e8bb9c6bc162babb">   27</a></span>&#160;<span class="preprocessor">#define REDFILEBUFFER_VERSION           &quot;1.0.0&quot;</span> <span class="comment">// 1.0.0</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#define REDFILEBUFFER_VERSION_NUMBER     100    </span><span class="comment">// 1.0.0</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="keyword">namespace </span>Red {</div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="a00321.html">   31</a></span>&#160;    <span class="keyword">class </span><a class="code" href="a00321.html">FileBuffer</a> {</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;            <span class="comment">//</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;            <span class="comment">// Variables.</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;            <span class="comment">//</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;            std::string            RedBufferAddress;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;            <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span> <span class="keywordtype">int</span> NumOfString = 1;</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;            <span class="comment">//</span></div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;            <span class="comment">// Private funcs.</span></div>
@@ -145,19 +145,19 @@ $(function() {
 <div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160; </div>
 <div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        <span class="keyword">public</span>:</div>
 <div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;            <span class="comment">// Ctor.</span></div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;            FileBuffer() {}</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;            <a class="code" href="a00321.html">FileBuffer</a>() {}</div>
 <div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160; </div>
 <div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;            <span class="comment">//</span></div>
 <div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;            <span class="comment">// Work funcs.</span></div>
 <div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;            <span class="comment">//</span></div>
 <div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160; </div>
-<div class="line"><a name="l00111"></a><span class="lineno"><a class="line" href="a00322.html#a8ff81e009b7053f7034cb0961c1d3a2f">  111</a></span>&#160;            <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="a00322.html#a8ff81e009b7053f7034cb0961c1d3a2f">SetupBuffer</a>(<span class="keyword">const</span> std::string_view FileAddress) {</div>
+<div class="line"><a name="l00111"></a><span class="lineno"><a class="line" href="a00321.html#a8ff81e009b7053f7034cb0961c1d3a2f">  111</a></span>&#160;            <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="a00321.html#a8ff81e009b7053f7034cb0961c1d3a2f">SetupBuffer</a>(<span class="keyword">const</span> std::string_view FileAddress) {</div>
 <div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;                RedBufferAddress = FileAddress;</div>
 <div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;                std::ofstream CreateNewBuf(RedBufferAddress);</div>
 <div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;                <span class="keywordflow">return</span> CreateNewBuf.is_open() ? true : <span class="keyword">false</span>;</div>
 <div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;            }</div>
 <div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160; </div>
-<div class="line"><a name="l00124"></a><span class="lineno"><a class="line" href="a00322.html#a68d6a9947a275930143fc4ff68e10e83">  124</a></span>&#160;            <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="a00322.html#a68d6a9947a275930143fc4ff68e10e83">AddToBuf</a>(<span class="keyword">const</span> std::string_view ToBuf) {</div>
+<div class="line"><a name="l00124"></a><span class="lineno"><a class="line" href="a00321.html#a68d6a9947a275930143fc4ff68e10e83">  124</a></span>&#160;            <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="a00321.html#a68d6a9947a275930143fc4ff68e10e83">AddToBuf</a>(<span class="keyword">const</span> std::string_view ToBuf) {</div>
 <div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;                <span class="keywordtype">size_t</span>            LenOfFileBuf = 0;</div>
 <div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;                <span class="keywordtype">size_t</span>            LenOfLastStr = 0;</div>
 <div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;                <span class="keywordtype">size_t</span>            AlreadyWrote = 0;</div>
@@ -191,7 +191,7 @@ $(function() {
 <div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;                <span class="keywordflow">return</span> ReturnNum;</div>
 <div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;            }</div>
 <div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160; </div>
-<div class="line"><a name="l00165"></a><span class="lineno"><a class="line" href="a00322.html#a0ad1f5fdb6d606bbcb72f43d4512f54f">  165</a></span>&#160;            <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="a00322.html#a0ad1f5fdb6d606bbcb72f43d4512f54f">GetStringTo</a>(std::string *StringReturn) {</div>
+<div class="line"><a name="l00165"></a><span class="lineno"><a class="line" href="a00321.html#a0ad1f5fdb6d606bbcb72f43d4512f54f">  165</a></span>&#160;            <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="a00321.html#a0ad1f5fdb6d606bbcb72f43d4512f54f">GetStringTo</a>(std::string *StringReturn) {</div>
 <div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;                <span class="keywordtype">bool</span> GotNextStr = <span class="keyword">false</span>;</div>
 <div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160; </div>
 <div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;                std::ifstream TakeStr(RedBufferAddress);</div>
@@ -218,7 +218,7 @@ $(function() {
 <div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;            }</div>
 <div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160; </div>
 <div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;            <span class="comment">// Dtor.</span></div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;            ~<a class="code" href="a00322.html">FileBuffer</a>() {</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;            ~<a class="code" href="a00321.html">FileBuffer</a>() {</div>
 <div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;                <span class="keywordflow">if</span> (std::remove(RedBufferAddress.c_str()) != 0) {</div>
 <div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;                    std::cout &lt;&lt; <span class="stringliteral">&quot;RedBuffer_err: Can&#39;t delete buffer (&#39;&quot;</span> &lt;&lt; RedBufferAddress &lt;&lt; <span class="stringliteral">&quot;&#39;).&quot;</span> &lt;&lt; std::endl;</div>
 <div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;                }</div>
@@ -227,10 +227,10 @@ $(function() {
 <div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;}</div>
 <div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160; </div>
 <div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// RED_FILEBUFFER_H</span></div>
-<div class="ttc" id="aa00322_html"><div class="ttname"><a href="a00322.html">Red::FileBuffer</a></div><div class="ttdef"><b>Definition:</b> FileBuffer.h:18</div></div>
-<div class="ttc" id="aa00322_html_a0ad1f5fdb6d606bbcb72f43d4512f54f"><div class="ttname"><a href="a00322.html#a0ad1f5fdb6d606bbcb72f43d4512f54f">Red::FileBuffer::GetStringTo</a></div><div class="ttdeci">bool GetStringTo(std::string *StringReturn)</div><div class="ttdoc">GetStringTo.</div><div class="ttdef"><b>Definition:</b> FileBuffer.h:165</div></div>
-<div class="ttc" id="aa00322_html_a68d6a9947a275930143fc4ff68e10e83"><div class="ttname"><a href="a00322.html#a68d6a9947a275930143fc4ff68e10e83">Red::FileBuffer::AddToBuf</a></div><div class="ttdeci">bool AddToBuf(const std::string_view ToBuf)</div><div class="ttdoc">AddToBuf.</div><div class="ttdef"><b>Definition:</b> FileBuffer.h:124</div></div>
-<div class="ttc" id="aa00322_html_a8ff81e009b7053f7034cb0961c1d3a2f"><div class="ttname"><a href="a00322.html#a8ff81e009b7053f7034cb0961c1d3a2f">Red::FileBuffer::SetupBuffer</a></div><div class="ttdeci">bool SetupBuffer(const std::string_view FileAddress)</div><div class="ttdoc">SetupBuffer.</div><div class="ttdef"><b>Definition:</b> FileBuffer.h:111</div></div>
+<div class="ttc" id="aa00321_html"><div class="ttname"><a href="a00321.html">Red::FileBuffer</a></div><div class="ttdef"><b>Definition:</b> FileBuffer.h:31</div></div>
+<div class="ttc" id="aa00321_html_a0ad1f5fdb6d606bbcb72f43d4512f54f"><div class="ttname"><a href="a00321.html#a0ad1f5fdb6d606bbcb72f43d4512f54f">Red::FileBuffer::GetStringTo</a></div><div class="ttdeci">bool GetStringTo(std::string *StringReturn)</div><div class="ttdoc">GetStringTo.</div><div class="ttdef"><b>Definition:</b> FileBuffer.h:165</div></div>
+<div class="ttc" id="aa00321_html_a68d6a9947a275930143fc4ff68e10e83"><div class="ttname"><a href="a00321.html#a68d6a9947a275930143fc4ff68e10e83">Red::FileBuffer::AddToBuf</a></div><div class="ttdeci">bool AddToBuf(const std::string_view ToBuf)</div><div class="ttdoc">AddToBuf.</div><div class="ttdef"><b>Definition:</b> FileBuffer.h:124</div></div>
+<div class="ttc" id="aa00321_html_a8ff81e009b7053f7034cb0961c1d3a2f"><div class="ttname"><a href="a00321.html#a8ff81e009b7053f7034cb0961c1d3a2f">Red::FileBuffer::SetupBuffer</a></div><div class="ttdeci">bool SetupBuffer(const std::string_view FileAddress)</div><div class="ttdoc">SetupBuffer.</div><div class="ttdef"><b>Definition:</b> FileBuffer.h:111</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

@@ -14,6 +14,19 @@
 #include <fstream>
 #include <string>
 
+/**
+ * @brief The [REDFILEBUFFER_VERSION] C preprocessor macro in the FileBuffer.h
+ * header evaluates to a string literal that is the FileBuffer version
+ * in the format "X.Y.Z" where X is the major version number
+ * and Y is the minor version number and Z is the release number.
+ *
+ * The [REDFILEBUFFER_VERSION_NUMBER] C preprocessor macro resolves to an integer
+ * with the value (X*100 + Y*10 + Z) where X, Y, and Z are the same
+ * numbers used in [REDFILEBUFFER_VERSION].
+ */
+#define REDFILEBUFFER_VERSION           "1.0.0" // 1.0.0
+#define REDFILEBUFFER_VERSION_NUMBER     100    // 1.0.0
+
 namespace Red {
     class FileBuffer {
         private:
@@ -23,19 +36,6 @@ namespace Red {
 
             std::string            RedBufferAddress;
             unsigned long long int NumOfString = 1;
-
-            /**
-             * @brief The [REDFILEBUFFER_VERSION] C preprocessor macro in the FileBuffer.h
-             * header evaluates to a string literal that is the FileBuffer version
-             * in the format "X.Y.Z" where X is the major version number
-             * and Y is the minor version number and Z is the release number.
-             *
-             * The [REDFILEBUFFER_VERSION_NUMBER] C preprocessor macro resolves to an integer
-             * with the value (X*100 + Y*10 + Z) where X, Y, and Z are the same
-             * numbers used in [REDFILEBUFFER_VERSION].
-             */
-            #define REDFILEBUFFER_VERSION           "1.0.0" // 1.0.0
-            #define REDFILEBUFFER_VERSION_NUMBER     100    // 1.0.0
 
             //
             // Private funcs.

@@ -13,20 +13,35 @@
 #include <iostream>
 #include <string>
 
+#define REDPROGRESSBAR_VERSION            "1.0.0"  // 1.0.0
+#define REDPROGRESSBAR_VERSION_NUMBER     100      // 1.0.0
+
 namespace Red {
     class ProgressBar {
         public:
-            // Base ctor.
+            /**
+             * @brief ProgressBar
+             *
+             * Base ctor.
+             */
             ProgressBar() {}
 
-            // Increment Percent var.
+            /**
+             * @brief Increment
+             *
+             * Uses to increment percent variable.
+             */
             inline void Increment() {
                 if (Percent <= 100) {
                     Percent++;
                 }
             }
 
-            // Show progress bar.
+            /**
+             * @brief Show
+             *
+             * Uses to show progress bar
+             */
             inline void Show() {
                 std::cout << "\r\e[42m";
 
@@ -35,7 +50,11 @@ namespace Red {
                 std::cout << std::flush;
             }
 
-            // Show progress bar (Red line).
+            /**
+             * @brief Red_Show
+             *
+             * Uses to show red progress bar.
+             */
             inline void Red_Show() {
                 std::cout << "\r\e[101m";
 
@@ -43,6 +62,9 @@ namespace Red {
 
                 std::cout << std::flush;
             }
+
+            // Base ctor.
+            ~ProgressBar() {}
 
         private:
             /**
@@ -58,7 +80,11 @@ namespace Red {
             #define REDPROGRESSBAR_VERSION           "1.0.0" // 1.0.0
             #define REDPROGRESSBAR_VERSION_NUMBER     100    // 1.0.0
 
-            // Show progress bar function.
+            /**
+             * @brief Show_main
+             *
+             * This function uses to print a progress bar.
+             */
             inline void Show_main() {
                 unsigned short int NumOfGreenCubes = Percent / 2;
 

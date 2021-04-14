@@ -74,9 +74,9 @@ $(function() {
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">namespace </span>Red {</div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> TimeT = std::chrono::milliseconds&gt;</div>
-<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="a00318.html">   17</a></span>&#160;    <span class="keyword">struct </span><a class="code" href="a00318.html">Measure</a> {</div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="a00317.html">   17</a></span>&#160;    <span class="keyword">struct </span><a class="code" href="a00317.html">Measure</a> {</div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        <span class="keyword">template</span>&lt;<span class="keyword">typename</span> F, <span class="keyword">typename</span> ...Args&gt;</div>
-<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="a00318.html#a69ec18012ad9078f1778938b2c76045e">   27</a></span>&#160;        <span class="keyword">inline</span> <span class="keyword">static</span> <span class="keyword">typename</span> TimeT::rep <a class="code" href="a00318.html#a69ec18012ad9078f1778938b2c76045e">ExecutionTime</a>(F func, Args&amp;&amp;... args) {</div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="a00317.html#a69ec18012ad9078f1778938b2c76045e">   27</a></span>&#160;        <span class="keyword">inline</span> <span class="keyword">static</span> <span class="keyword">typename</span> TimeT::rep <a class="code" href="a00317.html#a69ec18012ad9078f1778938b2c76045e">ExecutionTime</a>(F func, Args&amp;&amp;... args) {</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;            <span class="keyword">auto</span> start = std::chrono::system_clock::now();</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;            func(std::forward&lt;Args&gt;(args)...);</div>
@@ -90,8 +90,8 @@ $(function() {
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;}</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// RED_EXECUTIONTIME_H</span></div>
-<div class="ttc" id="aa00318_html"><div class="ttname"><a href="a00318.html">Red::Measure</a></div><div class="ttdef"><b>Definition:</b> ExecutionTime.h:17</div></div>
-<div class="ttc" id="aa00318_html_a69ec18012ad9078f1778938b2c76045e"><div class="ttname"><a href="a00318.html#a69ec18012ad9078f1778938b2c76045e">Red::Measure::ExecutionTime</a></div><div class="ttdeci">static TimeT::rep ExecutionTime(F func, Args &amp;&amp;... args)</div><div class="ttdoc">ExecutionTime.</div><div class="ttdef"><b>Definition:</b> ExecutionTime.h:27</div></div>
+<div class="ttc" id="aa00317_html"><div class="ttname"><a href="a00317.html">Red::Measure</a></div><div class="ttdef"><b>Definition:</b> ExecutionTime.h:17</div></div>
+<div class="ttc" id="aa00317_html_a69ec18012ad9078f1778938b2c76045e"><div class="ttname"><a href="a00317.html#a69ec18012ad9078f1778938b2c76045e">Red::Measure::ExecutionTime</a></div><div class="ttdeci">static TimeT::rep ExecutionTime(F func, Args &amp;&amp;... args)</div><div class="ttdoc">ExecutionTime.</div><div class="ttdef"><b>Definition:</b> ExecutionTime.h:27</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

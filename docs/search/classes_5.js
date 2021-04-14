@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['example_265',['Example',['../a00314.html',1,'']]],
-  ['exception_266',['Exception',['../a00374.html',1,'Red::RedDataBase']]]
+  ['example_268',['Example',['../a00313.html',1,'']]],
+  ['exception_269',['Exception',['../a00373.html',1,'Red::RedDataBase']]]
 ];
