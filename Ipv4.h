@@ -13,6 +13,14 @@
 #include <boost/lexical_cast.hpp>
 #include <string>
 
+#define RED_IPV4_ALL    "all"
+#define RED_IPV4_PUBLIC "public"
+#define RED_IPV4_192    "192"
+#define RED_IPV4_172    "172"
+#define RED_IPV4_169    "169"
+#define RED_IPV4_127    "127"
+#define RED_IPV4_10     "10"
+
 namespace Red {
     class Ipv4 {
         public:
@@ -83,13 +91,17 @@ namespace Red {
                 for (size_t CountPos = 0; CountPos < IpString.length(); CountPos++) {
                     if (IpString[CountPos] == '.') {
                         PointsInt++;
+
                     } else {
                         if (PointsInt < 1) {
                             _1Part += IpString[CountPos];
+
                         } else if (PointsInt < 2) {
                             _2Part += IpString[CountPos];
+
                         } else if (PointsInt < 3) {
                             _3Part += IpString[CountPos];
+
                         } else {
                             _4Part += IpString[CountPos];
                         }
@@ -103,12 +115,16 @@ namespace Red {
 
                 if (Part4 == 255) {
                     Part4 = 0;
+
                     if (Part3 == 255) {
                         Part3 = 0;
+
                         if (Part2 == 255) {
                             Part2 = 0;
+
                             if (Part1 == 255) {
                                 Part1 = 0;
+
                             } else {
                                 Part1++;
                             }
@@ -128,31 +144,24 @@ namespace Red {
                         // Check for private addresses.
                         if (Part1 == 192) {
                             Part1++;
+
                         } else if (Part1 == 172) {
                             Part1++;
+
                         } else if (Part1 == 169) {
                             Part1++;
+
                         } else if (Part1 == 127) {
                             Part1++;
+
                         } else if (Part1 == 10) {
                             Part1++;
                         }
+
                     } else {
                         Hold = true;
 
-                        if (Mode == "192") {        // only 192.XXX.XXX.XXX.
-                            HoldedAddress = 192;
-                        } else if (Mode == "172") { // only 172.XXX.XXX.XXX.
-                            HoldedAddress = 172;
-                        } else if (Mode == "169") { // only 169.XXX.XXX.XXX.
-                            HoldedAddress = 169;
-                        } else if (Mode == "127") { // only 127.XXX.XXX.XXX.
-                            HoldedAddress = 127;
-                        } else if (Mode == "10") {  // only  10.XXX.XXX.XXX.
-                            HoldedAddress = 10;
-                        } else {                    // only ???.XXX.XXX.XXX
-                            HoldedAddress = boost::lexical_cast<unsigned short int>(Mode);
-                        }
+                        HoldedAddress = boost::lexical_cast<unsigned short int>(Mode);
                     }
                 }
 
@@ -184,13 +193,17 @@ namespace Red {
                 for (size_t CountPos = 0; CountPos < IpString.length(); CountPos++) {
                     if (IpString[CountPos] == '.') {
                         PointsInt++;
+
                     } else {
                         if (PointsInt < 1) {
                             _1Part += IpString[CountPos];
+
                         } else if (PointsInt < 2) {
                             _2Part += IpString[CountPos];
+
                         } else if (PointsInt < 3) {
                             _3Part += IpString[CountPos];
+
                         } else {
                             _4Part += IpString[CountPos];
                         }
@@ -204,12 +217,16 @@ namespace Red {
 
                 if (Part4 == 0) {
                     Part4 = 255;
+
                     if (Part3 == 0) {
                         Part3 = 255;
+
                         if (Part2 == 0) {
                             Part2 = 255;
+
                             if (Part1 == 0) {
                                 Part1 = 255;
+
                             } else {
                                 Part1--;
                             }
@@ -229,28 +246,38 @@ namespace Red {
                         // Check for private addresses.
                         if (Part1 == 192) {
                             Part1++;
+
                         } else if (Part1 == 172) {
                             Part1++;
+
                         } else if (Part1 == 169) {
                             Part1++;
+
                         } else if (Part1 == 127) {
                             Part1++;
+
                         } else if (Part1 == 10) {
                             Part1++;
                         }
+
                     } else {
                         Hold = true;
 
                         if (Mode == "192") {        // only 192.XXX.XXX.XXX.
                             HoldedAddress = 192;
+
                         } else if (Mode == "172") { // only 172.XXX.XXX.XXX.
                             HoldedAddress = 172;
+
                         } else if (Mode == "169") { // only 169.XXX.XXX.XXX.
                             HoldedAddress = 169;
+
                         } else if (Mode == "127") { // only 127.XXX.XXX.XXX.
                             HoldedAddress = 127;
+
                         } else if (Mode == "10") {  // only  10.XXX.XXX.XXX.
                             HoldedAddress = 10;
+
                         } else {                    // only ???.XXX.XXX.XXX
                             HoldedAddress = boost::lexical_cast<unsigned short int>(Mode);
                         }
