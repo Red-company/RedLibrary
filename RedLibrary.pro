@@ -27,6 +27,7 @@ SOURCES += \
     RedEncryptionAlgorithms/ResECB1536.cpp \
     RedEncryptionAlgorithms/ResECB512.cpp \
     RedEncryptionAlgorithms/Va1.cpp \
+    RedLog.cpp
 
 HEADERS += \
     DiffieHellman.h \
@@ -70,6 +71,7 @@ HEADERS += \
     RedEncryptionAlgorithms/ResECB512.h \
     RedEncryptionAlgorithms/Va1.h \
     RedEncryptionAlgorithms/_private/ResDeclarations.h \
+    RedLog.h \
     RedTypes.h \
 
 QMAKE_CXXFLAGS += "-Wno-old-style-cast"

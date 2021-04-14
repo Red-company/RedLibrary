@@ -76,10 +76,10 @@ $(function() {
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &lt;math.h&gt;</span></div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment">// RedLibrary.</span></div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="a00269.html">RedTypes.h</a>&quot;</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="a00278.html">RedTypes.h</a>&quot;</span></div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keyword">namespace </span>Red {</div>
-<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="a00285.html">   22</a></span>&#160;    <span class="keyword">class </span><a class="code" href="a00285.html">DiffieHellman</a> {</div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="a00294.html">   22</a></span>&#160;    <span class="keyword">class </span><a class="code" href="a00294.html">DiffieHellman</a> {</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        <span class="keyword">private</span>:</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;            <span class="comment">//</span></div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;            <span class="comment">// Variables.</span></div>
@@ -102,12 +102,12 @@ $(function() {
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;            }</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00067"></a><span class="lineno"><a class="line" href="a00285.html#ae9159f69d9f8dbbf3ddf42beb18bebff">   67</a></span>&#160;            <a class="code" href="a00285.html#ae9159f69d9f8dbbf3ddf42beb18bebff">DiffieHellman</a>(Red::uint32_t ResultNum = 0,</div>
+<div class="line"><a name="l00067"></a><span class="lineno"><a class="line" href="a00294.html#ae9159f69d9f8dbbf3ddf42beb18bebff">   67</a></span>&#160;            <a class="code" href="a00294.html#ae9159f69d9f8dbbf3ddf42beb18bebff">DiffieHellman</a>(Red::uint32_t ResultNum = 0,</div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;                          Red::uint32_t ModificatedNum = 0,</div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;                          Red::uint32_t SecretNum = 0)</div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;                : G(ResultNum), P(ModificatedNum), a(SecretNum) {}</div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
-<div class="line"><a name="l00081"></a><span class="lineno"><a class="line" href="a00285.html#a73e637bbbd6dcb780ade24e876f3bf8e">   81</a></span>&#160;            <span class="keywordtype">void</span> <a class="code" href="a00285.html#a73e637bbbd6dcb780ade24e876f3bf8e">Set</a>(Red::uint32_t ResultNum,</div>
+<div class="line"><a name="l00081"></a><span class="lineno"><a class="line" href="a00294.html#a73e637bbbd6dcb780ade24e876f3bf8e">   81</a></span>&#160;            <span class="keywordtype">void</span> <a class="code" href="a00294.html#a73e637bbbd6dcb780ade24e876f3bf8e">Set</a>(Red::uint32_t ResultNum,</div>
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;                     Red::uint32_t ModificatedNum,</div>
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;                     Red::uint32_t SecretNum) {</div>
 <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;                G = ResultNum;</div>
@@ -115,32 +115,32 @@ $(function() {
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;                a = SecretNum;</div>
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;            }</div>
 <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
-<div class="line"><a name="l00096"></a><span class="lineno"><a class="line" href="a00285.html#aed648220f40fc79c377eeab4b600629e">   96</a></span>&#160;            Red::uint32_t <a class="code" href="a00285.html#aed648220f40fc79c377eeab4b600629e">GetPublicValue</a>() {</div>
+<div class="line"><a name="l00096"></a><span class="lineno"><a class="line" href="a00294.html#aed648220f40fc79c377eeab4b600629e">   96</a></span>&#160;            Red::uint32_t <a class="code" href="a00294.html#aed648220f40fc79c377eeab4b600629e">GetPublicValue</a>() {</div>
 <div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;                <span class="keywordflow">return</span> power(G, a, P);</div>
 <div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;            }</div>
 <div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160; </div>
-<div class="line"><a name="l00109"></a><span class="lineno"><a class="line" href="a00285.html#a02af9839847e99d3a44ae5dc9790669f">  109</a></span>&#160;            Red::uint32_t <a class="code" href="a00285.html#a02af9839847e99d3a44ae5dc9790669f">GetSymmetricKey</a>(Red::uint32_t x) {</div>
+<div class="line"><a name="l00109"></a><span class="lineno"><a class="line" href="a00294.html#a02af9839847e99d3a44ae5dc9790669f">  109</a></span>&#160;            Red::uint32_t <a class="code" href="a00294.html#a02af9839847e99d3a44ae5dc9790669f">GetSymmetricKey</a>(Red::uint32_t x) {</div>
 <div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;                <span class="keywordflow">return</span> power(x, a, P);</div>
 <div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;            }</div>
 <div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160; </div>
-<div class="line"><a name="l00124"></a><span class="lineno"><a class="line" href="a00285.html#a8d35b17f69e486fcfd771d9481f6b585">  124</a></span>&#160;            <span class="keyword">static</span> Red::uint32_t <a class="code" href="a00285.html#a8d35b17f69e486fcfd771d9481f6b585">GenerateSecret</a>(Red::uint32_t&amp; Srand) {</div>
+<div class="line"><a name="l00124"></a><span class="lineno"><a class="line" href="a00294.html#a8d35b17f69e486fcfd771d9481f6b585">  124</a></span>&#160;            <span class="keyword">static</span> Red::uint32_t <a class="code" href="a00294.html#a8d35b17f69e486fcfd771d9481f6b585">GenerateSecret</a>(Red::uint32_t&amp; Srand) {</div>
 <div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;                srand(time(0));</div>
 <div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;                <span class="keywordflow">return</span> (Red::uint32_t) rand() % Srand + 1;</div>
 <div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;            }</div>
 <div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160; </div>
 <div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;            <span class="comment">// Base dtor.</span></div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;            ~<a class="code" href="a00285.html">DiffieHellman</a>() {}</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;            ~<a class="code" href="a00294.html">DiffieHellman</a>() {}</div>
 <div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    };</div>
 <div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;}</div>
 <div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160; </div>
 <div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// RED_DIFFIEHELLMAN_H</span></div>
-<div class="ttc" id="aa00269_html"><div class="ttname"><a href="a00269.html">RedTypes.h</a></div><div class="ttdoc">RedTypes is a lib which serves to compress int and char definitions. Copyright (c) 2020-2021 Vladimir...</div></div>
-<div class="ttc" id="aa00285_html"><div class="ttname"><a href="a00285.html">Red::DiffieHellman</a></div><div class="ttdef"><b>Definition:</b> DiffieHellman.h:22</div></div>
-<div class="ttc" id="aa00285_html_a02af9839847e99d3a44ae5dc9790669f"><div class="ttname"><a href="a00285.html#a02af9839847e99d3a44ae5dc9790669f">Red::DiffieHellman::GetSymmetricKey</a></div><div class="ttdeci">Red::uint32_t GetSymmetricKey(Red::uint32_t x)</div><div class="ttdoc">GetSymmetricKey.</div><div class="ttdef"><b>Definition:</b> DiffieHellman.h:109</div></div>
-<div class="ttc" id="aa00285_html_a73e637bbbd6dcb780ade24e876f3bf8e"><div class="ttname"><a href="a00285.html#a73e637bbbd6dcb780ade24e876f3bf8e">Red::DiffieHellman::Set</a></div><div class="ttdeci">void Set(Red::uint32_t ResultNum, Red::uint32_t ModificatedNum, Red::uint32_t SecretNum)</div><div class="ttdoc">Set.</div><div class="ttdef"><b>Definition:</b> DiffieHellman.h:81</div></div>
-<div class="ttc" id="aa00285_html_a8d35b17f69e486fcfd771d9481f6b585"><div class="ttname"><a href="a00285.html#a8d35b17f69e486fcfd771d9481f6b585">Red::DiffieHellman::GenerateSecret</a></div><div class="ttdeci">static Red::uint32_t GenerateSecret(Red::uint32_t &amp;Srand)</div><div class="ttdoc">GenerateSecret.</div><div class="ttdef"><b>Definition:</b> DiffieHellman.h:124</div></div>
-<div class="ttc" id="aa00285_html_ae9159f69d9f8dbbf3ddf42beb18bebff"><div class="ttname"><a href="a00285.html#ae9159f69d9f8dbbf3ddf42beb18bebff">Red::DiffieHellman::DiffieHellman</a></div><div class="ttdeci">DiffieHellman(Red::uint32_t ResultNum=0, Red::uint32_t ModificatedNum=0, Red::uint32_t SecretNum=0)</div><div class="ttdoc">DiffieHellman.</div><div class="ttdef"><b>Definition:</b> DiffieHellman.h:67</div></div>
-<div class="ttc" id="aa00285_html_aed648220f40fc79c377eeab4b600629e"><div class="ttname"><a href="a00285.html#aed648220f40fc79c377eeab4b600629e">Red::DiffieHellman::GetPublicValue</a></div><div class="ttdeci">Red::uint32_t GetPublicValue()</div><div class="ttdoc">GetPublicValue.</div><div class="ttdef"><b>Definition:</b> DiffieHellman.h:96</div></div>
+<div class="ttc" id="aa00278_html"><div class="ttname"><a href="a00278.html">RedTypes.h</a></div><div class="ttdoc">RedTypes is a lib which serves to compress int and char definitions. Copyright (c) 2020-2021 Vladimir...</div></div>
+<div class="ttc" id="aa00294_html"><div class="ttname"><a href="a00294.html">Red::DiffieHellman</a></div><div class="ttdef"><b>Definition:</b> DiffieHellman.h:22</div></div>
+<div class="ttc" id="aa00294_html_a02af9839847e99d3a44ae5dc9790669f"><div class="ttname"><a href="a00294.html#a02af9839847e99d3a44ae5dc9790669f">Red::DiffieHellman::GetSymmetricKey</a></div><div class="ttdeci">Red::uint32_t GetSymmetricKey(Red::uint32_t x)</div><div class="ttdoc">GetSymmetricKey.</div><div class="ttdef"><b>Definition:</b> DiffieHellman.h:109</div></div>
+<div class="ttc" id="aa00294_html_a73e637bbbd6dcb780ade24e876f3bf8e"><div class="ttname"><a href="a00294.html#a73e637bbbd6dcb780ade24e876f3bf8e">Red::DiffieHellman::Set</a></div><div class="ttdeci">void Set(Red::uint32_t ResultNum, Red::uint32_t ModificatedNum, Red::uint32_t SecretNum)</div><div class="ttdoc">Set.</div><div class="ttdef"><b>Definition:</b> DiffieHellman.h:81</div></div>
+<div class="ttc" id="aa00294_html_a8d35b17f69e486fcfd771d9481f6b585"><div class="ttname"><a href="a00294.html#a8d35b17f69e486fcfd771d9481f6b585">Red::DiffieHellman::GenerateSecret</a></div><div class="ttdeci">static Red::uint32_t GenerateSecret(Red::uint32_t &amp;Srand)</div><div class="ttdoc">GenerateSecret.</div><div class="ttdef"><b>Definition:</b> DiffieHellman.h:124</div></div>
+<div class="ttc" id="aa00294_html_ae9159f69d9f8dbbf3ddf42beb18bebff"><div class="ttname"><a href="a00294.html#ae9159f69d9f8dbbf3ddf42beb18bebff">Red::DiffieHellman::DiffieHellman</a></div><div class="ttdeci">DiffieHellman(Red::uint32_t ResultNum=0, Red::uint32_t ModificatedNum=0, Red::uint32_t SecretNum=0)</div><div class="ttdoc">DiffieHellman.</div><div class="ttdef"><b>Definition:</b> DiffieHellman.h:67</div></div>
+<div class="ttc" id="aa00294_html_aed648220f40fc79c377eeab4b600629e"><div class="ttname"><a href="a00294.html#aed648220f40fc79c377eeab4b600629e">Red::DiffieHellman::GetPublicValue</a></div><div class="ttdeci">Red::uint32_t GetPublicValue()</div><div class="ttdoc">GetPublicValue.</div><div class="ttdef"><b>Definition:</b> DiffieHellman.h:96</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

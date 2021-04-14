@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Red Technologies: /Users/vladimir/Desktop/RedLibrary/RedDataBase.h Source File</title>
+<title>Red Technologies: /Users/vladimir/Desktop/RedLibrary/RedDataBase/VariadicBind.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -46,7 +46,6 @@ $(function() {
 });
 /* @license-end */</script>
 <div id="main-nav"></div>
-</div><!-- top -->
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -61,34 +60,56 @@ $(function() {
 </iframe>
 </div>
 
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_c817ed849eb7b23375e72b2fd3087b1f.html">RedDataBase</a></li>  </ul>
+</div>
+</div><!-- top -->
 <div class="header">
   <div class="headertitle">
-<div class="title">/Users/vladimir/Desktop/RedLibrary/RedDataBase.h</div>  </div>
+<div class="title">VariadicBind.h</div>  </div>
 </div><!--header-->
 <div class="contents">
 <a href="a00221.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#ifndef REDDATABSE_INCLUDED</span></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#define REDDATABSE_INCLUDED</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#ifndef RED_DATABASE_VARIADICBIND_H</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#define RED_DATABASE_VARIADICBIND_H</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="a00209.html">Statement.h</a>&quot;</span></div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="a00170.html">./RedDataBase/Assertion.h</a>&quot;</span></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="a00197.html">./RedDataBase/Exception.h</a>&quot;</span></div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="a00191.html">./RedDataBase/Database.h</a>&quot;</span></div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="a00206.html">./RedDataBase/Statement.h</a>&quot;</span></div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="a00185.html">./RedDataBase/Column.h</a>&quot;</span></div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="a00212.html">./RedDataBase/Transaction.h</a>&quot;</span></div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="a00179.html">./RedDataBase/Check.h</a>&quot;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#if (__cplusplus &gt;= 201402L) || ( defined(_MSC_VER) &amp;&amp; (_MSC_VER &gt;= 1900) ) </span><span class="comment">// c++14: Visual Studio 2015</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &lt;tuple&gt;</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// c++14</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &lt;utility&gt;</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &lt;initializer_list&gt;</span></div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
-<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="a00221.html#a2d21a5cb2b73f3442da248b0e5a58a85">   34</a></span>&#160;<span class="preprocessor">#define REDDATABASE_VERSION           &quot;1.0.0&quot;</span>   <span class="comment">// 1.0.0</span></div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="preprocessor">#define REDDATABASE_VERSION_NUMBER     100      </span><span class="comment">// 1.0.0</span></div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// REDDATABSE_INCLUDED</span></div>
-<div class="ttc" id="aa00170_html"><div class="ttname"><a href="a00170.html">Assertion.h</a></div><div class="ttdoc">Definition of the REDDATABASE_ASSERT() macro.</div></div>
-<div class="ttc" id="aa00179_html"><div class="ttname"><a href="a00179.html">Check.h</a></div><div class="ttdoc">This file contains check functions for RDB.</div></div>
-<div class="ttc" id="aa00185_html"><div class="ttname"><a href="a00185.html">Column.h</a></div><div class="ttdoc">Encapsulation of a Column in a row of the result pointed by the prepared RedDataBase::Statement.</div></div>
-<div class="ttc" id="aa00191_html"><div class="ttname"><a href="a00191.html">Database.h</a></div><div class="ttdoc">Management of a SQLite Database Connection.</div></div>
-<div class="ttc" id="aa00197_html"><div class="ttname"><a href="a00197.html">Exception.h</a></div><div class="ttdoc">Encapsulation of the error message from SQLite3 on a std::runtime_error.</div></div>
-<div class="ttc" id="aa00206_html"><div class="ttname"><a href="a00206.html">Statement.h</a></div><div class="ttdoc">A prepared SQLite Statement is a compiled SQL query ready to be executed, pointing to a row of result...</div></div>
-<div class="ttc" id="aa00212_html"><div class="ttname"><a href="a00212.html">Transaction.h</a></div><div class="ttdoc">A Transaction is way to group multiple SQL statements into an atomic secured operation.</div></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">namespace </span>Red::RedDataBase {</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">class </span>...Args&gt;</div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="a00221.html#a51f145c3b42f8b7c1be6d2cd6b093496">   46</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="a00221.html#a51f145c3b42f8b7c1be6d2cd6b093496">bind</a>(RedDataBase::Statement&amp; query, <span class="keyword">const</span> Args&amp; ... args) {</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <span class="keywordtype">int</span> pos = 0;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        (void)std::initializer_list&lt;int&gt;{</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;            ((void)query.bind(++pos, std::forward&lt;decltype(args)&gt;(args)), 0)...</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        };</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    }</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="preprocessor">    #if (__cplusplus &gt;= 201402L) || ( defined(_MSC_VER) &amp;&amp; (_MSC_VER &gt;= 1900) ) </span><span class="comment">// c++14: Visual Studio 2015</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> ... Types&gt;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="a00221.html#a51f145c3b42f8b7c1be6d2cd6b093496">bind</a>(RedDataBase::Statement&amp; query, <span class="keyword">const</span> std::tuple&lt;Types...&gt; &amp;tuple) {</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        <a class="code" href="a00221.html#a51f145c3b42f8b7c1be6d2cd6b093496">bind</a>(query, tuple, std::index_sequence_for&lt;Types...&gt;());</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    }</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> ... Types, std::size_t ... Indices&gt;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="a00221.html#a51f145c3b42f8b7c1be6d2cd6b093496">bind</a>(RedDataBase::Statement&amp; query, <span class="keyword">const</span> std::tuple&lt;Types...&gt; &amp;tuple, std::index_sequence&lt;Indices...&gt;) {</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        <a class="code" href="a00221.html#a51f145c3b42f8b7c1be6d2cd6b093496">bind</a>(query, std::get&lt;Indices&gt;(tuple)...);</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    }</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;<span class="preprocessor">    #endif </span><span class="comment">// c++14</span></div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;}</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160; </div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// RED_DATABASE_VARIADICBIND_H</span></div>
+<div class="ttc" id="aa00209_html"><div class="ttname"><a href="a00209.html">Statement.h</a></div><div class="ttdoc">A prepared SQLite Statement is a compiled SQL query ready to be executed, pointing to a row of result...</div></div>
+<div class="ttc" id="aa00221_html_a51f145c3b42f8b7c1be6d2cd6b093496"><div class="ttname"><a href="a00221.html#a51f145c3b42f8b7c1be6d2cd6b093496">bind</a></div><div class="ttdeci">void bind(RedDataBase::Statement &amp;query, const Args &amp;... args)</div><div class="ttdoc">Convenience function for calling Statement::bind(...) once for each argument given.</div><div class="ttdef"><b>Definition:</b> VariadicBind.h:46</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

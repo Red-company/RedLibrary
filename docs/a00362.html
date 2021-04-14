@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Red Technologies: Member List</title>
+<title>Red Technologies: Red::RedDataBase::Backup Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -62,54 +62,264 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><b>Red</b></li><li class="navelem"><b>RedDataBase</b></li><li class="navelem"><a class="el" href="a00365.html">Database</a></li>  </ul>
+<li class="navelem"><b>Red</b></li><li class="navelem"><b>RedDataBase</b></li><li class="navelem"><a class="el" href="a00362.html">Backup</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="a00359.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">Red::RedDataBase::Database Member List</div>  </div>
+<div class="title">Red::RedDataBase::Backup Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>This is the complete list of members for <a class="el" href="a00365.html">Red::RedDataBase::Database</a>, including all inherited members.</p>
-<table class="directory">
-  <tr class="even"><td class="entry"><a class="el" href="a00365.html#a4510eddb4919ca33aa9e03dc55947f27">backup</a>(const char *apFilename, BackupType aType)</td><td class="entry"><a class="el" href="a00365.html">Red::RedDataBase::Database</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="a00365.html#afe8bd335225de39019d259c426638d42">BackupType</a> enum name</td><td class="entry"><a class="el" href="a00365.html">Red::RedDataBase::Database</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a00365.html#a150f4deb3579c16f56ea894c4ae3c819">check</a>(const int aRet) const</td><td class="entry"><a class="el" href="a00365.html">Red::RedDataBase::Database</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr><td class="entry"><a class="el" href="a00365.html#a10cd09158c2856b8bf5bf185d94190f4">createFunction</a>(const char *apFuncName, int aNbArg, bool abDeterministic, void *apApp, void(*apFunc)(sqlite3_context *, int, sqlite3_value **), void(*apStep)(sqlite3_context *, int, sqlite3_value **)=nullptr, void(*apFinal)(sqlite3_context *)=nullptr, void(*apDestroy)(void *)=nullptr)</td><td class="entry"><a class="el" href="a00365.html">Red::RedDataBase::Database</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a00365.html#afa68e3d06544029296b2006ce20d700c">Database</a>(const char *apFilename, const int aFlags=RedDataBase::OPEN_READONLY, const int aBusyTimeoutMs=0, const char *apVfs=nullptr)</td><td class="entry"><a class="el" href="a00365.html">Red::RedDataBase::Database</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="a00365.html#ae222d874beacb2af5d638270bf59ca6b">Database</a>(const std::string &amp;aFilename, const int aFlags=RedDataBase::OPEN_READONLY, const int aBusyTimeoutMs=0, const std::string &amp;aVfs=&quot;&quot;)</td><td class="entry"><a class="el" href="a00365.html">Red::RedDataBase::Database</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>Database</b>(const Database &amp;)=delete (defined in <a class="el" href="a00365.html">Red::RedDataBase::Database</a>)</td><td class="entry"><a class="el" href="a00365.html">Red::RedDataBase::Database</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>Database</b>(Database &amp;&amp;aDatabase)=default (defined in <a class="el" href="a00365.html">Red::RedDataBase::Database</a>)</td><td class="entry"><a class="el" href="a00365.html">Red::RedDataBase::Database</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a00365.html#ae1c994d514c0c6ee9d5632258b55722e">exec</a>(const char *apQueries)</td><td class="entry"><a class="el" href="a00365.html">Red::RedDataBase::Database</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="a00365.html#a6dbf41a48dba858b6c98531329ac8d4a">exec</a>(const std::string &amp;aQueries)</td><td class="entry"><a class="el" href="a00365.html">Red::RedDataBase::Database</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a00365.html#a3e530b0c9d86bd09585717bf12c4c59f">execAndGet</a>(const char *apQuery)</td><td class="entry"><a class="el" href="a00365.html">Red::RedDataBase::Database</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="a00365.html#a82b951dc9e8de852a64a498e641e6132">execAndGet</a>(const std::string &amp;aQuery)</td><td class="entry"><a class="el" href="a00365.html">Red::RedDataBase::Database</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a00365.html#abd498506217a0ff278a036e1049d5783">getErrorCode</a>() const noexcept</td><td class="entry"><a class="el" href="a00365.html">Red::RedDataBase::Database</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="a00365.html#a2d469fa0adc3e86769e8bd98a1f8f614">getErrorMsg</a>() const noexcept</td><td class="entry"><a class="el" href="a00365.html">Red::RedDataBase::Database</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a00365.html#accdc37a1ed211ef43cba24b664544904">getExtendedErrorCode</a>() const noexcept</td><td class="entry"><a class="el" href="a00365.html">Red::RedDataBase::Database</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="a00365.html#aa6fe493b51f3dead3594079d8fc40152">getFilename</a>() const noexcept</td><td class="entry"><a class="el" href="a00365.html">Red::RedDataBase::Database</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a00365.html#a966258d8761c263311899f88d440da2b">getHandle</a>() const noexcept</td><td class="entry"><a class="el" href="a00365.html">Red::RedDataBase::Database</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr><td class="entry"><a class="el" href="a00365.html#a6b74bc55e4db6f1b2a1465a6db485e18">getHeaderInfo</a>(const std::string &amp;aFilename)</td><td class="entry"><a class="el" href="a00365.html">Red::RedDataBase::Database</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>getHeaderInfo</b>() (defined in <a class="el" href="a00365.html">Red::RedDataBase::Database</a>)</td><td class="entry"><a class="el" href="a00365.html">Red::RedDataBase::Database</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr><td class="entry"><a class="el" href="a00365.html#abf4b84574a8d677bcd8c6a7baceef5ec">getLastInsertRowid</a>() const noexcept</td><td class="entry"><a class="el" href="a00365.html">Red::RedDataBase::Database</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a00365.html#aafdbebfdda852c2dd1bff8339c1f2158">getTotalChanges</a>() const noexcept</td><td class="entry"><a class="el" href="a00365.html">Red::RedDataBase::Database</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="a00365.html#a6ab359d6a8143e42e068e7ba66bfd083">isUnencrypted</a>(const std::string &amp;aFilename)</td><td class="entry"><a class="el" href="a00365.html">Red::RedDataBase::Database</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a00365.html#adf7a4a99132e3423e70f9968e7606bc0">key</a>(const std::string &amp;aKey) const</td><td class="entry"><a class="el" href="a00365.html">Red::RedDataBase::Database</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>Load</b> enum value (defined in <a class="el" href="a00365.html">Red::RedDataBase::Database</a>)</td><td class="entry"><a class="el" href="a00365.html">Red::RedDataBase::Database</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a00365.html#a00a9cfd023f1abd32c234821e1443512">loadExtension</a>(const char *apExtensionName, const char *apEntryPointName)</td><td class="entry"><a class="el" href="a00365.html">Red::RedDataBase::Database</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>operator=</b>(const Database &amp;)=delete (defined in <a class="el" href="a00365.html">Red::RedDataBase::Database</a>)</td><td class="entry"><a class="el" href="a00365.html">Red::RedDataBase::Database</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>operator=</b>(Database &amp;&amp;aDatabase)=default (defined in <a class="el" href="a00365.html">Red::RedDataBase::Database</a>)</td><td class="entry"><a class="el" href="a00365.html">Red::RedDataBase::Database</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="a00365.html#acbb7ebf568b7d3c23d3e2cd23b8cf4d9">rekey</a>(const std::string &amp;aNewKey) const</td><td class="entry"><a class="el" href="a00365.html">Red::RedDataBase::Database</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>Save</b> enum value (defined in <a class="el" href="a00365.html">Red::RedDataBase::Database</a>)</td><td class="entry"><a class="el" href="a00365.html">Red::RedDataBase::Database</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="a00365.html#a171e94f51df43a60c3caa47695a031ba">setBusyTimeout</a>(const int aBusyTimeoutMs)</td><td class="entry"><a class="el" href="a00365.html">Red::RedDataBase::Database</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>Statement</b> (defined in <a class="el" href="a00365.html">Red::RedDataBase::Database</a>)</td><td class="entry"><a class="el" href="a00365.html">Red::RedDataBase::Database</a></td><td class="entry"><span class="mlabel">friend</span></td></tr>
-  <tr><td class="entry"><a class="el" href="a00365.html#af6fb4353afae3c5b031dd6a33af5885e">tableExists</a>(const char *apTableName)</td><td class="entry"><a class="el" href="a00365.html">Red::RedDataBase::Database</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a00365.html#a1d02f3b8c853d3a954d73bfb0b0bf80d">tableExists</a>(const std::string &amp;aTableName)</td><td class="entry"><a class="el" href="a00365.html">Red::RedDataBase::Database</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr><td class="entry"><a class="el" href="a00365.html#a006ce474798cf06fc3a652cdd0e980e8">tryExec</a>(const char *apQueries) noexcept</td><td class="entry"><a class="el" href="a00365.html">Red::RedDataBase::Database</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a00365.html#afbfe8ab64dc0f9d3df1e303aea690eef">tryExec</a>(const std::string aQueries) noexcept</td><td class="entry"><a class="el" href="a00365.html">Red::RedDataBase::Database</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr><td class="entry"><a class="el" href="a00365.html#aeef356afd25d0babfdfd4926382485ad">~Database</a>()=default</td><td class="entry"><a class="el" href="a00365.html">Red::RedDataBase::Database</a></td><td class="entry"></td></tr>
-</table></div><!-- contents -->
+<p>RAII encapsulation of a RedDataBase <a class="el" href="a00362.html" title="RAII encapsulation of a RedDataBase Backup process.">Backup</a> process.  
+ <a href="a00362.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="a00179_source.html">Backup.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:ac87183dde981bcbf0f2bf8ac3e68ebde"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00362.html#ac87183dde981bcbf0f2bf8ac3e68ebde">Backup</a> (<a class="el" href="a00374.html">Database</a> &amp;aDestDatabase, const char *apDestDatabaseName, <a class="el" href="a00374.html">Database</a> &amp;aSrcDatabase, const char *apSrcDatabaseName)</td></tr>
+<tr class="memdesc:ac87183dde981bcbf0f2bf8ac3e68ebde"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize a RedDataBase <a class="el" href="a00362.html" title="RAII encapsulation of a RedDataBase Backup process.">Backup</a> object.  <a href="a00362.html#ac87183dde981bcbf0f2bf8ac3e68ebde">More...</a><br /></td></tr>
+<tr class="separator:ac87183dde981bcbf0f2bf8ac3e68ebde"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae8fbd42c4607c060f4a8d5edb4277f50"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00362.html#ae8fbd42c4607c060f4a8d5edb4277f50">Backup</a> (<a class="el" href="a00374.html">Database</a> &amp;aDestDatabase, const std::string &amp;aDestDatabaseName, <a class="el" href="a00374.html">Database</a> &amp;aSrcDatabase, const std::string &amp;aSrcDatabaseName)</td></tr>
+<tr class="memdesc:ae8fbd42c4607c060f4a8d5edb4277f50"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize a RedDataBase <a class="el" href="a00362.html" title="RAII encapsulation of a RedDataBase Backup process.">Backup</a> object.  <a href="a00362.html#ae8fbd42c4607c060f4a8d5edb4277f50">More...</a><br /></td></tr>
+<tr class="separator:ae8fbd42c4607c060f4a8d5edb4277f50"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab1de8b2d9a47b4c687a31a6afddf6d0a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00362.html#ab1de8b2d9a47b4c687a31a6afddf6d0a">Backup</a> (<a class="el" href="a00374.html">Database</a> &amp;aDestDatabase, <a class="el" href="a00374.html">Database</a> &amp;aSrcDatabase)</td></tr>
+<tr class="memdesc:ab1de8b2d9a47b4c687a31a6afddf6d0a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize a RedDataBase <a class="el" href="a00362.html" title="RAII encapsulation of a RedDataBase Backup process.">Backup</a> object for main databases.  <a href="a00362.html#ab1de8b2d9a47b4c687a31a6afddf6d0a">More...</a><br /></td></tr>
+<tr class="separator:ab1de8b2d9a47b4c687a31a6afddf6d0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a170fa467975855d22a85a8f34353436c"><td class="memItemLeft" align="right" valign="top"><a id="a170fa467975855d22a85a8f34353436c"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>Backup</b> (const <a class="el" href="a00362.html">Backup</a> &amp;)=delete</td></tr>
+<tr class="separator:a170fa467975855d22a85a8f34353436c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7633a39a31266f787195d834a557b355"><td class="memItemLeft" align="right" valign="top"><a id="a7633a39a31266f787195d834a557b355"></a>
+<a class="el" href="a00362.html">Backup</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (const <a class="el" href="a00362.html">Backup</a> &amp;)=delete</td></tr>
+<tr class="separator:a7633a39a31266f787195d834a557b355"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0432bb3601bb3a2036394888dcf671d3"><td class="memItemLeft" align="right" valign="top"><a id="a0432bb3601bb3a2036394888dcf671d3"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00362.html#a0432bb3601bb3a2036394888dcf671d3">~Backup</a> ()</td></tr>
+<tr class="memdesc:a0432bb3601bb3a2036394888dcf671d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Release the RedDataBase <a class="el" href="a00362.html" title="RAII encapsulation of a RedDataBase Backup process.">Backup</a> resource. <br /></td></tr>
+<tr class="separator:a0432bb3601bb3a2036394888dcf671d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a94ad099816a51e9ae2a3a9ef00ecf8cd"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00362.html#a94ad099816a51e9ae2a3a9ef00ecf8cd">executeStep</a> (const int aNumPage=-1)</td></tr>
+<tr class="memdesc:a94ad099816a51e9ae2a3a9ef00ecf8cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Execute a step of backup with a given number of source pages to be copied.  <a href="a00362.html#a94ad099816a51e9ae2a3a9ef00ecf8cd">More...</a><br /></td></tr>
+<tr class="separator:a94ad099816a51e9ae2a3a9ef00ecf8cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2335126fdf7d9122686b253a911ae003"><td class="memItemLeft" align="right" valign="top"><a id="a2335126fdf7d9122686b253a911ae003"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00362.html#a2335126fdf7d9122686b253a911ae003">getRemainingPageCount</a> ()</td></tr>
+<tr class="memdesc:a2335126fdf7d9122686b253a911ae003"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the number of source pages still to be backed up as of the most recent call to <a class="el" href="a00362.html#a94ad099816a51e9ae2a3a9ef00ecf8cd" title="Execute a step of backup with a given number of source pages to be copied.">executeStep()</a>. <br /></td></tr>
+<tr class="separator:a2335126fdf7d9122686b253a911ae003"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d03da910eb164a07ee539f2e0fc9a7c"><td class="memItemLeft" align="right" valign="top"><a id="a6d03da910eb164a07ee539f2e0fc9a7c"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00362.html#a6d03da910eb164a07ee539f2e0fc9a7c">getTotalPageCount</a> ()</td></tr>
+<tr class="memdesc:a6d03da910eb164a07ee539f2e0fc9a7c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the total number of pages in the source database as of the most recent call to <a class="el" href="a00362.html#a94ad099816a51e9ae2a3a9ef00ecf8cd" title="Execute a step of backup with a given number of source pages to be copied.">executeStep()</a>. <br /></td></tr>
+<tr class="separator:a6d03da910eb164a07ee539f2e0fc9a7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>RAII encapsulation of a RedDataBase <a class="el" href="a00362.html" title="RAII encapsulation of a RedDataBase Backup process.">Backup</a> process. </p>
+<p>A <a class="el" href="a00362.html" title="RAII encapsulation of a RedDataBase Backup process.">Backup</a> object is used to backup a source database file to a destination database file in a safe and online way.</p>
+<p>See also the a reference implementation of live backup taken from the official site: <a href="https://www.sqlite.org/backup.html">https://www.sqlite.org/backup.html</a> </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="ac87183dde981bcbf0f2bf8ac3e68ebde"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac87183dde981bcbf0f2bf8ac3e68ebde">&#9670;&nbsp;</a></span>Backup() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Red::RedDataBase::Backup::Backup </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a00374.html">Database</a> &amp;&#160;</td>
+          <td class="paramname"><em>aDestDatabase</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>apDestDatabaseName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="a00374.html">Database</a> &amp;&#160;</td>
+          <td class="paramname"><em>aSrcDatabase</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>apSrcDatabaseName</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Initialize a RedDataBase <a class="el" href="a00362.html" title="RAII encapsulation of a RedDataBase Backup process.">Backup</a> object. </p>
+<p>Initialize a RedDataBase <a class="el" href="a00362.html" title="RAII encapsulation of a RedDataBase Backup process.">Backup</a> object for the source database and destination database. The database name is "main" for the main database, "temp" for the temporary database, or the name specified after the AS keyword in an ATTACH statement for an attached database.</p>
+<p><a class="el" href="a00382.html" title="Encapsulation of the error message from SQLite3, based on std::runtime_error.">Exception</a> is thrown in case of error, then the <a class="el" href="a00362.html" title="RAII encapsulation of a RedDataBase Backup process.">Backup</a> object is NOT constructed.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">aDestDatabase</td><td>Destination database connection </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">apDestDatabaseName</td><td>Destination database name </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">aSrcDatabase</td><td>Source database connection </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">apSrcDatabaseName</td><td>Source database name</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname"><a class="el" href="a00382.html" title="Encapsulation of the error message from SQLite3, based on std::runtime_error.">RedDataBase::Exception</a></td><td>in case of error </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ae8fbd42c4607c060f4a8d5edb4277f50"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae8fbd42c4607c060f4a8d5edb4277f50">&#9670;&nbsp;</a></span>Backup() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Red::RedDataBase::Backup::Backup </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a00374.html">Database</a> &amp;&#160;</td>
+          <td class="paramname"><em>aDestDatabase</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>aDestDatabaseName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="a00374.html">Database</a> &amp;&#160;</td>
+          <td class="paramname"><em>aSrcDatabase</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>aSrcDatabaseName</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Initialize a RedDataBase <a class="el" href="a00362.html" title="RAII encapsulation of a RedDataBase Backup process.">Backup</a> object. </p>
+<p>Initialize a RedDataBase <a class="el" href="a00362.html" title="RAII encapsulation of a RedDataBase Backup process.">Backup</a> object for source database and destination database. The database name is "main" for the main database, "temp" for the temporary database, or the name specified after the AS keyword in an ATTACH statement for an attached database.</p>
+<p><a class="el" href="a00382.html" title="Encapsulation of the error message from SQLite3, based on std::runtime_error.">Exception</a> is thrown in case of error, then the <a class="el" href="a00362.html" title="RAII encapsulation of a RedDataBase Backup process.">Backup</a> object is NOT constructed.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">aDestDatabase</td><td>Destination database connection </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">aDestDatabaseName</td><td>Destination database name </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">aSrcDatabase</td><td>Source database connection </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">aSrcDatabaseName</td><td>Source database name</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname"><a class="el" href="a00382.html" title="Encapsulation of the error message from SQLite3, based on std::runtime_error.">RedDataBase::Exception</a></td><td>in case of error </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ab1de8b2d9a47b4c687a31a6afddf6d0a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab1de8b2d9a47b4c687a31a6afddf6d0a">&#9670;&nbsp;</a></span>Backup() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Red::RedDataBase::Backup::Backup </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a00374.html">Database</a> &amp;&#160;</td>
+          <td class="paramname"><em>aDestDatabase</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="a00374.html">Database</a> &amp;&#160;</td>
+          <td class="paramname"><em>aSrcDatabase</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Initialize a RedDataBase <a class="el" href="a00362.html" title="RAII encapsulation of a RedDataBase Backup process.">Backup</a> object for main databases. </p>
+<p>Initialize a RedDataBase <a class="el" href="a00362.html" title="RAII encapsulation of a RedDataBase Backup process.">Backup</a> object for source database and destination database. <a class="el" href="a00362.html" title="RAII encapsulation of a RedDataBase Backup process.">Backup</a> the main databases between the source and the destination.</p>
+<p><a class="el" href="a00382.html" title="Encapsulation of the error message from SQLite3, based on std::runtime_error.">Exception</a> is thrown in case of error, then the <a class="el" href="a00362.html" title="RAII encapsulation of a RedDataBase Backup process.">Backup</a> object is NOT constructed.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">aDestDatabase</td><td>Destination database connection </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">aSrcDatabase</td><td>Source database connection</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname"><a class="el" href="a00382.html" title="Encapsulation of the error message from SQLite3, based on std::runtime_error.">RedDataBase::Exception</a></td><td>in case of error </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a94ad099816a51e9ae2a3a9ef00ecf8cd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a94ad099816a51e9ae2a3a9ef00ecf8cd">&#9670;&nbsp;</a></span>executeStep()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Red::RedDataBase::Backup::executeStep </td>
+          <td>(</td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>aNumPage</em> = <code>-1</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Execute a step of backup with a given number of source pages to be copied. </p>
+<p><a class="el" href="a00382.html" title="Encapsulation of the error message from SQLite3, based on std::runtime_error.">Exception</a> is thrown when SQLITE_IOERR_XXX, SQLITE_NOMEM, or SQLITE_READONLY is returned in sqlite3_backup_step(). These errors are considered fatal, so there is no point in retrying the call to <a class="el" href="a00362.html#a94ad099816a51e9ae2a3a9ef00ecf8cd" title="Execute a step of backup with a given number of source pages to be copied.">executeStep()</a>.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">aNumPage</td><td>The number of source pages to be copied, with a negative value meaning all remaining source pages</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>REDDATABASE_OK/REDDATABASE_DONE/REDDATABASE_BUSY/REDDATABASE_LOCKED</dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname"><a class="el" href="a00382.html" title="Encapsulation of the error message from SQLite3, based on std::runtime_error.">RedDataBase::Exception</a></td><td>in case of error </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
+<li>/Users/vladimir/Desktop/RedLibrary/RedDataBase/<a class="el" href="a00179_source.html">Backup.h</a></li>
+<li>/Users/vladimir/Desktop/RedLibrary/RedDataBase/<a class="el" href="a00176.html">Backup.cpp</a></li>
+</ul>
+</div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1

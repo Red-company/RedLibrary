@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Red Technologies: /Users/vladimir/Desktop/RedLibrary/RedConfig.h File Reference</title>
+<title>Red Technologies: /Users/vladimir/Desktop/RedLibrary/RedConfig.cpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -63,92 +63,60 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Classes</a> &#124;
-<a href="#define-members">Macros</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
-<div class="title">/Users/vladimir/Desktop/RedLibrary/RedConfig.h File Reference</div>  </div>
+<div class="title">/Users/vladimir/Desktop/RedLibrary/RedConfig.cpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
 <p>RedConfig is a lib to create/use variables preset.  
 <a href="#details">More...</a></p>
-<div class="textblock"><code>#include &lt;string&gt;</code><br />
-<code>#include &lt;map&gt;</code><br />
-<code>#include &quot;<a class="el" href="a00140_source.html">../RedLibrary/InsensitiveMap.h</a>&quot;</code><br />
-</div>
-<p><a href="a00167_source.html">Go to the source code of this file.</a></p>
-<table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
-Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00349.html">Red::RedConfig::Variable</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Base object.  <a href="a00349.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
-Macros</h2></td></tr>
-<tr class="memitem:ae9f5d8ab03d9badee9a84bea7b81e080"><td class="memItemLeft" align="right" valign="top"><a id="ae9f5d8ab03d9badee9a84bea7b81e080"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>REDCONFIG_VERSION</b>&#160;&#160;&#160;&quot;1.0.0&quot;</td></tr>
-<tr class="separator:ae9f5d8ab03d9badee9a84bea7b81e080"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6ad57be4d556af63db7eababdb64f68f"><td class="memItemLeft" align="right" valign="top"><a id="a6ad57be4d556af63db7eababdb64f68f"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>REDCONFIG_VERSION_NUMBER</b>&#160;&#160;&#160;100</td></tr>
-<tr class="separator:a6ad57be4d556af63db7eababdb64f68f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abcd8ed011448c926a9b17ef2e975315e"><td class="memItemLeft" align="right" valign="top"><a id="abcd8ed011448c926a9b17ef2e975315e"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00167.html#abcd8ed011448c926a9b17ef2e975315e">REDCONFIG_STRING_TYPE</a>&#160;&#160;&#160;&quot;str&quot;</td></tr>
-<tr class="memdesc:abcd8ed011448c926a9b17ef2e975315e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Types. <br /></td></tr>
-<tr class="separator:abcd8ed011448c926a9b17ef2e975315e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3f53d143c722ca581768390d7e743a89"><td class="memItemLeft" align="right" valign="top"><a id="a3f53d143c722ca581768390d7e743a89"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>REDCONFIG_INTEGER_TYPE</b>&#160;&#160;&#160;&quot;int&quot;</td></tr>
-<tr class="separator:a3f53d143c722ca581768390d7e743a89"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a660a5e29abf39546ef3caaea5742f335"><td class="memItemLeft" align="right" valign="top"><a id="a660a5e29abf39546ef3caaea5742f335"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00167.html#a660a5e29abf39546ef3caaea5742f335">REDCONFIG_THROW</a>&#160;&#160;&#160;true</td></tr>
-<tr class="memdesc:a660a5e29abf39546ef3caaea5742f335"><td class="mdescLeft">&#160;</td><td class="mdescRight">Throw. <br /></td></tr>
-<tr class="separator:a660a5e29abf39546ef3caaea5742f335"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab8bccf5fd25efec9cf85016bfa6fc2b5"><td class="memItemLeft" align="right" valign="top"><a id="ab8bccf5fd25efec9cf85016bfa6fc2b5"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>REDCONFIG_NO_THROW</b>&#160;&#160;&#160;false</td></tr>
-<tr class="separator:ab8bccf5fd25efec9cf85016bfa6fc2b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
+<div class="textblock"><code>#include &quot;<a class="el" href="a00170_source.html">RedConfig.h</a>&quot;</code><br />
+<code>#include &lt;fstream&gt;</code><br />
+<code>#include &lt;sstream&gt;</code><br />
+<code>#include &quot;<a class="el" href="a00164_source.html">RedConfig/Exceptions.h</a>&quot;</code><br />
+</div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:aa6c2e79dc89e544e03daffb551ccc882"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00164.html#aa6c2e79dc89e544e03daffb551ccc882">Red::RedConfig::is_int</a> (const std::string &amp;s)</td></tr>
-<tr class="memdesc:aa6c2e79dc89e544e03daffb551ccc882"><td class="mdescLeft">&#160;</td><td class="mdescRight">is_int  <a href="a00164.html#aa6c2e79dc89e544e03daffb551ccc882">More...</a><br /></td></tr>
+<tr class="memitem:aa6c2e79dc89e544e03daffb551ccc882"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00167.html#aa6c2e79dc89e544e03daffb551ccc882">Red::RedConfig::is_int</a> (const std::string &amp;s)</td></tr>
+<tr class="memdesc:aa6c2e79dc89e544e03daffb551ccc882"><td class="mdescLeft">&#160;</td><td class="mdescRight">is_int  <a href="a00167.html#aa6c2e79dc89e544e03daffb551ccc882">More...</a><br /></td></tr>
 <tr class="separator:aa6c2e79dc89e544e03daffb551ccc882"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a960695f96a8b650a619a226acc5e89b6"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00164.html#a960695f96a8b650a619a226acc5e89b6">Red::RedConfig::is_str</a> (const std::string &amp;s)</td></tr>
-<tr class="memdesc:a960695f96a8b650a619a226acc5e89b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">is_str  <a href="a00164.html#a960695f96a8b650a619a226acc5e89b6">More...</a><br /></td></tr>
+<tr class="memitem:a960695f96a8b650a619a226acc5e89b6"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00167.html#a960695f96a8b650a619a226acc5e89b6">Red::RedConfig::is_str</a> (const std::string &amp;s)</td></tr>
+<tr class="memdesc:a960695f96a8b650a619a226acc5e89b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">is_str  <a href="a00167.html#a960695f96a8b650a619a226acc5e89b6">More...</a><br /></td></tr>
 <tr class="separator:a960695f96a8b650a619a226acc5e89b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a02b163fb18404d7b3132f39dcf70beba"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00164.html#a02b163fb18404d7b3132f39dcf70beba">Red::RedConfig::GetType</a> (std::string &amp;str)</td></tr>
-<tr class="memdesc:a02b163fb18404d7b3132f39dcf70beba"><td class="mdescLeft">&#160;</td><td class="mdescRight">GetType.  <a href="a00164.html#a02b163fb18404d7b3132f39dcf70beba">More...</a><br /></td></tr>
+<tr class="memitem:a02b163fb18404d7b3132f39dcf70beba"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00167.html#a02b163fb18404d7b3132f39dcf70beba">Red::RedConfig::GetType</a> (std::string &amp;str)</td></tr>
+<tr class="memdesc:a02b163fb18404d7b3132f39dcf70beba"><td class="mdescLeft">&#160;</td><td class="mdescRight">GetType.  <a href="a00167.html#a02b163fb18404d7b3132f39dcf70beba">More...</a><br /></td></tr>
 <tr class="separator:a02b163fb18404d7b3132f39dcf70beba"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0db6fd11f2e7a0f0ce2034ee2a76c7c3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00164.html#a0db6fd11f2e7a0f0ce2034ee2a76c7c3">Red::RedConfig::ConfigFileExists</a> (std::string &amp;path)</td></tr>
-<tr class="memdesc:a0db6fd11f2e7a0f0ce2034ee2a76c7c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">ConfigFileExists.  <a href="a00164.html#a0db6fd11f2e7a0f0ce2034ee2a76c7c3">More...</a><br /></td></tr>
+<tr class="memitem:a0db6fd11f2e7a0f0ce2034ee2a76c7c3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00167.html#a0db6fd11f2e7a0f0ce2034ee2a76c7c3">Red::RedConfig::ConfigFileExists</a> (std::string &amp;path)</td></tr>
+<tr class="memdesc:a0db6fd11f2e7a0f0ce2034ee2a76c7c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">ConfigFileExists.  <a href="a00167.html#a0db6fd11f2e7a0f0ce2034ee2a76c7c3">More...</a><br /></td></tr>
 <tr class="separator:a0db6fd11f2e7a0f0ce2034ee2a76c7c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9724889c4a4ea9e021bf63c8d6bde4d7"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00164.html#a9724889c4a4ea9e021bf63c8d6bde4d7">Red::RedConfig::HasVariable</a> (std::string &amp;path, std::string &amp;variable)</td></tr>
-<tr class="memdesc:a9724889c4a4ea9e021bf63c8d6bde4d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">HasVariable.  <a href="a00164.html#a9724889c4a4ea9e021bf63c8d6bde4d7">More...</a><br /></td></tr>
-<tr class="separator:a9724889c4a4ea9e021bf63c8d6bde4d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a86517b84994b11f06b71a4f706c7de82"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00164.html#a86517b84994b11f06b71a4f706c7de82">Red::RedConfig::HasValue</a> (std::string &amp;path, std::string &amp;variable)</td></tr>
-<tr class="memdesc:a86517b84994b11f06b71a4f706c7de82"><td class="mdescLeft">&#160;</td><td class="mdescRight">HasValue.  <a href="a00164.html#a86517b84994b11f06b71a4f706c7de82">More...</a><br /></td></tr>
-<tr class="separator:a86517b84994b11f06b71a4f706c7de82"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa549937fb4016e17979ea2ed07b4ffcb"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00164.html#aa549937fb4016e17979ea2ed07b4ffcb">Red::RedConfig::CreateConfigFile</a> (std::string path, std::string name, bool can_throw)</td></tr>
-<tr class="memdesc:aa549937fb4016e17979ea2ed07b4ffcb"><td class="mdescLeft">&#160;</td><td class="mdescRight">CreateConfigFile.  <a href="a00164.html#aa549937fb4016e17979ea2ed07b4ffcb">More...</a><br /></td></tr>
+<tr class="memitem:aa549937fb4016e17979ea2ed07b4ffcb"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00167.html#aa549937fb4016e17979ea2ed07b4ffcb">Red::RedConfig::CreateConfigFile</a> (std::string path, std::string name, bool can_throw)</td></tr>
+<tr class="memdesc:aa549937fb4016e17979ea2ed07b4ffcb"><td class="mdescLeft">&#160;</td><td class="mdescRight">CreateConfigFile.  <a href="a00167.html#aa549937fb4016e17979ea2ed07b4ffcb">More...</a><br /></td></tr>
 <tr class="separator:aa549937fb4016e17979ea2ed07b4ffcb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac87ef67a93423a6182321179ec1e514a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00164.html#ac87ef67a93423a6182321179ec1e514a">Red::RedConfig::SaveValues</a> (std::map&lt; std::string, Variable &gt; &amp;variables, std::string &amp;path, bool can_throw)</td></tr>
-<tr class="memdesc:ac87ef67a93423a6182321179ec1e514a"><td class="mdescLeft">&#160;</td><td class="mdescRight">SaveValues.  <a href="a00164.html#ac87ef67a93423a6182321179ec1e514a">More...</a><br /></td></tr>
+<tr class="memitem:ac87ef67a93423a6182321179ec1e514a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00167.html#ac87ef67a93423a6182321179ec1e514a">Red::RedConfig::SaveValues</a> (std::map&lt; std::string, Variable &gt; &amp;variables, std::string &amp;path, bool can_throw)</td></tr>
+<tr class="memdesc:ac87ef67a93423a6182321179ec1e514a"><td class="mdescLeft">&#160;</td><td class="mdescRight">SaveValues.  <a href="a00167.html#ac87ef67a93423a6182321179ec1e514a">More...</a><br /></td></tr>
 <tr class="separator:ac87ef67a93423a6182321179ec1e514a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1cc04b6d96c4977caec76ba758550116"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00164.html#a1cc04b6d96c4977caec76ba758550116">Red::RedConfig::SaveValues</a> (<a class="el" href="a00140.html#ad2fd5abd48068dfe4efb4920957a4306">Red::InsensitiveMap</a>&lt; std::string, Variable &gt; &amp;variables, std::string &amp;path, bool can_throw)</td></tr>
-<tr class="memdesc:a1cc04b6d96c4977caec76ba758550116"><td class="mdescLeft">&#160;</td><td class="mdescRight">SaveValues.  <a href="a00164.html#a1cc04b6d96c4977caec76ba758550116">More...</a><br /></td></tr>
+<tr class="memitem:a1cc04b6d96c4977caec76ba758550116"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00167.html#a1cc04b6d96c4977caec76ba758550116">Red::RedConfig::SaveValues</a> (<a class="el" href="a00143.html#ad2fd5abd48068dfe4efb4920957a4306">Red::InsensitiveMap</a>&lt; std::string, Variable &gt; &amp;variables, std::string &amp;path, bool can_throw)</td></tr>
+<tr class="memdesc:a1cc04b6d96c4977caec76ba758550116"><td class="mdescLeft">&#160;</td><td class="mdescRight">SaveValues.  <a href="a00167.html#a1cc04b6d96c4977caec76ba758550116">More...</a><br /></td></tr>
 <tr class="separator:a1cc04b6d96c4977caec76ba758550116"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a853f48ea17c956556367e19b2e86da9e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00164.html#a853f48ea17c956556367e19b2e86da9e">Red::RedConfig::UpdateValues</a> (std::map&lt; std::string, Variable &gt; &amp;variables, std::string &amp;path, bool can_throw)</td></tr>
-<tr class="memdesc:a853f48ea17c956556367e19b2e86da9e"><td class="mdescLeft">&#160;</td><td class="mdescRight">UpdateValues.  <a href="a00164.html#a853f48ea17c956556367e19b2e86da9e">More...</a><br /></td></tr>
+<tr class="memitem:a853f48ea17c956556367e19b2e86da9e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00167.html#a853f48ea17c956556367e19b2e86da9e">Red::RedConfig::UpdateValues</a> (std::map&lt; std::string, Variable &gt; &amp;variables, std::string &amp;path, bool can_throw)</td></tr>
+<tr class="memdesc:a853f48ea17c956556367e19b2e86da9e"><td class="mdescLeft">&#160;</td><td class="mdescRight">UpdateValues.  <a href="a00167.html#a853f48ea17c956556367e19b2e86da9e">More...</a><br /></td></tr>
 <tr class="separator:a853f48ea17c956556367e19b2e86da9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab558d6aee9df49aeb54f9abaafc68821"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00164.html#ab558d6aee9df49aeb54f9abaafc68821">Red::RedConfig::UpdateValues</a> (<a class="el" href="a00140.html#ad2fd5abd48068dfe4efb4920957a4306">Red::InsensitiveMap</a>&lt; std::string, Variable &gt; &amp;variables, std::string &amp;path, bool can_throw)</td></tr>
-<tr class="memdesc:ab558d6aee9df49aeb54f9abaafc68821"><td class="mdescLeft">&#160;</td><td class="mdescRight">UpdateValues.  <a href="a00164.html#ab558d6aee9df49aeb54f9abaafc68821">More...</a><br /></td></tr>
+<tr class="memitem:ab558d6aee9df49aeb54f9abaafc68821"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00167.html#ab558d6aee9df49aeb54f9abaafc68821">Red::RedConfig::UpdateValues</a> (<a class="el" href="a00143.html#ad2fd5abd48068dfe4efb4920957a4306">Red::InsensitiveMap</a>&lt; std::string, Variable &gt; &amp;variables, std::string &amp;path, bool can_throw)</td></tr>
+<tr class="memdesc:ab558d6aee9df49aeb54f9abaafc68821"><td class="mdescLeft">&#160;</td><td class="mdescRight">UpdateValues.  <a href="a00167.html#ab558d6aee9df49aeb54f9abaafc68821">More...</a><br /></td></tr>
 <tr class="separator:ab558d6aee9df49aeb54f9abaafc68821"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5132159f500c7957e677808cd0e76409"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00164.html#a5132159f500c7957e677808cd0e76409">Red::RedConfig::LoadValues</a> (std::map&lt; std::string, Variable &gt; *variables, std::string &amp;path, bool can_throw)</td></tr>
-<tr class="memdesc:a5132159f500c7957e677808cd0e76409"><td class="mdescLeft">&#160;</td><td class="mdescRight">LoadValues.  <a href="a00164.html#a5132159f500c7957e677808cd0e76409">More...</a><br /></td></tr>
+<tr class="memitem:a5132159f500c7957e677808cd0e76409"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00167.html#a5132159f500c7957e677808cd0e76409">Red::RedConfig::LoadValues</a> (std::map&lt; std::string, Variable &gt; *variables, std::string &amp;path, bool can_throw)</td></tr>
+<tr class="memdesc:a5132159f500c7957e677808cd0e76409"><td class="mdescLeft">&#160;</td><td class="mdescRight">LoadValues.  <a href="a00167.html#a5132159f500c7957e677808cd0e76409">More...</a><br /></td></tr>
 <tr class="separator:a5132159f500c7957e677808cd0e76409"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac7d298ffb03bce4eec805b73500b09ba"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00164.html#ac7d298ffb03bce4eec805b73500b09ba">Red::RedConfig::LoadValues</a> (<a class="el" href="a00140.html#ad2fd5abd48068dfe4efb4920957a4306">Red::InsensitiveMap</a>&lt; std::string, Variable &gt; *variables, std::string &amp;path, bool can_throw)</td></tr>
-<tr class="memdesc:ac7d298ffb03bce4eec805b73500b09ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">LoadValues.  <a href="a00164.html#ac7d298ffb03bce4eec805b73500b09ba">More...</a><br /></td></tr>
+<tr class="memitem:ac7d298ffb03bce4eec805b73500b09ba"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00167.html#ac7d298ffb03bce4eec805b73500b09ba">Red::RedConfig::LoadValues</a> (<a class="el" href="a00143.html#ad2fd5abd48068dfe4efb4920957a4306">Red::InsensitiveMap</a>&lt; std::string, Variable &gt; *variables, std::string &amp;path, bool can_throw)</td></tr>
+<tr class="memdesc:ac7d298ffb03bce4eec805b73500b09ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">LoadValues.  <a href="a00167.html#ac7d298ffb03bce4eec805b73500b09ba">More...</a><br /></td></tr>
 <tr class="separator:ac7d298ffb03bce4eec805b73500b09ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9724889c4a4ea9e021bf63c8d6bde4d7"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00167.html#a9724889c4a4ea9e021bf63c8d6bde4d7">Red::RedConfig::HasVariable</a> (std::string &amp;path, std::string &amp;variable)</td></tr>
+<tr class="memdesc:a9724889c4a4ea9e021bf63c8d6bde4d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">HasVariable.  <a href="a00167.html#a9724889c4a4ea9e021bf63c8d6bde4d7">More...</a><br /></td></tr>
+<tr class="separator:a9724889c4a4ea9e021bf63c8d6bde4d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a86517b84994b11f06b71a4f706c7de82"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00167.html#a86517b84994b11f06b71a4f706c7de82">Red::RedConfig::HasValue</a> (std::string &amp;path, std::string &amp;variable)</td></tr>
+<tr class="memdesc:a86517b84994b11f06b71a4f706c7de82"><td class="mdescLeft">&#160;</td><td class="mdescRight">HasValue.  <a href="a00167.html#a86517b84994b11f06b71a4f706c7de82">More...</a><br /></td></tr>
+<tr class="separator:a86517b84994b11f06b71a4f706c7de82"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>RedConfig is a lib to create/use variables preset. </p>
@@ -225,7 +193,7 @@ Functions</h2></td></tr>
 </dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname"><a class="el" href="a00345.html" title="can_not_create_file">Red::RedConfig::Exceptions::can_not_create_file();</a></td><td></td></tr>
+    <tr><td class="paramname"><a class="el" href="a00354.html" title="can_not_create_file">Red::RedConfig::Exceptions::can_not_create_file();</a></td><td></td></tr>
   </table>
   </dd>
 </dl>
@@ -398,7 +366,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">bool Red::RedConfig::LoadValues </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="a00140.html#ad2fd5abd48068dfe4efb4920957a4306">Red::InsensitiveMap</a>&lt; std::string, <a class="el" href="a00349.html">Variable</a> &gt; *&#160;</td>
+          <td class="paramtype"><a class="el" href="a00143.html#ad2fd5abd48068dfe4efb4920957a4306">Red::InsensitiveMap</a>&lt; std::string, <a class="el" href="a00358.html">Variable</a> &gt; *&#160;</td>
           <td class="paramname"><em>variables</em>, </td>
         </tr>
         <tr>
@@ -432,7 +400,7 @@ Functions</h2></td></tr>
 </dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname"><a class="el" href="a00341.html" title="can_not_open_file">Red::RedConfig::Exceptions::can_not_open_file();</a></td><td></td></tr>
+    <tr><td class="paramname"><a class="el" href="a00350.html" title="can_not_open_file">Red::RedConfig::Exceptions::can_not_open_file();</a></td><td></td></tr>
   </table>
   </dd>
 </dl>
@@ -448,7 +416,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">bool Red::RedConfig::LoadValues </td>
           <td>(</td>
-          <td class="paramtype">std::map&lt; std::string, <a class="el" href="a00349.html">Variable</a> &gt; *&#160;</td>
+          <td class="paramtype">std::map&lt; std::string, <a class="el" href="a00358.html">Variable</a> &gt; *&#160;</td>
           <td class="paramname"><em>variables</em>, </td>
         </tr>
         <tr>
@@ -482,7 +450,7 @@ Functions</h2></td></tr>
 </dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname"><a class="el" href="a00341.html" title="can_not_open_file">Red::RedConfig::Exceptions::can_not_open_file();</a></td><td></td></tr>
+    <tr><td class="paramname"><a class="el" href="a00350.html" title="can_not_open_file">Red::RedConfig::Exceptions::can_not_open_file();</a></td><td></td></tr>
   </table>
   </dd>
 </dl>
@@ -498,7 +466,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">bool Red::RedConfig::SaveValues </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="a00140.html#ad2fd5abd48068dfe4efb4920957a4306">Red::InsensitiveMap</a>&lt; std::string, <a class="el" href="a00349.html">Variable</a> &gt; &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="a00143.html#ad2fd5abd48068dfe4efb4920957a4306">Red::InsensitiveMap</a>&lt; std::string, <a class="el" href="a00358.html">Variable</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>variables</em>, </td>
         </tr>
         <tr>
@@ -532,7 +500,7 @@ Functions</h2></td></tr>
 </dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname"><a class="el" href="a00345.html" title="can_not_create_file">Red::RedConfig::Exceptions::can_not_create_file();</a></td><td></td></tr>
+    <tr><td class="paramname"><a class="el" href="a00354.html" title="can_not_create_file">Red::RedConfig::Exceptions::can_not_create_file();</a></td><td></td></tr>
   </table>
   </dd>
 </dl>
@@ -548,7 +516,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">bool Red::RedConfig::SaveValues </td>
           <td>(</td>
-          <td class="paramtype">std::map&lt; std::string, <a class="el" href="a00349.html">Variable</a> &gt; &amp;&#160;</td>
+          <td class="paramtype">std::map&lt; std::string, <a class="el" href="a00358.html">Variable</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>variables</em>, </td>
         </tr>
         <tr>
@@ -582,7 +550,7 @@ Functions</h2></td></tr>
 </dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname"><a class="el" href="a00345.html" title="can_not_create_file">Red::RedConfig::Exceptions::can_not_create_file();</a></td><td></td></tr>
+    <tr><td class="paramname"><a class="el" href="a00354.html" title="can_not_create_file">Red::RedConfig::Exceptions::can_not_create_file();</a></td><td></td></tr>
   </table>
   </dd>
 </dl>
@@ -598,7 +566,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">bool Red::RedConfig::UpdateValues </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="a00140.html#ad2fd5abd48068dfe4efb4920957a4306">Red::InsensitiveMap</a>&lt; std::string, <a class="el" href="a00349.html">Variable</a> &gt; &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="a00143.html#ad2fd5abd48068dfe4efb4920957a4306">Red::InsensitiveMap</a>&lt; std::string, <a class="el" href="a00358.html">Variable</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>variables</em>, </td>
         </tr>
         <tr>
@@ -633,7 +601,7 @@ Functions</h2></td></tr>
 </dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname"><a class="el" href="a00345.html" title="can_not_create_file">Red::RedConfig::Exceptions::can_not_create_file();</a></td><td></td></tr>
+    <tr><td class="paramname"><a class="el" href="a00354.html" title="can_not_create_file">Red::RedConfig::Exceptions::can_not_create_file();</a></td><td></td></tr>
   </table>
   </dd>
 </dl>
@@ -649,7 +617,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">bool Red::RedConfig::UpdateValues </td>
           <td>(</td>
-          <td class="paramtype">std::map&lt; std::string, <a class="el" href="a00349.html">Variable</a> &gt; &amp;&#160;</td>
+          <td class="paramtype">std::map&lt; std::string, <a class="el" href="a00358.html">Variable</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>variables</em>, </td>
         </tr>
         <tr>
@@ -684,7 +652,7 @@ Functions</h2></td></tr>
 </dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname"><a class="el" href="a00345.html" title="can_not_create_file">Red::RedConfig::Exceptions::can_not_create_file();</a></td><td></td></tr>
+    <tr><td class="paramname"><a class="el" href="a00354.html" title="can_not_create_file">Red::RedConfig::Exceptions::can_not_create_file();</a></td><td></td></tr>
   </table>
   </dd>
 </dl>

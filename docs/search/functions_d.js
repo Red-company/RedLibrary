@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['red_5fshow_467',['Red_Show',['../a00337.html#a6a41495457d839cc39b02f879911c622',1,'Red::ProgressBar']]],
-  ['rekey_468',['rekey',['../a00365.html#acbb7ebf568b7d3c23d3e2cd23b8cf4d9',1,'Red::RedDataBase::Database']]],
-  ['reset_469',['reset',['../a00377.html#ad1112ac1d141dcb95d563ae122bd25b5',1,'Red::RedDataBase::Statement']]]
+  ['previous_478',['Previous',['../a00342.html#af41b50582220ef9a9cf15d8f07090fa7',1,'Red::Ipv4']]],
+  ['progressbar_479',['ProgressBar',['../a00346.html#a8da56ee16163f9bb9e29211bc3000017',1,'Red::ProgressBar']]]
 ];

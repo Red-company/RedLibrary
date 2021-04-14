@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Red Technologies: /Users/vladimir/Desktop/RedLibrary/RedDataBase/Assertion.h Source File</title>
+<title>Red Technologies: /Users/vladimir/Desktop/RedLibrary/RedConfig.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -46,6 +46,7 @@ $(function() {
 });
 /* @license-end */</script>
 <div id="main-nav"></div>
+</div><!-- top -->
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -60,44 +61,101 @@ $(function() {
 </iframe>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_c817ed849eb7b23375e72b2fd3087b1f.html">RedDataBase</a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
   <div class="headertitle">
-<div class="title">Assertion.h</div>  </div>
+<div class="title">/Users/vladimir/Desktop/RedLibrary/RedConfig.h</div>  </div>
 </div><!--header-->
 <div class="contents">
 <a href="a00170.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#ifndef RED_DATABASE_ASSERTION_H</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#define RED_DATABASE_ASSERTION_H</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#ifndef REDCONFIG_INCLUDED</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#define REDCONFIG_INCLUDED</span></div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &lt;cassert&gt;</span></div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#ifdef REDDATABASE_ENABLE_ASSERT_HANDLER</span></div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment">// if an assert handler is provided by user code, use it instead of assert()</span></div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">namespace </span>RedDataBase {</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="comment">// declaration of the assert handler to define in user code</span></div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordtype">void</span> assertion_failed(<span class="keyword">const</span> <span class="keywordtype">char</span>* apFile, <span class="keyword">const</span> <span class="keywordtype">long</span> apLine, <span class="keyword">const</span> <span class="keywordtype">char</span>* apFunc,</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;                          <span class="keyword">const</span> <span class="keywordtype">char</span>* apExpr, <span class="keyword">const</span> <span class="keywordtype">char</span>* apMsg);</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">    #ifdef _MSC_VER</span></div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">    #define __func__ __FUNCTION__</span></div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor">    #endif</span></div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="comment">// call the assert handler provided by user code</span></div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">    #define REDDATABASE_ASSERT(expression, message) \</span></div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="preprocessor">    if (!(expression)) { SQLite::assertion_failed(__FILE__, __LINE__, __func__, #expression, message) }</span></div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;}</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="preprocessor">#else</span></div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="comment">// if no assert handler provided by user code, use standard assert()</span></div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="comment">// (note: in release mode assert() does nothing)</span></div>
-<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="a00170.html#ad6ca9e1e5189cd7e862b7d97bb2998cd">   41</a></span>&#160;<span class="preprocessor">#define REDDATABASE_ASSERT(expression, message)   assert(expression &amp;&amp; message)</span></div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &lt;map&gt;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment">// RedLibrary.</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &quot;../RedLibrary/InsensitiveMap.h&quot;</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#define REDCONFIG_VERSION           &quot;1.0.0&quot;</span>   <span class="comment">// 1.0.0</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#define REDCONFIG_VERSION_NUMBER     100      </span><span class="comment">// 1.0.0</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keyword">namespace </span>Red {</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keyword">namespace </span>RedConfig {</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        <span class="comment">// Macroses.</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="a00170.html#abcd8ed011448c926a9b17ef2e975315e">   28</a></span>&#160;<span class="preprocessor">        #define REDCONFIG_STRING_TYPE  &quot;str&quot;</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">        #define REDCONFIG_INTEGER_TYPE &quot;int&quot;</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="a00170.html#a660a5e29abf39546ef3caaea5742f335">   32</a></span>&#160;<span class="preprocessor">        #define REDCONFIG_THROW    true</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor">        #define REDCONFIG_NO_THROW false</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="a00358.html">   36</a></span>&#160;        <span class="keyword">struct </span><a class="code" href="a00358.html">Variable</a> {</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;            <span class="comment">// Variables.</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;            std::string Type;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;            std::string Data;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;            <span class="comment">// Return functions.</span></div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// RED_DATABASE_ASSERTION_H</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;            std::string <a class="code" href="a00358.html#afc47ccd0430e89470af1fe0326934298">data</a>();</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;            std::string <a class="code" href="a00358.html#a953b541fb63fc5372b134579066c71db">type</a>();</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        };</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        <span class="comment">//</span></div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        <span class="comment">// RedConfig functions.</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        <span class="comment">//</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        <span class="comment">// Check functions.</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="a00167.html#aa6c2e79dc89e544e03daffb551ccc882">is_int</a>(<span class="keyword">const</span> std::string&amp; s);</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="a00167.html#a960695f96a8b650a619a226acc5e89b6">is_str</a>(<span class="keyword">const</span> std::string&amp; s);</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        <span class="comment">// Others.</span></div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        std::string <a class="code" href="a00167.html#a02b163fb18404d7b3132f39dcf70beba">GetType</a>(std::string&amp; str);</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160; </div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="a00167.html#a0db6fd11f2e7a0f0ce2034ee2a76c7c3">ConfigFileExists</a>(std::string&amp; path);</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160; </div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="a00167.html#a9724889c4a4ea9e021bf63c8d6bde4d7">HasVariable</a>(std::string&amp; path, std::string&amp; variable);</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160; </div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="a00167.html#a86517b84994b11f06b71a4f706c7de82">HasValue</a>(std::string&amp; path, std::string&amp; variable);</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160; </div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;        <span class="comment">// Base functions.</span></div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160; </div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="a00167.html#aa549937fb4016e17979ea2ed07b4ffcb">CreateConfigFile</a>(std::string path, std::string name, <span class="keywordtype">bool</span> can_throw = <a class="code" href="a00170.html#a660a5e29abf39546ef3caaea5742f335">REDCONFIG_THROW</a>);</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160; </div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="a00167.html#ac87ef67a93423a6182321179ec1e514a">SaveValues</a>(std::map&lt;std::string, Variable&gt;&amp; variables, std::string&amp; path, <span class="keywordtype">bool</span> can_throw = <a class="code" href="a00170.html#a660a5e29abf39546ef3caaea5742f335">REDCONFIG_THROW</a>);</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160; </div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="a00167.html#ac87ef67a93423a6182321179ec1e514a">SaveValues</a>(<a class="code" href="a00143.html#ad2fd5abd48068dfe4efb4920957a4306">Red::InsensitiveMap&lt;std::string, Variable&gt;</a>&amp; variables, std::string&amp; path, <span class="keywordtype">bool</span> can_throw = <a class="code" href="a00170.html#a660a5e29abf39546ef3caaea5742f335">REDCONFIG_THROW</a>);</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160; </div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="a00167.html#a853f48ea17c956556367e19b2e86da9e">UpdateValues</a>(std::map&lt;std::string, Variable&gt; &amp;variables, std::string&amp; path, <span class="keywordtype">bool</span> can_throw = <a class="code" href="a00170.html#a660a5e29abf39546ef3caaea5742f335">REDCONFIG_THROW</a>);</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160; </div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="a00167.html#a853f48ea17c956556367e19b2e86da9e">UpdateValues</a>(<a class="code" href="a00143.html#ad2fd5abd48068dfe4efb4920957a4306">Red::InsensitiveMap&lt;std::string, Variable&gt;</a> &amp;variables, std::string&amp; path, <span class="keywordtype">bool</span> can_throw = <a class="code" href="a00170.html#a660a5e29abf39546ef3caaea5742f335">REDCONFIG_THROW</a>);</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160; </div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="a00167.html#a5132159f500c7957e677808cd0e76409">LoadValues</a>(std::map&lt;std::string, Variable&gt; * variables, std::string&amp; path, <span class="keywordtype">bool</span> can_throw = <a class="code" href="a00170.html#a660a5e29abf39546ef3caaea5742f335">REDCONFIG_THROW</a>);</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160; </div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="a00167.html#a5132159f500c7957e677808cd0e76409">LoadValues</a>(<a class="code" href="a00143.html#ad2fd5abd48068dfe4efb4920957a4306">Red::InsensitiveMap&lt;std::string, Variable&gt;</a> * variables, std::string&amp; path, <span class="keywordtype">bool</span> can_throw = <a class="code" href="a00170.html#a660a5e29abf39546ef3caaea5742f335">REDCONFIG_THROW</a>);</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;    }</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;}</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160; </div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// REDCONFIG_INCLUDED</span></div>
+<div class="ttc" id="aa00143_html_ad2fd5abd48068dfe4efb4920957a4306"><div class="ttname"><a href="a00143.html#ad2fd5abd48068dfe4efb4920957a4306">Red::InsensitiveMap</a></div><div class="ttdeci">std::map&lt; T1, T2, _InsensitiveMap::CaseInsensitiveComparator &gt; InsensitiveMap</div><div class="ttdoc">InsensitiveMap.</div><div class="ttdef"><b>Definition:</b> InsensitiveMap.h:53</div></div>
+<div class="ttc" id="aa00167_html_a02b163fb18404d7b3132f39dcf70beba"><div class="ttname"><a href="a00167.html#a02b163fb18404d7b3132f39dcf70beba">Red::RedConfig::GetType</a></div><div class="ttdeci">std::string GetType(std::string &amp;str)</div><div class="ttdoc">GetType.</div><div class="ttdef"><b>Definition:</b> RedConfig.cpp:69</div></div>
+<div class="ttc" id="aa00167_html_a0db6fd11f2e7a0f0ce2034ee2a76c7c3"><div class="ttname"><a href="a00167.html#a0db6fd11f2e7a0f0ce2034ee2a76c7c3">Red::RedConfig::ConfigFileExists</a></div><div class="ttdeci">bool ConfigFileExists(std::string &amp;path)</div><div class="ttdoc">ConfigFileExists.</div><div class="ttdef"><b>Definition:</b> RedConfig.cpp:84</div></div>
+<div class="ttc" id="aa00167_html_a5132159f500c7957e677808cd0e76409"><div class="ttname"><a href="a00167.html#a5132159f500c7957e677808cd0e76409">Red::RedConfig::LoadValues</a></div><div class="ttdeci">bool LoadValues(std::map&lt; std::string, Variable &gt; *variables, std::string &amp;path, bool can_throw)</div><div class="ttdoc">LoadValues.</div><div class="ttdef"><b>Definition:</b> RedConfig.cpp:248</div></div>
+<div class="ttc" id="aa00167_html_a853f48ea17c956556367e19b2e86da9e"><div class="ttname"><a href="a00167.html#a853f48ea17c956556367e19b2e86da9e">Red::RedConfig::UpdateValues</a></div><div class="ttdeci">bool UpdateValues(std::map&lt; std::string, Variable &gt; &amp;variables, std::string &amp;path, bool can_throw)</div><div class="ttdoc">UpdateValues.</div><div class="ttdef"><b>Definition:</b> RedConfig.cpp:218</div></div>
+<div class="ttc" id="aa00167_html_a86517b84994b11f06b71a4f706c7de82"><div class="ttname"><a href="a00167.html#a86517b84994b11f06b71a4f706c7de82">Red::RedConfig::HasValue</a></div><div class="ttdeci">bool HasValue(std::string &amp;path, std::string &amp;variable)</div><div class="ttdoc">HasValue.</div><div class="ttdef"><b>Definition:</b> RedConfig.cpp:507</div></div>
+<div class="ttc" id="aa00167_html_a960695f96a8b650a619a226acc5e89b6"><div class="ttname"><a href="a00167.html#a960695f96a8b650a619a226acc5e89b6">Red::RedConfig::is_str</a></div><div class="ttdeci">bool is_str(const std::string &amp;s)</div><div class="ttdoc">is_str</div><div class="ttdef"><b>Definition:</b> RedConfig.cpp:56</div></div>
+<div class="ttc" id="aa00167_html_a9724889c4a4ea9e021bf63c8d6bde4d7"><div class="ttname"><a href="a00167.html#a9724889c4a4ea9e021bf63c8d6bde4d7">Red::RedConfig::HasVariable</a></div><div class="ttdeci">bool HasVariable(std::string &amp;path, std::string &amp;variable)</div><div class="ttdoc">HasVariable.</div><div class="ttdef"><b>Definition:</b> RedConfig.cpp:486</div></div>
+<div class="ttc" id="aa00167_html_aa549937fb4016e17979ea2ed07b4ffcb"><div class="ttname"><a href="a00167.html#aa549937fb4016e17979ea2ed07b4ffcb">Red::RedConfig::CreateConfigFile</a></div><div class="ttdeci">bool CreateConfigFile(std::string path, std::string name, bool can_throw)</div><div class="ttdoc">CreateConfigFile.</div><div class="ttdef"><b>Definition:</b> RedConfig.cpp:106</div></div>
+<div class="ttc" id="aa00167_html_aa6c2e79dc89e544e03daffb551ccc882"><div class="ttname"><a href="a00167.html#aa6c2e79dc89e544e03daffb551ccc882">Red::RedConfig::is_int</a></div><div class="ttdeci">bool is_int(const std::string &amp;s)</div><div class="ttdoc">is_int</div><div class="ttdef"><b>Definition:</b> RedConfig.cpp:43</div></div>
+<div class="ttc" id="aa00167_html_ac87ef67a93423a6182321179ec1e514a"><div class="ttname"><a href="a00167.html#ac87ef67a93423a6182321179ec1e514a">Red::RedConfig::SaveValues</a></div><div class="ttdeci">bool SaveValues(std::map&lt; std::string, Variable &gt; &amp;variables, std::string &amp;path, bool can_throw)</div><div class="ttdoc">SaveValues.</div><div class="ttdef"><b>Definition:</b> RedConfig.cpp:136</div></div>
+<div class="ttc" id="aa00170_html_a660a5e29abf39546ef3caaea5742f335"><div class="ttname"><a href="a00170.html#a660a5e29abf39546ef3caaea5742f335">REDCONFIG_THROW</a></div><div class="ttdeci">#define REDCONFIG_THROW</div><div class="ttdoc">Throw.</div><div class="ttdef"><b>Definition:</b> RedConfig.h:32</div></div>
+<div class="ttc" id="aa00358_html"><div class="ttname"><a href="a00358.html">Red::RedConfig::Variable</a></div><div class="ttdoc">Base object.</div><div class="ttdef"><b>Definition:</b> RedConfig.h:36</div></div>
+<div class="ttc" id="aa00358_html_a953b541fb63fc5372b134579066c71db"><div class="ttname"><a href="a00358.html#a953b541fb63fc5372b134579066c71db">Red::RedConfig::Variable::type</a></div><div class="ttdeci">std::string type()</div><div class="ttdoc">type</div><div class="ttdef"><b>Definition:</b> RedConfig.cpp:28</div></div>
+<div class="ttc" id="aa00358_html_afc47ccd0430e89470af1fe0326934298"><div class="ttname"><a href="a00358.html#afc47ccd0430e89470af1fe0326934298">Red::RedConfig::Variable::data</a></div><div class="ttdeci">std::string data()</div><div class="ttdoc">data</div><div class="ttdef"><b>Definition:</b> RedConfig.cpp:24</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

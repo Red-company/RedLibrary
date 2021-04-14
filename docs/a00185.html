@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Red Technologies: /Users/vladimir/Desktop/RedLibrary/RedDataBase/Column.h File Reference</title>
+<title>Red Technologies: /Users/vladimir/Desktop/RedLibrary/RedDataBase/Column.cpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -67,33 +67,47 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Classes</a> &#124;
-<a href="#func-members">Functions</a>  </div>
+<a href="#func-members">Functions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
-<div class="title">Column.h File Reference</div>  </div>
+<div class="title">Column.cpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
 <p>Encapsulation of a Column in a row of the result pointed by the prepared RedDataBase::Statement.  
 <a href="#details">More...</a></p>
-<div class="textblock"><code>#include &quot;<a class="el" href="a00206_source.html">Statement.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="a00197_source.html">Exception.h</a>&quot;</code><br />
-<code>#include &lt;string&gt;</code><br />
-<code>#include &lt;climits&gt;</code><br />
-</div>
-<p><a href="a00185_source.html">Go to the source code of this file.</a></p>
-<table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
-Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00357.html">Red::RedDataBase::Column</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Encapsulation of a <a class="el" href="a00357.html" title="Encapsulation of a Column in a row of the result pointed by the prepared Statement.">Column</a> in a row of the result pointed by the prepared <a class="el" href="a00377.html" title="RAII encapsulation of a prepared SQLite Statement.">Statement</a>.  <a href="a00357.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
+<div class="textblock"><code>#include &quot;<a class="el" href="a00188_source.html">./RedDataBase/Column.h</a>&quot;</code><br />
+<code>#include &lt;sqlite3.h&gt;</code><br />
+<code>#include &lt;iostream&gt;</code><br />
+</div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ad04696cd2eb669f0d6494ecd7364a12d"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00182.html#ad04696cd2eb669f0d6494ecd7364a12d">Red::RedDataBase::operator&lt;&lt;</a> (std::ostream &amp;aStream, const Column &amp;aColumn)</td></tr>
-<tr class="memdesc:ad04696cd2eb669f0d6494ecd7364a12d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Standard std::ostream text inserter.  <a href="a00182.html#ad04696cd2eb669f0d6494ecd7364a12d">More...</a><br /></td></tr>
+<tr class="memitem:ad04696cd2eb669f0d6494ecd7364a12d"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00185.html#ad04696cd2eb669f0d6494ecd7364a12d">Red::RedDataBase::operator&lt;&lt;</a> (std::ostream &amp;aStream, const Column &amp;aColumn)</td></tr>
+<tr class="memdesc:ad04696cd2eb669f0d6494ecd7364a12d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Standard std::ostream text inserter.  <a href="a00185.html#ad04696cd2eb669f0d6494ecd7364a12d">More...</a><br /></td></tr>
 <tr class="separator:ad04696cd2eb669f0d6494ecd7364a12d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:aec61ffbf2b67a4330aef7ab946f6f2ee"><td class="memItemLeft" align="right" valign="top"><a id="aec61ffbf2b67a4330aef7ab946f6f2ee"></a>
+const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00185.html#aec61ffbf2b67a4330aef7ab946f6f2ee">Red::RedDataBase::INTEGER</a> = SQLITE_INTEGER</td></tr>
+<tr class="memdesc:aec61ffbf2b67a4330aef7ab946f6f2ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">REDDATABASE_INTEGER. <br /></td></tr>
+<tr class="separator:aec61ffbf2b67a4330aef7ab946f6f2ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a764271627f52b2e444194d753723a2dc"><td class="memItemLeft" align="right" valign="top"><a id="a764271627f52b2e444194d753723a2dc"></a>
+const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00185.html#a764271627f52b2e444194d753723a2dc">Red::RedDataBase::FLOAT</a> = SQLITE_FLOAT</td></tr>
+<tr class="memdesc:a764271627f52b2e444194d753723a2dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">REDDATABASE_FLOAT. <br /></td></tr>
+<tr class="separator:a764271627f52b2e444194d753723a2dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae22f72546c32825ae89ef595a086ddcd"><td class="memItemLeft" align="right" valign="top"><a id="ae22f72546c32825ae89ef595a086ddcd"></a>
+const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00185.html#ae22f72546c32825ae89ef595a086ddcd">Red::RedDataBase::TEXT</a> = SQLITE_TEXT</td></tr>
+<tr class="memdesc:ae22f72546c32825ae89ef595a086ddcd"><td class="mdescLeft">&#160;</td><td class="mdescRight">REDDATABASE_TEXT. <br /></td></tr>
+<tr class="separator:ae22f72546c32825ae89ef595a086ddcd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a708c1ea0ba147e2e2f19274d2aea3600"><td class="memItemLeft" align="right" valign="top"><a id="a708c1ea0ba147e2e2f19274d2aea3600"></a>
+const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00185.html#a708c1ea0ba147e2e2f19274d2aea3600">Red::RedDataBase::BLOB</a> = SQLITE_BLOB</td></tr>
+<tr class="memdesc:a708c1ea0ba147e2e2f19274d2aea3600"><td class="mdescLeft">&#160;</td><td class="mdescRight">REDDATABASE_BLOB. <br /></td></tr>
+<tr class="separator:a708c1ea0ba147e2e2f19274d2aea3600"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af1a7cdfddcdb1451085ab0ee789d05f0"><td class="memItemLeft" align="right" valign="top"><a id="af1a7cdfddcdb1451085ab0ee789d05f0"></a>
+const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00185.html#af1a7cdfddcdb1451085ab0ee789d05f0">Red::RedDataBase::Null</a> = SQLITE_NULL</td></tr>
+<tr class="memdesc:af1a7cdfddcdb1451085ab0ee789d05f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">REDDATABASE_NULL. <br /></td></tr>
+<tr class="separator:af1a7cdfddcdb1451085ab0ee789d05f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Encapsulation of a Column in a row of the result pointed by the prepared RedDataBase::Statement. </p>
@@ -115,7 +129,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="a00357.html">Column</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="a00366.html">Column</a> &amp;&#160;</td>
           <td class="paramname"><em>aColumn</em>&#160;</td>
         </tr>
         <tr>
