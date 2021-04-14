@@ -47,7 +47,7 @@ namespace Red {
              *
              * @param path Path to log file.
              */
-            void OpenFile(std::string& path);
+            void OpenFile(std::string path);
 
             /**
              * @brief FileExists

@@ -48,7 +48,7 @@ namespace Red {
      *
      * @param path Path to log file.
      */
-    void RedLog::OpenFile(std::string& path) {
+    void RedLog::OpenFile(std::string path) {
         LogFile.open(path, std::ios::app);
     }
 
