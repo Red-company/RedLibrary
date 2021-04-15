@@ -13,13 +13,13 @@
 #include <boost/lexical_cast.hpp>
 #include <string>
 
-#define RED_IPV4_ALL    "all"
-#define RED_IPV4_PUBLIC "public"
-#define RED_IPV4_192    "192"
-#define RED_IPV4_172    "172"
-#define RED_IPV4_169    "169"
-#define RED_IPV4_127    "127"
-#define RED_IPV4_10     "10"
+#define IPV4_ALL    "all"
+#define IPV4_PUBLIC "public"
+#define IPV4_192    "192"
+#define IPV4_172    "172"
+#define IPV4_169    "169"
+#define IPV4_127    "127"
+#define IPV4_10     "10"
 
 namespace Red {
     class Ipv4 {

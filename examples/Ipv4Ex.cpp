@@ -7,12 +7,12 @@ int main() {
 
     // We have two ways to define an Ipv4 string.
     // First:
-    Red::Ipv4 *IpTest1 = new Red::Ipv4(RED_IPV4_127, "127.0.0.1"); // Or "127" instead of RED_IPV4_127.
+    Red::Ipv4 *IpTest1 = new Red::Ipv4(IPV4_127, "127.0.0.1"); // Or "127" instead of IPV4_127.
 
     // Second:
     Red::Ipv4 IpTest2;
 
-    // Or "25", or RED_IPV4_25.
+    // Or "25", or IPV4_25.
     IpTest2.Set("25", "25.0.0.0"); // The first argument mean the mode of our ip string.
     // It means that the first num can't be more or less than '25' (in this case).
     // We can show ip by Show method.

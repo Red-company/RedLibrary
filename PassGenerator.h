@@ -16,8 +16,8 @@
 #define REDPASSGENERATOR_VERSION            "1.0.0"  // 1.0.0
 #define REDPASSGENERATOR_VERSION_NUMBER     100      // 1.0.0
 
-#define RED_PASSGENERATOR_ONLY_NUMS "only nums"
-#define RED_PASSGENERATOR_NUMS_AND_LETTERS "nums and letters"
+#define PASSGENERATOR_ONLY_NUMS "only nums"
+#define PASSGENERATOR_NUMS_AND_LETTERS "nums and letters"
 
 namespace Red {
     /**

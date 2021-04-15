@@ -15,8 +15,9 @@ int main() {
         std::cout << "Log file exists." << std::endl;
 
         Red::RedLog rl(path);
-        rl.NewNote("Main module", "Test is running...");
+        rl.NewNote("Main module", "Test is running..");
         rl.NewNote("Main module", "Test was finish");
+        rl.NewNote(REDLOG_NO_GROUP, "New note");
 
     } else {
         std::cout << "Log file does not exist, creating file." << std::endl;

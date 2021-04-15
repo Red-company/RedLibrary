@@ -15,7 +15,7 @@
 #define REDLOG_VERSION           "1.0.0"   // 1.0.0
 #define REDLOG_VERSION_NUMBER     100      // 1.0.0
 
-#define RED_REDLOG_NO_GROUP "null"
+#define REDLOG_NO_GROUP "null"
 
 namespace Red {
     class RedLog {
