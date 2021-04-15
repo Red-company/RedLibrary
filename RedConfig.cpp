@@ -15,6 +15,8 @@
 
 #include "RedConfig/Exceptions.h"
 
+#include "InsensitiveMap.h"
+
 namespace Red {
     namespace RedConfig {
         //
@@ -484,7 +486,8 @@ namespace Red {
          * @return True if there is the variable, false if not.
          */
         bool HasVariable(std::string& path, std::string& variable) {
-            std::map<std::string, Red::RedConfig::Variable> variables;
+            //std::map<std::string, Red::RedConfig::Variable> variables;
+            Red::InsensitiveMap<std::string, Red::RedConfig::Variable> variables;
 
             Red::RedConfig::LoadValues(&variables, path, REDCONFIG_THROW);
 
@@ -505,7 +508,8 @@ namespace Red {
          * @return True if "variable" has any value, false if hasn't.
          */
         bool HasValue(std::string& path, std::string& variable) {
-            std::map<std::string, Red::RedConfig::Variable> variables;
+            //std::map<std::string, Red::RedConfig::Variable> variables;
+            Red::InsensitiveMap<std::string, Red::RedConfig::Variable> variables;
 
             Red::RedConfig::LoadValues(&variables, path, REDCONFIG_THROW);
 
