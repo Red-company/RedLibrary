@@ -1,6 +1,6 @@
 ![plot](./RedLibrary_logo.png)
 
-# RedLibrary [![](https://img.shields.io/apm/l/vim-mode)](https://github.com/Red-company/RES_Implementation/blob/main/LICENSE.md) [![](https://img.shields.io/github/repo-size/Red-company/RedLibrary)](https://github.com/Red-company/RedLibrary)
+# RedLibrary [![](https://img.shields.io/apm/l/vim-mode)](https://github.com/Red-company/RES_Implementation/blob/main/LICENSE.md) [![](https://img.shields.io/github/repo-size/Red-company/RedLibrary)](https://github.com/Red-company/RedLibrary) ![](https://img.shields.io/github/stars/Red-company/RedLibrary?style=social)
 
 ## What is it?
 
