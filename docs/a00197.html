@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Red Technologies: /Users/vladimir/Desktop/RedLibrary/RedDataBase/Exception.cpp File Reference</title>
+<title>Red Technologies: /Users/vladimir/Desktop/RedLibrary/RedDataBase/Database.cpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -66,20 +66,113 @@ $(function() {
 </div>
 </div><!-- top -->
 <div class="header">
+  <div class="summary">
+<a href="#define-members">Macros</a> &#124;
+<a href="#func-members">Functions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
-<div class="title">Exception.cpp File Reference</div>  </div>
+<div class="title">Database.cpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>Encapsulation of the error message from SQLite3 on a std::runtime_error.  
+<p>Management of a SQLite Database Connection.  
 <a href="#details">More...</a></p>
-<div class="textblock"><code>#include &quot;<a class="el" href="a00200_source.html">./RedDataBase/Exception.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="a00200_source.html">./RedDataBase/Database.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="a00179_source.html">./RedDataBase/Assertion.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="a00185_source.html">./RedDataBase/Backup.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="a00206_source.html">./RedDataBase/Exception.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="a00215_source.html">./RedDataBase/Statement.h</a>&quot;</code><br />
 <code>#include &lt;sqlite3.h&gt;</code><br />
-</div><a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Encapsulation of the error message from SQLite3 on a std::runtime_error. </p>
+<code>#include &lt;fstream&gt;</code><br />
+<code>#include &lt;string.h&gt;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:a1f4ef26d4f92ae06ba34b4ee85810129"><td class="memItemLeft" align="right" valign="top"><a id="a1f4ef26d4f92ae06ba34b4ee85810129"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>SQLITE_DETERMINISTIC</b>&#160;&#160;&#160;0x800</td></tr>
+<tr class="separator:a1f4ef26d4f92ae06ba34b4ee85810129"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:ad4cc4cf6a2f457a561c0bf614c542e3c"><td class="memItemLeft" align="right" valign="top"><a id="ad4cc4cf6a2f457a561c0bf614c542e3c"></a>
+const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00197.html#ad4cc4cf6a2f457a561c0bf614c542e3c">Red::RedDataBase::getLibVersion</a> () noexcept</td></tr>
+<tr class="memdesc:ad4cc4cf6a2f457a561c0bf614c542e3c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return RedDataBase version string using runtime call to the compiled library. <br /></td></tr>
+<tr class="separator:ad4cc4cf6a2f457a561c0bf614c542e3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae5b7e3c3d9cec797a027ee334002967a"><td class="memItemLeft" align="right" valign="top"><a id="ae5b7e3c3d9cec797a027ee334002967a"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00197.html#ae5b7e3c3d9cec797a027ee334002967a">Red::RedDataBase::getLibVersionNumber</a> () noexcept</td></tr>
+<tr class="memdesc:ae5b7e3c3d9cec797a027ee334002967a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return RedDataBase version number using runtime call to the compiled library. <br /></td></tr>
+<tr class="separator:ae5b7e3c3d9cec797a027ee334002967a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:abdb13593781c2ba3f94195a5ca522345"><td class="memItemLeft" align="right" valign="top"><a id="abdb13593781c2ba3f94195a5ca522345"></a>
+const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00197.html#abdb13593781c2ba3f94195a5ca522345">Red::RedDataBase::OPEN_READONLY</a> = SQLITE_OPEN_READONLY</td></tr>
+<tr class="memdesc:abdb13593781c2ba3f94195a5ca522345"><td class="mdescLeft">&#160;</td><td class="mdescRight">The database is opened in read-only mode. If the database does not already exist, an error is returned. <br /></td></tr>
+<tr class="separator:abdb13593781c2ba3f94195a5ca522345"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a457619a11ccabb30bacc6324479caab7"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00197.html#a457619a11ccabb30bacc6324479caab7">Red::RedDataBase::OPEN_READWRITE</a> = SQLITE_OPEN_READWRITE</td></tr>
+<tr class="separator:a457619a11ccabb30bacc6324479caab7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac9c1c86574f556d398f5c2964a232a59"><td class="memItemLeft" align="right" valign="top"><a id="ac9c1c86574f556d398f5c2964a232a59"></a>
+const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00197.html#ac9c1c86574f556d398f5c2964a232a59">Red::RedDataBase::OPEN_CREATE</a> = SQLITE_OPEN_CREATE</td></tr>
+<tr class="memdesc:ac9c1c86574f556d398f5c2964a232a59"><td class="mdescLeft">&#160;</td><td class="mdescRight">With OPEN_READWRITE: The database is opened for reading and writing, and is created if it does not already exist. <br /></td></tr>
+<tr class="separator:ac9c1c86574f556d398f5c2964a232a59"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c14a971145f305445ea2b1f223d9d88"><td class="memItemLeft" align="right" valign="top"><a id="a4c14a971145f305445ea2b1f223d9d88"></a>
+const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00197.html#a4c14a971145f305445ea2b1f223d9d88">Red::RedDataBase::OPEN_URI</a> = SQLITE_OPEN_URI</td></tr>
+<tr class="memdesc:a4c14a971145f305445ea2b1f223d9d88"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable URI filename interpretation, parsed according to RFC 3986 (ex. "file:data.db?mode=ro&amp;cache=private") <br /></td></tr>
+<tr class="separator:a4c14a971145f305445ea2b1f223d9d88"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a88e49663b1d36a22e3dfe9304909b6d1"><td class="memItemLeft" align="right" valign="top"><a id="a88e49663b1d36a22e3dfe9304909b6d1"></a>
+const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00197.html#a88e49663b1d36a22e3dfe9304909b6d1">Red::RedDataBase::OPEN_FULLMUTEX</a> = SQLITE_OPEN_FULLMUTEX</td></tr>
+<tr class="memdesc:a88e49663b1d36a22e3dfe9304909b6d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Open database with thread-safety. <br /></td></tr>
+<tr class="separator:a88e49663b1d36a22e3dfe9304909b6d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9d3ef07b71c7c24ebaa8f359bee02beb"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00197.html#a9d3ef07b71c7c24ebaa8f359bee02beb">Red::RedDataBase::OK</a> = SQLITE_OK</td></tr>
+<tr class="memdesc:a9d3ef07b71c7c24ebaa8f359bee02beb"><td class="mdescLeft">&#160;</td><td class="mdescRight">SQLITE_OK (used by check() bellow)  <a href="a00197.html#a9d3ef07b71c7c24ebaa8f359bee02beb">More...</a><br /></td></tr>
+<tr class="separator:a9d3ef07b71c7c24ebaa8f359bee02beb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff02180780d2af29a7d3f998b078c41c"><td class="memItemLeft" align="right" valign="top"><a id="aff02180780d2af29a7d3f998b078c41c"></a>
+const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00197.html#aff02180780d2af29a7d3f998b078c41c">Red::RedDataBase::VERSION</a> = SQLITE_VERSION</td></tr>
+<tr class="memdesc:aff02180780d2af29a7d3f998b078c41c"><td class="mdescLeft">&#160;</td><td class="mdescRight">SQLITE_VERSION string from the sqlite3.h used at compile time. <br /></td></tr>
+<tr class="separator:aff02180780d2af29a7d3f998b078c41c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6fdbeb94914875a117e3844fb345cec7"><td class="memItemLeft" align="right" valign="top"><a id="a6fdbeb94914875a117e3844fb345cec7"></a>
+const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00197.html#a6fdbeb94914875a117e3844fb345cec7">Red::RedDataBase::VERSION_NUMBER</a> = SQLITE_VERSION_NUMBER</td></tr>
+<tr class="memdesc:a6fdbeb94914875a117e3844fb345cec7"><td class="mdescLeft">&#160;</td><td class="mdescRight">SQLITE_VERSION_NUMBER from the sqlite3.h used at compile time. <br /></td></tr>
+<tr class="separator:a6fdbeb94914875a117e3844fb345cec7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Management of a SQLite Database Connection. </p>
 <p>Copyright (c) 2020-2021 Vladimir Rogozin (<a href="#" onclick="location.href='mai'+'lto:'+'vla'+'di'+'mir'+'20'+'040'+'60'+'9@g'+'ma'+'il.'+'co'+'m'; return false;">vladi<span style="display: none;">.nosp@m.</span>mir2<span style="display: none;">.nosp@m.</span>00406<span style="display: none;">.nosp@m.</span>09@g<span style="display: none;">.nosp@m.</span>mail.<span style="display: none;">.nosp@m.</span>com</a>)</p>
 <p>Distributed under the MIT License (MIT) (See accompanying file LICENSE.txt or copy at <a href="http://opensource.org/licenses/MIT">http://opensource.org/licenses/MIT</a>) </p>
-</div></div><!-- contents -->
+</div><h2 class="groupheader">Variable Documentation</h2>
+<a id="a9d3ef07b71c7c24ebaa8f359bee02beb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9d3ef07b71c7c24ebaa8f359bee02beb">&#9670;&nbsp;</a></span>OK</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int Red::RedDataBase::OK = SQLITE_OK</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>SQLITE_OK (used by check() bellow) </p>
+<p>REDDATABASE_OK. </p>
+
+</div>
+</div>
+<a id="a457619a11ccabb30bacc6324479caab7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a457619a11ccabb30bacc6324479caab7">&#9670;&nbsp;</a></span>OPEN_READWRITE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int Red::RedDataBase::OPEN_READWRITE = SQLITE_OPEN_READWRITE</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>The database is opened for reading and writing if possible, or reading only if the file is write protected by the operating system. In either case the database must already exist, otherwise an error is returned. </p>
+
+</div>
+</div>
+</div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1

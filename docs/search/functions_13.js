@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['_7ebackup_497',['~Backup',['../a00365.html#a0432bb3601bb3a2036394888dcf671d3',1,'Red::RedDataBase::Backup']]],
-  ['_7edatabase_498',['~Database',['../a00377.html#aeef356afd25d0babfdfd4926382485ad',1,'Red::RedDataBase::Database']]],
-  ['_7estatement_499',['~Statement',['../a00389.html#afc6cd8c422205c996817e8a13298e777',1,'Red::RedDataBase::Statement']]],
-  ['_7etransaction_500',['~Transaction',['../a00397.html#a6cf504d1353426289c4b04daf9844b18',1,'Red::RedDataBase::Transaction']]]
+  ['_7ebackup_505',['~Backup',['../a00375.html#a0432bb3601bb3a2036394888dcf671d3',1,'Red::RedDataBase::Backup']]],
+  ['_7edatabase_506',['~Database',['../a00387.html#aeef356afd25d0babfdfd4926382485ad',1,'Red::RedDataBase::Database']]],
+  ['_7estatement_507',['~Statement',['../a00399.html#afc6cd8c422205c996817e8a13298e777',1,'Red::RedDataBase::Statement']]],
+  ['_7etransaction_508',['~Transaction',['../a00407.html#a6cf504d1353426289c4b04daf9844b18',1,'Red::RedDataBase::Transaction']]]
 ];

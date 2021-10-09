@@ -30,6 +30,7 @@ SOURCES += \
     RedLog.cpp
 
 HEADERS += \
+    AcceptionLib.h \
     DiffieHellman.h \
     EncryptionAlgorithms/AesCBC128.h \
     EncryptionAlgorithms/AesCBC192.h \
