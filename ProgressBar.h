@@ -13,8 +13,8 @@
 #include <iostream>
 #include <string>
 
-#define REDPROGRESSBAR_VERSION            "1.0.0"  // 1.0.0
-#define REDPROGRESSBAR_VERSION_NUMBER     100      // 1.0.0
+#define REDPROGRESSBAR_VERSION            "1.0"
+#define REDPROGRESSBAR_VERSION_NUMBER     10
 
 namespace Red {
     class ProgressBar {
@@ -67,18 +67,6 @@ namespace Red {
             ~ProgressBar() {}
 
         private:
-            /**
-             * @brief The [REDPROGRESSBAR_VERSION] C preprocessor macro in the ProgressBar.h
-             * header evaluates to a string literal that is the ProgressBar version
-             * in the format "X.Y.Z" where X is the major version number
-             * and Y is the minor version number and Z is the release number.
-             *
-             * The [REDPROGRESSBAR_VERSION_NUMBER] C preprocessor macro resolves to an integer
-             * with the value (X*100 + Y*10 + Z) where X, Y, and Z are the same
-             * numbers used in [REDPROGRESSBAR_VERSION].
-             */
-            #define REDPROGRESSBAR_VERSION           "1.0.0" // 1.0.0
-            #define REDPROGRESSBAR_VERSION_NUMBER     100    // 1.0.0
 
             /**
              * @brief Show_main

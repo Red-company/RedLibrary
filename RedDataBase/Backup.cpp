@@ -33,7 +33,7 @@ namespace Red::RedDataBase {
     Backup::Backup(Database &aDestDatabase, Database &aSrcDatabase) :
         Backup(aDestDatabase, "main", aSrcDatabase, "main") {}
 
-    // Release resource for SQLite database backup
+    /// Release the RedDataBase Backup resource.
     Backup::~Backup() {
         if (mpSQLiteBackup) {
             sqlite3_backup_finish(mpSQLiteBackup);
@@ -42,7 +42,19 @@ namespace Red::RedDataBase {
         mpSQLiteBackup = nullptr;
     }
 
-    // Execute backup step with a given number of source pages to be copied
+    /**
+     * @brief Execute a step of backup with a given number of source pages to be copied
+     *
+     * Exception is thrown when SQLITE_IOERR_XXX, SQLITE_NOMEM, or SQLITE_READONLY is returned
+     * in sqlite3_backup_step(). These errors are considered fatal, so there is no point
+     * in retrying the call to executeStep().
+     *
+     * @param[in] aNumPage    The number of source pages to be copied, with a negative value meaning all remaining source pages
+     *
+     * @return REDDATABASE_OK/REDDATABASE_DONE/REDDATABASE_BUSY/REDDATABASE_LOCKED
+     *
+     * @throw RedDataBase::Exception in case of error
+     */
     int Backup::executeStep(const int aNumPage /* = -1 */) {
         const int res = sqlite3_backup_step(mpSQLiteBackup, aNumPage);
 
@@ -53,12 +65,20 @@ namespace Red::RedDataBase {
         return res;
     }
 
-    // Get the number of remaining source pages to be copied in this backup process
+    /**
+     * @brief getRemainingPageCount
+     *
+     * @return Number of source pages still to be backed up as of the most recent call to executeStep().
+     */
     int Backup::getRemainingPageCount() {
         return sqlite3_backup_remaining(mpSQLiteBackup);
     }
 
-    // Get the number of total source pages to be copied in this backup process
+    /**
+     * @brief getTotalPageCount
+     *
+     * @return Total number of pages in the source database as of the most recent call to executeStep().
+     */
     int Backup::getTotalPageCount() {
         return sqlite3_backup_pagecount(mpSQLiteBackup);
     }

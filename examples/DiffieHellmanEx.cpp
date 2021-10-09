@@ -3,30 +3,31 @@
 
 #include "../RedLibrary/DiffieHellman.h"
 
-int main()
-{
-    unsigned long long int P, G, x, a, y, b, ka, kb;
+#include "../RedLibrary/RedTypes.h"
+
+int main() {
+    Red::uint8192_t P, G, x, a, y, b, ka, kb;
 
     // Both the persons will be agreed upon the
     // public keys G and P
-    P = 23; // A prime number P is taken
-    printf("The value of P : %lld\n", P);
+    P = -1; // A prime number P is taken
+    std::cout << "The value of P : " << P << std::endl;
 
-    G = 9; // A primitve root for P, G is taken
-    printf("The value of G : %lld\n\n", G);
+    G = 3; // A primitve root for P, G is taken
+    std::cout << "The value of G : " << G << std::endl << std::endl;
 
     // Random size.
-    unsigned long long int s = 16;
+    Red::uint8192_t s = 16;
 
     // Generating secrets.
     a = Red::DiffieHellman::GenerateSecret(s);
-    b = 9;
+    b = 90;
 
     Red::DiffieHellman Alice(G, P, a);
     Red::DiffieHellman Bob(G, P, b);
 
-    printf("The private key a for Alice : %lld\n", a);
-    printf("The private key b for Bob : %lld\n\n", b);
+    std::cout << "The private key a for Alice : " << a << std::endl;
+    std::cout << "The private key b for Bob   : " << b << std::endl << std::endl;
 
     // Generating public keys.
     x = Alice.GetPublicValue();
@@ -36,8 +37,8 @@ int main()
     ka = Alice.GetSymmetricKey(y);
     kb = Bob.GetSymmetricKey(x);
 
-    printf("Secret key for the Alice is : %lld\n", ka);
-    printf("Secret Key for the Bob is : %lld\n", kb);
+    std::cout << "Secret key for the Alice is : " << ka << std::endl;
+    std::cout << "Secret Key for the Bob is   : " << kb << std::endl;
 
     return 0;
 }

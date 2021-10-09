@@ -23,10 +23,20 @@ namespace Red {
         // Variable return functions.
         //
 
+        /**
+         * @brief Variable::data
+         *
+         * @return Data variable as string object.
+         */
         std::string Variable::data() {
             return Data;
         }
 
+        /**
+         * @brief Variable::type
+         *
+         * @return Type variable as string object.
+         */
         std::string Variable::type() {
             return Type;
         }
@@ -71,6 +81,7 @@ namespace Red {
         std::string GetType(std::string& str) {
             if (is_int(str)) {
                 return REDCONFIG_INTEGER_TYPE;
+
             } else {
                 return REDCONFIG_STRING_TYPE;
             }
@@ -90,6 +101,7 @@ namespace Red {
             if (is.is_open()) {
                 res = true;
             }
+
             is.close();
 
             return res;
@@ -109,6 +121,7 @@ namespace Red {
             if (path[path.length()] != '/') {
                 path += "/";
             }
+
             path += name + ".rcfg";
 
             std::ofstream os(path);
@@ -116,9 +129,11 @@ namespace Red {
             if (os.is_open()) {
                 os.close();
                 return true;
+
             } else {
                 if (can_throw) {
                     throw Red::RedConfig::Exceptions::can_not_create_file();
+
                 } else {
                     return false;
                 }
@@ -142,9 +157,11 @@ namespace Red {
             while (it != variables.end()){
                 if (GetType(it->second.Data) == REDCONFIG_STRING_TYPE) {
                     toSave += "$" + it->first + "=" + "\"" + it->second.Data + "\"" + "\n";
+
                 } else if (GetType(it->second.Data) == REDCONFIG_INTEGER_TYPE) {
                     toSave += "$" + it->first + "=" + it->second.Data + "," + "\n";
                 }
+
                 it++;
             }
 
@@ -156,9 +173,11 @@ namespace Red {
                 outfile << toSave;
                 outfile.close();
                 return true;
+
             } else {
                 if (can_throw) {
                     throw Red::RedConfig::Exceptions::can_not_create_file();
+
                 } else {
                     return false;
                 }
@@ -182,9 +201,11 @@ namespace Red {
             while (it != variables.end()){
                 if (GetType(it->second.Data) == REDCONFIG_STRING_TYPE) {
                     toSave += "$" + it->first + "=" + "\"" + it->second.Data + "\"" + "\n";
+
                 } else if (GetType(it->second.Data) == REDCONFIG_INTEGER_TYPE) {
                     toSave += "$" + it->first + "=" + it->second.Data + "," + "\n";
                 }
+
                 it++;
             }
 
@@ -196,9 +217,11 @@ namespace Red {
                 outfile << toSave;
                 outfile.close();
                 return true;
+
             } else {
                 if (can_throw) {
                     throw Red::RedConfig::Exceptions::can_not_create_file();
+
                 } else {
                     return false;
                 }
@@ -258,9 +281,11 @@ namespace Red {
 
                     buffer << file.rdbuf();
                     source = buffer.str();
+
                 } else {
                     if (can_throw) {
                         throw Red::RedConfig::Exceptions::can_not_open_file();
+
                     } else {
                         return false;
                     }
@@ -278,6 +303,7 @@ namespace Red {
 
                         i++;
                     }
+
                 } else if (source.at(i) == '#') {
                     unsigned long int it = 1;
                     std::string s;
@@ -293,6 +319,7 @@ namespace Red {
                     }
 
                     i = i + it;
+
                 } else if (source.at(i) == '$') {
                     std::string variableName;
                     std::string variableValue;
@@ -325,6 +352,7 @@ namespace Red {
                             if (source.at(i + it) == '\'' || source.at(i + it) == '\"') {
                                 break;
                             }
+
                         } else {
                             if (source.at(i + it) == ',' || source.at(i + it) == '\n' ||
                                 source.at(i + it) == ' ' || source.at(i + it) == '\t') {
@@ -346,6 +374,7 @@ namespace Red {
 
                     if (variableType == REDCONFIG_STRING_TYPE) {
                         v.Type = REDCONFIG_STRING_TYPE;
+
                     } else if (variableType == REDCONFIG_INTEGER_TYPE) {
                         v.Type = REDCONFIG_INTEGER_TYPE;
                     }
@@ -378,9 +407,11 @@ namespace Red {
 
                     buffer << file.rdbuf();
                     source = buffer.str();
+
                 } else {
                     if (can_throw) {
                         throw Red::RedConfig::Exceptions::can_not_open_file();
+
                     } else {
                         return false;
                     }
@@ -398,6 +429,7 @@ namespace Red {
 
                         i++;
                     }
+
                 } else if (source.at(i) == '#') {
                     unsigned long int it = 1;
                     std::string s;
@@ -413,6 +445,7 @@ namespace Red {
                     }
 
                     i = i + it;
+
                 } else if (source.at(i) == '$') {
                     std::string variableName;
                     std::string variableValue;
@@ -445,6 +478,7 @@ namespace Red {
                             if (source.at(i + it) == '\'' || source.at(i + it) == '\"') {
                                 break;
                             }
+
                         } else {
                             if (source.at(i + it) == ',' || source.at(i + it) == '\n' ||
                                 source.at(i + it) == ' ' || source.at(i + it) == '\t') {
@@ -466,6 +500,7 @@ namespace Red {
 
                     if (variableType == REDCONFIG_STRING_TYPE) {
                         v.Type = REDCONFIG_STRING_TYPE;
+
                     } else if (variableType == REDCONFIG_INTEGER_TYPE) {
                         v.Type = REDCONFIG_INTEGER_TYPE;
                     }

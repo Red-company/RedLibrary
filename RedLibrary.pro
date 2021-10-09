@@ -73,8 +73,10 @@ HEADERS += \
     RedEncryptionAlgorithms/_private/ResDeclarations.h \
     RedLog.h \
     RedTypes.h \
+    Version.h
 
 QMAKE_CXXFLAGS += "-Wno-old-style-cast"
+QMAKE_CXXFLAGS += "-Wreserved-identifiers"
 
 macx {
 # Boost.
@@ -87,8 +89,8 @@ LIBS += -lboost_filesystem -lboost_system# -lboost_asio# using dynamic lib
 #LIBS += $${_BOOST_PATH}/lib/libboost_chrono-mt.a # using static lib
 
 # Openssl.
-INCLUDEPATH += "/usr/local/Cellar/openssl@1.1/1.1.1i/include/"
-LIBS += -L/usr/local/Cellar/openssl@1.1/1.1.1i/lib/
+INCLUDEPATH += "/usr/local/Cellar/openssl@1.1/1.1.1l/include/"
+LIBS += -L/usr/local/Cellar/openssl@1.1/1.1.1l/lib/
 LIBS += -lssl
 LIBS += -lcrypto
 
@@ -98,13 +100,14 @@ LIBS += -L/usr/local/Cellar/fmt/7.1.3/lib/
 LIBS += -lfmt
 
 # Sqlite.
-INCLUDEPATH += "/usr/local/Cellar/sqlite/3.34.0/include/"
-LIBS += -L/usr/local/Cellar/sqlite/3.34.0/lib/
+INCLUDEPATH += "/usr/local/Cellar/sqlite/3.36.0/include/"
+LIBS += -L/usr/local/Cellar/sqlite/3.36.0/lib/
 LIBS += -lsqlite3
+INCLUDEPATH += "/usr/local/opt/sqlite3/include/"
 
 # Unicode.
-INCLUDEPATH += "/usr/local/Cellar/icu4c/67.1/include/"
-LIBS += -L/usr/local/Cellar/icu4c/67.1/lib/
+INCLUDEPATH += "/usr/local/Cellar/icu4c/69.1/include/"
+LIBS += -L/usr/local/Cellar/icu4c/69.1/lib/
 LIBS += -licuuc
 
 # Gsasl.

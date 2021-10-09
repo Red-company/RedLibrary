@@ -7,18 +7,18 @@
  * Distributed under the MIT License (MIT) (See accompanying file LICENSE.txt
  * or copy at http://opensource.org/licenses/MIT)
  */
-#ifndef PERMISSIONSLIB_H
-#define PERMISSIONSLIB_H
+#ifndef RED_PERMISSIONSLIB_H
+#define RED_PERMISSIONSLIB_H
 
 #include <unistd.h>
 
-#define REDPERMISSIONSLIB_VERSION            "1.0.0"  // 1.0.0
-#define REDPERMISSIONSLIB_VERSION_NUMBER     100      // 1.0.0
+#define REDPERMISSIONSLIB_VERSION            "1.0"
+#define REDPERMISSIONSLIB_VERSION_NUMBER     10
 
 namespace Red {
     namespace PermissionsLib {
-        #define PERMISSIONSLIB_HAS_ROOT true
-        #define PERMISSIONSLIB_HAS_NO_ROOT false
+        #define REDPERMISSIONSLIB_HAS_ROOT true
+        #define REDPERMISSIONSLIB_HAS_NO_ROOT false
 
         /**
          * @brief CheckRootPermissions
@@ -30,4 +30,4 @@ namespace Red {
         }
     }
 }
-#endif // PERMISSIONSLIB_H
+#endif // RED_PERMISSIONSLIB_H

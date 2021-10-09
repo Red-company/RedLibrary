@@ -131,12 +131,12 @@ class Sha256 {
 
             m_block[m_len] = 0x80;
 
-            SHA2_UNPACK32(len_b, m_block + pm_len - 4);
+            SHA2_UNPACK32(len_b, m_block + pm_len - 4)
 
             transform(m_block, block_nb);
 
             for (i = 0 ; i < 8; i++) {
-                SHA2_UNPACK32(m_h[i], &digest[i << 2]);
+                SHA2_UNPACK32(m_h[i], &digest[i << 2])
             }
         }
 
@@ -154,7 +154,7 @@ class Sha256 {
                 sub_block = message + (i << 6);
 
                 for (j = 0; j < 16; j++) {
-                    SHA2_PACK32(&sub_block[j << 2], &w[j]);
+                    SHA2_PACK32(&sub_block[j << 2], &w[j])
                 }
 
                 for (j = 16; j < 64; j++) {
@@ -214,7 +214,7 @@ const std::string Red::Sha256Hash(const std::string_view input) {
 
     buf[2 * Sha256::DIGEST_SIZE] = 0;
 
-    for (int i = 0; i < Sha256::DIGEST_SIZE; i++) {
+    for (unsigned int i = 0; i < Sha256::DIGEST_SIZE; i++) {
         sprintf(buf + i * 2, "%02x", digest[i]);
     }
 

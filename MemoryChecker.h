@@ -10,8 +10,8 @@
 #ifndef RED_MEMORYCHECKER_H
 #define RED_MEMORYCHECKER_H
 
-#define REDMEMORYCHECKER_VERSION            "1.0.0"  // 1.0.0
-#define REDMEMORYCHECKER_VERSION_NUMBER     100      // 1.0.0
+#define REDMEMORYCHECKER_VERSION            "1.0"
+#define REDMEMORYCHECKER_VERSION_NUMBER     10
 
 namespace Red {
     namespace RAM {
@@ -70,6 +70,7 @@ namespace Red {
 
             if (GetProcessMemoryInfo (GetCurrentProcess(), &counters, sizeof (counters))) {
                 return counters.PagefileUsage;
+
             } else {
                 return 0;
             }

@@ -7,7 +7,7 @@ int main() {
 
     // We have two ways to define an Ipv4 string.
     // First:
-    Red::Ipv4 *IpTest1 = new Red::Ipv4(IPV4_127, "127.0.0.1"); // Or "127" instead of IPV4_127.
+    Red::Ipv4 *IpTest1 = new Red::Ipv4(REDIPV4_127, "127.0.0.1"); // Or "127" instead of IPV4_127.
 
     // Second:
     Red::Ipv4 IpTest2;

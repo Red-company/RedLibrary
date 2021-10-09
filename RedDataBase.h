@@ -10,8 +10,8 @@
  * Distributed under the MIT License (MIT) (See accompanying file LICENSE.txt
  * or copy at http://opensource.org/licenses/MIT)
  */
-#ifndef REDDATABSE_INCLUDED
-#define REDDATABSE_INCLUDED
+#ifndef RED_DATABSE_H
+#define RED_DATABSE_H
 
 #include "./RedDataBase/Assertion.h"
 #include "./RedDataBase/Exception.h"
@@ -21,17 +21,7 @@
 #include "./RedDataBase/Transaction.h"
 #include "./RedDataBase/Check.h"
 
-/**
- * @brief The [REDDATABASE_VERSION] C preprocessor macro in the RedDataBase.h
- * header evaluates to a string literal that is the RedDataBase version
- * in the format "X.Y.Z" where X is the major version number
- * and Y is the minor version number and Z is the release number.
- *
- * The [REDDATABASE_VERSION_NUMBER] C preprocessor macro resolves to an integer
- * with the value (X*100 + Y*10 + Z) where X, Y, and Z are the same
- * numbers used in [REDDATABASE_VERSION].
- */
-#define REDDATABASE_VERSION           "1.0.0"   // 1.0.0
-#define REDDATABASE_VERSION_NUMBER     100      // 1.0.0
+#define REDDATABASE_VERSION           "1.0"
+#define REDDATABASE_VERSION_NUMBER     10
 
-#endif // REDDATABSE_INCLUDED
+#endif // RED_DATABASE_H

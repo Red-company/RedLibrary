@@ -8,8 +8,8 @@
  * Distributed under the MIT License (MIT) (See accompanying file LICENSE.txt
  * or copy at http://opensource.org/licenses/MIT)
  */
-#ifndef REDCONFIG_INCLUDED
-#define REDCONFIG_INCLUDED
+#ifndef RED_CONFIG_H
+#define RED_CONFIG_H
 
 #include <string>
 #include <map>
@@ -17,8 +17,8 @@
 // RedLibrary.
 #include "../RedLibrary/InsensitiveMap.h"
 
-#define REDCONFIG_VERSION           "1.0.0"   // 1.0.0
-#define REDCONFIG_VERSION_NUMBER     100      // 1.0.0
+#define REDCONFIG_VERSION           "1.0"
+#define REDCONFIG_VERSION_NUMBER     10
 
 namespace Red {
     namespace RedConfig {
@@ -212,4 +212,4 @@ namespace Red {
     }
 }
 
-#endif // REDCONFIG_INCLUDED
+#endif // RED_CONFIG_H

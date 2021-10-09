@@ -14,18 +14,8 @@
 #include <fstream>
 #include <string>
 
-/**
- * @brief The [REDFILEBUFFER_VERSION] C preprocessor macro in the FileBuffer.h
- * header evaluates to a string literal that is the FileBuffer version
- * in the format "X.Y.Z" where X is the major version number
- * and Y is the minor version number and Z is the release number.
- *
- * The [REDFILEBUFFER_VERSION_NUMBER] C preprocessor macro resolves to an integer
- * with the value (X*100 + Y*10 + Z) where X, Y, and Z are the same
- * numbers used in [REDFILEBUFFER_VERSION].
- */
-#define REDFILEBUFFER_VERSION           "1.0.0" // 1.0.0
-#define REDFILEBUFFER_VERSION_NUMBER     100    // 1.0.0
+#define REDFILEBUFFER_VERSION           "1.0"
+#define REDFILEBUFFER_VERSION_NUMBER     10
 
 namespace Red {
     class FileBuffer {
@@ -37,15 +27,28 @@ namespace Red {
             std::string            RedBufferAddress;
             unsigned long long int NumOfString = 1;
 
+
             //
             // Private funcs.
             //
 
+            /**
+             * @brief CheckBufForExistence
+             *
+             * @return True if file buffer exists.
+             */
             inline bool CheckBufForExistence() {
                 std::ifstream Check4Buf(RedBufferAddress);
                 return Check4Buf.is_open() ? true : false;
             }
 
+            /**
+             * @brief MoveToStartOfLine
+             *
+             * @param fs Opened buffer.
+             *
+             * @return False if all ok.
+             */
             inline bool MoveToStartOfLine(std::ifstream& fs) {
                 fs.seekg(-1, std::ios_base::cur);
 
@@ -61,6 +64,11 @@ namespace Red {
                 return false;
             }
 
+            /**
+             * @brief GetLenOfLastString
+             *
+             * @return Length of the last string.
+             */
             inline size_t GetLenOfLastString() {
                 std::string lastline = "";
 
@@ -78,11 +86,21 @@ namespace Red {
                 return lastline.length();
             }
 
+            /**
+             * @brief GetLenOfFileBuffer
+             *
+             * @return Length of file buffer.
+             */
             inline size_t GetLenOfFileBuffer() {
                 std::ifstream GetLen(RedBufferAddress, std::ifstream::ate | std::ifstream::binary);
                 return static_cast<unsigned long long>(GetLen.tellg());
             }
 
+            /**
+             * @brief AddToFile
+             *
+             * @param ToAdd String to be added to file buffer.
+             */
             inline void AddToFile(const std::string_view ToAdd) {
                 std::ofstream AddNewChar(RedBufferAddress, std::ios::app);
 

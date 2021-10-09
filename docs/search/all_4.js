@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['data_45',['data',['../a00358.html#afc47ccd0430e89470af1fe0326934298',1,'Red::RedConfig::Variable']]],
-  ['database_46',['Database',['../a00374.html#afa68e3d06544029296b2006ce20d700c',1,'Red::RedDataBase::Database::Database(const char *apFilename, const int aFlags=RedDataBase::OPEN_READONLY, const int aBusyTimeoutMs=0, const char *apVfs=nullptr)'],['../a00374.html#ae222d874beacb2af5d638270bf59ca6b',1,'Red::RedDataBase::Database::Database(const std::string &amp;aFilename, const int aFlags=RedDataBase::OPEN_READONLY, const int aBusyTimeoutMs=0, const std::string &amp;aVfs=&quot;&quot;)'],['../a00374.html',1,'Red::RedDataBase::Database']]],
+  ['data_45',['data',['../a00361.html#afc47ccd0430e89470af1fe0326934298',1,'Red::RedConfig::Variable']]],
+  ['database_46',['Database',['../a00377.html#afa68e3d06544029296b2006ce20d700c',1,'Red::RedDataBase::Database::Database(const char *apFilename, const int aFlags=RedDataBase::OPEN_READONLY, const int aBusyTimeoutMs=0, const char *apVfs=nullptr)'],['../a00377.html#ae222d874beacb2af5d638270bf59ca6b',1,'Red::RedDataBase::Database::Database(const std::string &amp;aFilename, const int aFlags=RedDataBase::OPEN_READONLY, const int aBusyTimeoutMs=0, const std::string &amp;aVfs=&quot;&quot;)'],['../a00377.html',1,'Red::RedDataBase::Database']]],
   ['database_2ecpp_47',['Database.cpp',['../a00191.html',1,'']]],
   ['database_2eh_48',['Database.h',['../a00194.html',1,'']]],
   ['databaseexists_49',['DataBaseExists',['../a00182.html#aebc93a94f5cc1942fdbfe4387c88dfdb',1,'Red::RedDataBase']]],
@@ -17,8 +17,8 @@ var searchData=
   ['decryptresecb1024_59',['DecryptResECB1024',['../a00251.html#a66827eed4c3edf5fff61acdb7260479f',1,'Red']]],
   ['decryptresecb1536_60',['DecryptResECB1536',['../a00257.html#af7d7b11ee1a051dc3868584e86598c69',1,'Red']]],
   ['decryptresecb512_61',['DecryptResECB512',['../a00263.html#a4dbb61cb0cd373b2530461e19fb1b069',1,'Red']]],
-  ['deletefile_62',['DeleteFile',['../a00426.html#a35b64422e4f14c777127858b490bb9a4',1,'Red::RedLog']]],
-  ['deleter_63',['Deleter',['../a00378.html',1,'Red::RedDataBase::Database']]],
-  ['diffiehellman_64',['DiffieHellman',['../a00294.html#ae9159f69d9f8dbbf3ddf42beb18bebff',1,'Red::DiffieHellman::DiffieHellman()'],['../a00294.html',1,'Red::DiffieHellman']]],
+  ['deletefile_62',['DeleteFile',['../a00429.html#a35b64422e4f14c777127858b490bb9a4',1,'Red::RedLog']]],
+  ['deleter_63',['Deleter',['../a00381.html',1,'Red::RedDataBase::Database']]],
+  ['diffiehellman_64',['DiffieHellman',['../a00297.html#a5b1b5fbef1758c245cd29b8d61cef344',1,'Red::DiffieHellman::DiffieHellman()'],['../a00297.html',1,'Red::DiffieHellman']]],
   ['diffiehellman_2eh_65',['DiffieHellman.h',['../a00002.html',1,'']]]
 ];

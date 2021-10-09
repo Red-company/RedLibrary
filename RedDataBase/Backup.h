@@ -9,7 +9,7 @@
  * or copy at http://opensource.org/licenses/MIT)
  */
 #ifndef RED_DATABASE_BACKUP_H
-#define BACKUP_H
+#define RED_DATABASE_BACKUP_H
 
 #include "Database.h"
 
@@ -105,10 +105,18 @@ namespace Red::RedDataBase {
              */
             int executeStep(const int aNumPage = -1);
 
-            /// Return the number of source pages still to be backed up as of the most recent call to executeStep().
+            /**
+             * @brief getRemainingPageCount
+             *
+             * @return Number of source pages still to be backed up as of the most recent call to executeStep().
+             */
             int getRemainingPageCount();
 
-            /// Return the total number of pages in the source database as of the most recent call to executeStep().
+            /**
+             * @brief getTotalPageCount
+             *
+             * @return Total number of pages in the source database as of the most recent call to executeStep().
+             */
             int getTotalPageCount();
 
         private:

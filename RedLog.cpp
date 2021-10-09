@@ -75,7 +75,7 @@ namespace Red {
         res += "[" + time + "]";
 
         /// Insering group if need.
-        if (group != RED_REDLOG_NO_GROUP) {
+        if (group != REDLOG_NO_GROUP) {
             res += "(" + group + ")";
         }
 

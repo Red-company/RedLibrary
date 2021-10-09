@@ -9,9 +9,9 @@
 #include "../RedLibrary/RedConfig/Exceptions.h"
 
 // Pathes for example.
-static std::string Open     = "/Users/vladimir/Desktop/test.rcfg";
-static std::string Save     = "/Users/vladimir/Desktop/out.rcfg";
-static std::string SavePath = "/Users/vladimir/Desktop/";
+static std::string Open     = "/Users/vladimir/Desktop/RedLibrary/examples/ForRedConfig/test.rcfg"; // Need to change.
+static std::string Save     = "/Users/vladimir/Desktop/RedLibrary/examples/ForRedConfig/out.rcfg";  // Need to change.
+static std::string SavePath = "/Users/vladimir/Desktop/";          // Need to change.
 
 int main(){
     system("clear");

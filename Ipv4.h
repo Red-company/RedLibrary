@@ -13,13 +13,16 @@
 #include <boost/lexical_cast.hpp>
 #include <string>
 
-#define IPV4_ALL    "all"
-#define IPV4_PUBLIC "public"
-#define IPV4_192    "192"
-#define IPV4_172    "172"
-#define IPV4_169    "169"
-#define IPV4_127    "127"
-#define IPV4_10     "10"
+#define REDIPV4_VERSION           "1.0"
+#define REDIPV4_VERSION_NUMBER     10
+
+#define REDIPV4_ALL    "all"
+#define REDIPV4_PUBLIC "public"
+#define REDIPV4_192    "192"
+#define REDIPV4_172    "172"
+#define REDIPV4_169    "169"
+#define REDIPV4_127    "127"
+#define REDIPV4_10     "10"
 
 namespace Red {
     class Ipv4 {
@@ -309,19 +312,6 @@ namespace Red {
             }
 
         private:
-            /**
-             * @brief The [REDIPV4_VERSION] C preprocessor macro in the Ipv4.h
-             * header evaluates to a string literal that is the Ipv4 version
-             * in the format "X.Y.Z" where X is the major version number
-             * and Y is the minor version number and Z is the release number.
-             *
-             * The [REDIPV4_VERSION_NUMBER] C preprocessor macro resolves to an integer
-             * with the value (X*100 + Y*10 + Z) where X, Y, and Z are the same
-             * numbers used in [REDIPV4_VERSION].
-             */
-            #define REDIPV4_VERSION           "1.0.0" // 1.0.0
-            #define REDIPV4_VERSION_NUMBER     100    // 1.0.0
-
             //
             // Private funcs.
             //

@@ -8,6 +8,7 @@ int main() {
 
     for (int e = 0; e <= 100; e++) {
         pb.Show();
+        //pb.Red_Show(); // Red Edition.
         pb.Increment();
         std::this_thread::sleep_for(std::chrono::milliseconds(300));
     }

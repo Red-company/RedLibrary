@@ -72,16 +72,32 @@ namespace Red::RedDataBase {
             const char* getOriginName() const noexcept;
             #endif
 
-            /// Return the integer value of the column.
+            /**
+             * @brief getInt
+             *
+             * @return Integer value of the column.
+             */
             int         getInt() const noexcept;
 
-            /// Return the 32bits unsigned integer value of the column (note that SQLite3 does not support unsigned 64bits).
+            /**
+             * @brief getUInt
+             *
+             * @return 32bits unsigned integer value of the column (note that SQLite3 does not support unsigned 64bits).
+             */
             unsigned    getUInt() const noexcept;
 
-            /// Return the 64bits integer value of the column (note that SQLite3 does not support unsigned 64bits).
+            /**
+             * @brief getInt64
+             *
+             * @return 64bits integer value of the column (note that SQLite3 does not support unsigned 64bits).
+             */
             long long   getInt64() const noexcept;
 
-            /// Return the double (64bits float) value of the column
+            /**
+             * @brief getDouble
+             *
+             * @return Double (64bits float) value of the column.
+             */
             double      getDouble() const noexcept;
 
             /**
@@ -97,6 +113,8 @@ namespace Red::RedDataBase {
              *
              * @warning The value pointed at is only valid while the statement is valid (ie. not finalized),
              *          thus you must copy it before using it beyond its scope (to a std::string for instance).
+             *
+             * @return Pointer to the text value (NULL terminated string) of the column specified by its index starting at 0.
              */
             const void* getBlob() const noexcept;
 
@@ -104,6 +122,8 @@ namespace Red::RedDataBase {
              * @brief Return a std::string for a TEXT or BLOB column.
              *
              * Note this correctly handles strings that contain null bytes.
+             *
+             * @return String to a TEXT or BLOB column.
              */
             std::string getString() const;
 
@@ -114,6 +134,8 @@ namespace Red::RedDataBase {
              *
              * @warning After a type conversion (by a call to a getXxx on a Column of a Yyy type),
              *          the value returned by sqlite3_column_type() is undefined.
+             *
+             * @return Type of the value of the column.
              */
             int getType() const noexcept;
 
@@ -144,6 +166,8 @@ namespace Red::RedDataBase {
 
             /**
              * @brief Return the number of bytes used by the text (or blob) value of the column
+             *
+             * @return Number of bytes used by the text value of the column
              *
              * Return either :
              * - size in bytes (not in characters) of the string returned by getText() without the '\0' terminator

@@ -8,8 +8,8 @@
  * Distributed under the MIT License (MIT) (See accompanying file LICENSE.txt
  * or copy at http://opensource.org/licenses/MIT)
  */
-#ifndef REDCONFIG_EXCEPTIONS_H
-#define REDCONFIG_EXCEPTIONS_H
+#ifndef RED_CONFIG_EXCEPTIONS_H
+#define RED_CONFIG_EXCEPTIONS_H
 
 #include <exception>
 
@@ -43,4 +43,4 @@ namespace Red {
     }
 }
 
-#endif // REDCONFIG_EXCEPTIONS_H
+#endif // RED_CONFIG_EXCEPTIONS_H

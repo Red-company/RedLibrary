@@ -10,5 +10,9 @@ int main() {
     std::cout << "a: " << a << std::endl;
     std::cout << "b: " << b << std::endl;
 
+    Red::uint8192_t c = -1;
+
+    std::cout << std::endl << c << std::endl;
+
     return 0;
 }

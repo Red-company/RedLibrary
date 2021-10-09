@@ -11,9 +11,13 @@
 #define RED_DIFFIEHELLMAN_H
 
 // System libs.
+#include <sstream>
 #include <stdlib.h>
 #include <ctime>
 #include <math.h>
+
+// External libs.
+#include <boost/multiprecision/cpp_int.hpp>
 
 // RedLibrary.
 #include "RedTypes.h"
@@ -27,7 +31,7 @@ namespace Red {
 
             /// x = G**a mod P
 
-            Red::uint32_t G, P, a;
+            Red::uint8192_t G, P, a;
 
             //
             // Private functions.
@@ -44,12 +48,53 @@ namespace Red {
              *
              * @return Generated key.
              */
-            Red::uint32_t  power(Red::uint32_t a, Red::uint32_t b,
-                                                  Red::uint32_t P) {
+            Red::uint8192_t power(Red::uint8192_t a, Red::uint8192_t b,
+                                                     Red::uint8192_t P) {
                 if (b == 1) {
                     return a;
+
                 } else {
-                    return (((Red::uint32_t) pow(a, b)) % P);
+                    // Unfortunately we have to write a lot here, because there is no a good way to write it shorter.
+                    // So, let's do that!
+
+                    /// Need to get cpp_int version of base.
+                    boost::multiprecision::cpp_int a_c = boost::multiprecision::cpp_int(a);
+
+                    /// And ulli version of our exponent.
+                    Red::uint32_t b_int = 0;
+
+                    {
+                        std::stringstream ss;
+                        ss << b;
+                        ss >> b_int;
+                    }
+
+                    /// Let's get exponented 'a'...
+                    boost::multiprecision::cpp_int ab = boost::multiprecision::pow(a_c, (unsigned int)(b_int));
+
+                    /// Now we need cpp_int version of 'P'.
+                    boost::multiprecision::cpp_int p_c = 0;
+
+                    {
+                        std::stringstream ss;
+                        ss << P;
+                        ss >> p_c;
+                    }
+
+                    /// Moded expenented 'a' is needed...
+                    boost::multiprecision::cpp_int abp = ab % p_c;
+
+                    /// Now we just need to convert it to uint8192_t.
+                    Red::uint8192_t res = 0;
+
+                    {
+                        std::stringstream ss;
+                        ss << abp;
+                        ss >> res;
+                    }
+
+                    /// Yay, we finished this.
+                    return res;
                 }
             }
 
@@ -64,9 +109,9 @@ namespace Red {
              * @param ModificatedNum P number.
              * @param SecretNum Secret number.
              */
-            DiffieHellman(Red::uint32_t ResultNum = 0,
-                          Red::uint32_t ModificatedNum = 0,
-                          Red::uint32_t SecretNum = 0)
+            DiffieHellman(Red::uint8192_t ResultNum = 0,
+                          Red::uint8192_t ModificatedNum = 0,
+                          Red::uint8192_t SecretNum = 0)
                 : G(ResultNum), P(ModificatedNum), a(SecretNum) {}
 
             /**
@@ -78,9 +123,9 @@ namespace Red {
              * @param ResultNum G number.
              * @param ModificatedNum P number.
              */
-            void Set(Red::uint32_t ResultNum,
-                     Red::uint32_t ModificatedNum,
-                     Red::uint32_t SecretNum) {
+            void Set(Red::uint8192_t ResultNum,
+                     Red::uint8192_t ModificatedNum,
+                     Red::uint8192_t SecretNum) {
                 G = ResultNum;
                 P = ModificatedNum;
                 a = SecretNum;
@@ -93,7 +138,7 @@ namespace Red {
              *
              * @return Key for public exchange.
              */
-            Red::uint32_t GetPublicValue() {
+            Red::uint8192_t GetPublicValue() {
                 return power(G, a, P);
             }
 
@@ -106,24 +151,20 @@ namespace Red {
              *
              * @return Shared secret.
              */
-            Red::uint32_t GetSymmetricKey(Red::uint32_t x) {
+            Red::uint8192_t GetSymmetricKey(Red::uint8192_t x) {
                 return power(x, a, P);
             }
 
             /**
              * @brief GenerateSecret
              *
-             * GeneratedKey = G**a mod P
-             *
-             * Where,
-             * @param g G number.
-             * @param p P number.
+             * @param Srand Length of key.
              *
              * @return Generated key.
              */
-            static Red::uint32_t GenerateSecret(Red::uint32_t& Srand) {
-                srand(time(0));
-                return (Red::uint32_t) rand() % Srand + 1;
+            static Red::uint8192_t GenerateSecret(Red::uint8192_t& Srand) {
+                srand((unsigned int) time(nullptr));
+                return (Red::uint8192_t) rand() % Srand + 1;
             }
 
             // Base dtor.

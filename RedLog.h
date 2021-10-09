@@ -6,14 +6,14 @@
  * Distributed under the MIT License (MIT) (See accompanying file LICENSE.txt
  * or copy at http://opensource.org/licenses/MIT)
  */
-#ifndef RED_REDLOG_H
-#define RED_REDLOG_H
+#ifndef RED_LOG_H
+#define RED_LOG_H
 
 #include <string>
 #include <fstream>
 
-#define REDLOG_VERSION           "1.0.0"   // 1.0.0
-#define REDLOG_VERSION_NUMBER     100      // 1.0.0
+#define REDLOG_VERSION           "1.0"
+#define REDLOG_VERSION_NUMBER     10
 
 #define REDLOG_NO_GROUP "null"
 
@@ -92,6 +92,7 @@ namespace Red {
 
                 if (is.is_open()) {
                     return true;
+
                 } else {
                     return false;
                 }
@@ -128,4 +129,4 @@ namespace Red {
 }
 
 
-#endif // RED_REDLOG_H
+#endif // RED_LOG_H

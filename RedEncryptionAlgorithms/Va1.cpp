@@ -376,7 +376,9 @@ class _red_for_Va1 {
                     }
 
                     break;
+
                 case '1':
+
                     if (RLast[symb+1] == '0') {
                         Lstep += "v";
                     } else if (RLast[symb+1] == '1') {
@@ -400,7 +402,9 @@ class _red_for_Va1 {
                     }
 
                     break;
+
                 case '2':
+
                     if (RLast[symb+1] == '0') {
                         Lstep += "x";
                     } else if (RLast[symb+1] == '1') {
@@ -424,7 +428,9 @@ class _red_for_Va1 {
                     }
 
                     break;
+
                 case '3':
+
                     if (RLast[symb+1] == '0') {
                         Lstep += "#";
                     } else if (RLast[symb+1] == '1') {
@@ -448,7 +454,9 @@ class _red_for_Va1 {
                     }
 
                     break;
+
                 case '4':
+
                     if (RLast[symb+1] == '0') {
                         Lstep += "<";
                     } else if (RLast[symb+1] == '1') {
@@ -472,7 +480,9 @@ class _red_for_Va1 {
                     }
 
                     break;
+
                 case '5':
+
                     if (RLast[symb+1] == '0') {
                         Lstep += "}";
                     } else if (RLast[symb+1] == '1') {
@@ -496,7 +506,9 @@ class _red_for_Va1 {
                     }
 
                     break;
+
                 case '6':
+
                     if (RLast[symb+1] == '0') {
                         Lstep += "2";
                     } else if (RLast[symb+1] == '1') {
@@ -520,7 +532,9 @@ class _red_for_Va1 {
                     }
 
                     break;
+
                 case '7':
+
                     if (RLast[symb+1] == '0') {
                         Lstep += "T";
                     } else if (RLast[symb+1] == '1') {
@@ -544,7 +558,9 @@ class _red_for_Va1 {
                     }
 
                     break;
+
                 case '8':
+
                     if (RLast[symb+1] == '0') {
                         Lstep += "J";
                     } else if (RLast[symb+1] == '1') {
@@ -568,6 +584,7 @@ class _red_for_Va1 {
                     }
 
                     break;
+
                 case '9':
                     if (RLast[symb+1] == '0') {
                         Lstep += "E";
@@ -592,11 +609,13 @@ class _red_for_Va1 {
                     }
 
                     break;
+
                 default:
                     Lstep += "..";
                     break;
                 }
             }
+
             return Lstep;
         }
 
