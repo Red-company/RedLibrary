@@ -24,7 +24,7 @@ All examples are in "examples" folder.
     * Gsasl
   
 ##
-**Notes 2:**
+**Notes 2(About AES and RES):**
  * If you want to route result of AES / RES encryption to `std::cout`, you should convert string to hexadecimal system, in other way you will get bad output!
   * **Convertion functions are in Hex.h.**
  * In AES and RES there are no built-in error checking or protection from out-of-bounds memory access errors as a result of malicious input.
