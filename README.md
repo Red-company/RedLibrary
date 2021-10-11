@@ -10,7 +10,7 @@ This is a library which uses by Red projects. It consists of small libraries whi
 
 ## How to use it?
 
-All examples are in "examples" folder.
+These libraries are 'ready to work', all you need is just write a code. All examples are in "examples" folder.
 
 ##
 **Notes:**
