@@ -60,8 +60,8 @@ namespace Red {
                     /// Need to get cpp_int version of base.
                     boost::multiprecision::cpp_int a_c = boost::multiprecision::cpp_int(a);
 
-                    /// And ulli version of our exponent.
-                    Red::uint32_t b_int = 0;
+                    /// And ui version of our exponent.
+                    Red::uint_t b_int = 0;
 
                     {
                         std::stringstream ss;
@@ -70,7 +70,7 @@ namespace Red {
                     }
 
                     /// Let's get exponented 'a'...
-                    boost::multiprecision::cpp_int ab = boost::multiprecision::pow(a_c, (unsigned int)(b_int));
+                    boost::multiprecision::cpp_int ab = boost::multiprecision::pow(a_c, b_int);
 
                     /// Now we need cpp_int version of 'P'.
                     boost::multiprecision::cpp_int p_c = 0;
