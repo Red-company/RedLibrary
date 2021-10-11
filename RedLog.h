@@ -13,7 +13,6 @@
 #include <fstream>
 
 #define REDLOG_VERSION           "1.0"
-#define REDLOG_VERSION_NUMBER     10
 
 #define REDLOG_NO_GROUP "null"
 

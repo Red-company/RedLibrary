@@ -18,7 +18,6 @@
 #include "../RedLibrary/InsensitiveMap.h"
 
 #define REDCONFIG_VERSION           "1.0"
-#define REDCONFIG_VERSION_NUMBER     10
 
 namespace Red {
     namespace RedConfig {

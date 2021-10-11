@@ -22,6 +22,8 @@
 // RedLibrary.
 #include "RedTypes.h"
 
+#define REDDIFFIEHELLMAN_VERSION            "1.0"
+
 namespace Red {
     class DiffieHellman {
         private:

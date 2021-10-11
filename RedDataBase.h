@@ -22,6 +22,5 @@
 #include "./RedDataBase/Check.h"
 
 #define REDDATABASE_VERSION           "1.0"
-#define REDDATABASE_VERSION_NUMBER     10
 
 #endif // RED_DATABASE_H

@@ -15,7 +15,6 @@
 #include <string>
 
 #define REDFILEBUFFER_VERSION           "1.0"
-#define REDFILEBUFFER_VERSION_NUMBER     10
 
 namespace Red {
     class FileBuffer {

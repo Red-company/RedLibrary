@@ -13,7 +13,6 @@
 #include <unistd.h>
 
 #define REDPERMISSIONSLIB_VERSION            "1.0"
-#define REDPERMISSIONSLIB_VERSION_NUMBER     10
 
 namespace Red {
     namespace PermissionsLib {

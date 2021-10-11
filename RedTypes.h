@@ -11,6 +11,8 @@
 
 #include <boost/multiprecision/cpp_int.hpp>
 
+#define REDTYPES_VERSION            "1.0"
+
 namespace Red {
     // Standart size.
     typedef unsigned char           uint8_t;

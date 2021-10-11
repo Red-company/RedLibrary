@@ -14,7 +14,6 @@
 #include <string>
 
 #define REDIPV4_VERSION           "1.0"
-#define REDIPV4_VERSION_NUMBER     10
 
 #define REDIPV4_ALL    "all"
 #define REDIPV4_PUBLIC "public"

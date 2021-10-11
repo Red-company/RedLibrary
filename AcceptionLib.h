@@ -11,7 +11,6 @@
 #define RED_ACCEPTIONLIB_H
 
 #define REDACCEPTIONLIB_VERSION            "1.0"
-#define REDACCEPTIONLIB_VERSION_NUMBER     10
 
 // System libs.
 #include <iostream>

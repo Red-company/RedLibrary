@@ -12,6 +12,8 @@
 
 #include <string>
 
+#define REDHEX_VERSION            "1.0"
+
 namespace Red {
     /**
      * @brief GetHexArray
