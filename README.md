@@ -30,4 +30,10 @@ These libraries are 'ready to work', all you need is just write a code. All exam
  * In AES and RES there are no built-in error checking or protection from out-of-bounds memory access errors as a result of malicious input.
 
 ##
+**Notes 3(About DiffieHellman):**
+ * P number (prime one) is 2467 characters long (uint8192_t).
+ * Uint8192_t you can find in 'RedTypes.h'
+ * Example of usage is in 'examples' folder. It is a good idea to read how diffiehellman works.
+
+##
 All material in this repository is in the public domain.
