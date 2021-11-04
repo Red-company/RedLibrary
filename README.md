@@ -31,8 +31,7 @@ These libraries are 'ready to work', all you need is just write a code. All exam
 
 ##
 **Notes 3(About DiffieHellman):**
- * P number (prime one) is 2467 characters long (uint8192_t).
- * Uint8192_t you can find in 'RedTypes.h'
+ * P number (prime one) works stable with 19729 characters long (From 'RedTypes.h': 'Red::uint65536_t').
  * Example of usage is in 'examples' folder. It is a good idea to read how diffiehellman works.
 
 ##
