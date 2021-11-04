@@ -11,7 +11,7 @@
 
 #include <boost/multiprecision/cpp_int.hpp>
 
-#define REDTYPES_VERSION            "1.0"
+#define REDTYPES_VERSION            "1.1"
 
 namespace Red {
     // Standart size.
@@ -30,6 +30,9 @@ namespace Red {
     using uint2048_t = boost::multiprecision::number<boost::multiprecision::cpp_int_backend<2048, 2048, boost::multiprecision::unsigned_magnitude, boost::multiprecision::unchecked, void>, boost::multiprecision::et_off>;
     using uint4096_t = boost::multiprecision::number<boost::multiprecision::cpp_int_backend<4096, 4096, boost::multiprecision::unsigned_magnitude, boost::multiprecision::unchecked, void>, boost::multiprecision::et_off>;
     using uint8192_t = boost::multiprecision::number<boost::multiprecision::cpp_int_backend<8192, 8192, boost::multiprecision::unsigned_magnitude, boost::multiprecision::unchecked, void>, boost::multiprecision::et_off>;
+    using uint16384_t = boost::multiprecision::number<boost::multiprecision::cpp_int_backend<16384, 16384, boost::multiprecision::unsigned_magnitude, boost::multiprecision::unchecked, void>, boost::multiprecision::et_off>;
+    using uint32768_t = boost::multiprecision::number<boost::multiprecision::cpp_int_backend<32768, 32768, boost::multiprecision::unsigned_magnitude, boost::multiprecision::unchecked, void>, boost::multiprecision::et_off>;
+    using uint65536_t = boost::multiprecision::number<boost::multiprecision::cpp_int_backend<65536, 65536, boost::multiprecision::unsigned_magnitude, boost::multiprecision::unchecked, void>, boost::multiprecision::et_off>;
 }
 
 #endif // RED_TYPES_H
