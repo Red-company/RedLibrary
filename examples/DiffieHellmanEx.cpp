@@ -1,5 +1,6 @@
-#include<stdio.h>
-#include<math.h>
+#include <iostream>
+#include <stdio.h>
+#include <math.h>
 
 #include "../RedLibrary/DiffieHellman.h"
 
