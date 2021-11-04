@@ -22,9 +22,11 @@
 // RedLibrary.
 #include "RedTypes.h"
 
-#define REDDIFFIEHELLMAN_VERSION            "1.0"
+#define REDDIFFIEHELLMAN_VERSION            "1.1"
 
 namespace Red {
+    /// Creating a template for integers, because we need it to be cross-typed.
+    template<class INT_SIZE>
     class DiffieHellman {
         private:
             //
@@ -33,7 +35,7 @@ namespace Red {
 
             /// x = G**a mod P
 
-            Red::uint8192_t G, P, a;
+            INT_SIZE G, P, a;
 
             //
             // Private functions.
@@ -50,8 +52,7 @@ namespace Red {
              *
              * @return Generated key.
              */
-            Red::uint8192_t power(Red::uint8192_t a, Red::uint8192_t b,
-                                                     Red::uint8192_t P) {
+            INT_SIZE power(INT_SIZE a, INT_SIZE b, INT_SIZE P) {
                 if (b == 1) {
                     return a;
 
@@ -86,8 +87,8 @@ namespace Red {
                     /// Moded expenented 'a' is needed...
                     boost::multiprecision::cpp_int abp = ab % p_c;
 
-                    /// Now we just need to convert it to uint8192_t.
-                    Red::uint8192_t res = 0;
+                    /// Now we just need to convert it to the type we need.
+                    INT_SIZE res = 0;
 
                     {
                         std::stringstream ss;
@@ -111,9 +112,9 @@ namespace Red {
              * @param ModificatedNum P number.
              * @param SecretNum Secret number.
              */
-            DiffieHellman(Red::uint8192_t ResultNum = 0,
-                          Red::uint8192_t ModificatedNum = 0,
-                          Red::uint8192_t SecretNum = 0)
+            DiffieHellman(INT_SIZE ResultNum = 0,
+                          INT_SIZE ModificatedNum = 0,
+                          INT_SIZE SecretNum = 0)
                 : G(ResultNum), P(ModificatedNum), a(SecretNum) {}
 
             /**
@@ -125,9 +126,9 @@ namespace Red {
              * @param ResultNum G number.
              * @param ModificatedNum P number.
              */
-            void Set(Red::uint8192_t ResultNum,
-                     Red::uint8192_t ModificatedNum,
-                     Red::uint8192_t SecretNum) {
+            void Set(INT_SIZE ResultNum,
+                     INT_SIZE ModificatedNum,
+                     INT_SIZE SecretNum) {
                 G = ResultNum;
                 P = ModificatedNum;
                 a = SecretNum;
@@ -140,7 +141,7 @@ namespace Red {
              *
              * @return Key for public exchange.
              */
-            Red::uint8192_t GetPublicValue() {
+            INT_SIZE GetPublicValue() {
                 return power(G, a, P);
             }
 
@@ -153,7 +154,7 @@ namespace Red {
              *
              * @return Shared secret.
              */
-            Red::uint8192_t GetSymmetricKey(Red::uint8192_t x) {
+            INT_SIZE GetSymmetricKey(INT_SIZE x) {
                 return power(x, a, P);
             }
 
@@ -164,9 +165,9 @@ namespace Red {
              *
              * @return Generated key.
              */
-            static Red::uint8192_t GenerateSecret(Red::uint8192_t& Srand) {
+            static INT_SIZE GenerateSecret(INT_SIZE& Srand) {
                 srand((unsigned int) time(nullptr));
-                return (Red::uint8192_t) rand() % Srand + 1;
+                return (INT_SIZE) rand() % Srand + 1;
             }
 
             // Base dtor.
