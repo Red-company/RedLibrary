@@ -49,6 +49,7 @@ HEADERS += \
     PassGenerator.h \
     PermissionsLib.h \
     ProgressBar.h \
+    Randomizer.h \
     RedConfig.h \
     RedConfig/Exceptions.h \
     RedDataBase.h \
