@@ -21,7 +21,6 @@
 
 // RedLibrary.
 #include "RedTypes.h"
-#include "Randomizer.h"
 
 #define REDDIFFIEHELLMAN_VERSION            "1.1"
 
