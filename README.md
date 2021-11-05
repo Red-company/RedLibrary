@@ -35,6 +35,7 @@ These libraries are 'ready to work', all you need is just write a code. All exam
  * Example of usage is in 'examples' folder. It is a good idea to read how diffiehellman works.
  * Needs to understand that the time of calculation rises as the secret key value rises.
  * Tested with Asecret=7000000 and Bsecret=90, but takes a lot of time to calculate.
+ * Secret key is restricted by uint max size in power function(function from boost is used there).
 
 ##
 **Notes 4(About Randomizer):**
