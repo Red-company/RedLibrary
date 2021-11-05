@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Red Technologies: /Users/vladimir/Desktop/RedLibrary/ProgressBar.h File Reference</title>
+<title>Red Technologies: /Users/vladimir/Desktop/RedLibrary/PermissionsLib.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -63,39 +63,63 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Classes</a> &#124;
-<a href="#define-members">Macros</a>  </div>
+<a href="#define-members">Macros</a> &#124;
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
-<div class="title">/Users/vladimir/Desktop/RedLibrary/ProgressBar.h File Reference</div>  </div>
+<div class="title">/Users/vladimir/Desktop/RedLibrary/PermissionsLib.h File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>ProgressBar is a lib, that shows a progress bar in terminal.  
+<p>PermissionsLib has function which checks root permissions.  
 <a href="#details">More...</a></p>
-<div class="textblock"><code>#include &lt;iostream&gt;</code><br />
-<code>#include &lt;string&gt;</code><br />
+<div class="textblock"><code>#include &lt;unistd.h&gt;</code><br />
 </div>
 <p><a href="a00164_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
-Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00359.html">Red::ProgressBar</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:a4aa427c1619d67c6f3fd5ff71466cc9e"><td class="memItemLeft" align="right" valign="top"><a id="a4aa427c1619d67c6f3fd5ff71466cc9e"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>REDPROGRESSBAR_VERSION</b>&#160;&#160;&#160;&quot;1.0&quot;</td></tr>
-<tr class="separator:a4aa427c1619d67c6f3fd5ff71466cc9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a316ef3a0e92af7db87b7c08156077962"><td class="memItemLeft" align="right" valign="top"><a id="a316ef3a0e92af7db87b7c08156077962"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>REDPROGRESSBAR_VERSION_NUMBER</b>&#160;&#160;&#160;10</td></tr>
-<tr class="separator:a316ef3a0e92af7db87b7c08156077962"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ade8743f86168abc9e01a33bde321ebde"><td class="memItemLeft" align="right" valign="top"><a id="ade8743f86168abc9e01a33bde321ebde"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>REDPERMISSIONSLIB_VERSION</b>&#160;&#160;&#160;&quot;1.0&quot;</td></tr>
+<tr class="separator:ade8743f86168abc9e01a33bde321ebde"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9724cea8d22e7b7650daf6040b2d63d2"><td class="memItemLeft" align="right" valign="top"><a id="a9724cea8d22e7b7650daf6040b2d63d2"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>REDPERMISSIONSLIB_HAS_ROOT</b>&#160;&#160;&#160;true</td></tr>
+<tr class="separator:a9724cea8d22e7b7650daf6040b2d63d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa886e0d368252e057f4c7c2189a85089"><td class="memItemLeft" align="right" valign="top"><a id="aa886e0d368252e057f4c7c2189a85089"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>REDPERMISSIONSLIB_HAS_NO_ROOT</b>&#160;&#160;&#160;false</td></tr>
+<tr class="separator:aa886e0d368252e057f4c7c2189a85089"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:aa007f4e6c421ddf9ba11978d9c5dd9d0"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00164.html#aa007f4e6c421ddf9ba11978d9c5dd9d0">Red::PermissionsLib::CheckRootPermissions</a> ()</td></tr>
+<tr class="memdesc:aa007f4e6c421ddf9ba11978d9c5dd9d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">CheckRootPermissions.  <a href="a00164.html#aa007f4e6c421ddf9ba11978d9c5dd9d0">More...</a><br /></td></tr>
+<tr class="separator:aa007f4e6c421ddf9ba11978d9c5dd9d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>ProgressBar is a lib, that shows a progress bar in terminal. </p>
+<div class="textblock"><p>PermissionsLib has function which checks root permissions. </p>
 <p>Copyright (c) 2020-2021 Vladimir Rogozin (<a href="#" onclick="location.href='mai'+'lto:'+'vla'+'di'+'mir'+'20'+'040'+'60'+'9@g'+'ma'+'il.'+'co'+'m'; return false;">vladi<span style="display: none;">.nosp@m.</span>mir2<span style="display: none;">.nosp@m.</span>00406<span style="display: none;">.nosp@m.</span>09@g<span style="display: none;">.nosp@m.</span>mail.<span style="display: none;">.nosp@m.</span>com</a>)</p>
 <p>Distributed under the MIT License (MIT) (See accompanying file LICENSE.txt or copy at <a href="http://opensource.org/licenses/MIT">http://opensource.org/licenses/MIT</a>) </p>
-</div></div><!-- contents -->
+</div><h2 class="groupheader">Function Documentation</h2>
+<a id="aa007f4e6c421ddf9ba11978d9c5dd9d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa007f4e6c421ddf9ba11978d9c5dd9d0">&#9670;&nbsp;</a></span>CheckRootPermissions()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Red::PermissionsLib::CheckRootPermissions </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>CheckRootPermissions. </p>
+<dl class="section return"><dt>Returns</dt><dd>true if has root, false if hasn't. </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1

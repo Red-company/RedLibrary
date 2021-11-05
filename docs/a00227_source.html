@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Red Technologies: /Users/vladimir/Desktop/RedLibrary/RedDataBase/VariadicBind.h Source File</title>
+<title>Red Technologies: /Users/vladimir/Desktop/RedLibrary/RedDataBase/Transaction.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -67,49 +67,44 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="headertitle">
-<div class="title">VariadicBind.h</div>  </div>
+<div class="title">Transaction.h</div>  </div>
 </div><!--header-->
 <div class="contents">
 <a href="a00227.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#ifndef RED_DATABASE_VARIADICBIND_H</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#define RED_DATABASE_VARIADICBIND_H</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#ifndef RED_DATABASE_TRANSACTION_H</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#define RED_DATABASE_TRANSACTION_H</span></div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="a00215.html">Statement.h</a>&quot;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="a00212.html">Exception.h</a>&quot;</span></div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#if (__cplusplus &gt;= 201402L) || ( defined(_MSC_VER) &amp;&amp; (_MSC_VER &gt;= 1900) ) </span><span class="comment">// c++14: Visual Studio 2015</span></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &lt;tuple&gt;</span></div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// c++14</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">namespace </span>Red::RedDataBase {</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="comment">// Forward declaration</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keyword">class </span>Database;</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &lt;utility&gt;</span></div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &lt;initializer_list&gt;</span></div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">namespace </span>Red::RedDataBase {</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">class </span>...Args&gt;</div>
-<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="a00227.html#a51f145c3b42f8b7c1be6d2cd6b093496">   46</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="a00227.html#a51f145c3b42f8b7c1be6d2cd6b093496">bind</a>(RedDataBase::Statement&amp; query, <span class="keyword">const</span> Args&amp; ... args) {</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <span class="keywordtype">int</span> pos = 0;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        (void)std::initializer_list&lt;int&gt;{</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;            ((void)query.bind(++pos, std::forward&lt;decltype(args)&gt;(args)), 0)...</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        };</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    }</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="preprocessor">    #if (__cplusplus &gt;= 201402L) || ( defined(_MSC_VER) &amp;&amp; (_MSC_VER &gt;= 1900) ) </span><span class="comment">// c++14: Visual Studio 2015</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="a00413.html">   40</a></span>&#160;    <span class="keyword">class </span><a class="code" href="a00413.html">Transaction</a> {</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;            <span class="keyword">explicit</span> <a class="code" href="a00413.html#a1920439942fdaa66d4b1827f626a65b7">Transaction</a>(<a class="code" href="a00393.html">Database</a>&amp; aDatabase);</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;            <span class="comment">// Transaction is non-copyable</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;            <a class="code" href="a00413.html#a1920439942fdaa66d4b1827f626a65b7">Transaction</a>(<span class="keyword">const</span> <a class="code" href="a00413.html">Transaction</a>&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;            <a class="code" href="a00413.html">Transaction</a>&amp; operator=(<span class="keyword">const</span> <a class="code" href="a00413.html">Transaction</a>&amp;) = <span class="keyword">delete</span>;</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> ... Types&gt;</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="a00227.html#a51f145c3b42f8b7c1be6d2cd6b093496">bind</a>(RedDataBase::Statement&amp; query, <span class="keyword">const</span> std::tuple&lt;Types...&gt; &amp;tuple) {</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        <a class="code" href="a00227.html#a51f145c3b42f8b7c1be6d2cd6b093496">bind</a>(query, tuple, std::index_sequence_for&lt;Types...&gt;());</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    }</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> ... Types, std::size_t ... Indices&gt;</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="a00227.html#a51f145c3b42f8b7c1be6d2cd6b093496">bind</a>(RedDataBase::Statement&amp; query, <span class="keyword">const</span> std::tuple&lt;Types...&gt; &amp;tuple, std::index_sequence&lt;Indices...&gt;) {</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        <a class="code" href="a00227.html#a51f145c3b42f8b7c1be6d2cd6b093496">bind</a>(query, std::get&lt;Indices&gt;(tuple)...);</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    }</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;<span class="preprocessor">    #endif </span><span class="comment">// c++14</span></div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;}</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160; </div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// RED_DATABASE_VARIADICBIND_H</span></div>
-<div class="ttc" id="aa00215_html"><div class="ttname"><a href="a00215.html">Statement.h</a></div><div class="ttdoc">A prepared SQLite Statement is a compiled SQL query ready to be executed, pointing to a row of result...</div></div>
-<div class="ttc" id="aa00227_html_a51f145c3b42f8b7c1be6d2cd6b093496"><div class="ttname"><a href="a00227.html#a51f145c3b42f8b7c1be6d2cd6b093496">bind</a></div><div class="ttdeci">void bind(RedDataBase::Statement &amp;query, const Args &amp;... args)</div><div class="ttdoc">Convenience function for calling Statement::bind(...) once for each argument given.</div><div class="ttdef"><b>Definition:</b> VariadicBind.h:46</div></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;            <a class="code" href="a00413.html#a6cf504d1353426289c4b04daf9844b18">~Transaction</a>();</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;            <span class="keywordtype">void</span> <a class="code" href="a00413.html#a50ce3055c6b7dbc27e048516de9943a7">commit</a>();</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            <a class="code" href="a00393.html">Database</a>&amp;   mDatabase;  </div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;            <span class="keywordtype">bool</span>        mbCommited; </div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    };</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;}</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// RED_DATABASE_TRANSACTION_H</span></div>
+<div class="ttc" id="aa00212_html"><div class="ttname"><a href="a00212.html">Exception.h</a></div><div class="ttdoc">Encapsulation of the error message from SQLite3 on a std::runtime_error.</div></div>
+<div class="ttc" id="aa00393_html"><div class="ttname"><a href="a00393.html">Red::RedDataBase::Database</a></div><div class="ttdoc">RAII management of a SQLite Database Connection.</div><div class="ttdef"><b>Definition:</b> Database.h:104</div></div>
+<div class="ttc" id="aa00413_html"><div class="ttname"><a href="a00413.html">Red::RedDataBase::Transaction</a></div><div class="ttdoc">RAII encapsulation of a SQLite Transaction.</div><div class="ttdef"><b>Definition:</b> Transaction.h:40</div></div>
+<div class="ttc" id="aa00413_html_a1920439942fdaa66d4b1827f626a65b7"><div class="ttname"><a href="a00413.html#a1920439942fdaa66d4b1827f626a65b7">Red::RedDataBase::Transaction::Transaction</a></div><div class="ttdeci">Transaction(Database &amp;aDatabase)</div><div class="ttdoc">Begins the SQLite transaction.</div><div class="ttdef"><b>Definition:</b> Transaction.cpp:18</div></div>
+<div class="ttc" id="aa00413_html_a50ce3055c6b7dbc27e048516de9943a7"><div class="ttname"><a href="a00413.html#a50ce3055c6b7dbc27e048516de9943a7">Red::RedDataBase::Transaction::commit</a></div><div class="ttdeci">void commit()</div><div class="ttdoc">Commit the transaction.</div><div class="ttdef"><b>Definition:</b> Transaction.cpp:35</div></div>
+<div class="ttc" id="aa00413_html_a6cf504d1353426289c4b04daf9844b18"><div class="ttname"><a href="a00413.html#a6cf504d1353426289c4b04daf9844b18">Red::RedDataBase::Transaction::~Transaction</a></div><div class="ttdeci">~Transaction()</div><div class="ttdoc">Safely rollback the transaction if it has not been committed.</div><div class="ttdef"><b>Definition:</b> Transaction.cpp:24</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

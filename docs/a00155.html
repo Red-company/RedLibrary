@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Red Technologies: /Users/vladimir/Desktop/RedLibrary/MemoryChecker.h File Reference</title>
+<title>Red Technologies: /Users/vladimir/Desktop/RedLibrary/Ipv4.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -63,236 +63,57 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#define-members">Macros</a> &#124;
-<a href="#func-members">Functions</a>  </div>
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#define-members">Macros</a>  </div>
   <div class="headertitle">
-<div class="title">/Users/vladimir/Desktop/RedLibrary/MemoryChecker.h File Reference</div>  </div>
+<div class="title">/Users/vladimir/Desktop/RedLibrary/Ipv4.h File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>MemoryChecker is lib, which has some functions uses to get system memory info.  
+<p>Ipv4 is a lib, which has object with Ipv4 address and functions to interact with it.  
 <a href="#details">More...</a></p>
-<div class="textblock"><code>#include &lt;sys/resource.h&gt;</code><br />
-<code>#include &lt;sys/statvfs.h&gt;</code><br />
+<div class="textblock"><code>#include &lt;boost/lexical_cast.hpp&gt;</code><br />
 <code>#include &lt;string&gt;</code><br />
 </div>
 <p><a href="a00155_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00361.html">Red::Ipv4</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:a2c691d5330c520eead3f5389797d091f"><td class="memItemLeft" align="right" valign="top"><a id="a2c691d5330c520eead3f5389797d091f"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>REDMEMORYCHECKER_VERSION</b>&#160;&#160;&#160;&quot;1.0&quot;</td></tr>
-<tr class="separator:a2c691d5330c520eead3f5389797d091f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a72499471cf476c41373e176f50885f46"><td class="memItemLeft" align="right" valign="top"><a id="a72499471cf476c41373e176f50885f46"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>REDMEMORYCHECKER_VERSION_NUMBER</b>&#160;&#160;&#160;10</td></tr>
-<tr class="separator:a72499471cf476c41373e176f50885f46"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
-Functions</h2></td></tr>
-<tr class="memitem:a664363d9b44aa3e4bc7d4004e7243fc3"><td class="memItemLeft" align="right" valign="top">unsigned long long int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00155.html#a664363d9b44aa3e4bc7d4004e7243fc3">Red::RAM::GetMemoryUsage</a> ()</td></tr>
-<tr class="memdesc:a664363d9b44aa3e4bc7d4004e7243fc3"><td class="mdescLeft">&#160;</td><td class="mdescRight">GetMemoryUsage.  <a href="a00155.html#a664363d9b44aa3e4bc7d4004e7243fc3">More...</a><br /></td></tr>
-<tr class="separator:a664363d9b44aa3e4bc7d4004e7243fc3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a87dcf28d8361750dfc87900ecd12fc60"><td class="memItemLeft" align="right" valign="top">unsigned long long int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00155.html#a87dcf28d8361750dfc87900ecd12fc60">Red::RAM::GetFreeMemory</a> ()</td></tr>
-<tr class="memdesc:a87dcf28d8361750dfc87900ecd12fc60"><td class="mdescLeft">&#160;</td><td class="mdescRight">GetFreeMemory.  <a href="a00155.html#a87dcf28d8361750dfc87900ecd12fc60">More...</a><br /></td></tr>
-<tr class="separator:a87dcf28d8361750dfc87900ecd12fc60"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0ab6b7e1f5141f30da9cfee8ef11827e"><td class="memItemLeft" align="right" valign="top">unsigned long long int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00155.html#a0ab6b7e1f5141f30da9cfee8ef11827e">Red::ROM::GetTotalMemory</a> (std::string &amp;path)</td></tr>
-<tr class="memdesc:a0ab6b7e1f5141f30da9cfee8ef11827e"><td class="mdescLeft">&#160;</td><td class="mdescRight">GetTotalMemory.  <a href="a00155.html#a0ab6b7e1f5141f30da9cfee8ef11827e">More...</a><br /></td></tr>
-<tr class="separator:a0ab6b7e1f5141f30da9cfee8ef11827e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae9e0f0b9febe774eaae375da62fecc7b"><td class="memItemLeft" align="right" valign="top">unsigned long long int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00155.html#ae9e0f0b9febe774eaae375da62fecc7b">Red::ROM::GetFreeMemory</a> (std::string &amp;path)</td></tr>
-<tr class="memdesc:ae9e0f0b9febe774eaae375da62fecc7b"><td class="mdescLeft">&#160;</td><td class="mdescRight">GetFreeMemory.  <a href="a00155.html#ae9e0f0b9febe774eaae375da62fecc7b">More...</a><br /></td></tr>
-<tr class="separator:ae9e0f0b9febe774eaae375da62fecc7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a57710c0ada9638fe79427184907ec8c7"><td class="memItemLeft" align="right" valign="top">unsigned long long int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00155.html#a57710c0ada9638fe79427184907ec8c7">Red::ROM::GetFreeMemory_root</a> (std::string &amp;path)</td></tr>
-<tr class="memdesc:a57710c0ada9638fe79427184907ec8c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">GetFreeMemory_root.  <a href="a00155.html#a57710c0ada9638fe79427184907ec8c7">More...</a><br /></td></tr>
-<tr class="separator:a57710c0ada9638fe79427184907ec8c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0139e7cfc0f33f7a8c6873d1ea58a327"><td class="memItemLeft" align="right" valign="top">unsigned long long int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00155.html#a0139e7cfc0f33f7a8c6873d1ea58a327">Red::ROM::GetMemoryUsage</a> (std::string &amp;path)</td></tr>
-<tr class="memdesc:a0139e7cfc0f33f7a8c6873d1ea58a327"><td class="mdescLeft">&#160;</td><td class="mdescRight">GetMemoryUsage.  <a href="a00155.html#a0139e7cfc0f33f7a8c6873d1ea58a327">More...</a><br /></td></tr>
-<tr class="separator:a0139e7cfc0f33f7a8c6873d1ea58a327"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a91293ad575786103d70d58a1f789c360"><td class="memItemLeft" align="right" valign="top">unsigned long long int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00155.html#a91293ad575786103d70d58a1f789c360">Red::ROM::GetMemoryUsage_root</a> (std::string &amp;path)</td></tr>
-<tr class="memdesc:a91293ad575786103d70d58a1f789c360"><td class="mdescLeft">&#160;</td><td class="mdescRight">GetMemoryUsage_root.  <a href="a00155.html#a91293ad575786103d70d58a1f789c360">More...</a><br /></td></tr>
-<tr class="separator:a91293ad575786103d70d58a1f789c360"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab01fbf699d6d2986e4576b99f59054c8"><td class="memItemLeft" align="right" valign="top"><a id="ab01fbf699d6d2986e4576b99f59054c8"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>REDIPV4_VERSION</b>&#160;&#160;&#160;&quot;1.0&quot;</td></tr>
+<tr class="separator:ab01fbf699d6d2986e4576b99f59054c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa6208ac61abdd2c2fd9c3213623f0d2"><td class="memItemLeft" align="right" valign="top"><a id="afa6208ac61abdd2c2fd9c3213623f0d2"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>REDIPV4_ALL</b>&#160;&#160;&#160;&quot;all&quot;</td></tr>
+<tr class="separator:afa6208ac61abdd2c2fd9c3213623f0d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5cab1f69f67a3211dc640dea211481e1"><td class="memItemLeft" align="right" valign="top"><a id="a5cab1f69f67a3211dc640dea211481e1"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>REDIPV4_PUBLIC</b>&#160;&#160;&#160;&quot;public&quot;</td></tr>
+<tr class="separator:a5cab1f69f67a3211dc640dea211481e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afab46d1f2990eb2579e1e6851e9388d0"><td class="memItemLeft" align="right" valign="top"><a id="afab46d1f2990eb2579e1e6851e9388d0"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>REDIPV4_192</b>&#160;&#160;&#160;&quot;192&quot;</td></tr>
+<tr class="separator:afab46d1f2990eb2579e1e6851e9388d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aed5fccb29d4fce084748547fb7cd31e8"><td class="memItemLeft" align="right" valign="top"><a id="aed5fccb29d4fce084748547fb7cd31e8"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>REDIPV4_172</b>&#160;&#160;&#160;&quot;172&quot;</td></tr>
+<tr class="separator:aed5fccb29d4fce084748547fb7cd31e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7dc6d8fed2c6156d1e301f939be86175"><td class="memItemLeft" align="right" valign="top"><a id="a7dc6d8fed2c6156d1e301f939be86175"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>REDIPV4_169</b>&#160;&#160;&#160;&quot;169&quot;</td></tr>
+<tr class="separator:a7dc6d8fed2c6156d1e301f939be86175"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a913ae9cbbb6c3ecb15660aaeeed142b3"><td class="memItemLeft" align="right" valign="top"><a id="a913ae9cbbb6c3ecb15660aaeeed142b3"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>REDIPV4_127</b>&#160;&#160;&#160;&quot;127&quot;</td></tr>
+<tr class="separator:a913ae9cbbb6c3ecb15660aaeeed142b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab84edaa86f9ca7844d08e8a12bf6dae1"><td class="memItemLeft" align="right" valign="top"><a id="ab84edaa86f9ca7844d08e8a12bf6dae1"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>REDIPV4_10</b>&#160;&#160;&#160;&quot;10&quot;</td></tr>
+<tr class="separator:ab84edaa86f9ca7844d08e8a12bf6dae1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>MemoryChecker is lib, which has some functions uses to get system memory info. </p>
+<div class="textblock"><p>Ipv4 is a lib, which has object with Ipv4 address and functions to interact with it. </p>
 <p>Copyright (c) 2020-2021 Vladimir Rogozin (<a href="#" onclick="location.href='mai'+'lto:'+'vla'+'di'+'mir'+'20'+'040'+'60'+'9@g'+'ma'+'il.'+'co'+'m'; return false;">vladi<span style="display: none;">.nosp@m.</span>mir2<span style="display: none;">.nosp@m.</span>00406<span style="display: none;">.nosp@m.</span>09@g<span style="display: none;">.nosp@m.</span>mail.<span style="display: none;">.nosp@m.</span>com</a>)</p>
 <p>Distributed under the MIT License (MIT) (See accompanying file LICENSE.txt or copy at <a href="http://opensource.org/licenses/MIT">http://opensource.org/licenses/MIT</a>) </p>
-</div><h2 class="groupheader">Function Documentation</h2>
-<a id="a87dcf28d8361750dfc87900ecd12fc60"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a87dcf28d8361750dfc87900ecd12fc60">&#9670;&nbsp;</a></span>GetFreeMemory() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">unsigned long long int Red::RAM::GetFreeMemory </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>GetFreeMemory. </p>
-<dl class="section return"><dt>Returns</dt><dd>Num of free memory (in bytes). </dd></dl>
-
-</div>
-</div>
-<a id="ae9e0f0b9febe774eaae375da62fecc7b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae9e0f0b9febe774eaae375da62fecc7b">&#9670;&nbsp;</a></span>GetFreeMemory() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">unsigned long long int Red::ROM::GetFreeMemory </td>
-          <td>(</td>
-          <td class="paramtype">std::string &amp;&#160;</td>
-          <td class="paramname"><em>path</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>GetFreeMemory. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">path</td><td>Path to folder which need to be parsed.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>Num of memory available to non-root user. </dd></dl>
-
-</div>
-</div>
-<a id="a57710c0ada9638fe79427184907ec8c7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a57710c0ada9638fe79427184907ec8c7">&#9670;&nbsp;</a></span>GetFreeMemory_root()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">unsigned long long int Red::ROM::GetFreeMemory_root </td>
-          <td>(</td>
-          <td class="paramtype">std::string &amp;&#160;</td>
-          <td class="paramname"><em>path</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>GetFreeMemory_root. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">path</td><td>Path to folder which need to be parsed.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>Num of memory available to root user. </dd></dl>
-
-</div>
-</div>
-<a id="a664363d9b44aa3e4bc7d4004e7243fc3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a664363d9b44aa3e4bc7d4004e7243fc3">&#9670;&nbsp;</a></span>GetMemoryUsage() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">unsigned long long int Red::RAM::GetMemoryUsage </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>GetMemoryUsage. </p>
-<dl class="section return"><dt>Returns</dt><dd>Num of using memory (in bytes). </dd></dl>
-<p>The amount of memory currently being used by this process, in bytes. By default, returns the full virtual arena, but if resident=true, it will report just the resident set in RAM (if supported on that OS).</p>
-
-</div>
-</div>
-<a id="a0139e7cfc0f33f7a8c6873d1ea58a327"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0139e7cfc0f33f7a8c6873d1ea58a327">&#9670;&nbsp;</a></span>GetMemoryUsage() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">unsigned long long int Red::ROM::GetMemoryUsage </td>
-          <td>(</td>
-          <td class="paramtype">std::string &amp;&#160;</td>
-          <td class="paramname"><em>path</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>GetMemoryUsage. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">path</td><td>Path to folder which need to be parsed.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>Num of using memory available to non-root user. </dd></dl>
-
-</div>
-</div>
-<a id="a91293ad575786103d70d58a1f789c360"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a91293ad575786103d70d58a1f789c360">&#9670;&nbsp;</a></span>GetMemoryUsage_root()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">unsigned long long int Red::ROM::GetMemoryUsage_root </td>
-          <td>(</td>
-          <td class="paramtype">std::string &amp;&#160;</td>
-          <td class="paramname"><em>path</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>GetMemoryUsage_root. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">path</td><td>Path to folder which need to be parsed.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>Num of using memory available to non-root user. </dd></dl>
-
-</div>
-</div>
-<a id="a0ab6b7e1f5141f30da9cfee8ef11827e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0ab6b7e1f5141f30da9cfee8ef11827e">&#9670;&nbsp;</a></span>GetTotalMemory()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">unsigned long long int Red::ROM::GetTotalMemory </td>
-          <td>(</td>
-          <td class="paramtype">std::string &amp;&#160;</td>
-          <td class="paramname"><em>path</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>GetTotalMemory. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">path</td><td>Path to folder which need to be parsed.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>Total num of memory. </dd></dl>
-
-</div>
-</div>
-</div><!-- contents -->
+</div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1

@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Red Technologies: /Users/vladimir/Desktop/RedLibrary/ProgressBar.h Source File</title>
+<title>Red Technologies: /Users/vladimir/Desktop/RedLibrary/PermissionsLib.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -63,80 +63,29 @@ $(function() {
 
 <div class="header">
   <div class="headertitle">
-<div class="title">/Users/vladimir/Desktop/RedLibrary/ProgressBar.h</div>  </div>
+<div class="title">/Users/vladimir/Desktop/RedLibrary/PermissionsLib.h</div>  </div>
 </div><!--header-->
 <div class="contents">
 <a href="a00164.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#ifndef RED_PROGRESSBAR_H</span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#define RED_PROGRESSBAR_H</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#ifndef RED_PERMISSIONSLIB_H</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#define RED_PERMISSIONSLIB_H</span></div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#define REDPROGRESSBAR_VERSION            &quot;1.0&quot;</span></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#define REDPROGRESSBAR_VERSION_NUMBER     10</span></div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keyword">namespace </span>Red {</div>
-<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="a00359.html">   20</a></span>&#160;    <span class="keyword">class </span><a class="code" href="a00359.html">ProgressBar</a> {</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="a00359.html#a8da56ee16163f9bb9e29211bc3000017">   27</a></span>&#160;            <a class="code" href="a00359.html#a8da56ee16163f9bb9e29211bc3000017">ProgressBar</a>() {}</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
-<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="a00359.html#a84124642a38354ab38299b56b829166e">   34</a></span>&#160;            <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="a00359.html#a84124642a38354ab38299b56b829166e">Increment</a>() {</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;                <span class="keywordflow">if</span> (Percent &lt;= 100) {</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;                    Percent++;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;                }</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;            }</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
-<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="a00359.html#a872409acf4c736feee2b9dd6e931ef4d">   45</a></span>&#160;            <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="a00359.html#a872409acf4c736feee2b9dd6e931ef4d">Show</a>() {</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;                std::cout &lt;&lt; <span class="stringliteral">&quot;\r\e[42m&quot;</span>;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;                Show_main();</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;                std::cout &lt;&lt; std::flush;</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;            }</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
-<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="a00359.html#a6a41495457d839cc39b02f879911c622">   58</a></span>&#160;            <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="a00359.html#a6a41495457d839cc39b02f879911c622">Red_Show</a>() {</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;                std::cout &lt;&lt; <span class="stringliteral">&quot;\r\e[101m&quot;</span>;</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;                Show_main();</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;                std::cout &lt;&lt; std::flush;</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;            }</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            <span class="comment">// Base ctor.</span></div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;            ~<a class="code" href="a00359.html">ProgressBar</a>() {}</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;            <span class="keyword">inline</span> <span class="keywordtype">void</span> Show_main() {</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;                <span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> <span class="keywordtype">int</span> NumOfGreenCubes = Percent / 2;</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;                <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> <span class="keywordtype">int</span> g = 0; g &lt; NumOfGreenCubes; g++) {</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;                    std::cout &lt;&lt; <span class="stringliteral">&quot; &quot;</span>;</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;                }</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;                std::cout &lt;&lt; <span class="stringliteral">&quot;\e[0m\e[47m&quot;</span>;</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;                <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> <span class="keywordtype">int</span> h = 0; h + NumOfGreenCubes &lt; 50; h++) {</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;                    std::cout &lt;&lt; <span class="stringliteral">&quot; &quot;</span>;</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;                }</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;                std::cout &lt;&lt; <span class="stringliteral">&quot;\e[0m &quot;</span>;</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160; </div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;                std::cout &lt;&lt; Percent &lt;&lt; <span class="stringliteral">&quot;% &quot;</span>;</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;            }</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160; </div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;            <span class="comment">// Variables.</span></div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;            <span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> <span class="keywordtype">int</span> Percent = 0;</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    };</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;}</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160; </div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// RED_PROGRESSBAR_H</span></div>
-<div class="ttc" id="aa00359_html"><div class="ttname"><a href="a00359.html">Red::ProgressBar</a></div><div class="ttdef"><b>Definition:</b> ProgressBar.h:20</div></div>
-<div class="ttc" id="aa00359_html_a6a41495457d839cc39b02f879911c622"><div class="ttname"><a href="a00359.html#a6a41495457d839cc39b02f879911c622">Red::ProgressBar::Red_Show</a></div><div class="ttdeci">void Red_Show()</div><div class="ttdoc">Red_Show.</div><div class="ttdef"><b>Definition:</b> ProgressBar.h:58</div></div>
-<div class="ttc" id="aa00359_html_a84124642a38354ab38299b56b829166e"><div class="ttname"><a href="a00359.html#a84124642a38354ab38299b56b829166e">Red::ProgressBar::Increment</a></div><div class="ttdeci">void Increment()</div><div class="ttdoc">Increment.</div><div class="ttdef"><b>Definition:</b> ProgressBar.h:34</div></div>
-<div class="ttc" id="aa00359_html_a872409acf4c736feee2b9dd6e931ef4d"><div class="ttname"><a href="a00359.html#a872409acf4c736feee2b9dd6e931ef4d">Red::ProgressBar::Show</a></div><div class="ttdeci">void Show()</div><div class="ttdoc">Show.</div><div class="ttdef"><b>Definition:</b> ProgressBar.h:45</div></div>
-<div class="ttc" id="aa00359_html_a8da56ee16163f9bb9e29211bc3000017"><div class="ttname"><a href="a00359.html#a8da56ee16163f9bb9e29211bc3000017">Red::ProgressBar::ProgressBar</a></div><div class="ttdeci">ProgressBar()</div><div class="ttdoc">ProgressBar.</div><div class="ttdef"><b>Definition:</b> ProgressBar.h:27</div></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;unistd.h&gt;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#define REDPERMISSIONSLIB_VERSION            &quot;1.0&quot;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keyword">namespace </span>Red {</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keyword">namespace </span>PermissionsLib {</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">        #define REDPERMISSIONSLIB_HAS_ROOT true</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">        #define REDPERMISSIONSLIB_HAS_NO_ROOT false</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="a00164.html#aa007f4e6c421ddf9ba11978d9c5dd9d0">   27</a></span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="a00164.html#aa007f4e6c421ddf9ba11978d9c5dd9d0">CheckRootPermissions</a>() {</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;            <span class="keywordflow">return</span> !getuid();</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        }</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    }</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;}</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// RED_PERMISSIONSLIB_H</span></div>
+<div class="ttc" id="aa00164_html_aa007f4e6c421ddf9ba11978d9c5dd9d0"><div class="ttname"><a href="a00164.html#aa007f4e6c421ddf9ba11978d9c5dd9d0">Red::PermissionsLib::CheckRootPermissions</a></div><div class="ttdeci">bool CheckRootPermissions()</div><div class="ttdoc">CheckRootPermissions.</div><div class="ttdef"><b>Definition:</b> PermissionsLib.h:27</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
