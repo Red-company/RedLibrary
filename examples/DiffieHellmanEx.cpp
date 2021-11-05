@@ -2,7 +2,7 @@
 #include<math.h>
 
 #include "../RedLibrary/DiffieHellman.h"
-
+#include "../RedLibrary/Randomizer.h"
 #include "../RedLibrary/RedTypes.h"
 
 int main() {
@@ -16,11 +16,8 @@ int main() {
     G = 2; // A primitve root for P, G is taken
     std::cout << "The value of G : " << G << std::endl << std::endl;
 
-    // Random size.
-    Red::uint65536_t s = 16;
-
     // Generating secrets.
-    a = Red::DiffieHellman<Red::uint65536_t>::GenerateSecret(s);
+    a = 7000000;//Red::Randomize() % 10000 + 1;
     b = 90;
 
     Red::DiffieHellman<Red::uint65536_t> Alice(G, P, a);

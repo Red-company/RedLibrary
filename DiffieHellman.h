@@ -21,6 +21,7 @@
 
 // RedLibrary.
 #include "RedTypes.h"
+#include "Randomizer.h"
 
 #define REDDIFFIEHELLMAN_VERSION            "1.1"
 
@@ -156,18 +157,6 @@ namespace Red {
              */
             INT_SIZE GetSymmetricKey(INT_SIZE x) {
                 return power(x, a, P);
-            }
-
-            /**
-             * @brief GenerateSecret
-             *
-             * @param Srand Length of key.
-             *
-             * @return Generated key.
-             */
-            static INT_SIZE GenerateSecret(INT_SIZE& Srand) {
-                srand((unsigned int) time(nullptr));
-                return (INT_SIZE) rand() % Srand + 1;
             }
 
             // Base dtor.
