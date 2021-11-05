@@ -26,13 +26,19 @@ These libraries are 'ready to work', all you need is just write a code. All exam
 ##
 **Notes 2(About AES and RES):**
  * If you want to route result of AES / RES encryption to `std::cout`, you should convert string to hexadecimal system, in other way you will get bad output!
-  * **Convertion functions are in Hex.h.**
+ * Convertion functions are in Hex.h.
  * In AES and RES there are no built-in error checking or protection from out-of-bounds memory access errors as a result of malicious input.
 
 ##
 **Notes 3(About DiffieHellman):**
  * P number (prime one) works stable with 19729 characters long (From 'RedTypes.h': 'Red::uint65536_t').
  * Example of usage is in 'examples' folder. It is a good idea to read how diffiehellman works.
+ * Needs to understand that the time of calculation rises as the secret key value rises.
+ * Tested with Asecret=7000000 and Bsecret=90, but takes a lot of time to calculate.
+
+##
+**Notes 4(About Randomizer):**
+ * Max return value is 'ull' int.
 
 ##
 All material in this repository is in the public domain.
