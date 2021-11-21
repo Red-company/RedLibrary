@@ -14,7 +14,7 @@
 #include <string>
 #include <map>
 
-#define REDINSENSITIVEMAP_VERSION            "1.0"
+#define REDINSENSITIVEMAP_VERSION "1.0"
 
 namespace Red {
     //

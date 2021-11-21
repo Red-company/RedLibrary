@@ -10,7 +10,7 @@
 #ifndef RED_MEMORYCHECKER_H
 #define RED_MEMORYCHECKER_H
 
-#define REDMEMORYCHECKER_VERSION            "1.0"
+#define REDMEMORYCHECKER_VERSION "1.0"
 
 namespace Red {
     namespace RAM {

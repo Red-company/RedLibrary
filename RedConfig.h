@@ -17,7 +17,7 @@
 // RedLibrary.
 #include "../RedLibrary/InsensitiveMap.h"
 
-#define REDCONFIG_VERSION           "1.0"
+#define REDCONFIG_VERSION "1.0"
 
 namespace Red {
     namespace RedConfig {

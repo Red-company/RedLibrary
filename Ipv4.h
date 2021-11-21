@@ -13,7 +13,7 @@
 #include <boost/lexical_cast.hpp>
 #include <string>
 
-#define REDIPV4_VERSION           "1.0"
+#define REDIPV4_VERSION "1.0"
 
 #define REDIPV4_ALL    "all"
 #define REDIPV4_PUBLIC "public"

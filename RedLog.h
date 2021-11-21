@@ -12,7 +12,7 @@
 #include <string>
 #include <fstream>
 
-#define REDLOG_VERSION           "1.0"
+#define REDLOG_VERSION "1.0"
 
 #define REDLOG_NO_GROUP "null"
 

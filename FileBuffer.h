@@ -14,7 +14,7 @@
 #include <fstream>
 #include <string>
 
-#define REDFILEBUFFER_VERSION           "1.0"
+#define REDFILEBUFFER_VERSION "1.0"
 
 namespace Red {
     class FileBuffer {

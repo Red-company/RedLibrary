@@ -22,7 +22,7 @@
 // RedLibrary.
 #include "RedTypes.h"
 
-#define REDDIFFIEHELLMAN_VERSION            "1.1"
+#define REDDIFFIEHELLMAN_VERSION "1.1"
 
 namespace Red {
     /// Creating a template for integers, because we need it to be cross-typed.

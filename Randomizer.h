@@ -14,7 +14,7 @@
 #include <time.h>
 #include <math.h>
 
-#define REDRANDOMIZER_VERSION            "1.0"
+#define REDRANDOMIZER_VERSION "1.0"
 
 namespace Red {
     /**

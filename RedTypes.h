@@ -11,7 +11,7 @@
 
 #include <boost/multiprecision/cpp_int.hpp>
 
-#define REDTYPES_VERSION            "1.1"
+#define REDTYPES_VERSION "1.1"
 
 namespace Red {
     // Standart size.

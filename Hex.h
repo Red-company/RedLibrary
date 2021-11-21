@@ -12,7 +12,7 @@
 
 #include <string>
 
-#define REDHEX_VERSION            "1.0"
+#define REDHEX_VERSION "1.0"
 
 namespace Red {
     /**

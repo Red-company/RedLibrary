@@ -12,7 +12,7 @@
 
 #include <chrono>
 
-#define REDEXECUTIONTIME_VERSION            "1.0"
+#define REDEXECUTIONTIME_VERSION "1.0"
 
 namespace Red {
     template<typename TimeT = std::chrono::milliseconds>

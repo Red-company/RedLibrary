@@ -13,7 +13,7 @@
 #include <string>
 #include <ctime>
 
-#define REDPASSGENERATOR_VERSION          "1.0"
+#define REDPASSGENERATOR_VERSION "1.0"
 
 #define REDPASSGENERATOR_ONLY_NUMS        "only nums"
 #define REDPASSGENERATOR_NUMS_AND_LETTERS "nums and letters"

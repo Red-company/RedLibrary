@@ -13,7 +13,7 @@
 #include <iostream>
 #include <string>
 
-#define REDPROGRESSBAR_VERSION            "1.0"
+#define REDPROGRESSBAR_VERSION "1.0"
 
 namespace Red {
     class ProgressBar {
