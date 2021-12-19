@@ -630,7 +630,7 @@ class _red_for_Va1 {
  *
  * @return Encoded string.
  */
-inline const std::string Red::Va1Encode(const std::string_view ToEnc) {
+const std::string Red::Va1Encode(const std::string_view ToEnc) {
     return _red_for_Va1::FirstEncoding(ToEnc);
 }
 
@@ -641,6 +641,6 @@ inline const std::string Red::Va1Encode(const std::string_view ToEnc) {
  *
  * @return Decoded string.
  */
-inline const std::string Red::Va1Decode(const std::string_view ToDec) {
+const std::string Red::Va1Decode(const std::string_view ToDec) {
     return _red_for_Va1::LastDecoding(ToDec);
 }
