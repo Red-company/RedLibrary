@@ -42,4 +42,12 @@ These libraries are _'ready to work'_, all you need is just write a code. All ex
  * Max return value is _'ull' int_.
 
 ##
+**Notes 5(about Va1):**
+ * Original repository is [_here_](https://github.com/vladimirrogozin/Va1).
+
+##
+**Notes 6(about Sha256):**
+ * Original repository is [_here_](https://github.com/vladimirrogozin/Sha256).
+
+##
 All material in this repository is in the public domain.
