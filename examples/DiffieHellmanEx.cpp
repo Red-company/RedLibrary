@@ -17,7 +17,7 @@ int main() {
     std::cout << "The value of G : " << G << std::endl << std::endl;
 
     // Generating secrets.
-    a = 7000000;//Red::Randomize() % 7000000 + 1; // a E [1; 7000001].
+    a = 7000000;//Red::Randomize() % 7000000 + 1; // a (E [1; 7000001]. Warning: Takes a lot of time to calculate.
     b = 90;
 
     Red::DiffieHellman<Red::uint65536_t> Alice(G, P, a);
