@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['filebuffer_279',['FileBuffer',['../a00349.html',1,'Red']]]
+  ['filebuffer_284',['FileBuffer',['../a00355.html',1,'Red']]]
 ];

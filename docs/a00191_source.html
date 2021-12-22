@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Red Technologies: /Users/vladimir/Desktop/RedLibrary/RedDataBase/Backup.h Source File</title>
+<title>Red Technologies: /Users/vladimir/Desktop/RedLibrary/RedDataBase/Assertion.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -67,58 +67,37 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="headertitle">
-<div class="title">Backup.h</div>  </div>
+<div class="title">Assertion.h</div>  </div>
 </div><!--header-->
 <div class="contents">
 <a href="a00191.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#ifndef RED_DATABASE_BACKUP_H</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#define RED_DATABASE_BACKUP_H</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#ifndef RED_DATABASE_ASSERTION_H</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#define RED_DATABASE_ASSERTION_H</span></div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="a00206.html">Database.h</a>&quot;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &lt;cassert&gt;</span></div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment">// Forward declaration to avoid inclusion of &lt;sqlite3.h&gt; in a header</span></div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keyword">struct </span>sqlite3_backup;</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keyword">namespace </span>Red::RedDataBase {</div>
-<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="a00381.html">   31</a></span>&#160;    <span class="keyword">class </span><a class="code" href="a00381.html">Backup</a> {</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;            <a class="code" href="a00381.html#ac87183dde981bcbf0f2bf8ac3e68ebde">Backup</a>(<a class="code" href="a00393.html">Database</a>&amp; aDestDatabase, <span class="keyword">const</span> <span class="keywordtype">char</span>* apDestDatabaseName,</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;                   <a class="code" href="a00393.html">Database</a>&amp; aSrcDatabase, <span class="keyword">const</span> <span class="keywordtype">char</span>* apSrcDatabaseName);</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;            <a class="code" href="a00381.html#ac87183dde981bcbf0f2bf8ac3e68ebde">Backup</a>(<a class="code" href="a00393.html">Database</a>&amp; aDestDatabase, <span class="keyword">const</span> std::string&amp; aDestDatabaseName,</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;                   <a class="code" href="a00393.html">Database</a>&amp; aSrcDatabase, <span class="keyword">const</span> std::string&amp; aSrcDatabaseName);</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;            <a class="code" href="a00381.html#ac87183dde981bcbf0f2bf8ac3e68ebde">Backup</a>(<a class="code" href="a00393.html">Database</a>&amp; aDestDatabase, <a class="code" href="a00393.html">Database</a>&amp; aSrcDatabase);</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160; </div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;            <span class="comment">// Backup is non-copyable</span></div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;            <a class="code" href="a00381.html#ac87183dde981bcbf0f2bf8ac3e68ebde">Backup</a>(<span class="keyword">const</span> <a class="code" href="a00381.html">Backup</a>&amp;) = <span class="keyword">delete</span>;</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;            <a class="code" href="a00381.html">Backup</a>&amp; operator=(<span class="keyword">const</span> <a class="code" href="a00381.html">Backup</a>&amp;) = <span class="keyword">delete</span>;</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160; </div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;            <a class="code" href="a00381.html#a0432bb3601bb3a2036394888dcf671d3">~Backup</a>();</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160; </div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;            <span class="keywordtype">int</span> <a class="code" href="a00381.html#a94ad099816a51e9ae2a3a9ef00ecf8cd">executeStep</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> aNumPage = -1);</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160; </div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;            <span class="keywordtype">int</span> <a class="code" href="a00381.html#a2335126fdf7d9122686b253a911ae003">getRemainingPageCount</a>();</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160; </div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;            <span class="keywordtype">int</span> <a class="code" href="a00381.html#a6d03da910eb164a07ee539f2e0fc9a7c">getTotalPageCount</a>();</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160; </div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;        <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;            <span class="comment">// TODO: use std::unique_ptr with a custom deleter to call sqlite3_backup_finish()</span></div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;            sqlite3_backup* mpSQLiteBackup = <span class="keyword">nullptr</span>;   </div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    };</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;}</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160; </div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// RED_DATABASE_BACKUP_H</span></div>
-<div class="ttc" id="aa00206_html"><div class="ttname"><a href="a00206.html">Database.h</a></div><div class="ttdoc">Management of a SQLite Database Connection.</div></div>
-<div class="ttc" id="aa00381_html"><div class="ttname"><a href="a00381.html">Red::RedDataBase::Backup</a></div><div class="ttdoc">RAII encapsulation of a RedDataBase Backup process.</div><div class="ttdef"><b>Definition:</b> Backup.h:31</div></div>
-<div class="ttc" id="aa00381_html_a0432bb3601bb3a2036394888dcf671d3"><div class="ttname"><a href="a00381.html#a0432bb3601bb3a2036394888dcf671d3">Red::RedDataBase::Backup::~Backup</a></div><div class="ttdeci">~Backup()</div><div class="ttdoc">Release the RedDataBase Backup resource.</div><div class="ttdef"><b>Definition:</b> Backup.cpp:37</div></div>
-<div class="ttc" id="aa00381_html_a2335126fdf7d9122686b253a911ae003"><div class="ttname"><a href="a00381.html#a2335126fdf7d9122686b253a911ae003">Red::RedDataBase::Backup::getRemainingPageCount</a></div><div class="ttdeci">int getRemainingPageCount()</div><div class="ttdoc">getRemainingPageCount</div><div class="ttdef"><b>Definition:</b> Backup.cpp:73</div></div>
-<div class="ttc" id="aa00381_html_a6d03da910eb164a07ee539f2e0fc9a7c"><div class="ttname"><a href="a00381.html#a6d03da910eb164a07ee539f2e0fc9a7c">Red::RedDataBase::Backup::getTotalPageCount</a></div><div class="ttdeci">int getTotalPageCount()</div><div class="ttdoc">getTotalPageCount</div><div class="ttdef"><b>Definition:</b> Backup.cpp:82</div></div>
-<div class="ttc" id="aa00381_html_a94ad099816a51e9ae2a3a9ef00ecf8cd"><div class="ttname"><a href="a00381.html#a94ad099816a51e9ae2a3a9ef00ecf8cd">Red::RedDataBase::Backup::executeStep</a></div><div class="ttdeci">int executeStep(const int aNumPage=-1)</div><div class="ttdoc">Execute a step of backup with a given number of source pages to be copied.</div><div class="ttdef"><b>Definition:</b> Backup.cpp:58</div></div>
-<div class="ttc" id="aa00381_html_ac87183dde981bcbf0f2bf8ac3e68ebde"><div class="ttname"><a href="a00381.html#ac87183dde981bcbf0f2bf8ac3e68ebde">Red::RedDataBase::Backup::Backup</a></div><div class="ttdeci">Backup(Database &amp;aDestDatabase, const char *apDestDatabaseName, Database &amp;aSrcDatabase, const char *apSrcDatabaseName)</div><div class="ttdoc">Initialize a RedDataBase Backup object.</div><div class="ttdef"><b>Definition:</b> Backup.cpp:19</div></div>
-<div class="ttc" id="aa00393_html"><div class="ttname"><a href="a00393.html">Red::RedDataBase::Database</a></div><div class="ttdoc">RAII management of a SQLite Database Connection.</div><div class="ttdef"><b>Definition:</b> Database.h:104</div></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#ifdef REDDATABASE_ENABLE_ASSERT_HANDLER</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment">// if an assert handler is provided by user code, use it instead of assert()</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">namespace </span>RedDataBase {</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="comment">// declaration of the assert handler to define in user code</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordtype">void</span> assertion_failed(<span class="keyword">const</span> <span class="keywordtype">char</span>* apFile, <span class="keyword">const</span> <span class="keywordtype">long</span> apLine, <span class="keyword">const</span> <span class="keywordtype">char</span>* apFunc,</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;                          <span class="keyword">const</span> <span class="keywordtype">char</span>* apExpr, <span class="keyword">const</span> <span class="keywordtype">char</span>* apMsg);</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">    #ifdef _MSC_VER</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">    #define __func__ __FUNCTION__</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor">    #endif</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="comment">// call the assert handler provided by user code</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">    #define REDDATABASE_ASSERT(expression, message) \</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="preprocessor">    if (!(expression)) { SQLite::assertion_failed(__FILE__, __LINE__, __func__, #expression, message) }</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;}</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="comment">// if no assert handler provided by user code, use standard assert()</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="comment">// (note: in release mode assert() does nothing)</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="a00191.html#ad6ca9e1e5189cd7e862b7d97bb2998cd">   41</a></span>&#160;<span class="preprocessor">#define REDDATABASE_ASSERT(expression, message)   assert(expression &amp;&amp; message)</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// RED_DATABASE_ASSERTION_H</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Red Technologies: /Users/vladimir/Desktop/RedLibrary/Randomizer.h File Reference</title>
+<title>Red Technologies: /Users/vladimir/Desktop/RedLibrary/PermissionsLib.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -66,61 +66,56 @@ $(function() {
 <a href="#define-members">Macros</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
-<div class="title">/Users/vladimir/Desktop/RedLibrary/Randomizer.h File Reference</div>  </div>
+<div class="title">/Users/vladimir/Desktop/RedLibrary/PermissionsLib.h File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>Randomizer is a lib which contains a 'Randomize' function.  
+<p>PermissionsLib has function which checks root permissions.  
 <a href="#details">More...</a></p>
-<div class="textblock"><code>#include &lt;stdlib.h&gt;</code><br />
-<code>#include &lt;time.h&gt;</code><br />
-<code>#include &lt;math.h&gt;</code><br />
+<div class="textblock"><code>#include &lt;unistd.h&gt;</code><br />
 </div>
 <p><a href="a00170_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:ac3ee9611a07112baf5ac1df923f06c22"><td class="memItemLeft" align="right" valign="top"><a id="ac3ee9611a07112baf5ac1df923f06c22"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>REDRANDOMIZER_VERSION</b>&#160;&#160;&#160;&quot;1.0&quot;</td></tr>
-<tr class="separator:ac3ee9611a07112baf5ac1df923f06c22"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ade8743f86168abc9e01a33bde321ebde"><td class="memItemLeft" align="right" valign="top"><a id="ade8743f86168abc9e01a33bde321ebde"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>REDPERMISSIONSLIB_VERSION</b>&#160;&#160;&#160;&quot;1.0&quot;</td></tr>
+<tr class="separator:ade8743f86168abc9e01a33bde321ebde"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9724cea8d22e7b7650daf6040b2d63d2"><td class="memItemLeft" align="right" valign="top"><a id="a9724cea8d22e7b7650daf6040b2d63d2"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>REDPERMISSIONSLIB_HAS_ROOT</b>&#160;&#160;&#160;true</td></tr>
+<tr class="separator:a9724cea8d22e7b7650daf6040b2d63d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa886e0d368252e057f4c7c2189a85089"><td class="memItemLeft" align="right" valign="top"><a id="aa886e0d368252e057f4c7c2189a85089"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>REDPERMISSIONSLIB_HAS_NO_ROOT</b>&#160;&#160;&#160;false</td></tr>
+<tr class="separator:aa886e0d368252e057f4c7c2189a85089"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a64c9dc4098b3b3d14882cf218595deb5"><td class="memItemLeft" align="right" valign="top">unsigned long long int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00170.html#a64c9dc4098b3b3d14882cf218595deb5">Red::Randomize</a> ()</td></tr>
-<tr class="memdesc:a64c9dc4098b3b3d14882cf218595deb5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Randomize.  <a href="a00170.html#a64c9dc4098b3b3d14882cf218595deb5">More...</a><br /></td></tr>
-<tr class="separator:a64c9dc4098b3b3d14882cf218595deb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa007f4e6c421ddf9ba11978d9c5dd9d0"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00170.html#aa007f4e6c421ddf9ba11978d9c5dd9d0">Red::PermissionsLib::CheckRootPermissions</a> ()</td></tr>
+<tr class="memdesc:aa007f4e6c421ddf9ba11978d9c5dd9d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">CheckRootPermissions.  <a href="a00170.html#aa007f4e6c421ddf9ba11978d9c5dd9d0">More...</a><br /></td></tr>
+<tr class="separator:aa007f4e6c421ddf9ba11978d9c5dd9d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Randomizer is a lib which contains a 'Randomize' function. </p>
+<div class="textblock"><p>PermissionsLib has function which checks root permissions. </p>
 <p>Copyright (c) 2020-2021 Vladimir Rogozin (<a href="#" onclick="location.href='mai'+'lto:'+'vla'+'di'+'mir'+'20'+'040'+'60'+'9@g'+'ma'+'il.'+'co'+'m'; return false;">vladi<span style="display: none;">.nosp@m.</span>mir2<span style="display: none;">.nosp@m.</span>00406<span style="display: none;">.nosp@m.</span>09@g<span style="display: none;">.nosp@m.</span>mail.<span style="display: none;">.nosp@m.</span>com</a>)</p>
 <p>Distributed under the MIT License (MIT) (See accompanying file LICENSE.txt or copy at <a href="http://opensource.org/licenses/MIT">http://opensource.org/licenses/MIT</a>) </p>
 </div><h2 class="groupheader">Function Documentation</h2>
-<a id="a64c9dc4098b3b3d14882cf218595deb5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a64c9dc4098b3b3d14882cf218595deb5">&#9670;&nbsp;</a></span>Randomize()</h2>
+<a id="aa007f4e6c421ddf9ba11978d9c5dd9d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa007f4e6c421ddf9ba11978d9c5dd9d0">&#9670;&nbsp;</a></span>CheckRootPermissions()</h2>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">unsigned long long int Red::Randomize </td>
+          <td class="memname">bool Red::PermissionsLib::CheckRootPermissions </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
-<p>Randomize. </p>
-<p>Used to generate a long random number.</p>
-<dl class="section return"><dt>Returns</dt><dd>Long random number. </dd></dl>
+<p>CheckRootPermissions. </p>
+<dl class="section return"><dt>Returns</dt><dd>true if has root, false if hasn't. </dd></dl>
 
 </div>
 </div>

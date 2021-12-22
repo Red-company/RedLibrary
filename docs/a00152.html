@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Red Technologies: /Users/vladimir/Desktop/RedLibrary/InsensitiveMap.h File Reference</title>
+<title>Red Technologies: /Users/vladimir/Desktop/RedLibrary/HashFunctions/Sha256.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -60,65 +60,60 @@ $(function() {
 </iframe>
 </div>
 
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_448a196a236ae8d8a32b2a4ab3ebc0b4.html">HashFunctions</a></li>  </ul>
+</div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Classes</a> &#124;
-<a href="#define-members">Macros</a> &#124;
-<a href="#typedef-members">Typedefs</a>  </div>
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
-<div class="title">/Users/vladimir/Desktop/RedLibrary/InsensitiveMap.h File Reference</div>  </div>
+<div class="title">Sha256.h File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>Definition of InsensitiveMap.  
+<p><a class="el" href="a00359.html">Sha256</a> is hash function implementation.  
 <a href="#details">More...</a></p>
-<div class="textblock"><code>#include &lt;strings.h&gt;</code><br />
-<code>#include &lt;string&gt;</code><br />
-<code>#include &lt;map&gt;</code><br />
+<div class="textblock"><code>#include &lt;string&gt;</code><br />
 </div>
 <p><a href="a00152_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
-Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00357.html">Red::_InsensitiveMap::CaseInsensitiveComparator</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a00357.html" title="CaseInsensitiveComparator.">CaseInsensitiveComparator</a>.  <a href="a00357.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
-Macros</h2></td></tr>
-<tr class="memitem:ac41dd50a4bbc91169e6211c4b609b60f"><td class="memItemLeft" align="right" valign="top"><a id="ac41dd50a4bbc91169e6211c4b609b60f"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>REDINSENSITIVEMAP_VERSION</b>&#160;&#160;&#160;&quot;1.0&quot;</td></tr>
-<tr class="separator:ac41dd50a4bbc91169e6211c4b609b60f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
-Typedefs</h2></td></tr>
-<tr class="memitem:ad2fd5abd48068dfe4efb4920957a4306"><td class="memTemplParams" colspan="2">template&lt;typename T1 , typename T2 &gt; </td></tr>
-<tr class="memitem:ad2fd5abd48068dfe4efb4920957a4306"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00152.html#ad2fd5abd48068dfe4efb4920957a4306">Red::InsensitiveMap</a> = std::map&lt; T1, T2, _InsensitiveMap::CaseInsensitiveComparator &gt;</td></tr>
-<tr class="memdesc:ad2fd5abd48068dfe4efb4920957a4306"><td class="mdescLeft">&#160;</td><td class="mdescRight">InsensitiveMap.  <a href="a00152.html#ad2fd5abd48068dfe4efb4920957a4306">More...</a><br /></td></tr>
-<tr class="separator:ad2fd5abd48068dfe4efb4920957a4306"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a17bbe3aa48b8aff7cd3cef9c563be22a"><td class="memItemLeft" align="right" valign="top">const std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00152.html#a17bbe3aa48b8aff7cd3cef9c563be22a">Red::Sha256Hash</a> (const std::string_view input)</td></tr>
+<tr class="memdesc:a17bbe3aa48b8aff7cd3cef9c563be22a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sha256Hash.  <a href="a00152.html#a17bbe3aa48b8aff7cd3cef9c563be22a">More...</a><br /></td></tr>
+<tr class="separator:a17bbe3aa48b8aff7cd3cef9c563be22a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Definition of InsensitiveMap. </p>
+<div class="textblock"><p><a class="el" href="a00359.html">Sha256</a> is hash function implementation. </p>
 <p>Copyright (c) 2020-2021 Vladimir Rogozin (<a href="#" onclick="location.href='mai'+'lto:'+'vla'+'di'+'mir'+'20'+'040'+'60'+'9@g'+'ma'+'il.'+'co'+'m'; return false;">vladi<span style="display: none;">.nosp@m.</span>mir2<span style="display: none;">.nosp@m.</span>00406<span style="display: none;">.nosp@m.</span>09@g<span style="display: none;">.nosp@m.</span>mail.<span style="display: none;">.nosp@m.</span>com</a>)</p>
 <p>Distributed under the MIT License (MIT) (See accompanying file LICENSE.txt or copy at <a href="http://opensource.org/licenses/MIT">http://opensource.org/licenses/MIT</a>) </p>
-</div><h2 class="groupheader">Typedef Documentation</h2>
-<a id="ad2fd5abd48068dfe4efb4920957a4306"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad2fd5abd48068dfe4efb4920957a4306">&#9670;&nbsp;</a></span>InsensitiveMap</h2>
+</div><h2 class="groupheader">Function Documentation</h2>
+<a id="a17bbe3aa48b8aff7cd3cef9c563be22a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a17bbe3aa48b8aff7cd3cef9c563be22a">&#9670;&nbsp;</a></span>Sha256Hash()</h2>
 
 <div class="memitem">
 <div class="memproto">
-<div class="memtemplate">
-template&lt;typename T1 , typename T2 &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="a00152.html#ad2fd5abd48068dfe4efb4920957a4306">Red::InsensitiveMap</a> = typedef std::map&lt;T1, T2, _InsensitiveMap::CaseInsensitiveComparator&gt;</td>
+          <td class="memname">const std::string Red::Sha256Hash </td>
+          <td>(</td>
+          <td class="paramtype">const std::string_view&#160;</td>
+          <td class="paramname"><em>input</em></td><td>)</td>
+          <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>InsensitiveMap. </p>
-<p>Definition of InsensitiveMap. </p>
+<p>Sha256Hash. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">input</td><td>string which we will get hash from</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>string with hash </dd></dl>
 
 </div>
 </div>
