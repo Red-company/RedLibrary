@@ -22,7 +22,7 @@
 // RedLibrary.
 #include "RedTypes.h"
 
-#define REDDIFFIEHELLMAN_VERSION "1.1"
+#define REDDIFFIEHELLMAN_VERSION "1.2"
 
 namespace Red {
     /// Creating a template for integers, because we need it to be cross-typed.
@@ -52,7 +52,7 @@ namespace Red {
              *
              * @return Generated key.
              */
-            INT_SIZE power(INT_SIZE a, INT_SIZE b, INT_SIZE P) {
+            inline INT_SIZE power(const INT_SIZE a, const INT_SIZE b, const INT_SIZE P) const {
                 if (b == 1) {
                     return a;
 
@@ -141,7 +141,7 @@ namespace Red {
              *
              * @return Key for public exchange.
              */
-            INT_SIZE GetPublicValue() {
+            INT_SIZE GetPublicValue() const {
                 return power(G, a, P);
             }
 
@@ -154,7 +154,7 @@ namespace Red {
              *
              * @return Shared secret.
              */
-            INT_SIZE GetSymmetricKey(INT_SIZE x) {
+            INT_SIZE GetSymmetricKey(INT_SIZE x) const {
                 return power(x, a, P);
             }
 
