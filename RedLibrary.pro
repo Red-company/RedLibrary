@@ -38,6 +38,7 @@ HEADERS += \
     EncryptionAlgorithms/AesECB128.h \
     EncryptionAlgorithms/AesECB192.h \
     EncryptionAlgorithms/AesECB256.h \
+    EncryptionAlgorithms/Base64.h \
     EncryptionAlgorithms/_private/AesDeclarations.h \
     ExecutionTime.h \
     FileBuffer.h \
