@@ -50,4 +50,9 @@ These libraries are _'ready to work'_, all you need is just write a code. All ex
  * Original repository is [_here_](https://github.com/vladimirrogozin/Sha256).
 
 ##
+**Notes 7(about FastSqrt):**
+ * Uses inside _long int_ type.
+ * Original repository is [_here_](https://github.com/vladimirrogozin/Fast-sqrt).
+
+##
 All material in this repository is in the public domain.
