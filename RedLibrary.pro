@@ -41,6 +41,7 @@ HEADERS += \
     EncryptionAlgorithms/Base64.h \
     EncryptionAlgorithms/_private/AesDeclarations.h \
     ExecutionTime.h \
+    FastMath/FastSqrt.h \
     FileBuffer.h \
     HashFunctions/Sha256.h \
     Hex.h \
@@ -92,8 +93,8 @@ LIBS += -lboost_filesystem -lboost_system# -lboost_asio# using dynamic lib
 #LIBS += $${_BOOST_PATH}/lib/libboost_chrono-mt.a # using static lib
 
 # Openssl.
-INCLUDEPATH += "/usr/local/Cellar/openssl@1.1/1.1.1l/include/"
-LIBS += -L/usr/local/Cellar/openssl@1.1/1.1.1l/lib/
+INCLUDEPATH += "/usr/local/Cellar/openssl@1.1/1.1.1m/include/"
+LIBS += -L/usr/local/Cellar/openssl@1.1/1.1.1m/lib/
 LIBS += -lssl
 LIBS += -lcrypto
 
