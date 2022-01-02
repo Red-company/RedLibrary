@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Red Technologies: /Users/vladimir/Desktop/RedLibrary/RedDataBase/Column.h File Reference</title>
+<title>Red Technologies: /Users/vladimir/Desktop/RedLibrary/RedDataBase/Check.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -67,75 +67,62 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Classes</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
-<div class="title">Column.h File Reference</div>  </div>
+<div class="title">Check.h File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>Encapsulation of a Column in a row of the result pointed by the prepared RedDataBase::Statement.  
+<p>This file contains check functions for RDB.  
 <a href="#details">More...</a></p>
-<div class="textblock"><code>#include &quot;<a class="el" href="a00227_source.html">Statement.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="a00218_source.html">Exception.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &lt;sys/stat.h&gt;</code><br />
 <code>#include &lt;string&gt;</code><br />
-<code>#include &lt;climits&gt;</code><br />
 </div>
 <p><a href="a00206_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
-Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00391.html">Red::RedDataBase::Column</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Encapsulation of a <a class="el" href="a00391.html" title="Encapsulation of a Column in a row of the result pointed by the prepared Statement.">Column</a> in a row of the result pointed by the prepared <a class="el" href="a00411.html" title="RAII encapsulation of a prepared SQLite Statement.">Statement</a>.  <a href="a00391.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ad04696cd2eb669f0d6494ecd7364a12d"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00203.html#ad04696cd2eb669f0d6494ecd7364a12d">Red::RedDataBase::operator&lt;&lt;</a> (std::ostream &amp;aStream, const Column &amp;aColumn)</td></tr>
-<tr class="memdesc:ad04696cd2eb669f0d6494ecd7364a12d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Standard std::ostream text inserter.  <a href="a00203.html#ad04696cd2eb669f0d6494ecd7364a12d">More...</a><br /></td></tr>
-<tr class="separator:ad04696cd2eb669f0d6494ecd7364a12d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aebc93a94f5cc1942fdbfe4387c88dfdb"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00206.html#aebc93a94f5cc1942fdbfe4387c88dfdb">Red::RedDataBase::DataBaseExists</a> (std::string &amp;path)</td></tr>
+<tr class="memdesc:aebc93a94f5cc1942fdbfe4387c88dfdb"><td class="mdescLeft">&#160;</td><td class="mdescRight">DataBaseExists.  <a href="a00206.html#aebc93a94f5cc1942fdbfe4387c88dfdb">More...</a><br /></td></tr>
+<tr class="separator:aebc93a94f5cc1942fdbfe4387c88dfdb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Encapsulation of a Column in a row of the result pointed by the prepared RedDataBase::Statement. </p>
+<div class="textblock"><p>This file contains check functions for RDB. </p>
 <p>Copyright (c) 2020-2021 Vladimir Rogozin (<a href="#" onclick="location.href='mai'+'lto:'+'vla'+'di'+'mir'+'20'+'040'+'60'+'9@g'+'ma'+'il.'+'co'+'m'; return false;">vladi<span style="display: none;">.nosp@m.</span>mir2<span style="display: none;">.nosp@m.</span>00406<span style="display: none;">.nosp@m.</span>09@g<span style="display: none;">.nosp@m.</span>mail.<span style="display: none;">.nosp@m.</span>com</a>)</p>
 <p>Distributed under the MIT License (MIT) (See accompanying file LICENSE.txt or copy at <a href="http://opensource.org/licenses/MIT">http://opensource.org/licenses/MIT</a>) </p>
 </div><h2 class="groupheader">Function Documentation</h2>
-<a id="ad04696cd2eb669f0d6494ecd7364a12d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad04696cd2eb669f0d6494ecd7364a12d">&#9670;&nbsp;</a></span>operator&lt;&lt;()</h2>
+<a id="aebc93a94f5cc1942fdbfe4387c88dfdb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aebc93a94f5cc1942fdbfe4387c88dfdb">&#9670;&nbsp;</a></span>DataBaseExists()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::ostream &amp; Red::RedDataBase::operator&lt;&lt; </td>
+          <td class="memname">bool Red::RedDataBase::DataBaseExists </td>
           <td>(</td>
-          <td class="paramtype">std::ostream &amp;&#160;</td>
-          <td class="paramname"><em>aStream</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramtype">std::string &amp;&#160;</td>
+          <td class="paramname"><em>path</em></td><td>)</td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="a00391.html">Column</a> &amp;&#160;</td>
-          <td class="paramname"><em>aColumn</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p>Standard std::ostream text inserter. </p>
-<p>Insert the text value of the Column object, using getText(), into the provided stream.</p>
+<p>DataBaseExists. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">aStream</td><td>Stream to use </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">aColumn</td><td>Column object to insert into the provided stream</td></tr>
+    <tr><td class="paramname">path</td><td>Path to RDB.</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>Reference to the stream used </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>True if RDB exists, false if not. </dd></dl>
 
 </div>
 </div>

@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['database_279',['Database',['../a00399.html',1,'Red::RedDataBase']]],
-  ['deleter_280',['Deleter',['../a00403.html',1,'Red::RedDataBase::Database']]],
-  ['diffiehellman_281',['DiffieHellman',['../a00319.html',1,'Red']]]
+  ['database_281',['Database',['../a00405.html',1,'Red::RedDataBase']]],
+  ['deleter_282',['Deleter',['../a00409.html',1,'Red::RedDataBase::Database']]],
+  ['diffiehellman_283',['DiffieHellman',['../a00325.html',1,'Red']]]
 ];

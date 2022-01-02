@@ -1,3 +1,11 @@
+/**
+ * @file    FastSqrt.h
+ * @brief   FastSqrt.h contains inverse sqrt func.
+ * Copyright (c) 2020-2021 Vladimir Rogozin (vladimir20040609@gmail.com)
+ *
+ * Distributed under the MIT License (MIT) (See accompanying file LICENSE.txt
+ * or copy at http://opensource.org/licenses/MIT)
+ */
 #ifndef RED_FASTMATH_FASTSQRT_H
 #define RED_FASTMATH_FASTSQRT_H
 

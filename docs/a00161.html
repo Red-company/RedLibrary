@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Red Technologies: /Users/vladimir/Desktop/RedLibrary/Ipv4.h File Reference</title>
+<title>Red Technologies: /Users/vladimir/Desktop/RedLibrary/Hex.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -63,57 +63,110 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Classes</a> &#124;
-<a href="#define-members">Macros</a>  </div>
+<a href="#define-members">Macros</a> &#124;
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
-<div class="title">/Users/vladimir/Desktop/RedLibrary/Ipv4.h File Reference</div>  </div>
+<div class="title">/Users/vladimir/Desktop/RedLibrary/Hex.h File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>Ipv4 is a lib, which has object with Ipv4 address and functions to interact with it.  
+<p>Hex is a lib, which has functions converts string to a string with hex values.  
 <a href="#details">More...</a></p>
-<div class="textblock"><code>#include &lt;boost/lexical_cast.hpp&gt;</code><br />
-<code>#include &lt;string&gt;</code><br />
+<div class="textblock"><code>#include &lt;string&gt;</code><br />
 </div>
 <p><a href="a00161_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
-Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00367.html">Red::Ipv4</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:ab01fbf699d6d2986e4576b99f59054c8"><td class="memItemLeft" align="right" valign="top"><a id="ab01fbf699d6d2986e4576b99f59054c8"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>REDIPV4_VERSION</b>&#160;&#160;&#160;&quot;1.0&quot;</td></tr>
-<tr class="separator:ab01fbf699d6d2986e4576b99f59054c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afa6208ac61abdd2c2fd9c3213623f0d2"><td class="memItemLeft" align="right" valign="top"><a id="afa6208ac61abdd2c2fd9c3213623f0d2"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>REDIPV4_ALL</b>&#160;&#160;&#160;&quot;all&quot;</td></tr>
-<tr class="separator:afa6208ac61abdd2c2fd9c3213623f0d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5cab1f69f67a3211dc640dea211481e1"><td class="memItemLeft" align="right" valign="top"><a id="a5cab1f69f67a3211dc640dea211481e1"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>REDIPV4_PUBLIC</b>&#160;&#160;&#160;&quot;public&quot;</td></tr>
-<tr class="separator:a5cab1f69f67a3211dc640dea211481e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afab46d1f2990eb2579e1e6851e9388d0"><td class="memItemLeft" align="right" valign="top"><a id="afab46d1f2990eb2579e1e6851e9388d0"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>REDIPV4_192</b>&#160;&#160;&#160;&quot;192&quot;</td></tr>
-<tr class="separator:afab46d1f2990eb2579e1e6851e9388d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aed5fccb29d4fce084748547fb7cd31e8"><td class="memItemLeft" align="right" valign="top"><a id="aed5fccb29d4fce084748547fb7cd31e8"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>REDIPV4_172</b>&#160;&#160;&#160;&quot;172&quot;</td></tr>
-<tr class="separator:aed5fccb29d4fce084748547fb7cd31e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7dc6d8fed2c6156d1e301f939be86175"><td class="memItemLeft" align="right" valign="top"><a id="a7dc6d8fed2c6156d1e301f939be86175"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>REDIPV4_169</b>&#160;&#160;&#160;&quot;169&quot;</td></tr>
-<tr class="separator:a7dc6d8fed2c6156d1e301f939be86175"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a913ae9cbbb6c3ecb15660aaeeed142b3"><td class="memItemLeft" align="right" valign="top"><a id="a913ae9cbbb6c3ecb15660aaeeed142b3"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>REDIPV4_127</b>&#160;&#160;&#160;&quot;127&quot;</td></tr>
-<tr class="separator:a913ae9cbbb6c3ecb15660aaeeed142b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab84edaa86f9ca7844d08e8a12bf6dae1"><td class="memItemLeft" align="right" valign="top"><a id="ab84edaa86f9ca7844d08e8a12bf6dae1"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>REDIPV4_10</b>&#160;&#160;&#160;&quot;10&quot;</td></tr>
-<tr class="separator:ab84edaa86f9ca7844d08e8a12bf6dae1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a50bbc48d2e7a33f44c48643b8020b078"><td class="memItemLeft" align="right" valign="top"><a id="a50bbc48d2e7a33f44c48643b8020b078"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>REDHEX_VERSION</b>&#160;&#160;&#160;&quot;1.0&quot;</td></tr>
+<tr class="separator:a50bbc48d2e7a33f44c48643b8020b078"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a838d68c44221751d88406503de29dd5d"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00161.html#a838d68c44221751d88406503de29dd5d">Red::GetHexArray</a> (const std::string_view a)</td></tr>
+<tr class="memdesc:a838d68c44221751d88406503de29dd5d"><td class="mdescLeft">&#160;</td><td class="mdescRight">GetHexArray.  <a href="a00161.html#a838d68c44221751d88406503de29dd5d">More...</a><br /></td></tr>
+<tr class="separator:a838d68c44221751d88406503de29dd5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1702e369a56c87e3e60009f0dda4fd17"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00161.html#a1702e369a56c87e3e60009f0dda4fd17">Red::GetStrArray</a> (const std::string_view a)</td></tr>
+<tr class="memdesc:a1702e369a56c87e3e60009f0dda4fd17"><td class="mdescLeft">&#160;</td><td class="mdescRight">GetStrArray.  <a href="a00161.html#a1702e369a56c87e3e60009f0dda4fd17">More...</a><br /></td></tr>
+<tr class="separator:a1702e369a56c87e3e60009f0dda4fd17"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Ipv4 is a lib, which has object with Ipv4 address and functions to interact with it. </p>
+<div class="textblock"><p>Hex is a lib, which has functions converts string to a string with hex values. </p>
 <p>Copyright (c) 2020-2021 Vladimir Rogozin (<a href="#" onclick="location.href='mai'+'lto:'+'vla'+'di'+'mir'+'20'+'040'+'60'+'9@g'+'ma'+'il.'+'co'+'m'; return false;">vladi<span style="display: none;">.nosp@m.</span>mir2<span style="display: none;">.nosp@m.</span>00406<span style="display: none;">.nosp@m.</span>09@g<span style="display: none;">.nosp@m.</span>mail.<span style="display: none;">.nosp@m.</span>com</a>)</p>
 <p>Distributed under the MIT License (MIT) (See accompanying file LICENSE.txt or copy at <a href="http://opensource.org/licenses/MIT">http://opensource.org/licenses/MIT</a>) </p>
-</div></div><!-- contents -->
+</div><h2 class="groupheader">Function Documentation</h2>
+<a id="a838d68c44221751d88406503de29dd5d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a838d68c44221751d88406503de29dd5d">&#9670;&nbsp;</a></span>GetHexArray()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string Red::GetHexArray </td>
+          <td>(</td>
+          <td class="paramtype">const std::string_view&#160;</td>
+          <td class="paramname"><em>a</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>GetHexArray. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">a</td><td>String to get hex string from.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>String with hex result. </dd></dl>
+
+</div>
+</div>
+<a id="a1702e369a56c87e3e60009f0dda4fd17"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1702e369a56c87e3e60009f0dda4fd17">&#9670;&nbsp;</a></span>GetStrArray()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string Red::GetStrArray </td>
+          <td>(</td>
+          <td class="paramtype">const std::string_view&#160;</td>
+          <td class="paramname"><em>a</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>GetStrArray. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">a</td><td>Hex string to get string from.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Normal string. </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
