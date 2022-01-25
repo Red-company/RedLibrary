@@ -30,6 +30,7 @@ SOURCES += \
     RedLog.cpp
 
 HEADERS += \
+    2layerDiffieHellman.h \
     AcceptionLib.h \
     DiffieHellman.h \
     EncryptionAlgorithms/AesCBC128.h \
@@ -81,13 +82,14 @@ HEADERS += \
 
 QMAKE_CXXFLAGS += "-Wno-old-style-cast"
 QMAKE_CXXFLAGS += "-Wreserved-identifiers"
+QMAKE_CXXFLAGS += "-Wzero-as-null-pointer-constant"
 
 macx {
 # Boost.
 QMAKE_CXXFLAGS += -std=c++17
 
-INCLUDEPATH += "/usr/local/Cellar/boost/1.75.0_1/include/"
-LIBS += -L/usr/local/Cellar/boost/1.75.0_1/lib/
+INCLUDEPATH += "/usr/local/Cellar/boost/1.76.0/include/"
+LIBS += -L/usr/local/Cellar/boost/1.76.0/lib/
 ## Use only one of these:
 LIBS += -lboost_filesystem -lboost_system# -lboost_asio# using dynamic lib
 #LIBS += $${_BOOST_PATH}/lib/libboost_chrono-mt.a # using static lib
@@ -99,13 +101,13 @@ LIBS += -lssl
 LIBS += -lcrypto
 
 # Fmt.
-INCLUDEPATH += "/usr/local/Cellar/fmt/7.1.3/include/"
-LIBS += -L/usr/local/Cellar/fmt/7.1.3/lib/
+INCLUDEPATH += "/usr/local/Cellar/fmt/8.1.1_1/include/"
+LIBS += -L/usr/local/Cellar/fmt/8.1.1_1/lib/
 LIBS += -lfmt
 
 # Sqlite.
-INCLUDEPATH += "/usr/local/Cellar/sqlite/3.36.0/include/"
-LIBS += -L/usr/local/Cellar/sqlite/3.36.0/lib/
+INCLUDEPATH += "/usr/local/Cellar/sqlite/3.37.2/include/"
+LIBS += -L/usr/local/Cellar/sqlite/3.37.2/lib/
 LIBS += -lsqlite3
 INCLUDEPATH += "/usr/local/opt/sqlite3/include/"
 
