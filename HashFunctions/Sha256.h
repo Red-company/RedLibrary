@@ -11,7 +11,7 @@
 #define RED_SHA256_H
 
 // Version.
-#define REDVA1_VERSION "1.1" // There was no v1.0 macros.
+#define REDSHA256_VERSION "1.1" // There was no v1.0 macros.
 
 #include <string>
 
