@@ -22,7 +22,7 @@
 // RedLibrary.
 #include "RedTypes.h"
 
-#define REDDIFFIEHELLMAN_VERSION "1.2"
+#define REDDIFFIEHELLMAN_VERSION "1.3"
 
 namespace Red {
     /// Creating a template for integers, because we need it to be cross-typed.
@@ -35,7 +35,10 @@ namespace Red {
 
             /// x = G**a mod P
 
-            INT_SIZE G, P, a;
+            /// Local vars.
+            INT_SIZE *m_G, // Base num.
+                     *m_P, // P num.
+                     *m_a; // Secret num.
 
             //
             // Private functions.
@@ -52,23 +55,25 @@ namespace Red {
              *
              * @return Generated key.
              */
-            inline INT_SIZE power(const INT_SIZE a, const INT_SIZE b, const INT_SIZE P) const {
-                if (b == 1) {
-                    return a;
+            inline INT_SIZE * power(const INT_SIZE *a, const INT_SIZE *b, const INT_SIZE *P) const {
+                if (*b == 1) {
+                    INT_SIZE *res = new INT_SIZE;
+                    *res = *a;
+                    return res;
 
                 } else {
                     // Unfortunately we have to write a lot here, because there is no a good way to write it shorter.
                     // So, let's do that!
 
                     /// Need to get cpp_int version of base.
-                    boost::multiprecision::cpp_int a_c = boost::multiprecision::cpp_int(a);
+                    boost::multiprecision::cpp_int a_c = boost::multiprecision::cpp_int(*a);
 
                     /// And ui version of our exponent.
                     Red::uint_t b_int = 0;
 
                     {
                         std::stringstream ss;
-                        ss << b;
+                        ss << *b;
                         ss >> b_int;
                     }
 
@@ -80,7 +85,7 @@ namespace Red {
 
                     {
                         std::stringstream ss;
-                        ss << P;
+                        ss << *P;
                         ss >> p_c;
                     }
 
@@ -88,12 +93,12 @@ namespace Red {
                     boost::multiprecision::cpp_int abp = ab % p_c;
 
                     /// Now we just need to convert it to the type we need.
-                    INT_SIZE res = 0;
+                    INT_SIZE *res = new INT_SIZE;
 
                     {
                         std::stringstream ss;
                         ss << abp;
-                        ss >> res;
+                        ss >> *res;
                     }
 
                     /// Yay, we finished this.
@@ -112,10 +117,10 @@ namespace Red {
              * @param ModificatedNum P number.
              * @param SecretNum Secret number.
              */
-            DiffieHellman(INT_SIZE ResultNum = 0,
-                          INT_SIZE ModificatedNum = 0,
-                          INT_SIZE SecretNum = 0)
-                : G(ResultNum), P(ModificatedNum), a(SecretNum) {}
+            DiffieHellman(INT_SIZE *ResultNum = 0,
+                          INT_SIZE *ModificatedNum = 0,
+                          INT_SIZE *SecretNum = 0)
+                : m_G(ResultNum), m_P(ModificatedNum), m_a(SecretNum) {}
 
             /**
              * @brief Set
@@ -125,13 +130,14 @@ namespace Red {
              * Where,
              * @param ResultNum G number.
              * @param ModificatedNum P number.
+             * @param SecretNum Secret number.
              */
-            void Set(INT_SIZE ResultNum,
-                     INT_SIZE ModificatedNum,
-                     INT_SIZE SecretNum) {
-                G = ResultNum;
-                P = ModificatedNum;
-                a = SecretNum;
+            void Set(INT_SIZE *ResultNum,
+                     INT_SIZE *ModificatedNum,
+                     INT_SIZE *SecretNum) {
+                this->m_G = ResultNum;
+                this->m_P = ModificatedNum;
+                this->m_a = SecretNum;
             }
 
             /**
@@ -141,8 +147,8 @@ namespace Red {
              *
              * @return Key for public exchange.
              */
-            INT_SIZE GetPublicValue() const {
-                return power(G, a, P);
+            INT_SIZE * GetPublicValue() const {
+                return power(this->m_G, this->m_a, this->m_P);
             }
 
             /**
@@ -154,8 +160,8 @@ namespace Red {
              *
              * @return Shared secret.
              */
-            INT_SIZE GetSymmetricKey(INT_SIZE x) const {
-                return power(x, a, P);
+            INT_SIZE * GetSymmetricKey(const INT_SIZE *x) const {
+                return power(x, this->m_a, this->m_P);
             }
 
             // Base dtor.
