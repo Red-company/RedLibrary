@@ -199,7 +199,7 @@ class Sha256 {
  *
  * @return string with hash
  */
-const std::string Red::Sha256Hash(const std::string_view input) {
+std::string * Red::Sha256Hash(std::string *input) {
     unsigned char digest[Sha256::DIGEST_SIZE];
 
     memset(digest, 0, Sha256::DIGEST_SIZE);
@@ -207,7 +207,7 @@ const std::string Red::Sha256Hash(const std::string_view input) {
     Sha256 ctx = Sha256();
 
     ctx.init();
-    ctx.update((unsigned char *) input.data(), input.length());
+    ctx.update((unsigned char *) input->data(), input->length());
     ctx.final(digest);
 
     char buf[2 * Sha256::DIGEST_SIZE + 1];
@@ -218,7 +218,10 @@ const std::string Red::Sha256Hash(const std::string_view input) {
         sprintf(buf + i * 2, "%02x", digest[i]);
     }
 
-    return std::string(buf);
+    // Result var.
+    std::string *res = new std::string(buf);
+
+    return res;
 }
 
 #undef SHA2_SHFR

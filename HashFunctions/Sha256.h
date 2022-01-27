@@ -10,6 +10,9 @@
 #ifndef RED_SHA256_H
 #define RED_SHA256_H
 
+// Version.
+#define REDVA1_VERSION "1.1" // There was no v1.0 macros.
+
 #include <string>
 
 namespace Red {
@@ -20,7 +23,7 @@ namespace Red {
      *
      * @return string with hash
      */
-    const std::string Sha256Hash(const std::string_view input);
+    std::string * Sha256Hash(std::string *input);
 }
 
 #endif // RED_SHA256_H
