@@ -1,14 +1,42 @@
 #include <iostream>
 #include <string>
 
-#include "../RedLibrary/EncryptionAlgorithms/Base64.h"
+#include "Base64.h"
 
 int main() {
-    std::string Str = "Hello world!";
+    std::string s;
 
-    std::string Enc = Red::Base64Encode(Str);
-    std::string Dec = Red::Base64Decode(Enc);
+    while (true) {
+        system("clear");
+        std::cout << "\033[4mChoose operation:\033[0m 1)Encode 2)Decode." << std::endl << std::endl << "[\033[93mBase64\033[0m]  > ";
 
-    std::cout << "Base64: '" << Enc << "'." << std::endl;
-    std::cout << "Str: '" << Dec << "'." << std::endl;
+        getline(std::cin, s);
+
+        // Encrypting.
+        if (s == "1") {
+            system("clear");
+            std::cout << "\033[4mEnter a message.\033[0m" << std::endl << std::endl << "[\033[93mBase64\033[0m] > ";
+
+            getline(std::cin, s);
+            std::cout << std::endl;
+
+            std::cout << "[\033[93mBase64\033[0m] \033[4mEncrypted message:\033[0m" << std::endl << std::endl << *Red::Base64Encode(&s);
+            std::cout << std::endl << std::endl << std::endl << "Press Enter to continue.";
+
+            std::cin.get();
+
+        // Decrypting.
+        } else if (s == "2") {
+            system("clear");
+            std::cout << "\033[4mEnter a message.\033[0m" << std::endl << std::endl << "[\033[93mBase64\033[0m] > ";
+
+            getline(std::cin, s);
+            std::cout << std::endl;
+
+            std::cout << "[\033[93mBase64\033[0m] Decrypted message:" << std::endl << std::endl << *Red::Base64Decode(&s);
+            std::cout << std::endl << std::endl << std::endl << "Press Enter to continue.";
+
+            std::cin.get();
+        }
+    }
 }
