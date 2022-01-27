@@ -12,6 +12,9 @@
 
 #include <string>
 
+// Version.
+#define REDVA1_VERSION "1.1" // There was no v1.0.
+
 namespace Red {
     /**
      * @brief Va1Encode
@@ -20,7 +23,7 @@ namespace Red {
      *
      * @return Encoded string.
      */
-    const std::string Va1Encode(const std::string_view ToEnc);
+    std::string * Va1Encode(const std::string *ToEnc);
 
     /**
      * @brief Va1Decode
@@ -29,7 +32,7 @@ namespace Red {
      *
      * @return Decoded string.
      */
-    const std::string Va1Decode(const std::string_view ToDec);
+    std::string * Va1Decode(const std::string *ToDec);
 }
 
 #endif // RED_VA1_H
