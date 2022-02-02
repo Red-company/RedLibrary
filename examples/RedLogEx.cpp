@@ -16,7 +16,7 @@ int main() {
 
         Red::RedLog rl(path);
         rl.NewNote("Main module", "Test is running..");
-        rl.NewNote("Main module", "Test was finish");
+        rl.NewNote("Main module", "Test was finished");
         rl.NewNote(REDLOG_NO_GROUP, "New note");
 
     } else {
