@@ -143,8 +143,8 @@ inline static void RES_ECB_decrypt(const struct RES_ctx_ECB_1536 *ctx, uint8_t *
  *
  * @return Encrypted string
  */
-const std::string Red::EncryptResECB1536(const std::string& in, const std::string_view key) {
-    std::string Encrypted = "";
+std::string * Red::EncryptResECB1536(const std::string& in, const std::string_view key) {
+    std::string *Encrypted = new std::string;
 
     unsigned long long int InLen = in.length();
 
@@ -179,7 +179,7 @@ const std::string Red::EncryptResECB1536(const std::string& in, const std::strin
         RES_init_ctx(&ctx, (const uint8_t *) key.data());
         RES_ECB_encrypt(&ctx, (uint8_t *) Block.data());
 
-        Encrypted.append(Block);
+        Encrypted->append(Block);
     }
 
     return Encrypted;
@@ -194,8 +194,8 @@ const std::string Red::EncryptResECB1536(const std::string& in, const std::strin
  *
  * @return Decrypted string
  */
-const std::string Red::DecryptResECB1536(const std::string& in, const std::string_view key) {
-    std::string Decrypted = "";
+std::string * Red::DecryptResECB1536(const std::string& in, const std::string_view key) {
+    std::string *Decrypted = new std::string;
 
     unsigned long long int InLen = in.length();
 
@@ -225,7 +225,7 @@ const std::string Red::DecryptResECB1536(const std::string& in, const std::strin
         RES_init_ctx(&ctx, (const uint8_t *) key.data());
         RES_ECB_decrypt(&ctx, (uint8_t *) Block.data());
 
-        Decrypted.append(Block);
+        Decrypted->append(Block);
     }
 
     return Decrypted;

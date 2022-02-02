@@ -22,7 +22,7 @@ namespace Red {
      *
      * @return Encrypted string
      */
-    const std::string EncryptResECB512(const std::string& in, const std::string_view key);
+    std::string * EncryptResECB512(const std::string& in, const std::string_view key);
 
     /**
      * @brief EncryptResECB512
@@ -33,7 +33,7 @@ namespace Red {
      *
      * @return Decrypted string
      */
-    const std::string DecryptResECB512(const std::string& in, const std::string_view key);
+    std::string * DecryptResECB512(const std::string& in, const std::string_view key);
 }
 
 #endif // RED_RESECB512_H
