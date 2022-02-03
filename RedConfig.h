@@ -17,7 +17,7 @@
 // RedLibrary.
 #include "../RedLibrary/InsensitiveMap.h"
 
-#define REDCONFIG_VERSION "1.0"
+#define REDCONFIG_VERSION "1.1"
 
 namespace Red {
     namespace RedConfig {
@@ -45,14 +45,14 @@ namespace Red {
              *
              * @return Data of variable.
              */
-            std::string data();
+            std::string * data();
 
             /**
              * @brief type
              *
              * @return Type of variable.
              */
-            std::string type();
+            std::string * type();
         };
 
         //
@@ -131,7 +131,7 @@ namespace Red {
          *
          * @throw Red::RedConfig::Exceptions::can_not_create_file();
          */
-        bool CreateConfigFile(std::string path, std::string name, bool can_throw = REDCONFIG_THROW);
+        bool CreateConfigFile(std::string *path, std::string name, bool can_throw = REDCONFIG_THROW);
 
         /**
          * @brief SaveValues

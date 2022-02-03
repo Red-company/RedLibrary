@@ -28,8 +28,8 @@ namespace Red {
          *
          * @return Data variable as string object.
          */
-        std::string Variable::data() {
-            return Data;
+        std::string * Variable::data() {
+            return &Data;
         }
 
         /**
@@ -37,8 +37,8 @@ namespace Red {
          *
          * @return Type variable as string object.
          */
-        std::string Variable::type() {
-            return Type;
+        std::string * Variable::type() {
+            return &Type;
         }
 
         //
@@ -117,14 +117,14 @@ namespace Red {
          *
          * @throw Red::RedConfig::Exceptions::can_not_create_file();
          */
-        bool CreateConfigFile(std::string path, std::string name, bool can_throw) {
-            if (path[path.length()] != '/') {
-                path += "/";
+        bool CreateConfigFile(std::string *path, std::string name, bool can_throw) {
+            if ((*path)[path->length()] != '/') {
+                *path += "/";
             }
 
-            path += name + ".rcfg";
+            *path += name + ".rcfg";
 
-            std::ofstream os(path);
+            std::ofstream os(*path);
 
             if (os.is_open()) {
                 os.close();

@@ -9,8 +9,8 @@
 #include "../RedLibrary/RedConfig/Exceptions.h"
 
 // Pathes for example.
-static std::string Open     = "/Users/vladimir/Desktop/RedLibrary/examples/ForRedConfig/test.rcfg"; // Need to change.
-static std::string Save     = "/Users/vladimir/Desktop/RedLibrary/examples/ForRedConfig/out.rcfg";  // Need to change.
+static std::string Open     = "/Users/vladimir/Desktop/test.rcfg"; // Need to change.
+static std::string Save     = "/Users/vladimir/Desktop/out.rcfg";  // Need to change.
 static std::string SavePath = "/Users/vladimir/Desktop/";          // Need to change.
 
 int main(){
@@ -60,7 +60,7 @@ int main(){
     //
 
     std::string value1;
-    std::string typeValue1 = variables["valueString"].type();
+    std::string typeValue1 = *variables["valueString"].type();
     // std::string typeValue1 = variables["valueString"].Type;
 
     std::string value2;
@@ -73,7 +73,7 @@ int main(){
 
     if (typeValue1 == REDCONFIG_STRING_TYPE) {
         // value1 = variables["valueString"].Data;
-        value1 = variables["valueString"].data();
+        value1 = *variables["valueString"].data();
     }
 
     if (typeValue2 == REDCONFIG_INTEGER_TYPE) {
@@ -107,7 +107,7 @@ int main(){
     // Creating empty config file (May be omitted).
     //
 
-    if (Red::RedConfig::CreateConfigFile(SavePath, "out")) {
+    if (Red::RedConfig::CreateConfigFile(&SavePath, "out")) {
         // Created out.cfg at SavePath successfully.
     }
 
@@ -142,7 +142,7 @@ int main(){
     // CreateConfigFile exception.
 
     try {
-        if (Red::RedConfig::CreateConfigFile(BadPath, "new", REDCONFIG_THROW)) { // REDCONFIG_THROW may be omitted
+        if (Red::RedConfig::CreateConfigFile(&BadPath, "new", REDCONFIG_THROW)) { // REDCONFIG_THROW may be omitted
                                                                             // or changed to "true".
             // Loaded successfully.
         }
@@ -192,7 +192,7 @@ int main(){
     // CreateConfigFile.
 
     try {
-        if (Red::RedConfig::CreateConfigFile(BadPath, "new", REDCONFIG_NO_THROW)) {
+        if (Red::RedConfig::CreateConfigFile(&BadPath, "new", REDCONFIG_NO_THROW)) {
             // Loaded successfully.
         } else { // Your exception inside.
             throw "CreateConfigFile err";
