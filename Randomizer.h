@@ -25,7 +25,7 @@ namespace Red {
      * @return Long random number.
      */
     inline unsigned long long int * Randomize() {
-        srand(time(NULL));
+        srand((unsigned int) time(nullptr));
 
         unsigned long long *randnumber = new unsigned long long int(0);
         int digits[20];

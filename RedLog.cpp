@@ -12,7 +12,7 @@
  * @return String with time.
  */
 static inline std::string _GetCurrentTime() {
-    time_t     now = time(0);
+    time_t     now = time(nullptr);
     struct tm  tstruct;
     char       buf[80];
     tstruct = *localtime(&now);

@@ -67,7 +67,7 @@ namespace Red {
              * This function generates ip address using Mode.
              */
             inline void Gen() {
-                srand(time(0));
+                srand((unsigned int) time(nullptr));
 
                 IpString.clear();
 

@@ -251,7 +251,7 @@ namespace Red {
                 boost::multiprecision::cpp_int a_c = boost::multiprecision::cpp_int(*a);
 
                 /// And ui version of a random(if needed) exponent.
-                srand(time(0));
+                srand((unsigned int) time(nullptr));
                 Red::uint_t b_int;
 
                 *m_a2 = (unsigned int) rand() % b;
