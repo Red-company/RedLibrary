@@ -9,6 +9,6 @@
 #ifndef RED_VERSION_H
 #define RED_VERSION_H
 
-#define REDLIB_VERSION "1.3"
+#define REDLIB_VERSION "2.0"
 
 #endif // RED_VERSION_H
