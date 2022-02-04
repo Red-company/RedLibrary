@@ -55,4 +55,12 @@ These libraries are _'ready to work'_, all you need is just write a code. All ex
  * Original repository is [_here_](https://github.com/vladimirrogozin/Fast-sqrt).
 
 ##
+**Notes 8(about 2layerDiffieHellman):**
+ * Everything about it is [_here_](https://github.com/vladimirrogozin/2layerDiffieHellman)
+
+##
+**Additional notes:**
+ * All other libraries can be described by files in _example_ folder.
+
+##
 All material in this repository is in the public domain.
