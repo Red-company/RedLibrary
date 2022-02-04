@@ -14,7 +14,7 @@
 #include <time.h>
 #include <math.h>
 
-#define REDRANDOMIZER_VERSION "1.0"
+#define REDRANDOMIZER_VERSION "1.1"
 
 namespace Red {
     /**
@@ -24,10 +24,10 @@ namespace Red {
      *
      * @return Long random number.
      */
-    inline unsigned long long int Randomize() {
+    inline unsigned long long int * Randomize() {
         srand(time(NULL));
 
-        unsigned long long randnumber = 0;
+        unsigned long long *randnumber = new unsigned long long int(0);
         int digits[20];
 
         for (int i = 19; i >= 1; i--) {
@@ -41,7 +41,7 @@ namespace Red {
                 power++;
             }
 
-            randnumber += power * digits[i];
+            *randnumber += power * digits[i];
         }
 
         return randnumber;
