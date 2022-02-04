@@ -1,12 +1,16 @@
 var searchData=
 [
-  ['tableexists_244',['tableExists',['../a00405.html#af6fb4353afae3c5b031dd6a33af5885e',1,'Red::RedDataBase::Database::tableExists(const char *apTableName)'],['../a00405.html#a1d02f3b8c853d3a954d73bfb0b0bf80d',1,'Red::RedDataBase::Database::tableExists(const std::string &amp;aTableName)']]],
-  ['text_245',['TEXT',['../a00209.html#ae22f72546c32825ae89ef595a086ddcd',1,'Red::RedDataBase']]],
-  ['transaction_246',['Transaction',['../a00425.html',1,'Red::RedDataBase::Transaction'],['../a00425.html#a1920439942fdaa66d4b1827f626a65b7',1,'Red::RedDataBase::Transaction::Transaction()']]],
-  ['transaction_2ecpp_247',['Transaction.cpp',['../a00236.html',1,'']]],
-  ['transaction_2eh_248',['Transaction.h',['../a00239.html',1,'']]],
-  ['tryexec_249',['tryExec',['../a00405.html#a006ce474798cf06fc3a652cdd0e980e8',1,'Red::RedDataBase::Database::tryExec(const char *apQueries) noexcept'],['../a00405.html#afbfe8ab64dc0f9d3df1e303aea690eef',1,'Red::RedDataBase::Database::tryExec(const std::string aQueries) noexcept']]],
-  ['tryexecutestep_250',['tryExecuteStep',['../a00417.html#a66b315089b745c120512107e8398272c',1,'Red::RedDataBase::Statement']]],
-  ['tryreset_251',['tryReset',['../a00417.html#a6aebec77ee2598557bbd4cd49997b1dd',1,'Red::RedDataBase::Statement']]],
-  ['type_252',['type',['../a00389.html#a953b541fb63fc5372b134579066c71db',1,'Red::RedConfig::Variable']]]
+  ['savevalues_236',['SaveValues',['../a00197.html#ac87ef67a93423a6182321179ec1e514a',1,'Red::RedConfig::SaveValues(std::map&lt; std::string, Variable &gt; &amp;variables, std::string &amp;path, bool can_throw)'],['../a00197.html#a1cc04b6d96c4977caec76ba758550116',1,'Red::RedConfig::SaveValues(Red::InsensitiveMap&lt; std::string, Variable &gt; &amp;variables, std::string &amp;path, bool can_throw)']]],
+  ['set_237',['Set',['../a00327.html#afce0ba079c2d35e08509c3b700269bcd',1,'Red::TwoLayerDiffieHellman::Set()'],['../a00335.html#abf3ca793c9973a904f18adc40f040459',1,'Red::DiffieHellman::Set()'],['../a00383.html#a1d0f8c37b82ed97a7c2625ee2d68a507',1,'Red::Ipv4::Set()']]],
+  ['setbusytimeout_238',['setBusyTimeout',['../a00415.html#a171e94f51df43a60c3caa47695a031ba',1,'Red::RedDataBase::Database']]],
+  ['setupbuffer_239',['SetupBuffer',['../a00371.html#a8ff81e009b7053f7034cb0961c1d3a2f',1,'Red::FileBuffer']]],
+  ['sha256_240',['Sha256',['../a00375.html',1,'']]],
+  ['sha256_2ecpp_241',['Sha256.cpp',['../a00161.html',1,'']]],
+  ['sha256_2eh_242',['Sha256.h',['../a00164.html',1,'']]],
+  ['sha256hash_243',['Sha256Hash',['../a00164.html#a0d31971ed0473a59ef9f870ce151edaa',1,'Red']]],
+  ['show_244',['Show',['../a00383.html#ab61bb123684521c586f8ce758456ce83',1,'Red::Ipv4::Show()'],['../a00387.html#a872409acf4c736feee2b9dd6e931ef4d',1,'Red::ProgressBar::Show()']]],
+  ['size_245',['size',['../a00407.html#a4c69dacd3429711931a414fffe57ff96',1,'Red::RedDataBase::Column']]],
+  ['statement_246',['Statement',['../a00427.html',1,'Red::RedDataBase::Statement'],['../a00427.html#a0e2f3f22b1060c7db50ba8915ac021ee',1,'Red::RedDataBase::Statement::Statement(Database &amp;aDatabase, const char *apQuery)'],['../a00427.html#a891fbffb1c6ffa6ce5dfb297b84573e5',1,'Red::RedDataBase::Statement::Statement(Database &amp;aDatabase, const std::string &amp;aQuery)'],['../a00427.html#aa60eb6c8ca2730eff4b323a15ea8c222',1,'Red::RedDataBase::Statement::Statement(Statement &amp;&amp;aStatement) noexcept']]],
+  ['statement_2ecpp_247',['Statement.cpp',['../a00236.html',1,'']]],
+  ['statement_2eh_248',['Statement.h',['../a00239.html',1,'']]]
 ];

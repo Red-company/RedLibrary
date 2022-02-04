@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Red Technologies: /Users/vladimir/Desktop/RedLibrary/AcceptionLib.h File Reference</title>
+<title>Red Technologies: /Users/vladimir/Desktop/RedLibrary/2layerDiffieHellman.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -66,30 +66,67 @@ $(function() {
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#define-members">Macros</a>  </div>
   <div class="headertitle">
-<div class="title">/Users/vladimir/Desktop/RedLibrary/AcceptionLib.h File Reference</div>  </div>
+<div class="title">/Users/vladimir/Desktop/RedLibrary/2layerDiffieHellman.h File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>AcceptionLib is a lib which makes terminal questions('[y/n]') easier to do.  
+<p>2layerDiffieHellman is a lib which implements advanced DiffieHellman's key exchange algorithm.  
 <a href="#details">More...</a></p>
-<div class="textblock"><code>#include &lt;iostream&gt;</code><br />
+<div class="textblock"><code>#include &lt;sstream&gt;</code><br />
+<code>#include &lt;stdlib.h&gt;</code><br />
+<code>#include &lt;ctime&gt;</code><br />
+<code>#include &lt;math.h&gt;</code><br />
 <code>#include &lt;string&gt;</code><br />
+<code>#include &lt;random&gt;</code><br />
+<code>#include &lt;boost/multiprecision/cpp_int.hpp&gt;</code><br />
+<code>#include &quot;<a class="el" href="a00308_source.html">RedTypes.h</a>&quot;</code><br />
 </div>
 <p><a href="a00002_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00321.html">Red::AcceptionObj</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00327.html">Red::TwoLayerDiffieHellman&lt; INT_SIZE &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creating a template for integers, because we need it to be cross-typed.  <a href="a00327.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:ac66b1ce0c6954f65bec890ec200c7a8f"><td class="memItemLeft" align="right" valign="top"><a id="ac66b1ce0c6954f65bec890ec200c7a8f"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>REDACCEPTIONLIB_VERSION</b>&#160;&#160;&#160;&quot;1.0&quot;</td></tr>
-<tr class="separator:ac66b1ce0c6954f65bec890ec200c7a8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3150d9a1a3d2a9e646e35fbff7a5f16a"><td class="memItemLeft" align="right" valign="top"><a id="a3150d9a1a3d2a9e646e35fbff7a5f16a"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>RED2LAYERDIFFIEHELLMAN_VERSION</b>&#160;&#160;&#160;&quot;1.0&quot;</td></tr>
+<tr class="separator:a3150d9a1a3d2a9e646e35fbff7a5f16a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae828fa7cb8a7331390838e7edfd8d13d"><td class="memItemLeft" align="right" valign="top"><a id="ae828fa7cb8a7331390838e7edfd8d13d"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>RED_2lDH_140m_AUTO</b>&#160;&#160;&#160;&quot;auto mode enabled 140m&quot;</td></tr>
+<tr class="separator:ae828fa7cb8a7331390838e7edfd8d13d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeeb5e0023e26f8801f1c0d549cd9bab3"><td class="memItemLeft" align="right" valign="top"><a id="aeeb5e0023e26f8801f1c0d549cd9bab3"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>RED_2lDH_280m_AUTO</b>&#160;&#160;&#160;&quot;auto mode enabled 280m&quot;</td></tr>
+<tr class="separator:aeeb5e0023e26f8801f1c0d549cd9bab3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a76e757a5c2fe548e68d1e515823fe906"><td class="memItemLeft" align="right" valign="top"><a id="a76e757a5c2fe548e68d1e515823fe906"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>RED_2lDH_490m_AUTO</b>&#160;&#160;&#160;&quot;auto mode enabled 490m&quot;</td></tr>
+<tr class="separator:a76e757a5c2fe548e68d1e515823fe906"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3014a962ece983df2ae52cfc30544dbf"><td class="memItemLeft" align="right" valign="top"><a id="a3014a962ece983df2ae52cfc30544dbf"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>RED_2lDH_693m_AUTO</b>&#160;&#160;&#160;&quot;auto mode enabled 693m&quot;</td></tr>
+<tr class="separator:a3014a962ece983df2ae52cfc30544dbf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a72f0dde401e44d1ad391de2ac3851bea"><td class="memItemLeft" align="right" valign="top"><a id="a72f0dde401e44d1ad391de2ac3851bea"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>RED_2lDH_1543m_AUTO</b>&#160;&#160;&#160;&quot;auto mode enabled 1543m&quot;</td></tr>
+<tr class="separator:a72f0dde401e44d1ad391de2ac3851bea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab7eeaaddf29654dabf6ae8b1e395e621"><td class="memItemLeft" align="right" valign="top"><a id="ab7eeaaddf29654dabf6ae8b1e395e621"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>RED_2lDH_RANDOM_A1_KEY_70m</b>&#160;&#160;&#160;8366</td></tr>
+<tr class="separator:ab7eeaaddf29654dabf6ae8b1e395e621"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a24489b1cafbe9326b956fb17d02e5cf7"><td class="memItemLeft" align="right" valign="top"><a id="a24489b1cafbe9326b956fb17d02e5cf7"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>RED_2lDH_RANDOM_A1_KEY_105m</b>&#160;&#160;&#160;10246</td></tr>
+<tr class="separator:a24489b1cafbe9326b956fb17d02e5cf7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6fc8ad779382f37023ec95baad2d4f32"><td class="memItemLeft" align="right" valign="top"><a id="a6fc8ad779382f37023ec95baad2d4f32"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>RED_2lDH_RANDOM_A1_KEY_126m</b>&#160;&#160;&#160;11224</td></tr>
+<tr class="separator:a6fc8ad779382f37023ec95baad2d4f32"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2c5f81ef15df1319d7b8c49b08cba70b"><td class="memItemLeft" align="right" valign="top"><a id="a2c5f81ef15df1319d7b8c49b08cba70b"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>RED_2lDH_RANDOM_A1_KEY_238m</b>&#160;&#160;&#160;15427</td></tr>
+<tr class="separator:a2c5f81ef15df1319d7b8c49b08cba70b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa7a65e200f7c815e013e5dc7e8410fe1"><td class="memItemLeft" align="right" valign="top"><a id="aa7a65e200f7c815e013e5dc7e8410fe1"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>RED_2lDH_RANDOM_A1_KEY_336m</b>&#160;&#160;&#160;18330</td></tr>
+<tr class="separator:aa7a65e200f7c815e013e5dc7e8410fe1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>AcceptionLib is a lib which makes terminal questions('[y/n]') easier to do. </p>
+<div class="textblock"><p>2layerDiffieHellman is a lib which implements advanced DiffieHellman's key exchange algorithm. </p>
 <p>Copyright (c) 2020-2021 Vladimir Rogozin (<a href="#" onclick="location.href='mai'+'lto:'+'vla'+'di'+'mir'+'20'+'040'+'60'+'9@g'+'ma'+'il.'+'co'+'m'; return false;">vladi<span style="display: none;">.nosp@m.</span>mir2<span style="display: none;">.nosp@m.</span>00406<span style="display: none;">.nosp@m.</span>09@g<span style="display: none;">.nosp@m.</span>mail.<span style="display: none;">.nosp@m.</span>com</a>)</p>
 <p>Distributed under the MIT License (MIT) (See accompanying file LICENSE.txt or copy at <a href="http://opensource.org/licenses/MIT">http://opensource.org/licenses/MIT</a>) </p>
 </div></div><!-- contents -->

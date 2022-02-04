@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Red Technologies: /Users/vladimir/Desktop/RedLibrary/HashFunctions/Sha256.cpp File Reference</title>
+<title>Red Technologies: /Users/vladimir/Desktop/RedLibrary/FastMath/FastSqrt.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -62,137 +62,122 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_448a196a236ae8d8a32b2a4ab3ebc0b4.html">HashFunctions</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_cb2655f7c7966553c64f45bca64457fb.html">FastMath</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Classes</a> &#124;
-<a href="#define-members">Macros</a>  </div>
+<a href="#define-members">Macros</a> &#124;
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
-<div class="title">Sha256.cpp File Reference</div>  </div>
+<div class="title">FastSqrt.h File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p><a class="el" href="a00365.html">Sha256</a> is hash function implementation.  
+<p><a class="el" href="a00155.html" title="FastSqrt.h contains inverse sqrt func. Copyright (c) 2020-2021 Vladimir Rogozin (vladimir20040609@gma...">FastSqrt.h</a> contains inverse sqrt func. Copyright (c) 2020-2021 Vladimir Rogozin (<a href="#" onclick="location.href='mai'+'lto:'+'vla'+'di'+'mir'+'20'+'040'+'60'+'9@g'+'ma'+'il.'+'co'+'m'; return false;">vladi<span style="display: none;">.nosp@m.</span>mir2<span style="display: none;">.nosp@m.</span>00406<span style="display: none;">.nosp@m.</span>09@g<span style="display: none;">.nosp@m.</span>mail.<span style="display: none;">.nosp@m.</span>com</a>)  
 <a href="#details">More...</a></p>
-<div class="textblock"><code>#include &lt;iostream&gt;</code><br />
-<code>#include &lt;cstring&gt;</code><br />
-<code>#include &lt;fstream&gt;</code><br />
-<code>#include &lt;vector&gt;</code><br />
-<code>#include &lt;chrono&gt;</code><br />
-<code>#include &quot;<a class="el" href="a00158_source.html">Sha256.h</a>&quot;</code><br />
-</div><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
-Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00365.html">Sha256</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
+<div class="textblock"><code>#include &lt;stdio.h&gt;</code><br />
+</div>
+<p><a href="a00155_source.html">Go to the source code of this file.</a></p>
+<table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:a0a0e7e0d135e9feff1da2e46fa556d50"><td class="memItemLeft" align="right" valign="top"><a id="a0a0e7e0d135e9feff1da2e46fa556d50"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>SHA2_SHFR</b>(x,  n)&#160;&#160;&#160;(x &gt;&gt; n)</td></tr>
-<tr class="separator:a0a0e7e0d135e9feff1da2e46fa556d50"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9509f7c1f927cb12f98d9995ae2f92d3"><td class="memItemLeft" align="right" valign="top"><a id="a9509f7c1f927cb12f98d9995ae2f92d3"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>SHA2_ROTR</b>(x,  n)&#160;&#160;&#160;((x &gt;&gt; n) | (x &lt;&lt; ((sizeof(x) &lt;&lt; 3) - n)))</td></tr>
-<tr class="separator:a9509f7c1f927cb12f98d9995ae2f92d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0fcefdff5f2609b2c5eb1d0f99214199"><td class="memItemLeft" align="right" valign="top"><a id="a0fcefdff5f2609b2c5eb1d0f99214199"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>SHA2_ROTL</b>(x,  n)&#160;&#160;&#160;((x &lt;&lt; n) | (x &gt;&gt; ((sizeof(x) &lt;&lt; 3) - n)))</td></tr>
-<tr class="separator:a0fcefdff5f2609b2c5eb1d0f99214199"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1d4a72c3cb3d85b0c82736081042c1a4"><td class="memItemLeft" align="right" valign="top"><a id="a1d4a72c3cb3d85b0c82736081042c1a4"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>SHA2_CH</b>(x,  y,  z)&#160;&#160;&#160;((x &amp; y) ^ (~x &amp; z))</td></tr>
-<tr class="separator:a1d4a72c3cb3d85b0c82736081042c1a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae9222f6c22449097806fb1dac2a58107"><td class="memItemLeft" align="right" valign="top"><a id="ae9222f6c22449097806fb1dac2a58107"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>SHA2_MAJ</b>(x,  y,  z)&#160;&#160;&#160;((x &amp; y) ^ (x &amp; z) ^ (y &amp; z))</td></tr>
-<tr class="separator:ae9222f6c22449097806fb1dac2a58107"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0ae1b70e2104958a43d1d8f32cb79eb6"><td class="memItemLeft" align="right" valign="top"><a id="a0ae1b70e2104958a43d1d8f32cb79eb6"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>SHA256_F1</b>(x)&#160;&#160;&#160;(SHA2_ROTR(x,  2) ^ SHA2_ROTR(x, 13) ^ SHA2_ROTR(x, 22))</td></tr>
-<tr class="separator:a0ae1b70e2104958a43d1d8f32cb79eb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afc002a02aab7533fb0bfe557a25266e1"><td class="memItemLeft" align="right" valign="top"><a id="afc002a02aab7533fb0bfe557a25266e1"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>SHA256_F2</b>(x)&#160;&#160;&#160;(SHA2_ROTR(x,  6) ^ SHA2_ROTR(x, 11) ^ SHA2_ROTR(x, 25))</td></tr>
-<tr class="separator:afc002a02aab7533fb0bfe557a25266e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9435ee6ad07985796b91077d13eaf7a0"><td class="memItemLeft" align="right" valign="top"><a id="a9435ee6ad07985796b91077d13eaf7a0"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>SHA256_F3</b>(x)&#160;&#160;&#160;(SHA2_ROTR(x,  7) ^ SHA2_ROTR(x, 18) ^ SHA2_SHFR(x,  3))</td></tr>
-<tr class="separator:a9435ee6ad07985796b91077d13eaf7a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afc7152c6ff0146084db95994f2852b56"><td class="memItemLeft" align="right" valign="top"><a id="afc7152c6ff0146084db95994f2852b56"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>SHA256_F4</b>(x)&#160;&#160;&#160;(SHA2_ROTR(x, 17) ^ SHA2_ROTR(x, 19) ^ SHA2_SHFR(x, 10))</td></tr>
-<tr class="separator:afc7152c6ff0146084db95994f2852b56"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2dc032adc83afe8e265a7941ef11f258"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><b>SHA2_UNPACK32</b>(x,  str)</td></tr>
-<tr class="separator:a2dc032adc83afe8e265a7941ef11f258"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7275957ed17d7fe14f0ab6e32c18f9b7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><b>SHA2_PACK32</b>(str,  x)</td></tr>
-<tr class="separator:a7275957ed17d7fe14f0ab6e32c18f9b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9fb68bfc2d47aafe0074065a19c1651f"><td class="memItemLeft" align="right" valign="top"><a id="a9fb68bfc2d47aafe0074065a19c1651f"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>TEHS</b>&#160;&#160;&#160;1.5F</td></tr>
+<tr class="separator:a9fb68bfc2d47aafe0074065a19c1651f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:ad658aa3fa11c804a6af00bb18e900cd2"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00155.html#ad658aa3fa11c804a6af00bb18e900cd2">Red::fi_sqrt</a> (float num)</td></tr>
+<tr class="memdesc:ad658aa3fa11c804a6af00bb18e900cd2"><td class="mdescLeft">&#160;</td><td class="mdescRight">fi_sqrt  <a href="a00155.html#ad658aa3fa11c804a6af00bb18e900cd2">More...</a><br /></td></tr>
+<tr class="separator:ad658aa3fa11c804a6af00bb18e900cd2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p><a class="el" href="a00365.html">Sha256</a> is hash function implementation. </p>
-<p>Copyright (c) 2020-2021 Vladimir Rogozin (<a href="#" onclick="location.href='mai'+'lto:'+'vla'+'di'+'mir'+'20'+'040'+'60'+'9@g'+'ma'+'il.'+'co'+'m'; return false;">vladi<span style="display: none;">.nosp@m.</span>mir2<span style="display: none;">.nosp@m.</span>00406<span style="display: none;">.nosp@m.</span>09@g<span style="display: none;">.nosp@m.</span>mail.<span style="display: none;">.nosp@m.</span>com</a>)</p>
+<div class="textblock"><p><a class="el" href="a00155.html" title="FastSqrt.h contains inverse sqrt func. Copyright (c) 2020-2021 Vladimir Rogozin (vladimir20040609@gma...">FastSqrt.h</a> contains inverse sqrt func. Copyright (c) 2020-2021 Vladimir Rogozin (<a href="#" onclick="location.href='mai'+'lto:'+'vla'+'di'+'mir'+'20'+'040'+'60'+'9@g'+'ma'+'il.'+'co'+'m'; return false;">vladi<span style="display: none;">.nosp@m.</span>mir2<span style="display: none;">.nosp@m.</span>00406<span style="display: none;">.nosp@m.</span>09@g<span style="display: none;">.nosp@m.</span>mail.<span style="display: none;">.nosp@m.</span>com</a>) </p>
 <p>Distributed under the MIT License (MIT) (See accompanying file LICENSE.txt or copy at <a href="http://opensource.org/licenses/MIT">http://opensource.org/licenses/MIT</a>) </p>
-</div><h2 class="groupheader">Macro Definition Documentation</h2>
-<a id="a7275957ed17d7fe14f0ab6e32c18f9b7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7275957ed17d7fe14f0ab6e32c18f9b7">&#9670;&nbsp;</a></span>SHA2_PACK32</h2>
+</div><h2 class="groupheader">Function Documentation</h2>
+<a id="ad658aa3fa11c804a6af00bb18e900cd2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad658aa3fa11c804a6af00bb18e900cd2">&#9670;&nbsp;</a></span>fi_sqrt()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define SHA2_PACK32</td>
+          <td class="memname">float Red::fi_sqrt </td>
           <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">str, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>num</em></td><td>)</td>
           <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">x&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">{                                             \</div>
-<div class="line">    *(x) = ((uint32) *((str) + 3))            \</div>
-<div class="line">         | ((uint32) *((str) + 2) &lt;&lt;  8)      \</div>
-<div class="line">         | ((uint32) *((str) + 1) &lt;&lt; 16)      \</div>
-<div class="line">         | ((uint32) *((str) + 0) &lt;&lt; 24);     \</div>
-<div class="line">}</div>
-</div><!-- fragment -->
-</div>
-</div>
-<a id="a2dc032adc83afe8e265a7941ef11f258"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2dc032adc83afe8e265a7941ef11f258">&#9670;&nbsp;</a></span>SHA2_UNPACK32</h2>
 
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define SHA2_UNPACK32</td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">x, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">str&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">{                                             \</div>
-<div class="line">    *((str) + 3) = (uint8) ((x));             \</div>
-<div class="line">    *((str) + 2) = (uint8) ((x) &gt;&gt;  8);       \</div>
-<div class="line">    *((str) + 1) = (uint8) ((x) &gt;&gt; 16);       \</div>
-<div class="line">    *((str) + 0) = (uint8) ((x) &gt;&gt; 24);       \</div>
-<div class="line">}</div>
-</div><!-- fragment -->
+<p>fi_sqrt </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">num</td><td>Number to get sqrt from.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Inversed sqrt.</dd></dl>
+<hr  />
+<p>Compute the inverse square root of a non-negative number. </p><pre class="fragment">fast_inv_sqrt(25) * 0.2 == 1/√25
+</pre><p> This directly computes an approximation by utilizing the structure of IEEE 754-1985 32-bit floating-point numbers. </p><pre class="fragment">  s (sign-bit)             M (mantissa)
+  |       E (8-bit exponent)  |
+  |       |                   |
++----+----------+------------------------+
+| 31 | 30 - 23  | 22 - 0                 |
++----+----------+------------------------+
+</pre> <hr  />
+<p>For example, to compute the decimal representation x of an IEE 754 formatted number:</p>
+<p>Let B = 127 (exponent bias) and L = 2^23 (mantissa length) </p><pre class="fragment">x = (-1)^s (1 + M) 2^(E - B)
+</pre><p> For example, 2.25 in IEE 754 is </p><pre class="fragment">00111110100000000000000000000000
+
+s = 0
+E = 011111010 = 125
+M = 00000000000000000000000 = 0
+
+x = (-1)^(0) (1 + 0) 2^(125 - 127) = 1(1)2^(-2) = 0.25
+</pre><p> We can also define the following </p><pre class="fragment">m = M / L    (the mantissa as a floating point)
+e = E - B    (the integer part of x is 2^e)
+</pre><p> Then </p><pre class="fragment">x = (1 + m)2^e
+x interpreted as an integer = M + LE
+</pre><p> We want to find the inverse square root, that is </p><pre class="fragment">y = 1/√x = x^(-1/2)
+</pre><p> We see that </p><pre class="fragment">log2(y) = (-1/2)log2(x)
+</pre><p> Replacing x and y with their floating-point components </p><pre class="fragment">log2(1 + m_y) + e_y = (-1/2)(log2(1 + m_x) + e_x)
+</pre><p> We see that each side has a term like log(1 + v), where v ∈ [0, 1). For such v, log(1 + v) is approximately equal to a straight line, so we substitute </p><pre class="fragment">log(1 + v) ≈ v + σ
+</pre><p> Where σ is some constant that we pick.</p>
+<p>So </p><pre class="fragment">m_y + σ + e_y =~ (-1/2)(m_x + σ + e_y)
+</pre><p> Substituting back the integer components </p><pre class="fragment">M_y/L + σ + E_y - B =~ (-1/2)(M_x/L + σ + E_x - B)
+M_y/L + E_y =~ (-1/2)(M_x/L + σ + E_x - B) -σ + B
+M_y/L + E_y =~ (-1/2)(M_x/L + σ + E_x) - (3/2)(-σ - B)
+M_y + LE_y =~ (3/2)L(B - σ) - (1/2)(M_x + LE_x)
+</pre><p> Notice we now have the integer representations of y and x on both sides of the equation. Let I_n be the integer representation of n, then </p><pre class="fragment">I_y =~ (3/2)L(B - σ) - (1/2)I_x
+</pre><p> That is, the integer representation of y is equal to some constant minus one half the integer representation of x.</p>
+<p>Using σ = 0.0450465, we get </p><pre class="fragment">(3/2)L(B - σ) = (3/2)(2^23)(B - 0.0450465) = 1597463007 = 0x5f3759df
+</pre><p> We also use use Newton's Method to increase the accuracy</p>
+<blockquote class="doxtable">
+<p>If x_n is an approximation to the solution of f(x) = 0 and if f'(x_n) ≠ 0, then the next approximation is given by </p><pre class="fragment">x_(n+1) = x_n - f(x_n)/f'(x_n)  ,  n &gt;= 0
+</pre> </blockquote>
+<p>The positive roots of the inverse square root function are solutions to </p><pre class="fragment">f(x)  = 1/x^2 - x_0 = 0         (x_0 is the inital guess)
+
+f(x)  = 1/x^2 - x_0
+f'(x) = -2 x^(-2 - 1) = 2/x^3
+
+f(x_n+1) = x_n - f(x_n)/f'(x_n)
+         = x_n - [1/x^2 - x_0] / [2/x^3]
+         ... (todo)
+         = [x_n (3 - x_0 (x_n^2))] / 2
+         = x_n ((3/2) - (x_0/2)(x_n^2))
+</pre> <hr  />
+<p>References:</p>
+<ul>
+<li>https:*chortle.ccsu.edu/assemblytutorial/Chapter-30/ass30_17.html</li>
+<li>https:*www.h-schmidt.net/FloatConverter/IEEE754.html</li>
+<li>http:*h14s.p5r.org/2012/09/0x5f3759df.html?mwh=1</li>
+<li>https:*en.wikipedia.org/wiki/Fast_inverse_square_root </li>
+</ul>
+
 </div>
 </div>
 </div><!-- contents -->
