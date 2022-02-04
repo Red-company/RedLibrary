@@ -27,19 +27,19 @@ namespace Red {
      * @return Generated pass
      */
     std::string GeneratePassword(unsigned short int& PassLen, std::string mode) {
-        std::string Result        = "";
+        std::string Result = "";
 
         srand((unsigned int) time(nullptr));
 
         if (mode == REDPASSGENERATOR_ONLY_NUMS) {
-            std::string        alphanum1 = "0123456789";
+            std::string alphanum1 = "0123456789";
 
             for (unsigned short int i = 0; i < PassLen; i++) {
                 Result += alphanum1[(unsigned long long int) rand() % alphanum1.length()];
             }
 
         } else {
-            std::string        alphanum2 = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+            std::string alphanum2 = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
             for (unsigned short int i = 0; i < PassLen; i++) {
                 Result += alphanum2[(unsigned long long int) rand() % alphanum2.length()];
