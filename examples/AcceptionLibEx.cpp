@@ -6,7 +6,15 @@
 int main() {
     Red::AcceptionObj continueask;
 
-    if (continueask.Request("go?") == true) {
+    // Base example.
+    if (continueask.Request() == true) {
+        std::cout << "Received YES" << std::endl;
+    } else {
+        std::cout << "Received NO"  << std::endl;
+    }
+
+    // Custom one.
+    if (continueask.Request("So, let's go?") == true) {
         std::cout << "Received YES" << std::endl;
     } else {
         std::cout << "Received NO"  << std::endl;

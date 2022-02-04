@@ -10,7 +10,7 @@
 #ifndef RED_ACCEPTIONLIB_H
 #define RED_ACCEPTIONLIB_H
 
-#define REDACCEPTIONLIB_VERSION "1.0"
+#define REDACCEPTIONLIB_VERSION "1.1"
 
 // System libs.
 #include <iostream>
@@ -33,7 +33,7 @@ namespace Red {
              *
              * @return True if received yes, false if received no.
              */
-            bool Request(std::string Text = "Are you sure?") {
+            bool Request(std::string Text = "[\033[91m*\033[0m] Are you sure?") {
                 std::string inp = "";
 
                 std::cout << Text << " [y/n]: ";
