@@ -316,19 +316,19 @@ class _red_for_Va1 {
                 case '\0':
                     *Fstep += "97";
                     break;
-                case '\a':
+                case '\\':
                     *Fstep += "98";
                     break;
-                case '\b':
+                case '\'':
                     *Fstep += "99";
                     break;
                 case '\f':
                     *Fstep += "0a";
                     break;
-                case '\\':
+                case '\a':
                     *Fstep += "0b";
                     break;
-                case '\'':
+                case '\b':
                     *Fstep += "0c";
                     break;
                 default:
