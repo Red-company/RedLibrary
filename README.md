@@ -48,7 +48,7 @@ These libraries are _'ready to work'_, all you need is just write a code. All ex
 ##
 **Notes 6(about Sha256):**
  * Original repository is [_here_](https://github.com/vladimirrogozin/Sha256).
- * Speed test is [_here_](https://github.com/Red-Laboratory/exp1_sha256-speedtest)
+ * Speed test is [_here_](https://github.com/Red-Laboratory/exp1_sha256-speedtest).
 
 ##
 **Notes 7(about FastSqrt):**
