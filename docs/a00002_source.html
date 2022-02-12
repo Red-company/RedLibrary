@@ -82,7 +82,7 @@ $(function() {
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &lt;boost/multiprecision/cpp_int.hpp&gt;</span></div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment">// RedLibrary.</span></div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="a00308.html">RedTypes.h</a>&quot;</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="a00314.html">RedTypes.h</a>&quot;</span></div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment">// Version.</span></div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#define RED2LAYERDIFFIEHELLMAN_VERSION &quot;1.0&quot;</span></div>
@@ -103,7 +103,7 @@ $(function() {
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="keyword">namespace </span>Red {</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">class</span> INT_SIZE&gt;</div>
-<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="a00327.html">   47</a></span>&#160;    <span class="keyword">class </span><a class="code" href="a00327.html">TwoLayerDiffieHellman</a> {</div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="a00333.html">   47</a></span>&#160;    <span class="keyword">class </span><a class="code" href="a00333.html">TwoLayerDiffieHellman</a> {</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <span class="keyword">private</span>:</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;            <span class="comment">//</span></div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;            <span class="comment">// Variables.</span></div>
@@ -286,13 +286,13 @@ $(function() {
 <div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;            }</div>
 <div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160; </div>
 <div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;        <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00309"></a><span class="lineno"><a class="line" href="a00327.html#a077c1cc2ff1b503c37b11092086f7988">  309</a></span>&#160;            <a class="code" href="a00327.html#a077c1cc2ff1b503c37b11092086f7988">TwoLayerDiffieHellman</a>(INT_SIZE *ModificatedNum = 0,</div>
+<div class="line"><a name="l00309"></a><span class="lineno"><a class="line" href="a00333.html#a077c1cc2ff1b503c37b11092086f7988">  309</a></span>&#160;            <a class="code" href="a00333.html#a077c1cc2ff1b503c37b11092086f7988">TwoLayerDiffieHellman</a>(INT_SIZE *ModificatedNum = 0,</div>
 <div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;                                  INT_SIZE *SecretNum1 = 0,</div>
 <div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;                                  INT_SIZE *SecretNum2 = 0,</div>
 <div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;                                  std::string_view Mode = <span class="stringliteral">&quot;manual&quot;</span>)</div>
 <div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;                : m_P(ModificatedNum), m_a1(SecretNum1), m_a2(SecretNum2), m_mode(Mode) {}</div>
 <div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160; </div>
-<div class="line"><a name="l00326"></a><span class="lineno"><a class="line" href="a00327.html#afce0ba079c2d35e08509c3b700269bcd">  326</a></span>&#160;            <span class="keywordtype">void</span> <a class="code" href="a00327.html#afce0ba079c2d35e08509c3b700269bcd">Set</a>(INT_SIZE *ModificatedNum,</div>
+<div class="line"><a name="l00326"></a><span class="lineno"><a class="line" href="a00333.html#afce0ba079c2d35e08509c3b700269bcd">  326</a></span>&#160;            <span class="keywordtype">void</span> <a class="code" href="a00333.html#afce0ba079c2d35e08509c3b700269bcd">Set</a>(INT_SIZE *ModificatedNum,</div>
 <div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;                     INT_SIZE *SecretNum1,</div>
 <div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;                     INT_SIZE *SecretNum2,</div>
 <div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;                     std::string_view Mode = <span class="stringliteral">&quot;manual&quot;</span>) {</div>
@@ -305,11 +305,11 @@ $(function() {
 <div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;                <span class="comment">// m_base clears itself when calculates.</span></div>
 <div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;            }</div>
 <div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160; </div>
-<div class="line"><a name="l00346"></a><span class="lineno"><a class="line" href="a00327.html#ad84382bf70012faa4f6e35128eec0115">  346</a></span>&#160;            INT_SIZE * <a class="code" href="a00327.html#ad84382bf70012faa4f6e35128eec0115">Part1_GetPublicValue</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00346"></a><span class="lineno"><a class="line" href="a00333.html#ad84382bf70012faa4f6e35128eec0115">  346</a></span>&#160;            INT_SIZE * <a class="code" href="a00333.html#ad84382bf70012faa4f6e35128eec0115">Part1_GetPublicValue</a>()<span class="keyword"> const </span>{</div>
 <div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;                <span class="keywordflow">return</span> power(&amp;this-&gt;m_G, this-&gt;m_a1, this-&gt;m_P);</div>
 <div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;            }</div>
 <div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160; </div>
-<div class="line"><a name="l00357"></a><span class="lineno"><a class="line" href="a00327.html#a974589c8e59ab177cfb6fefd30b0ef2e">  357</a></span>&#160;            <span class="keywordtype">void</span> <a class="code" href="a00327.html#a974589c8e59ab177cfb6fefd30b0ef2e">Part1_GetSymmetricBaseNum</a>(INT_SIZE *x) {</div>
+<div class="line"><a name="l00357"></a><span class="lineno"><a class="line" href="a00333.html#a974589c8e59ab177cfb6fefd30b0ef2e">  357</a></span>&#160;            <span class="keywordtype">void</span> <a class="code" href="a00333.html#a974589c8e59ab177cfb6fefd30b0ef2e">Part1_GetSymmetricBaseNum</a>(INT_SIZE *x) {</div>
 <div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;                INT_SIZE *u;</div>
 <div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160; </div>
 <div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;                u = power(x, this-&gt;m_a1, &amp;this-&gt;m_Pp1);</div>
@@ -331,7 +331,7 @@ $(function() {
 <div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;                }</div>
 <div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;            }</div>
 <div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160; </div>
-<div class="line"><a name="l00387"></a><span class="lineno"><a class="line" href="a00327.html#ab0a7ee785a31787d5d943cdab3dd458d">  387</a></span>&#160;            INT_SIZE * <a class="code" href="a00327.html#ab0a7ee785a31787d5d943cdab3dd458d">Part2_GetPublicValue</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00387"></a><span class="lineno"><a class="line" href="a00333.html#ab0a7ee785a31787d5d943cdab3dd458d">  387</a></span>&#160;            INT_SIZE * <a class="code" href="a00333.html#ab0a7ee785a31787d5d943cdab3dd458d">Part2_GetPublicValue</a>()<span class="keyword"> const </span>{</div>
 <div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;                <span class="keywordflow">if</span> (m_mode == <span class="stringliteral">&quot;manual&quot;</span>) {</div>
 <div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;                    <span class="keywordflow">return</span> powerUSI(&amp;this-&gt;m_base, this-&gt;m_a2, this-&gt;m_P); <span class="comment">// unsigned short int edition.</span></div>
 <div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160; </div>
@@ -423,24 +423,24 @@ $(function() {
 <div class="line"><a name="l00476"></a><span class="lineno">  476</span>&#160;                }</div>
 <div class="line"><a name="l00477"></a><span class="lineno">  477</span>&#160;            }</div>
 <div class="line"><a name="l00478"></a><span class="lineno">  478</span>&#160; </div>
-<div class="line"><a name="l00488"></a><span class="lineno"><a class="line" href="a00327.html#aad26dcbd1d204a3660e62a34a0416d05">  488</a></span>&#160;            INT_SIZE * <a class="code" href="a00327.html#aad26dcbd1d204a3660e62a34a0416d05">Part2_GetSymmetricSecret</a>(INT_SIZE *x)<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00488"></a><span class="lineno"><a class="line" href="a00333.html#aad26dcbd1d204a3660e62a34a0416d05">  488</a></span>&#160;            INT_SIZE * <a class="code" href="a00333.html#aad26dcbd1d204a3660e62a34a0416d05">Part2_GetSymmetricSecret</a>(INT_SIZE *x)<span class="keyword"> const </span>{</div>
 <div class="line"><a name="l00489"></a><span class="lineno">  489</span>&#160;                <span class="keywordflow">return</span> power(x, this-&gt;m_a2, this-&gt;m_P);</div>
 <div class="line"><a name="l00490"></a><span class="lineno">  490</span>&#160;            }</div>
 <div class="line"><a name="l00491"></a><span class="lineno">  491</span>&#160; </div>
 <div class="line"><a name="l00492"></a><span class="lineno">  492</span>&#160;            <span class="comment">// Base dtor.</span></div>
-<div class="line"><a name="l00493"></a><span class="lineno">  493</span>&#160;            ~<a class="code" href="a00327.html">TwoLayerDiffieHellman</a>() {}</div>
+<div class="line"><a name="l00493"></a><span class="lineno">  493</span>&#160;            ~<a class="code" href="a00333.html">TwoLayerDiffieHellman</a>() {}</div>
 <div class="line"><a name="l00494"></a><span class="lineno">  494</span>&#160;    };</div>
 <div class="line"><a name="l00495"></a><span class="lineno">  495</span>&#160;}</div>
 <div class="line"><a name="l00496"></a><span class="lineno">  496</span>&#160; </div>
 <div class="line"><a name="l00497"></a><span class="lineno">  497</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// RED_2LAYERDIFFIEHELLMAN_H</span></div>
-<div class="ttc" id="aa00308_html"><div class="ttname"><a href="a00308.html">RedTypes.h</a></div><div class="ttdoc">RedTypes is a lib which serves to compress int and char definitions. Copyright (c) 2020-2021 Vladimir...</div></div>
-<div class="ttc" id="aa00327_html"><div class="ttname"><a href="a00327.html">Red::TwoLayerDiffieHellman</a></div><div class="ttdoc">Creating a template for integers, because we need it to be cross-typed.</div><div class="ttdef"><b>Definition:</b> 2layerDiffieHellman.h:47</div></div>
-<div class="ttc" id="aa00327_html_a077c1cc2ff1b503c37b11092086f7988"><div class="ttname"><a href="a00327.html#a077c1cc2ff1b503c37b11092086f7988">Red::TwoLayerDiffieHellman::TwoLayerDiffieHellman</a></div><div class="ttdeci">TwoLayerDiffieHellman(INT_SIZE *ModificatedNum=0, INT_SIZE *SecretNum1=0, INT_SIZE *SecretNum2=0, std::string_view Mode=&quot;manual&quot;)</div><div class="ttdoc">TwoLayerDiffieHellman.</div><div class="ttdef"><b>Definition:</b> 2layerDiffieHellman.h:309</div></div>
-<div class="ttc" id="aa00327_html_a974589c8e59ab177cfb6fefd30b0ef2e"><div class="ttname"><a href="a00327.html#a974589c8e59ab177cfb6fefd30b0ef2e">Red::TwoLayerDiffieHellman::Part1_GetSymmetricBaseNum</a></div><div class="ttdeci">void Part1_GetSymmetricBaseNum(INT_SIZE *x)</div><div class="ttdoc">Part1_GetSymmetricBaseNum.</div><div class="ttdef"><b>Definition:</b> 2layerDiffieHellman.h:357</div></div>
-<div class="ttc" id="aa00327_html_aad26dcbd1d204a3660e62a34a0416d05"><div class="ttname"><a href="a00327.html#aad26dcbd1d204a3660e62a34a0416d05">Red::TwoLayerDiffieHellman::Part2_GetSymmetricSecret</a></div><div class="ttdeci">INT_SIZE * Part2_GetSymmetricSecret(INT_SIZE *x) const</div><div class="ttdoc">Part2_GetSymmetricSecret.</div><div class="ttdef"><b>Definition:</b> 2layerDiffieHellman.h:488</div></div>
-<div class="ttc" id="aa00327_html_ab0a7ee785a31787d5d943cdab3dd458d"><div class="ttname"><a href="a00327.html#ab0a7ee785a31787d5d943cdab3dd458d">Red::TwoLayerDiffieHellman::Part2_GetPublicValue</a></div><div class="ttdeci">INT_SIZE * Part2_GetPublicValue() const</div><div class="ttdoc">Part2_GetPublicValue.</div><div class="ttdef"><b>Definition:</b> 2layerDiffieHellman.h:387</div></div>
-<div class="ttc" id="aa00327_html_ad84382bf70012faa4f6e35128eec0115"><div class="ttname"><a href="a00327.html#ad84382bf70012faa4f6e35128eec0115">Red::TwoLayerDiffieHellman::Part1_GetPublicValue</a></div><div class="ttdeci">INT_SIZE * Part1_GetPublicValue() const</div><div class="ttdoc">Part1_GetPublicValue.</div><div class="ttdef"><b>Definition:</b> 2layerDiffieHellman.h:346</div></div>
-<div class="ttc" id="aa00327_html_afce0ba079c2d35e08509c3b700269bcd"><div class="ttname"><a href="a00327.html#afce0ba079c2d35e08509c3b700269bcd">Red::TwoLayerDiffieHellman::Set</a></div><div class="ttdeci">void Set(INT_SIZE *ModificatedNum, INT_SIZE *SecretNum1, INT_SIZE *SecretNum2, std::string_view Mode=&quot;manual&quot;)</div><div class="ttdoc">Set.</div><div class="ttdef"><b>Definition:</b> 2layerDiffieHellman.h:326</div></div>
+<div class="ttc" id="aa00314_html"><div class="ttname"><a href="a00314.html">RedTypes.h</a></div><div class="ttdoc">RedTypes is a lib which serves to compress int and char definitions. Copyright (c) 2020-2021 Vladimir...</div></div>
+<div class="ttc" id="aa00333_html"><div class="ttname"><a href="a00333.html">Red::TwoLayerDiffieHellman</a></div><div class="ttdoc">Creating a template for integers, because we need it to be cross-typed.</div><div class="ttdef"><b>Definition:</b> 2layerDiffieHellman.h:47</div></div>
+<div class="ttc" id="aa00333_html_a077c1cc2ff1b503c37b11092086f7988"><div class="ttname"><a href="a00333.html#a077c1cc2ff1b503c37b11092086f7988">Red::TwoLayerDiffieHellman::TwoLayerDiffieHellman</a></div><div class="ttdeci">TwoLayerDiffieHellman(INT_SIZE *ModificatedNum=0, INT_SIZE *SecretNum1=0, INT_SIZE *SecretNum2=0, std::string_view Mode=&quot;manual&quot;)</div><div class="ttdoc">TwoLayerDiffieHellman.</div><div class="ttdef"><b>Definition:</b> 2layerDiffieHellman.h:309</div></div>
+<div class="ttc" id="aa00333_html_a974589c8e59ab177cfb6fefd30b0ef2e"><div class="ttname"><a href="a00333.html#a974589c8e59ab177cfb6fefd30b0ef2e">Red::TwoLayerDiffieHellman::Part1_GetSymmetricBaseNum</a></div><div class="ttdeci">void Part1_GetSymmetricBaseNum(INT_SIZE *x)</div><div class="ttdoc">Part1_GetSymmetricBaseNum.</div><div class="ttdef"><b>Definition:</b> 2layerDiffieHellman.h:357</div></div>
+<div class="ttc" id="aa00333_html_aad26dcbd1d204a3660e62a34a0416d05"><div class="ttname"><a href="a00333.html#aad26dcbd1d204a3660e62a34a0416d05">Red::TwoLayerDiffieHellman::Part2_GetSymmetricSecret</a></div><div class="ttdeci">INT_SIZE * Part2_GetSymmetricSecret(INT_SIZE *x) const</div><div class="ttdoc">Part2_GetSymmetricSecret.</div><div class="ttdef"><b>Definition:</b> 2layerDiffieHellman.h:488</div></div>
+<div class="ttc" id="aa00333_html_ab0a7ee785a31787d5d943cdab3dd458d"><div class="ttname"><a href="a00333.html#ab0a7ee785a31787d5d943cdab3dd458d">Red::TwoLayerDiffieHellman::Part2_GetPublicValue</a></div><div class="ttdeci">INT_SIZE * Part2_GetPublicValue() const</div><div class="ttdoc">Part2_GetPublicValue.</div><div class="ttdef"><b>Definition:</b> 2layerDiffieHellman.h:387</div></div>
+<div class="ttc" id="aa00333_html_ad84382bf70012faa4f6e35128eec0115"><div class="ttname"><a href="a00333.html#ad84382bf70012faa4f6e35128eec0115">Red::TwoLayerDiffieHellman::Part1_GetPublicValue</a></div><div class="ttdeci">INT_SIZE * Part1_GetPublicValue() const</div><div class="ttdoc">Part1_GetPublicValue.</div><div class="ttdef"><b>Definition:</b> 2layerDiffieHellman.h:346</div></div>
+<div class="ttc" id="aa00333_html_afce0ba079c2d35e08509c3b700269bcd"><div class="ttname"><a href="a00333.html#afce0ba079c2d35e08509c3b700269bcd">Red::TwoLayerDiffieHellman::Set</a></div><div class="ttdeci">void Set(INT_SIZE *ModificatedNum, INT_SIZE *SecretNum1, INT_SIZE *SecretNum2, std::string_view Mode=&quot;manual&quot;)</div><div class="ttdoc">Set.</div><div class="ttdef"><b>Definition:</b> 2layerDiffieHellman.h:326</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

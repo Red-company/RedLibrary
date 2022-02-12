@@ -1,3 +1,12 @@
+/**
+ * @file    rcrypt.h
+ * @brief   rcrypt is a lib which is used to encrypt/hash information like passwords.
+ *
+ * Copyright (c) 2020-2021 Vladimir Rogozin (vladimir20040609@gmail.com)
+ *
+ * Distributed under the MIT License (MIT) (See accompanying file LICENSE.txt
+ * or copy at http://opensource.org/licenses/MIT)
+ */
 #ifndef RED_RCRYPT_H
 #define RED_RCRYPT_H
 

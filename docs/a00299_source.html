@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Red Technologies: /Users/vladimir/Desktop/RedLibrary/RedEncryptionAlgorithms/Va1.h Source File</title>
+<title>Red Technologies: /Users/vladimir/Desktop/RedLibrary/RedEncryptionAlgorithms/ResECB512.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -67,27 +67,24 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="headertitle">
-<div class="title">Va1.h</div>  </div>
+<div class="title">ResECB512.h</div>  </div>
 </div><!--header-->
 <div class="contents">
 <a href="a00299.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#ifndef RED_VA1_H</span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#define RED_VA1_H</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#ifndef RED_RESECB512_H</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#define RED_RESECB512_H</span></div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment">// Version.</span></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#define REDVA1_VERSION &quot;1.1&quot;</span> <span class="comment">// There was no v1.0.</span></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keyword">namespace </span>Red {</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    std::string * <a class="code" href="a00299.html#a1779c97080202eb4fe6823c14671ae67">Va1Encode</a>(<span class="keyword">const</span> std::string *ToEnc);</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    std::string * <a class="code" href="a00299.html#a0cf803d90c1a8e2c80769e08503bdecd">Va1Decode</a>(<span class="keyword">const</span> std::string *ToDec);</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;}</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// RED_VA1_H</span></div>
-<div class="ttc" id="aa00299_html_a0cf803d90c1a8e2c80769e08503bdecd"><div class="ttname"><a href="a00299.html#a0cf803d90c1a8e2c80769e08503bdecd">Red::Va1Decode</a></div><div class="ttdeci">std::string * Va1Decode(const std::string *ToDec)</div><div class="ttdoc">Va1Decode.</div><div class="ttdef"><b>Definition:</b> Va1.cpp:636</div></div>
-<div class="ttc" id="aa00299_html_a1779c97080202eb4fe6823c14671ae67"><div class="ttname"><a href="a00299.html#a1779c97080202eb4fe6823c14671ae67">Red::Va1Encode</a></div><div class="ttdeci">std::string * Va1Encode(const std::string *ToEnc)</div><div class="ttdoc">Va1Encode.</div><div class="ttdef"><b>Definition:</b> Va1.cpp:625</div></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">namespace </span>Red {</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    std::string * <a class="code" href="a00299.html#a5b7eb187d1cfca5c995a1db5751e3617">EncryptResECB512</a>(<span class="keyword">const</span> std::string&amp; in, <span class="keyword">const</span> std::string_view key);</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    std::string * <a class="code" href="a00299.html#abd3f10426370f005dc768214ea4540ea">DecryptResECB512</a>(<span class="keyword">const</span> std::string&amp; in, <span class="keyword">const</span> std::string_view key);</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;}</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// RED_RESECB512_H</span></div>
+<div class="ttc" id="aa00299_html_a5b7eb187d1cfca5c995a1db5751e3617"><div class="ttname"><a href="a00299.html#a5b7eb187d1cfca5c995a1db5751e3617">Red::EncryptResECB512</a></div><div class="ttdeci">std::string * EncryptResECB512(const std::string &amp;in, const std::string_view key)</div><div class="ttdoc">EncryptResECB512.</div><div class="ttdef"><b>Definition:</b> ResECB512.cpp:146</div></div>
+<div class="ttc" id="aa00299_html_abd3f10426370f005dc768214ea4540ea"><div class="ttname"><a href="a00299.html#abd3f10426370f005dc768214ea4540ea">Red::DecryptResECB512</a></div><div class="ttdeci">std::string * DecryptResECB512(const std::string &amp;in, const std::string_view key)</div><div class="ttdoc">EncryptResECB512.</div><div class="ttdef"><b>Definition:</b> ResECB512.cpp:197</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

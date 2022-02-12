@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Red Technologies: /Users/vladimir/Desktop/RedLibrary/Hex.h File Reference</title>
+<title>Red Technologies: /Users/vladimir/Desktop/RedLibrary/HashFunctions/Sha256.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -60,17 +60,21 @@ $(function() {
 </iframe>
 </div>
 
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_448a196a236ae8d8a32b2a4ab3ebc0b4.html">HashFunctions</a></li>  </ul>
+</div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#define-members">Macros</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
-<div class="title">/Users/vladimir/Desktop/RedLibrary/Hex.h File Reference</div>  </div>
+<div class="title">Sha256.h File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>Hex is a lib, which has functions converts string to a string with hex values.  
+<p><a class="el" href="a00381.html">Sha256</a> is hash function implementation.  
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;string&gt;</code><br />
 </div>
@@ -78,91 +82,45 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:a50bbc48d2e7a33f44c48643b8020b078"><td class="memItemLeft" align="right" valign="top"><a id="a50bbc48d2e7a33f44c48643b8020b078"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>REDHEX_VERSION</b>&#160;&#160;&#160;&quot;1.1&quot;</td></tr>
-<tr class="separator:a50bbc48d2e7a33f44c48643b8020b078"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af1edbbc1d2f662ab0510a91e37c05570"><td class="memItemLeft" align="right" valign="top"><a id="af1edbbc1d2f662ab0510a91e37c05570"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>REDSHA256_VERSION</b>&#160;&#160;&#160;&quot;1.1&quot;</td></tr>
+<tr class="separator:af1edbbc1d2f662ab0510a91e37c05570"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a99dbd2b2a3a884db0e2b3b512efb924f"><td class="memItemLeft" align="right" valign="top">std::string *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00167.html#a99dbd2b2a3a884db0e2b3b512efb924f">Red::GetHexArray</a> (const std::string_view a)</td></tr>
-<tr class="memdesc:a99dbd2b2a3a884db0e2b3b512efb924f"><td class="mdescLeft">&#160;</td><td class="mdescRight">GetHexArray.  <a href="a00167.html#a99dbd2b2a3a884db0e2b3b512efb924f">More...</a><br /></td></tr>
-<tr class="separator:a99dbd2b2a3a884db0e2b3b512efb924f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a99dafa281ad4859a56682a120527847a"><td class="memItemLeft" align="right" valign="top">std::string *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00167.html#a99dafa281ad4859a56682a120527847a">Red::GetStrArray</a> (const std::string_view a)</td></tr>
-<tr class="memdesc:a99dafa281ad4859a56682a120527847a"><td class="mdescLeft">&#160;</td><td class="mdescRight">GetStrArray.  <a href="a00167.html#a99dafa281ad4859a56682a120527847a">More...</a><br /></td></tr>
-<tr class="separator:a99dafa281ad4859a56682a120527847a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0d31971ed0473a59ef9f870ce151edaa"><td class="memItemLeft" align="right" valign="top">std::string *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00167.html#a0d31971ed0473a59ef9f870ce151edaa">Red::Sha256Hash</a> (std::string *input)</td></tr>
+<tr class="memdesc:a0d31971ed0473a59ef9f870ce151edaa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sha256Hash.  <a href="a00167.html#a0d31971ed0473a59ef9f870ce151edaa">More...</a><br /></td></tr>
+<tr class="separator:a0d31971ed0473a59ef9f870ce151edaa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Hex is a lib, which has functions converts string to a string with hex values. </p>
+<div class="textblock"><p><a class="el" href="a00381.html">Sha256</a> is hash function implementation. </p>
 <p>Copyright (c) 2020-2021 Vladimir Rogozin (<a href="#" onclick="location.href='mai'+'lto:'+'vla'+'di'+'mir'+'20'+'040'+'60'+'9@g'+'ma'+'il.'+'co'+'m'; return false;">vladi<span style="display: none;">.nosp@m.</span>mir2<span style="display: none;">.nosp@m.</span>00406<span style="display: none;">.nosp@m.</span>09@g<span style="display: none;">.nosp@m.</span>mail.<span style="display: none;">.nosp@m.</span>com</a>)</p>
 <p>Distributed under the MIT License (MIT) (See accompanying file LICENSE.txt or copy at <a href="http://opensource.org/licenses/MIT">http://opensource.org/licenses/MIT</a>) </p>
 </div><h2 class="groupheader">Function Documentation</h2>
-<a id="a99dbd2b2a3a884db0e2b3b512efb924f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a99dbd2b2a3a884db0e2b3b512efb924f">&#9670;&nbsp;</a></span>GetHexArray()</h2>
+<a id="a0d31971ed0473a59ef9f870ce151edaa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0d31971ed0473a59ef9f870ce151edaa">&#9670;&nbsp;</a></span>Sha256Hash()</h2>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::string* Red::GetHexArray </td>
+          <td class="memname">std::string * Red::Sha256Hash </td>
           <td>(</td>
-          <td class="paramtype">const std::string_view&#160;</td>
-          <td class="paramname"><em>a</em></td><td>)</td>
+          <td class="paramtype">std::string *&#160;</td>
+          <td class="paramname"><em>input</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
-<p>GetHexArray. </p>
+<p>Sha256Hash. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">a</td><td>String to get hex string from.</td></tr>
+    <tr><td class="paramname">input</td><td>string which we will get hash from</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>String with hex result. </dd></dl>
-
-</div>
-</div>
-<a id="a99dafa281ad4859a56682a120527847a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a99dafa281ad4859a56682a120527847a">&#9670;&nbsp;</a></span>GetStrArray()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::string* Red::GetStrArray </td>
-          <td>(</td>
-          <td class="paramtype">const std::string_view&#160;</td>
-          <td class="paramname"><em>a</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>GetStrArray. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">a</td><td>Hex string to get string from.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>Normal string. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>string with hash </dd></dl>
 
 </div>
 </div>

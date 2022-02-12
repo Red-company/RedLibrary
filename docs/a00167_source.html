@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Red Technologies: /Users/vladimir/Desktop/RedLibrary/Hex.h Source File</title>
+<title>Red Technologies: /Users/vladimir/Desktop/RedLibrary/HashFunctions/Sha256.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -46,7 +46,6 @@ $(function() {
 });
 /* @license-end */</script>
 <div id="main-nav"></div>
-</div><!-- top -->
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -61,56 +60,31 @@ $(function() {
 </iframe>
 </div>
 
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_448a196a236ae8d8a32b2a4ab3ebc0b4.html">HashFunctions</a></li>  </ul>
+</div>
+</div><!-- top -->
 <div class="header">
   <div class="headertitle">
-<div class="title">/Users/vladimir/Desktop/RedLibrary/Hex.h</div>  </div>
+<div class="title">Sha256.h</div>  </div>
 </div><!--header-->
 <div class="contents">
 <a href="a00167.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#ifndef RED_HEX_H</span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#define RED_HEX_H</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#ifndef RED_SHA256_H</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#define RED_SHA256_H</span></div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#define REDHEX_VERSION &quot;1.1&quot;</span></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keyword">namespace </span>Red {</div>
-<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="a00167.html#a99dbd2b2a3a884db0e2b3b512efb924f">   25</a></span>&#160;    <span class="keyword">inline</span> std::string * <a class="code" href="a00167.html#a99dbd2b2a3a884db0e2b3b512efb924f">GetHexArray</a>(<span class="keyword">const</span> std::string_view a) {</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        std::string *Result = <span class="keyword">new</span> std::string;</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span> <span class="keywordtype">int</span> i = 0; i &lt; a.length(); i++) {</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;            <span class="keywordtype">char</span> <span class="keyword">const</span> hex[16] = { <span class="charliteral">&#39;0&#39;</span>, <span class="charliteral">&#39;1&#39;</span>, <span class="charliteral">&#39;2&#39;</span>, <span class="charliteral">&#39;3&#39;</span>, <span class="charliteral">&#39;4&#39;</span>, <span class="charliteral">&#39;5&#39;</span>, <span class="charliteral">&#39;6&#39;</span>, <span class="charliteral">&#39;7&#39;</span>, <span class="charliteral">&#39;8&#39;</span>, <span class="charliteral">&#39;9&#39;</span>, <span class="charliteral">&#39;a&#39;</span>, <span class="charliteral">&#39;b&#39;</span>,<span class="charliteral">&#39;c&#39;</span>,<span class="charliteral">&#39;d&#39;</span>,<span class="charliteral">&#39;e&#39;</span>,<span class="charliteral">&#39;f&#39;</span>};</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;            <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> ch = (<span class="keyword">const</span> <span class="keywordtype">unsigned</span> char) a[i];</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;            Result-&gt;append(&amp;hex[(ch  &amp; 0xF0) &gt;&gt; 4], 1);</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;            Result-&gt;append(&amp;hex[ch &amp; 0xF], 1);</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        }</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        <span class="keywordflow">return</span> Result;</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    }</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
-<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="a00167.html#a99dafa281ad4859a56682a120527847a">   47</a></span>&#160;    <span class="keyword">inline</span> std::string * <a class="code" href="a00167.html#a99dafa281ad4859a56682a120527847a">GetStrArray</a>(<span class="keyword">const</span> std::string_view a) {</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        std::string *Result = <span class="keyword">new</span> std::string;</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span> <span class="keywordtype">int</span> n = 0; n &lt; a.length(); n += 2) {</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;            std::string HexByte = <span class="stringliteral">&quot;&quot;</span>;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;            HexByte += a[n];</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;            HexByte += a[n + 1];</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;            <span class="keywordtype">int</span> num = std::stoi(HexByte, <span class="keyword">nullptr</span>, 16);</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;            Result-&gt;push_back((<span class="keywordtype">char</span>) num);</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        }</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        <span class="keywordflow">return</span> Result;</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    }</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;}</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// RED_HEX_H</span></div>
-<div class="ttc" id="aa00167_html_a99dafa281ad4859a56682a120527847a"><div class="ttname"><a href="a00167.html#a99dafa281ad4859a56682a120527847a">Red::GetStrArray</a></div><div class="ttdeci">std::string * GetStrArray(const std::string_view a)</div><div class="ttdoc">GetStrArray.</div><div class="ttdef"><b>Definition:</b> Hex.h:47</div></div>
-<div class="ttc" id="aa00167_html_a99dbd2b2a3a884db0e2b3b512efb924f"><div class="ttname"><a href="a00167.html#a99dbd2b2a3a884db0e2b3b512efb924f">Red::GetHexArray</a></div><div class="ttdeci">std::string * GetHexArray(const std::string_view a)</div><div class="ttdoc">GetHexArray.</div><div class="ttdef"><b>Definition:</b> Hex.h:25</div></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment">// Version.</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#define REDSHA256_VERSION &quot;1.1&quot;</span> <span class="comment">// There was no v1.0 macros.</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keyword">namespace </span>Red {</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    std::string * <a class="code" href="a00167.html#a0d31971ed0473a59ef9f870ce151edaa">Sha256Hash</a>(std::string *input);</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;}</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// RED_SHA256_H</span></div>
+<div class="ttc" id="aa00167_html_a0d31971ed0473a59ef9f870ce151edaa"><div class="ttname"><a href="a00167.html#a0d31971ed0473a59ef9f870ce151edaa">Red::Sha256Hash</a></div><div class="ttdeci">std::string * Sha256Hash(std::string *input)</div><div class="ttdoc">Sha256Hash.</div><div class="ttdef"><b>Definition:</b> Sha256.cpp:202</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

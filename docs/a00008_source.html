@@ -80,13 +80,13 @@ $(function() {
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &lt;boost/multiprecision/cpp_int.hpp&gt;</span></div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment">// RedLibrary.</span></div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="a00308.html">RedTypes.h</a>&quot;</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="a00314.html">RedTypes.h</a>&quot;</span></div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#define REDDIFFIEHELLMAN_VERSION &quot;1.3&quot;</span></div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keyword">namespace </span>Red {</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">class</span> INT_SIZE&gt;</div>
-<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="a00335.html">   30</a></span>&#160;    <span class="keyword">class </span><a class="code" href="a00335.html">DiffieHellman</a> {</div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="a00341.html">   30</a></span>&#160;    <span class="keyword">class </span><a class="code" href="a00341.html">DiffieHellman</a> {</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        <span class="keyword">private</span>:</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;            <span class="comment">//</span></div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;            <span class="comment">// Variables.</span></div>
@@ -146,12 +146,12 @@ $(function() {
 <div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;            }</div>
 <div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160; </div>
 <div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00120"></a><span class="lineno"><a class="line" href="a00335.html#abf0eadf99bc595893f723717508925aa">  120</a></span>&#160;            <a class="code" href="a00335.html#abf0eadf99bc595893f723717508925aa">DiffieHellman</a>(INT_SIZE *ResultNum = 0,</div>
+<div class="line"><a name="l00120"></a><span class="lineno"><a class="line" href="a00341.html#abf0eadf99bc595893f723717508925aa">  120</a></span>&#160;            <a class="code" href="a00341.html#abf0eadf99bc595893f723717508925aa">DiffieHellman</a>(INT_SIZE *ResultNum = 0,</div>
 <div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;                          INT_SIZE *ModificatedNum = 0,</div>
 <div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;                          INT_SIZE *SecretNum = 0)</div>
 <div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;                : m_G(ResultNum), m_P(ModificatedNum), m_a(SecretNum) {}</div>
 <div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160; </div>
-<div class="line"><a name="l00135"></a><span class="lineno"><a class="line" href="a00335.html#abf3ca793c9973a904f18adc40f040459">  135</a></span>&#160;            <span class="keywordtype">void</span> <a class="code" href="a00335.html#abf3ca793c9973a904f18adc40f040459">Set</a>(INT_SIZE *ResultNum,</div>
+<div class="line"><a name="l00135"></a><span class="lineno"><a class="line" href="a00341.html#abf3ca793c9973a904f18adc40f040459">  135</a></span>&#160;            <span class="keywordtype">void</span> <a class="code" href="a00341.html#abf3ca793c9973a904f18adc40f040459">Set</a>(INT_SIZE *ResultNum,</div>
 <div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;                     INT_SIZE *ModificatedNum,</div>
 <div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;                     INT_SIZE *SecretNum) {</div>
 <div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;                this-&gt;m_G = ResultNum;</div>
@@ -159,26 +159,26 @@ $(function() {
 <div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;                this-&gt;m_a = SecretNum;</div>
 <div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;            }</div>
 <div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160; </div>
-<div class="line"><a name="l00150"></a><span class="lineno"><a class="line" href="a00335.html#a6e982c3f5341d988e6edfe1699d5a08a">  150</a></span>&#160;            INT_SIZE * <a class="code" href="a00335.html#a6e982c3f5341d988e6edfe1699d5a08a">GetPublicValue</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00150"></a><span class="lineno"><a class="line" href="a00341.html#a6e982c3f5341d988e6edfe1699d5a08a">  150</a></span>&#160;            INT_SIZE * <a class="code" href="a00341.html#a6e982c3f5341d988e6edfe1699d5a08a">GetPublicValue</a>()<span class="keyword"> const </span>{</div>
 <div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;                <span class="keywordflow">return</span> power(this-&gt;m_G, this-&gt;m_a, this-&gt;m_P);</div>
 <div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;            }</div>
 <div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160; </div>
-<div class="line"><a name="l00163"></a><span class="lineno"><a class="line" href="a00335.html#aa55afe2ab4e97c10a13242621c955960">  163</a></span>&#160;            INT_SIZE * <a class="code" href="a00335.html#aa55afe2ab4e97c10a13242621c955960">GetSymmetricKey</a>(<span class="keyword">const</span> INT_SIZE *x)<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00163"></a><span class="lineno"><a class="line" href="a00341.html#aa55afe2ab4e97c10a13242621c955960">  163</a></span>&#160;            INT_SIZE * <a class="code" href="a00341.html#aa55afe2ab4e97c10a13242621c955960">GetSymmetricKey</a>(<span class="keyword">const</span> INT_SIZE *x)<span class="keyword"> const </span>{</div>
 <div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;                <span class="keywordflow">return</span> power(x, this-&gt;m_a, this-&gt;m_P);</div>
 <div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;            }</div>
 <div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160; </div>
 <div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;            <span class="comment">// Base dtor.</span></div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;            ~<a class="code" href="a00335.html">DiffieHellman</a>() {}</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;            ~<a class="code" href="a00341.html">DiffieHellman</a>() {}</div>
 <div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;    };</div>
 <div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;}</div>
 <div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160; </div>
 <div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// RED_DIFFIEHELLMAN_H</span></div>
-<div class="ttc" id="aa00308_html"><div class="ttname"><a href="a00308.html">RedTypes.h</a></div><div class="ttdoc">RedTypes is a lib which serves to compress int and char definitions. Copyright (c) 2020-2021 Vladimir...</div></div>
-<div class="ttc" id="aa00335_html"><div class="ttname"><a href="a00335.html">Red::DiffieHellman</a></div><div class="ttdoc">Creating a template for integers, because we need it to be cross-typed.</div><div class="ttdef"><b>Definition:</b> DiffieHellman.h:30</div></div>
-<div class="ttc" id="aa00335_html_a6e982c3f5341d988e6edfe1699d5a08a"><div class="ttname"><a href="a00335.html#a6e982c3f5341d988e6edfe1699d5a08a">Red::DiffieHellman::GetPublicValue</a></div><div class="ttdeci">INT_SIZE * GetPublicValue() const</div><div class="ttdoc">GetPublicValue.</div><div class="ttdef"><b>Definition:</b> DiffieHellman.h:150</div></div>
-<div class="ttc" id="aa00335_html_aa55afe2ab4e97c10a13242621c955960"><div class="ttname"><a href="a00335.html#aa55afe2ab4e97c10a13242621c955960">Red::DiffieHellman::GetSymmetricKey</a></div><div class="ttdeci">INT_SIZE * GetSymmetricKey(const INT_SIZE *x) const</div><div class="ttdoc">GetSymmetricKey.</div><div class="ttdef"><b>Definition:</b> DiffieHellman.h:163</div></div>
-<div class="ttc" id="aa00335_html_abf0eadf99bc595893f723717508925aa"><div class="ttname"><a href="a00335.html#abf0eadf99bc595893f723717508925aa">Red::DiffieHellman::DiffieHellman</a></div><div class="ttdeci">DiffieHellman(INT_SIZE *ResultNum=0, INT_SIZE *ModificatedNum=0, INT_SIZE *SecretNum=0)</div><div class="ttdoc">DiffieHellman.</div><div class="ttdef"><b>Definition:</b> DiffieHellman.h:120</div></div>
-<div class="ttc" id="aa00335_html_abf3ca793c9973a904f18adc40f040459"><div class="ttname"><a href="a00335.html#abf3ca793c9973a904f18adc40f040459">Red::DiffieHellman::Set</a></div><div class="ttdeci">void Set(INT_SIZE *ResultNum, INT_SIZE *ModificatedNum, INT_SIZE *SecretNum)</div><div class="ttdoc">Set.</div><div class="ttdef"><b>Definition:</b> DiffieHellman.h:135</div></div>
+<div class="ttc" id="aa00314_html"><div class="ttname"><a href="a00314.html">RedTypes.h</a></div><div class="ttdoc">RedTypes is a lib which serves to compress int and char definitions. Copyright (c) 2020-2021 Vladimir...</div></div>
+<div class="ttc" id="aa00341_html"><div class="ttname"><a href="a00341.html">Red::DiffieHellman</a></div><div class="ttdoc">Creating a template for integers, because we need it to be cross-typed.</div><div class="ttdef"><b>Definition:</b> DiffieHellman.h:30</div></div>
+<div class="ttc" id="aa00341_html_a6e982c3f5341d988e6edfe1699d5a08a"><div class="ttname"><a href="a00341.html#a6e982c3f5341d988e6edfe1699d5a08a">Red::DiffieHellman::GetPublicValue</a></div><div class="ttdeci">INT_SIZE * GetPublicValue() const</div><div class="ttdoc">GetPublicValue.</div><div class="ttdef"><b>Definition:</b> DiffieHellman.h:150</div></div>
+<div class="ttc" id="aa00341_html_aa55afe2ab4e97c10a13242621c955960"><div class="ttname"><a href="a00341.html#aa55afe2ab4e97c10a13242621c955960">Red::DiffieHellman::GetSymmetricKey</a></div><div class="ttdeci">INT_SIZE * GetSymmetricKey(const INT_SIZE *x) const</div><div class="ttdoc">GetSymmetricKey.</div><div class="ttdef"><b>Definition:</b> DiffieHellman.h:163</div></div>
+<div class="ttc" id="aa00341_html_abf0eadf99bc595893f723717508925aa"><div class="ttname"><a href="a00341.html#abf0eadf99bc595893f723717508925aa">Red::DiffieHellman::DiffieHellman</a></div><div class="ttdeci">DiffieHellman(INT_SIZE *ResultNum=0, INT_SIZE *ModificatedNum=0, INT_SIZE *SecretNum=0)</div><div class="ttdoc">DiffieHellman.</div><div class="ttdef"><b>Definition:</b> DiffieHellman.h:120</div></div>
+<div class="ttc" id="aa00341_html_abf3ca793c9973a904f18adc40f040459"><div class="ttname"><a href="a00341.html#abf3ca793c9973a904f18adc40f040459">Red::DiffieHellman::Set</a></div><div class="ttdeci">void Set(INT_SIZE *ResultNum, INT_SIZE *ModificatedNum, INT_SIZE *SecretNum)</div><div class="ttdoc">Set.</div><div class="ttdef"><b>Definition:</b> DiffieHellman.h:135</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Red Technologies: /Users/vladimir/Desktop/RedLibrary/RedLog.h Source File</title>
+<title>Red Technologies: /Users/vladimir/Desktop/RedLibrary/RedEncryptionAlgorithms/Va1.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -46,7 +46,6 @@ $(function() {
 });
 /* @license-end */</script>
 <div id="main-nav"></div>
-</div><!-- top -->
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -61,59 +60,34 @@ $(function() {
 </iframe>
 </div>
 
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_f9eaa8731b6f7a1d043ed190654202a7.html">RedEncryptionAlgorithms</a></li>  </ul>
+</div>
+</div><!-- top -->
 <div class="header">
   <div class="headertitle">
-<div class="title">/Users/vladimir/Desktop/RedLibrary/RedLog.h</div>  </div>
+<div class="title">Va1.h</div>  </div>
 </div><!--header-->
 <div class="contents">
 <a href="a00305.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#ifndef RED_LOG_H</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#define RED_LOG_H</span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;fstream&gt;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#ifndef RED_VA1_H</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#define RED_VA1_H</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#define REDLOG_VERSION &quot;1.1&quot;</span></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#define REDLOG_NO_GROUP &quot;redlog null group&quot;</span></div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keyword">namespace </span>Red {</div>
-<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="a00467.html">   20</a></span>&#160;    <span class="keyword">class </span><a class="code" href="a00467.html">RedLog</a> {</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;            <span class="comment">// Connection to log file.</span></div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;            std::ofstream m_LogFile;</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;            <a class="code" href="a00467.html#a93eedd800f8f6f33a9bd2f72e8eb2377">RedLog</a>();</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;            <a class="code" href="a00467.html#a93eedd800f8f6f33a9bd2f72e8eb2377">RedLog</a>(std::string&amp; path);</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;            <span class="keywordtype">void</span> <a class="code" href="a00467.html#ac7be1b7e94fbd90e9ebeafe9a5ddedd6">OpenFile</a>(std::string&amp; path);</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;            <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="a00467.html#af64aaefceb47a6fa7dce1a196683098e">FileExists</a>(std::string&amp; path);</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;            <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="a00467.html#a5b94464a7cb2b1a8ec074e6fc775691f">CreateLogFile</a>(std::string&amp; path);</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;            <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="a00467.html#a5f5ed24ec7594a8716a46c090f137cb0">DeleteFile</a>(std::string&amp; path);</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160; </div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;            <span class="keywordtype">void</span> <a class="code" href="a00467.html#a9dfbbb94c18c1301a4b07cca2910136b">NewNote</a>(std::string *group, std::string *note);</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160; </div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;            <span class="keywordtype">void</span> <a class="code" href="a00467.html#a9dfbbb94c18c1301a4b07cca2910136b">NewNote</a>(std::string group, std::string note);</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160; </div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;            <span class="comment">// Base dtor.</span></div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;            ~<a class="code" href="a00467.html">RedLog</a>() {}</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    };</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;}</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160; </div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160; </div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// RED_LOG_H</span></div>
-<div class="ttc" id="aa00467_html"><div class="ttname"><a href="a00467.html">Red::RedLog</a></div><div class="ttdef"><b>Definition:</b> RedLog.h:20</div></div>
-<div class="ttc" id="aa00467_html_a5b94464a7cb2b1a8ec074e6fc775691f"><div class="ttname"><a href="a00467.html#a5b94464a7cb2b1a8ec074e6fc775691f">Red::RedLog::CreateLogFile</a></div><div class="ttdeci">static bool CreateLogFile(std::string &amp;path)</div><div class="ttdoc">CreateLogFile.</div><div class="ttdef"><b>Definition:</b> RedLog.cpp:77</div></div>
-<div class="ttc" id="aa00467_html_a5f5ed24ec7594a8716a46c090f137cb0"><div class="ttname"><a href="a00467.html#a5f5ed24ec7594a8716a46c090f137cb0">Red::RedLog::DeleteFile</a></div><div class="ttdeci">static bool DeleteFile(std::string &amp;path)</div><div class="ttdoc">DeleteFile.</div><div class="ttdef"><b>Definition:</b> RedLog.cpp:115</div></div>
-<div class="ttc" id="aa00467_html_a93eedd800f8f6f33a9bd2f72e8eb2377"><div class="ttname"><a href="a00467.html#a93eedd800f8f6f33a9bd2f72e8eb2377">Red::RedLog::RedLog</a></div><div class="ttdeci">RedLog()</div><div class="ttdoc">RedLog.</div><div class="ttdef"><b>Definition:</b> RedLog.cpp:30</div></div>
-<div class="ttc" id="aa00467_html_a9dfbbb94c18c1301a4b07cca2910136b"><div class="ttname"><a href="a00467.html#a9dfbbb94c18c1301a4b07cca2910136b">Red::RedLog::NewNote</a></div><div class="ttdeci">void NewNote(std::string *group, std::string *note)</div><div class="ttdoc">NewNote.</div><div class="ttdef"><b>Definition:</b> RedLog.cpp:129</div></div>
-<div class="ttc" id="aa00467_html_ac7be1b7e94fbd90e9ebeafe9a5ddedd6"><div class="ttname"><a href="a00467.html#ac7be1b7e94fbd90e9ebeafe9a5ddedd6">Red::RedLog::OpenFile</a></div><div class="ttdeci">void OpenFile(std::string &amp;path)</div><div class="ttdoc">OpenFile.</div><div class="ttdef"><b>Definition:</b> RedLog.cpp:50</div></div>
-<div class="ttc" id="aa00467_html_af64aaefceb47a6fa7dce1a196683098e"><div class="ttname"><a href="a00467.html#af64aaefceb47a6fa7dce1a196683098e">Red::RedLog::FileExists</a></div><div class="ttdeci">static bool FileExists(std::string &amp;path)</div><div class="ttdoc">FileExists.</div><div class="ttdef"><b>Definition:</b> RedLog.cpp:63</div></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment">// Version.</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#define REDVA1_VERSION &quot;1.1&quot;</span> <span class="comment">// There was no v1.0.</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keyword">namespace </span>Red {</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    std::string * <a class="code" href="a00305.html#a1779c97080202eb4fe6823c14671ae67">Va1Encode</a>(<span class="keyword">const</span> std::string *ToEnc);</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    std::string * <a class="code" href="a00305.html#a0cf803d90c1a8e2c80769e08503bdecd">Va1Decode</a>(<span class="keyword">const</span> std::string *ToDec);</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;}</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// RED_VA1_H</span></div>
+<div class="ttc" id="aa00305_html_a0cf803d90c1a8e2c80769e08503bdecd"><div class="ttname"><a href="a00305.html#a0cf803d90c1a8e2c80769e08503bdecd">Red::Va1Decode</a></div><div class="ttdeci">std::string * Va1Decode(const std::string *ToDec)</div><div class="ttdoc">Va1Decode.</div><div class="ttdef"><b>Definition:</b> Va1.cpp:636</div></div>
+<div class="ttc" id="aa00305_html_a1779c97080202eb4fe6823c14671ae67"><div class="ttname"><a href="a00305.html#a1779c97080202eb4fe6823c14671ae67">Red::Va1Encode</a></div><div class="ttdeci">std::string * Va1Encode(const std::string *ToEnc)</div><div class="ttdoc">Va1Encode.</div><div class="ttdef"><b>Definition:</b> Va1.cpp:625</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
