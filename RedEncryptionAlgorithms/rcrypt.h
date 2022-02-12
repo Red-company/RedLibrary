@@ -205,4 +205,5 @@ namespace Red {
         return hashed;
     }
 }
+
 #endif // RED_RCRYPT_H
