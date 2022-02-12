@@ -76,6 +76,7 @@ HEADERS += \
     RedEncryptionAlgorithms/ResECB512.h \
     RedEncryptionAlgorithms/Va1.h \
     RedEncryptionAlgorithms/_private/ResDeclarations.h \
+    RedEncryptionAlgorithms/rcrypt.h \
     RedLog.h \
     RedTypes.h \
     Version.h
