@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['sha256_314',['Sha256',['../a00381.html',1,'']]],
-  ['statement_315',['Statement',['../a00433.html',1,'Red::RedDataBase']]]
+  ['sha256_323',['Sha256',['../a00390.html',1,'']]],
+  ['sha512_324',['SHA512',['../a00394.html',1,'']]],
+  ['statement_325',['Statement',['../a00446.html',1,'Red::RedDataBase']]]
 ];

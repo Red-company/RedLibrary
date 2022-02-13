@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Red Technologies: /Users/vladimir/Desktop/RedLibrary/RedDataBase/Backup.h File Reference</title>
+<title>Red Technologies: /Users/vladimir/Desktop/RedLibrary/RedConfig.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -60,37 +60,635 @@ $(function() {
 </iframe>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_c817ed849eb7b23375e72b2fd3087b1f.html">RedDataBase</a></li>  </ul>
-</div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Classes</a>  </div>
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#define-members">Macros</a> &#124;
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
-<div class="title">Backup.h File Reference</div>  </div>
+<div class="title">/Users/vladimir/Desktop/RedLibrary/RedConfig.h File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>Backup is used to backup a database file in a safe and online way.  
+<p>RedConfig is a lib to create/use variables preset.  
 <a href="#details">More...</a></p>
-<div class="textblock"><code>#include &quot;<a class="el" href="a00227_source.html">Database.h</a>&quot;</code><br />
-<code>#include &lt;string&gt;</code><br />
+<div class="textblock"><code>#include &lt;string&gt;</code><br />
+<code>#include &lt;map&gt;</code><br />
+<code>#include &quot;<a class="el" href="a00182_source.html">../RedLibrary/InsensitiveMap.h</a>&quot;</code><br />
 </div>
 <p><a href="a00212_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00409.html">Red::RedDataBase::Backup</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">RAII encapsulation of a RedDataBase <a class="el" href="a00409.html" title="RAII encapsulation of a RedDataBase Backup process.">Backup</a> process.  <a href="a00409.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00418.html">Red::RedConfig::Variable</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Base object.  <a href="a00418.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:ae9f5d8ab03d9badee9a84bea7b81e080"><td class="memItemLeft" align="right" valign="top"><a id="ae9f5d8ab03d9badee9a84bea7b81e080"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>REDCONFIG_VERSION</b>&#160;&#160;&#160;&quot;1.1&quot;</td></tr>
+<tr class="separator:ae9f5d8ab03d9badee9a84bea7b81e080"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abcd8ed011448c926a9b17ef2e975315e"><td class="memItemLeft" align="right" valign="top"><a id="abcd8ed011448c926a9b17ef2e975315e"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00212.html#abcd8ed011448c926a9b17ef2e975315e">REDCONFIG_STRING_TYPE</a>&#160;&#160;&#160;&quot;str&quot;</td></tr>
+<tr class="memdesc:abcd8ed011448c926a9b17ef2e975315e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Types. <br /></td></tr>
+<tr class="separator:abcd8ed011448c926a9b17ef2e975315e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f53d143c722ca581768390d7e743a89"><td class="memItemLeft" align="right" valign="top"><a id="a3f53d143c722ca581768390d7e743a89"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>REDCONFIG_INTEGER_TYPE</b>&#160;&#160;&#160;&quot;int&quot;</td></tr>
+<tr class="separator:a3f53d143c722ca581768390d7e743a89"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a660a5e29abf39546ef3caaea5742f335"><td class="memItemLeft" align="right" valign="top"><a id="a660a5e29abf39546ef3caaea5742f335"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00212.html#a660a5e29abf39546ef3caaea5742f335">REDCONFIG_THROW</a>&#160;&#160;&#160;true</td></tr>
+<tr class="memdesc:a660a5e29abf39546ef3caaea5742f335"><td class="mdescLeft">&#160;</td><td class="mdescRight">Throw. <br /></td></tr>
+<tr class="separator:a660a5e29abf39546ef3caaea5742f335"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab8bccf5fd25efec9cf85016bfa6fc2b5"><td class="memItemLeft" align="right" valign="top"><a id="ab8bccf5fd25efec9cf85016bfa6fc2b5"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>REDCONFIG_NO_THROW</b>&#160;&#160;&#160;false</td></tr>
+<tr class="separator:ab8bccf5fd25efec9cf85016bfa6fc2b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:aa6c2e79dc89e544e03daffb551ccc882"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00209.html#aa6c2e79dc89e544e03daffb551ccc882">Red::RedConfig::is_int</a> (const std::string &amp;s)</td></tr>
+<tr class="memdesc:aa6c2e79dc89e544e03daffb551ccc882"><td class="mdescLeft">&#160;</td><td class="mdescRight">is_int  <a href="a00209.html#aa6c2e79dc89e544e03daffb551ccc882">More...</a><br /></td></tr>
+<tr class="separator:aa6c2e79dc89e544e03daffb551ccc882"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a960695f96a8b650a619a226acc5e89b6"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00209.html#a960695f96a8b650a619a226acc5e89b6">Red::RedConfig::is_str</a> (const std::string &amp;s)</td></tr>
+<tr class="memdesc:a960695f96a8b650a619a226acc5e89b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">is_str  <a href="a00209.html#a960695f96a8b650a619a226acc5e89b6">More...</a><br /></td></tr>
+<tr class="separator:a960695f96a8b650a619a226acc5e89b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a02b163fb18404d7b3132f39dcf70beba"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00209.html#a02b163fb18404d7b3132f39dcf70beba">Red::RedConfig::GetType</a> (std::string &amp;str)</td></tr>
+<tr class="memdesc:a02b163fb18404d7b3132f39dcf70beba"><td class="mdescLeft">&#160;</td><td class="mdescRight">GetType.  <a href="a00209.html#a02b163fb18404d7b3132f39dcf70beba">More...</a><br /></td></tr>
+<tr class="separator:a02b163fb18404d7b3132f39dcf70beba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0db6fd11f2e7a0f0ce2034ee2a76c7c3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00209.html#a0db6fd11f2e7a0f0ce2034ee2a76c7c3">Red::RedConfig::ConfigFileExists</a> (std::string &amp;path)</td></tr>
+<tr class="memdesc:a0db6fd11f2e7a0f0ce2034ee2a76c7c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">ConfigFileExists.  <a href="a00209.html#a0db6fd11f2e7a0f0ce2034ee2a76c7c3">More...</a><br /></td></tr>
+<tr class="separator:a0db6fd11f2e7a0f0ce2034ee2a76c7c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9724889c4a4ea9e021bf63c8d6bde4d7"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00209.html#a9724889c4a4ea9e021bf63c8d6bde4d7">Red::RedConfig::HasVariable</a> (std::string &amp;path, std::string &amp;variable)</td></tr>
+<tr class="memdesc:a9724889c4a4ea9e021bf63c8d6bde4d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">HasVariable.  <a href="a00209.html#a9724889c4a4ea9e021bf63c8d6bde4d7">More...</a><br /></td></tr>
+<tr class="separator:a9724889c4a4ea9e021bf63c8d6bde4d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a86517b84994b11f06b71a4f706c7de82"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00209.html#a86517b84994b11f06b71a4f706c7de82">Red::RedConfig::HasValue</a> (std::string &amp;path, std::string &amp;variable)</td></tr>
+<tr class="memdesc:a86517b84994b11f06b71a4f706c7de82"><td class="mdescLeft">&#160;</td><td class="mdescRight">HasValue.  <a href="a00209.html#a86517b84994b11f06b71a4f706c7de82">More...</a><br /></td></tr>
+<tr class="separator:a86517b84994b11f06b71a4f706c7de82"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb28bb2cff9fcfe6f4678ad05af85631"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00209.html#acb28bb2cff9fcfe6f4678ad05af85631">Red::RedConfig::CreateConfigFile</a> (std::string *path, std::string name, bool can_throw)</td></tr>
+<tr class="memdesc:acb28bb2cff9fcfe6f4678ad05af85631"><td class="mdescLeft">&#160;</td><td class="mdescRight">CreateConfigFile.  <a href="a00209.html#acb28bb2cff9fcfe6f4678ad05af85631">More...</a><br /></td></tr>
+<tr class="separator:acb28bb2cff9fcfe6f4678ad05af85631"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac87ef67a93423a6182321179ec1e514a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00209.html#ac87ef67a93423a6182321179ec1e514a">Red::RedConfig::SaveValues</a> (std::map&lt; std::string, Variable &gt; &amp;variables, std::string &amp;path, bool can_throw)</td></tr>
+<tr class="memdesc:ac87ef67a93423a6182321179ec1e514a"><td class="mdescLeft">&#160;</td><td class="mdescRight">SaveValues.  <a href="a00209.html#ac87ef67a93423a6182321179ec1e514a">More...</a><br /></td></tr>
+<tr class="separator:ac87ef67a93423a6182321179ec1e514a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1cc04b6d96c4977caec76ba758550116"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00209.html#a1cc04b6d96c4977caec76ba758550116">Red::RedConfig::SaveValues</a> (<a class="el" href="a00182.html#ad2fd5abd48068dfe4efb4920957a4306">Red::InsensitiveMap</a>&lt; std::string, Variable &gt; &amp;variables, std::string &amp;path, bool can_throw)</td></tr>
+<tr class="memdesc:a1cc04b6d96c4977caec76ba758550116"><td class="mdescLeft">&#160;</td><td class="mdescRight">SaveValues.  <a href="a00209.html#a1cc04b6d96c4977caec76ba758550116">More...</a><br /></td></tr>
+<tr class="separator:a1cc04b6d96c4977caec76ba758550116"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a853f48ea17c956556367e19b2e86da9e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00209.html#a853f48ea17c956556367e19b2e86da9e">Red::RedConfig::UpdateValues</a> (std::map&lt; std::string, Variable &gt; &amp;variables, std::string &amp;path, bool can_throw)</td></tr>
+<tr class="memdesc:a853f48ea17c956556367e19b2e86da9e"><td class="mdescLeft">&#160;</td><td class="mdescRight">UpdateValues.  <a href="a00209.html#a853f48ea17c956556367e19b2e86da9e">More...</a><br /></td></tr>
+<tr class="separator:a853f48ea17c956556367e19b2e86da9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab558d6aee9df49aeb54f9abaafc68821"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00209.html#ab558d6aee9df49aeb54f9abaafc68821">Red::RedConfig::UpdateValues</a> (<a class="el" href="a00182.html#ad2fd5abd48068dfe4efb4920957a4306">Red::InsensitiveMap</a>&lt; std::string, Variable &gt; &amp;variables, std::string &amp;path, bool can_throw)</td></tr>
+<tr class="memdesc:ab558d6aee9df49aeb54f9abaafc68821"><td class="mdescLeft">&#160;</td><td class="mdescRight">UpdateValues.  <a href="a00209.html#ab558d6aee9df49aeb54f9abaafc68821">More...</a><br /></td></tr>
+<tr class="separator:ab558d6aee9df49aeb54f9abaafc68821"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5132159f500c7957e677808cd0e76409"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00209.html#a5132159f500c7957e677808cd0e76409">Red::RedConfig::LoadValues</a> (std::map&lt; std::string, Variable &gt; *variables, std::string &amp;path, bool can_throw)</td></tr>
+<tr class="memdesc:a5132159f500c7957e677808cd0e76409"><td class="mdescLeft">&#160;</td><td class="mdescRight">LoadValues.  <a href="a00209.html#a5132159f500c7957e677808cd0e76409">More...</a><br /></td></tr>
+<tr class="separator:a5132159f500c7957e677808cd0e76409"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac7d298ffb03bce4eec805b73500b09ba"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00209.html#ac7d298ffb03bce4eec805b73500b09ba">Red::RedConfig::LoadValues</a> (<a class="el" href="a00182.html#ad2fd5abd48068dfe4efb4920957a4306">Red::InsensitiveMap</a>&lt; std::string, Variable &gt; *variables, std::string &amp;path, bool can_throw)</td></tr>
+<tr class="memdesc:ac7d298ffb03bce4eec805b73500b09ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">LoadValues.  <a href="a00209.html#ac7d298ffb03bce4eec805b73500b09ba">More...</a><br /></td></tr>
+<tr class="separator:ac7d298ffb03bce4eec805b73500b09ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Backup is used to backup a database file in a safe and online way. </p>
+<div class="textblock"><p>RedConfig is a lib to create/use variables preset. </p>
 <p>Copyright (c) 2020-2021 Vladimir Rogozin (<a href="#" onclick="location.href='mai'+'lto:'+'vla'+'di'+'mir'+'20'+'040'+'60'+'9@g'+'ma'+'il.'+'co'+'m'; return false;">vladi<span style="display: none;">.nosp@m.</span>mir2<span style="display: none;">.nosp@m.</span>00406<span style="display: none;">.nosp@m.</span>09@g<span style="display: none;">.nosp@m.</span>mail.<span style="display: none;">.nosp@m.</span>com</a>)</p>
 <p>Distributed under the MIT License (MIT) (See accompanying file LICENSE.txt or copy at <a href="http://opensource.org/licenses/MIT">http://opensource.org/licenses/MIT</a>) </p>
-</div></div><!-- contents -->
+</div><h2 class="groupheader">Function Documentation</h2>
+<a id="a0db6fd11f2e7a0f0ce2034ee2a76c7c3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0db6fd11f2e7a0f0ce2034ee2a76c7c3">&#9670;&nbsp;</a></span>ConfigFileExists()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Red::RedConfig::ConfigFileExists </td>
+          <td>(</td>
+          <td class="paramtype">std::string &amp;&#160;</td>
+          <td class="paramname"><em>path</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>ConfigFileExists. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">path</td><td>Path to .rcfg file.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>True if configuration file exists, false if not. </dd></dl>
+
+</div>
+</div>
+<a id="acb28bb2cff9fcfe6f4678ad05af85631"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acb28bb2cff9fcfe6f4678ad05af85631">&#9670;&nbsp;</a></span>CreateConfigFile()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Red::RedConfig::CreateConfigFile </td>
+          <td>(</td>
+          <td class="paramtype">std::string *&#160;</td>
+          <td class="paramname"><em>path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>can_throw</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>CreateConfigFile. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">path</td><td>Path where .rcfg file will be created. </td></tr>
+    <tr><td class="paramname">name</td><td>File name. </td></tr>
+    <tr><td class="paramname">can_throw</td><td>If true, may throw an exception, if false, returns false.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname"><a class="el" href="a00414.html" title="can_not_create_file">Red::RedConfig::Exceptions::can_not_create_file();</a></td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a02b163fb18404d7b3132f39dcf70beba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a02b163fb18404d7b3132f39dcf70beba">&#9670;&nbsp;</a></span>GetType()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string Red::RedConfig::GetType </td>
+          <td>(</td>
+          <td class="paramtype">std::string &amp;&#160;</td>
+          <td class="paramname"><em>str</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>GetType. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">str</td><td>Value to parse.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>"int" if str is integer, "str" if isn't. </dd></dl>
+
+</div>
+</div>
+<a id="a86517b84994b11f06b71a4f706c7de82"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a86517b84994b11f06b71a4f706c7de82">&#9670;&nbsp;</a></span>HasValue()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Red::RedConfig::HasValue </td>
+          <td>(</td>
+          <td class="paramtype">std::string &amp;&#160;</td>
+          <td class="paramname"><em>path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string &amp;&#160;</td>
+          <td class="paramname"><em>variable</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>HasValue. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">path</td><td>Path to .rcfg file. </td></tr>
+    <tr><td class="paramname">variable</td><td>Variable to be parsed.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>True if "variable" has any value, false if hasn't. </dd></dl>
+
+</div>
+</div>
+<a id="a9724889c4a4ea9e021bf63c8d6bde4d7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9724889c4a4ea9e021bf63c8d6bde4d7">&#9670;&nbsp;</a></span>HasVariable()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Red::RedConfig::HasVariable </td>
+          <td>(</td>
+          <td class="paramtype">std::string &amp;&#160;</td>
+          <td class="paramname"><em>path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string &amp;&#160;</td>
+          <td class="paramname"><em>variable</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>HasVariable. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">path</td><td>Path to .rcfg file. </td></tr>
+    <tr><td class="paramname">variable</td><td>Variable to be found in .rcfg file.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>True if there is the variable, false if not. </dd></dl>
+
+</div>
+</div>
+<a id="aa6c2e79dc89e544e03daffb551ccc882"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa6c2e79dc89e544e03daffb551ccc882">&#9670;&nbsp;</a></span>is_int()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Red::RedConfig::is_int </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>s</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>is_int </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">s</td><td>String to parse.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>'1' if s is number, '0' if isn't. </dd></dl>
+
+</div>
+</div>
+<a id="a960695f96a8b650a619a226acc5e89b6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a960695f96a8b650a619a226acc5e89b6">&#9670;&nbsp;</a></span>is_str()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Red::RedConfig::is_str </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>s</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>is_str </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">s</td><td>String to parse.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>'1' if s is string, '0' if isn't. </dd></dl>
+
+</div>
+</div>
+<a id="ac7d298ffb03bce4eec805b73500b09ba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac7d298ffb03bce4eec805b73500b09ba">&#9670;&nbsp;</a></span>LoadValues() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Red::RedConfig::LoadValues </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a00182.html#ad2fd5abd48068dfe4efb4920957a4306">Red::InsensitiveMap</a>&lt; std::string, <a class="el" href="a00418.html">Variable</a> &gt; *&#160;</td>
+          <td class="paramname"><em>variables</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string &amp;&#160;</td>
+          <td class="paramname"><em>path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>can_throw</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>LoadValues. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">variables</td><td>Key-value array where variables will be saved. </td></tr>
+    <tr><td class="paramname">path</td><td>Path of .rcfg file which need to be loaded. </td></tr>
+    <tr><td class="paramname">can_throw</td><td>If true, may throw an exception, if false, returns false.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname"><a class="el" href="a00410.html" title="can_not_open_file">Red::RedConfig::Exceptions::can_not_open_file();</a></td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a5132159f500c7957e677808cd0e76409"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5132159f500c7957e677808cd0e76409">&#9670;&nbsp;</a></span>LoadValues() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Red::RedConfig::LoadValues </td>
+          <td>(</td>
+          <td class="paramtype">std::map&lt; std::string, <a class="el" href="a00418.html">Variable</a> &gt; *&#160;</td>
+          <td class="paramname"><em>variables</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string &amp;&#160;</td>
+          <td class="paramname"><em>path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>can_throw</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>LoadValues. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">variables</td><td>Key-value array where variables will be saved. </td></tr>
+    <tr><td class="paramname">path</td><td>Path of .rcfg file which need to be loaded. </td></tr>
+    <tr><td class="paramname">can_throw</td><td>If true, may throw an exception, if false, returns false.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname"><a class="el" href="a00410.html" title="can_not_open_file">Red::RedConfig::Exceptions::can_not_open_file();</a></td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a1cc04b6d96c4977caec76ba758550116"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1cc04b6d96c4977caec76ba758550116">&#9670;&nbsp;</a></span>SaveValues() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Red::RedConfig::SaveValues </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a00182.html#ad2fd5abd48068dfe4efb4920957a4306">Red::InsensitiveMap</a>&lt; std::string, <a class="el" href="a00418.html">Variable</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>variables</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string &amp;&#160;</td>
+          <td class="paramname"><em>path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>can_throw</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>SaveValues. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">variables</td><td>Key-value array of variables to save. </td></tr>
+    <tr><td class="paramname">path</td><td>Path where new .rcfg setup will be saved. </td></tr>
+    <tr><td class="paramname">can_throw</td><td>If true, may throw an exception, if false, returns false.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname"><a class="el" href="a00414.html" title="can_not_create_file">Red::RedConfig::Exceptions::can_not_create_file();</a></td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ac87ef67a93423a6182321179ec1e514a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac87ef67a93423a6182321179ec1e514a">&#9670;&nbsp;</a></span>SaveValues() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Red::RedConfig::SaveValues </td>
+          <td>(</td>
+          <td class="paramtype">std::map&lt; std::string, <a class="el" href="a00418.html">Variable</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>variables</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string &amp;&#160;</td>
+          <td class="paramname"><em>path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>can_throw</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>SaveValues. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">variables</td><td>Key-value array of variables to save. </td></tr>
+    <tr><td class="paramname">path</td><td>Path where new .rcfg setup will be saved. </td></tr>
+    <tr><td class="paramname">can_throw</td><td>If true, may throw an exception, if false, returns false.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname"><a class="el" href="a00414.html" title="can_not_create_file">Red::RedConfig::Exceptions::can_not_create_file();</a></td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ab558d6aee9df49aeb54f9abaafc68821"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab558d6aee9df49aeb54f9abaafc68821">&#9670;&nbsp;</a></span>UpdateValues() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Red::RedConfig::UpdateValues </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a00182.html#ad2fd5abd48068dfe4efb4920957a4306">Red::InsensitiveMap</a>&lt; std::string, <a class="el" href="a00418.html">Variable</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>variables</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string &amp;&#160;</td>
+          <td class="paramname"><em>path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>can_throw</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>UpdateValues. </p>
+<p>Wrapper for SaveValues</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">variables</td><td>Key-value array of variables to save. </td></tr>
+    <tr><td class="paramname">path</td><td>Path where new .rcfg setup will be saved. </td></tr>
+    <tr><td class="paramname">can_throw</td><td>If true, may throw an exception, if false, returns false.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname"><a class="el" href="a00414.html" title="can_not_create_file">Red::RedConfig::Exceptions::can_not_create_file();</a></td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a853f48ea17c956556367e19b2e86da9e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a853f48ea17c956556367e19b2e86da9e">&#9670;&nbsp;</a></span>UpdateValues() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Red::RedConfig::UpdateValues </td>
+          <td>(</td>
+          <td class="paramtype">std::map&lt; std::string, <a class="el" href="a00418.html">Variable</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>variables</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string &amp;&#160;</td>
+          <td class="paramname"><em>path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>can_throw</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>UpdateValues. </p>
+<p>Wrapper for SaveValues</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">variables</td><td>Key-value array of variables to save. </td></tr>
+    <tr><td class="paramname">path</td><td>Path where new .rcfg setup will be saved. </td></tr>
+    <tr><td class="paramname">can_throw</td><td>If true, may throw an exception, if false, returns false.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname"><a class="el" href="a00414.html" title="can_not_create_file">Red::RedConfig::Exceptions::can_not_create_file();</a></td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+</div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1

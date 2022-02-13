@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Red Technologies: /Users/vladimir/Desktop/RedLibrary/RedDataBase/Transaction.h File Reference</title>
+<title>Red Technologies: /Users/vladimir/Desktop/RedLibrary/RedDataBase/Statement.cpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -66,27 +66,21 @@ $(function() {
 </div>
 </div><!-- top -->
 <div class="header">
-  <div class="summary">
-<a href="#nested-classes">Classes</a>  </div>
   <div class="headertitle">
-<div class="title">Transaction.h File Reference</div>  </div>
+<div class="title">Statement.cpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>A Transaction is way to group multiple SQL statements into an atomic secured operation.  
+<p>A prepared SQLite Statement is a compiled SQL query ready to be executed, pointing to a row of result.  
 <a href="#details">More...</a></p>
-<div class="textblock"><code>#include &quot;<a class="el" href="a00233_source.html">Exception.h</a>&quot;</code><br />
-</div>
-<p><a href="a00248_source.html">Go to the source code of this file.</a></p>
-<table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
-Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00441.html">Red::RedDataBase::Transaction</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">RAII encapsulation of a SQLite <a class="el" href="a00441.html" title="RAII encapsulation of a SQLite Transaction.">Transaction</a>.  <a href="a00441.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table>
-<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>A Transaction is way to group multiple SQL statements into an atomic secured operation. </p>
+<div class="textblock"><code>#include &quot;<a class="el" href="a00251_source.html">./RedDataBase/Statement.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="a00236_source.html">./RedDataBase/Database.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="a00230_source.html">./RedDataBase/Column.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="a00215_source.html">./RedDataBase/Assertion.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="a00242_source.html">./RedDataBase/Exception.h</a>&quot;</code><br />
+<code>#include &lt;sqlite3.h&gt;</code><br />
+</div><a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>A prepared SQLite Statement is a compiled SQL query ready to be executed, pointing to a row of result. </p>
 <p>Copyright (c) 2020-2021 Vladimir Rogozin (<a href="#" onclick="location.href='mai'+'lto:'+'vla'+'di'+'mir'+'20'+'040'+'60'+'9@g'+'ma'+'il.'+'co'+'m'; return false;">vladi<span style="display: none;">.nosp@m.</span>mir2<span style="display: none;">.nosp@m.</span>00406<span style="display: none;">.nosp@m.</span>09@g<span style="display: none;">.nosp@m.</span>mail.<span style="display: none;">.nosp@m.</span>com</a>)</p>
 <p>Distributed under the MIT License (MIT) (See accompanying file LICENSE.txt or copy at <a href="http://opensource.org/licenses/MIT">http://opensource.org/licenses/MIT</a>) </p>
 </div></div><!-- contents -->

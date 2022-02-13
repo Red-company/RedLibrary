@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Red Technologies: Member List</title>
+<title>Red Technologies: SHA512 Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -60,21 +60,223 @@ $(function() {
 </iframe>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><b>Red</b></li><li class="navelem"><b>RedConfig</b></li><li class="navelem"><b>Exceptions</b></li><li class="navelem"><a class="el" href="a00397.html">can_not_open_file</a></li>  </ul>
-</div>
 </div><!-- top -->
 <div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-attribs">Static Public Attributes</a> &#124;
+<a href="#pro-types">Protected Types</a> &#124;
+<a href="#pro-methods">Protected Member Functions</a> &#124;
+<a href="#pro-attribs">Protected Attributes</a> &#124;
+<a href="#pro-static-attribs">Static Protected Attributes</a> &#124;
+<a href="a00391.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">Red::RedConfig::Exceptions::can_not_open_file Member List</div>  </div>
+<div class="title">SHA512 Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>This is the complete list of members for <a class="el" href="a00397.html">Red::RedConfig::Exceptions::can_not_open_file</a>, including all inherited members.</p>
-<table class="directory">
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>what</b>() const (defined in <a class="el" href="a00397.html">Red::RedConfig::Exceptions::can_not_open_file</a>)</td><td class="entry"><a class="el" href="a00397.html">Red::RedConfig::Exceptions::can_not_open_file</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">virtual</span></td></tr>
-</table></div><!-- contents -->
+<p>The <a class="el" href="a00394.html" title="The SHA512 class.">SHA512</a> class.  
+ <a href="a00394.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="a00176_source.html">Sha512.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a92d7e88a28d0bd70930df68bfcd4d136"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00394.html#a92d7e88a28d0bd70930df68bfcd4d136">init</a> ()</td></tr>
+<tr class="memdesc:a92d7e88a28d0bd70930df68bfcd4d136"><td class="mdescLeft">&#160;</td><td class="mdescRight">init  <a href="a00394.html#a92d7e88a28d0bd70930df68bfcd4d136">More...</a><br /></td></tr>
+<tr class="separator:a92d7e88a28d0bd70930df68bfcd4d136"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa1c4c23e601cbc51deda2fecbfed71d6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00394.html#aa1c4c23e601cbc51deda2fecbfed71d6">update</a> (const unsigned char *message, unsigned int len)</td></tr>
+<tr class="memdesc:aa1c4c23e601cbc51deda2fecbfed71d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">update  <a href="a00394.html#aa1c4c23e601cbc51deda2fecbfed71d6">More...</a><br /></td></tr>
+<tr class="separator:aa1c4c23e601cbc51deda2fecbfed71d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6db56be0379bbf38babee9567356ad68"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00394.html#a6db56be0379bbf38babee9567356ad68">final</a> (unsigned char *digest)</td></tr>
+<tr class="memdesc:a6db56be0379bbf38babee9567356ad68"><td class="mdescLeft">&#160;</td><td class="mdescRight">final  <a href="a00394.html#a6db56be0379bbf38babee9567356ad68">More...</a><br /></td></tr>
+<tr class="separator:a6db56be0379bbf38babee9567356ad68"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
+Static Public Attributes</h2></td></tr>
+<tr class="memitem:a911d66aedbff405df349ef300791d8eb"><td class="memItemLeft" align="right" valign="top"><a id="a911d66aedbff405df349ef300791d8eb"></a>
+static const unsigned int&#160;</td><td class="memItemRight" valign="bottom"><b>DIGEST_SIZE</b> = ( 512 / 8)</td></tr>
+<tr class="separator:a911d66aedbff405df349ef300791d8eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-types"></a>
+Protected Types</h2></td></tr>
+<tr class="memitem:a92a2b23b4b5217fefcb5b1884f40c054"><td class="memItemLeft" align="right" valign="top"><a id="a92a2b23b4b5217fefcb5b1884f40c054"></a>
+typedef unsigned char&#160;</td><td class="memItemRight" valign="bottom"><b>uint8</b></td></tr>
+<tr class="separator:a92a2b23b4b5217fefcb5b1884f40c054"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a52085ac598de8ad6c5f157eafcefc047"><td class="memItemLeft" align="right" valign="top"><a id="a52085ac598de8ad6c5f157eafcefc047"></a>
+typedef unsigned long&#160;</td><td class="memItemRight" valign="bottom"><b>uint32</b></td></tr>
+<tr class="separator:a52085ac598de8ad6c5f157eafcefc047"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af8e6d233ae15030174e481d6d79b1786"><td class="memItemLeft" align="right" valign="top"><a id="af8e6d233ae15030174e481d6d79b1786"></a>
+typedef unsigned long long&#160;</td><td class="memItemRight" valign="bottom"><b>uint64</b></td></tr>
+<tr class="separator:af8e6d233ae15030174e481d6d79b1786"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+Protected Member Functions</h2></td></tr>
+<tr class="memitem:aaa6717d3ffe1b8efa2d17b838276ab29"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00394.html#aaa6717d3ffe1b8efa2d17b838276ab29">transform</a> (const unsigned char *message, unsigned int block_nb)</td></tr>
+<tr class="memdesc:aaa6717d3ffe1b8efa2d17b838276ab29"><td class="mdescLeft">&#160;</td><td class="mdescRight">transform  <a href="a00394.html#aaa6717d3ffe1b8efa2d17b838276ab29">More...</a><br /></td></tr>
+<tr class="separator:aaa6717d3ffe1b8efa2d17b838276ab29"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
+Protected Attributes</h2></td></tr>
+<tr class="memitem:a99134ffe06076eaf88e6db543304d0ef"><td class="memItemLeft" align="right" valign="top"><a id="a99134ffe06076eaf88e6db543304d0ef"></a>
+unsigned int&#160;</td><td class="memItemRight" valign="bottom"><b>m_tot_len</b></td></tr>
+<tr class="separator:a99134ffe06076eaf88e6db543304d0ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac08a6cd41b96a9ca98ca567c3225bdca"><td class="memItemLeft" align="right" valign="top"><a id="ac08a6cd41b96a9ca98ca567c3225bdca"></a>
+unsigned int&#160;</td><td class="memItemRight" valign="bottom"><b>m_len</b></td></tr>
+<tr class="separator:ac08a6cd41b96a9ca98ca567c3225bdca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef099f8df4da2e3ea0a56bf5f0479fce"><td class="memItemLeft" align="right" valign="top"><a id="aef099f8df4da2e3ea0a56bf5f0479fce"></a>
+unsigned char&#160;</td><td class="memItemRight" valign="bottom"><b>m_block</b> [2 *SHA384_512_BLOCK_SIZE]</td></tr>
+<tr class="separator:aef099f8df4da2e3ea0a56bf5f0479fce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6fcfcd454382329628cd6baa0487bee5"><td class="memItemLeft" align="right" valign="top"><a id="a6fcfcd454382329628cd6baa0487bee5"></a>
+uint64&#160;</td><td class="memItemRight" valign="bottom"><b>m_h</b> [8]</td></tr>
+<tr class="separator:a6fcfcd454382329628cd6baa0487bee5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-static-attribs"></a>
+Static Protected Attributes</h2></td></tr>
+<tr class="memitem:af6d393ef5aa7458c3545efa1b9d92900"><td class="memItemLeft" align="right" valign="top"><a id="af6d393ef5aa7458c3545efa1b9d92900"></a>
+static const uint64&#160;</td><td class="memItemRight" valign="bottom"><b>sha512_k</b> []</td></tr>
+<tr class="separator:af6d393ef5aa7458c3545efa1b9d92900"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5191f35aa313f5fd0447d2c272a82c99"><td class="memItemLeft" align="right" valign="top"><a id="a5191f35aa313f5fd0447d2c272a82c99"></a>
+static const unsigned int&#160;</td><td class="memItemRight" valign="bottom"><b>SHA384_512_BLOCK_SIZE</b> = (1024/8)</td></tr>
+<tr class="separator:a5191f35aa313f5fd0447d2c272a82c99"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>The <a class="el" href="a00394.html" title="The SHA512 class.">SHA512</a> class. </p>
+<p>Class with operations. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a6db56be0379bbf38babee9567356ad68"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6db56be0379bbf38babee9567356ad68">&#9670;&nbsp;</a></span>final()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SHA512::final </td>
+          <td>(</td>
+          <td class="paramtype">unsigned char *&#160;</td>
+          <td class="paramname"><em>digest</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>final </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">digest</td><td>Finalization func. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a92d7e88a28d0bd70930df68bfcd4d136"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a92d7e88a28d0bd70930df68bfcd4d136">&#9670;&nbsp;</a></span>init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SHA512::init </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>init </p>
+<p>Classic init func. </p>
+
+</div>
+</div>
+<a id="aaa6717d3ffe1b8efa2d17b838276ab29"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaa6717d3ffe1b8efa2d17b838276ab29">&#9670;&nbsp;</a></span>transform()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SHA512::transform </td>
+          <td>(</td>
+          <td class="paramtype">const unsigned char *&#160;</td>
+          <td class="paramname"><em>message</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>block_nb</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>transform </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">message</td><td>Message to be transformed. </td></tr>
+    <tr><td class="paramname">block_nb</td><td>Number of blocks. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aa1c4c23e601cbc51deda2fecbfed71d6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa1c4c23e601cbc51deda2fecbfed71d6">&#9670;&nbsp;</a></span>update()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SHA512::update </td>
+          <td>(</td>
+          <td class="paramtype">const unsigned char *&#160;</td>
+          <td class="paramname"><em>message</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>len</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>update </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">message</td><td>Message to be updated. </td></tr>
+    <tr><td class="paramname">len</td><td>Length to be updated. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
+<li>/Users/vladimir/Desktop/RedLibrary/HashFunctions/<a class="el" href="a00176_source.html">Sha512.h</a></li>
+<li>/Users/vladimir/Desktop/RedLibrary/HashFunctions/<a class="el" href="a00173.html">Sha512.cpp</a></li>
+</ul>
+</div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1

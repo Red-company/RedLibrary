@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Red Technologies: /Users/vladimir/Desktop/RedLibrary/RedTypes.h File Reference</title>
+<title>Red Technologies: /Users/vladimir/Desktop/RedLibrary/RedEncryptionAlgorithms/Va1.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -60,92 +60,101 @@ $(function() {
 </iframe>
 </div>
 
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_f9eaa8731b6f7a1d043ed190654202a7.html">RedEncryptionAlgorithms</a></li>  </ul>
+</div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#define-members">Macros</a> &#124;
-<a href="#typedef-members">Typedefs</a>  </div>
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
-<div class="title">/Users/vladimir/Desktop/RedLibrary/RedTypes.h File Reference</div>  </div>
+<div class="title">Va1.h File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>RedTypes is a lib which serves to compress int and char definitions. Copyright (c) 2020-2021 Vladimir Rogozin (<a href="#" onclick="location.href='mai'+'lto:'+'vla'+'di'+'mir'+'20'+'040'+'60'+'9@g'+'ma'+'il.'+'co'+'m'; return false;">vladi<span style="display: none;">.nosp@m.</span>mir2<span style="display: none;">.nosp@m.</span>00406<span style="display: none;">.nosp@m.</span>09@g<span style="display: none;">.nosp@m.</span>mail.<span style="display: none;">.nosp@m.</span>com</a>)  
+<p>Va1 is encryption/decryption lib.  
 <a href="#details">More...</a></p>
-<div class="textblock"><code>#include &lt;boost/multiprecision/cpp_int.hpp&gt;</code><br />
+<div class="textblock"><code>#include &lt;string&gt;</code><br />
 </div>
 <p><a href="a00314_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:ac5edd5ce41182f20502f7cac8d46be14"><td class="memItemLeft" align="right" valign="top"><a id="ac5edd5ce41182f20502f7cac8d46be14"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>REDTYPES_VERSION</b>&#160;&#160;&#160;&quot;1.2&quot;</td></tr>
-<tr class="separator:ac5edd5ce41182f20502f7cac8d46be14"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a38c56a6d1ebdb70fa5c0b047559cb8b9"><td class="memItemLeft" align="right" valign="top"><a id="a38c56a6d1ebdb70fa5c0b047559cb8b9"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>REDVA1_VERSION</b>&#160;&#160;&#160;&quot;1.1&quot;</td></tr>
+<tr class="separator:a38c56a6d1ebdb70fa5c0b047559cb8b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
-Typedefs</h2></td></tr>
-<tr class="memitem:a63f70029da591ffae72976267044b367"><td class="memItemLeft" align="right" valign="top"><a id="a63f70029da591ffae72976267044b367"></a>
-typedef unsigned char&#160;</td><td class="memItemRight" valign="bottom"><b>Red::uint8_t</b></td></tr>
-<tr class="separator:a63f70029da591ffae72976267044b367"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6be16e8b9872f8861486d088d02d595a"><td class="memItemLeft" align="right" valign="top"><a id="a6be16e8b9872f8861486d088d02d595a"></a>
-typedef unsigned short int&#160;</td><td class="memItemRight" valign="bottom"><b>Red::uint16_t</b></td></tr>
-<tr class="separator:a6be16e8b9872f8861486d088d02d595a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac985a59acc8b2dbbfd9339fad432c0ab"><td class="memItemLeft" align="right" valign="top"><a id="ac985a59acc8b2dbbfd9339fad432c0ab"></a>
-typedef unsigned int&#160;</td><td class="memItemRight" valign="bottom"><b>Red::uint_t</b></td></tr>
-<tr class="separator:ac985a59acc8b2dbbfd9339fad432c0ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9c6043ce4cd50532a43e2ae47aecc3f5"><td class="memItemLeft" align="right" valign="top"><a id="a9c6043ce4cd50532a43e2ae47aecc3f5"></a>
-typedef unsigned long long int&#160;</td><td class="memItemRight" valign="bottom"><b>Red::uint32_t</b></td></tr>
-<tr class="separator:a9c6043ce4cd50532a43e2ae47aecc3f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad4ab37c933351049d5387190de19bda0"><td class="memItemLeft" align="right" valign="top"><a id="ad4ab37c933351049d5387190de19bda0"></a>
-typedef signed char&#160;</td><td class="memItemRight" valign="bottom"><b>Red::int8_t</b></td></tr>
-<tr class="separator:ad4ab37c933351049d5387190de19bda0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a37e903cfcfee2bd57c339a5b7aa81cde"><td class="memItemLeft" align="right" valign="top"><a id="a37e903cfcfee2bd57c339a5b7aa81cde"></a>
-typedef signed short int&#160;</td><td class="memItemRight" valign="bottom"><b>Red::int16_t</b></td></tr>
-<tr class="separator:a37e903cfcfee2bd57c339a5b7aa81cde"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a28fecb51cc73ddf2c84df396bbd61d26"><td class="memItemLeft" align="right" valign="top"><a id="a28fecb51cc73ddf2c84df396bbd61d26"></a>
-typedef signed int&#160;</td><td class="memItemRight" valign="bottom"><b>Red::int_t</b></td></tr>
-<tr class="separator:a28fecb51cc73ddf2c84df396bbd61d26"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a76b7082e10d2670075d09a097f191c68"><td class="memItemLeft" align="right" valign="top"><a id="a76b7082e10d2670075d09a097f191c68"></a>
-typedef signed long long int&#160;</td><td class="memItemRight" valign="bottom"><b>Red::int32_t</b></td></tr>
-<tr class="separator:a76b7082e10d2670075d09a097f191c68"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1048005f21f536a194dc7e55f50555d5"><td class="memItemLeft" align="right" valign="top"><a id="a1048005f21f536a194dc7e55f50555d5"></a>
-using&#160;</td><td class="memItemRight" valign="bottom"><b>Red::uint512_t</b> = boost::multiprecision::number&lt; boost::multiprecision::cpp_int_backend&lt; 512, 512, boost::multiprecision::unsigned_magnitude, boost::multiprecision::unchecked, void &gt;, boost::multiprecision::et_off &gt;</td></tr>
-<tr class="separator:a1048005f21f536a194dc7e55f50555d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad9088cb90e8c5ec2d1eac4598bb00104"><td class="memItemLeft" align="right" valign="top"><a id="ad9088cb90e8c5ec2d1eac4598bb00104"></a>
-using&#160;</td><td class="memItemRight" valign="bottom"><b>Red::uint1024_t</b> = boost::multiprecision::number&lt; boost::multiprecision::cpp_int_backend&lt; 1024, 1024, boost::multiprecision::unsigned_magnitude, boost::multiprecision::unchecked, void &gt;, boost::multiprecision::et_off &gt;</td></tr>
-<tr class="separator:ad9088cb90e8c5ec2d1eac4598bb00104"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8b71b8db015b90f3397ba21b6877dab8"><td class="memItemLeft" align="right" valign="top"><a id="a8b71b8db015b90f3397ba21b6877dab8"></a>
-using&#160;</td><td class="memItemRight" valign="bottom"><b>Red::uint2048_t</b> = boost::multiprecision::number&lt; boost::multiprecision::cpp_int_backend&lt; 2048, 2048, boost::multiprecision::unsigned_magnitude, boost::multiprecision::unchecked, void &gt;, boost::multiprecision::et_off &gt;</td></tr>
-<tr class="separator:a8b71b8db015b90f3397ba21b6877dab8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8e80050dfa4691dab4d1b8e4e12d7971"><td class="memItemLeft" align="right" valign="top"><a id="a8e80050dfa4691dab4d1b8e4e12d7971"></a>
-using&#160;</td><td class="memItemRight" valign="bottom"><b>Red::uint4096_t</b> = boost::multiprecision::number&lt; boost::multiprecision::cpp_int_backend&lt; 4096, 4096, boost::multiprecision::unsigned_magnitude, boost::multiprecision::unchecked, void &gt;, boost::multiprecision::et_off &gt;</td></tr>
-<tr class="separator:a8e80050dfa4691dab4d1b8e4e12d7971"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac988f92aeb92c415cf02b04bb6d2c609"><td class="memItemLeft" align="right" valign="top"><a id="ac988f92aeb92c415cf02b04bb6d2c609"></a>
-using&#160;</td><td class="memItemRight" valign="bottom"><b>Red::uint8192_t</b> = boost::multiprecision::number&lt; boost::multiprecision::cpp_int_backend&lt; 8192, 8192, boost::multiprecision::unsigned_magnitude, boost::multiprecision::unchecked, void &gt;, boost::multiprecision::et_off &gt;</td></tr>
-<tr class="separator:ac988f92aeb92c415cf02b04bb6d2c609"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a54d4082bff4ed5adfba63fe9e916143e"><td class="memItemLeft" align="right" valign="top"><a id="a54d4082bff4ed5adfba63fe9e916143e"></a>
-using&#160;</td><td class="memItemRight" valign="bottom"><b>Red::uint16384_t</b> = boost::multiprecision::number&lt; boost::multiprecision::cpp_int_backend&lt; 16384, 16384, boost::multiprecision::unsigned_magnitude, boost::multiprecision::unchecked, void &gt;, boost::multiprecision::et_off &gt;</td></tr>
-<tr class="separator:a54d4082bff4ed5adfba63fe9e916143e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a69bde1e1b70608c24e810c30d62b7eb7"><td class="memItemLeft" align="right" valign="top"><a id="a69bde1e1b70608c24e810c30d62b7eb7"></a>
-using&#160;</td><td class="memItemRight" valign="bottom"><b>Red::uint32768_t</b> = boost::multiprecision::number&lt; boost::multiprecision::cpp_int_backend&lt; 32768, 32768, boost::multiprecision::unsigned_magnitude, boost::multiprecision::unchecked, void &gt;, boost::multiprecision::et_off &gt;</td></tr>
-<tr class="separator:a69bde1e1b70608c24e810c30d62b7eb7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa398331608036446e87bfcf299eb1da0"><td class="memItemLeft" align="right" valign="top"><a id="aa398331608036446e87bfcf299eb1da0"></a>
-using&#160;</td><td class="memItemRight" valign="bottom"><b>Red::uint65536_t</b> = boost::multiprecision::number&lt; boost::multiprecision::cpp_int_backend&lt; 65536, 65536, boost::multiprecision::unsigned_magnitude, boost::multiprecision::unchecked, void &gt;, boost::multiprecision::et_off &gt;</td></tr>
-<tr class="separator:aa398331608036446e87bfcf299eb1da0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aff38d0dcbbddd95a93b9543771fb6c46"><td class="memItemLeft" align="right" valign="top"><a id="aff38d0dcbbddd95a93b9543771fb6c46"></a>
-using&#160;</td><td class="memItemRight" valign="bottom"><b>Red::uint131072_t</b> = boost::multiprecision::number&lt; boost::multiprecision::cpp_int_backend&lt; 131072, 131072, boost::multiprecision::unsigned_magnitude, boost::multiprecision::unchecked, void &gt;, boost::multiprecision::et_off &gt;</td></tr>
-<tr class="separator:aff38d0dcbbddd95a93b9543771fb6c46"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a97b41ecf67e1b5ef82ff229e868af060"><td class="memItemLeft" align="right" valign="top"><a id="a97b41ecf67e1b5ef82ff229e868af060"></a>
-using&#160;</td><td class="memItemRight" valign="bottom"><b>Red::uint262144_t</b> = boost::multiprecision::number&lt; boost::multiprecision::cpp_int_backend&lt; 262144, 262144, boost::multiprecision::unsigned_magnitude, boost::multiprecision::unchecked, void &gt;, boost::multiprecision::et_off &gt;</td></tr>
-<tr class="separator:a97b41ecf67e1b5ef82ff229e868af060"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aeb4ab898b45e4961c8bd0758217dabc2"><td class="memItemLeft" align="right" valign="top"><a id="aeb4ab898b45e4961c8bd0758217dabc2"></a>
-using&#160;</td><td class="memItemRight" valign="bottom"><b>Red::uint524288_t</b> = boost::multiprecision::number&lt; boost::multiprecision::cpp_int_backend&lt; 524288, 524288, boost::multiprecision::unsigned_magnitude, boost::multiprecision::unchecked, void &gt;, boost::multiprecision::et_off &gt;</td></tr>
-<tr class="separator:aeb4ab898b45e4961c8bd0758217dabc2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a1779c97080202eb4fe6823c14671ae67"><td class="memItemLeft" align="right" valign="top">std::string *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00314.html#a1779c97080202eb4fe6823c14671ae67">Red::Va1Encode</a> (const std::string *ToEnc)</td></tr>
+<tr class="memdesc:a1779c97080202eb4fe6823c14671ae67"><td class="mdescLeft">&#160;</td><td class="mdescRight">Va1Encode.  <a href="a00314.html#a1779c97080202eb4fe6823c14671ae67">More...</a><br /></td></tr>
+<tr class="separator:a1779c97080202eb4fe6823c14671ae67"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0cf803d90c1a8e2c80769e08503bdecd"><td class="memItemLeft" align="right" valign="top">std::string *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00314.html#a0cf803d90c1a8e2c80769e08503bdecd">Red::Va1Decode</a> (const std::string *ToDec)</td></tr>
+<tr class="memdesc:a0cf803d90c1a8e2c80769e08503bdecd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Va1Decode.  <a href="a00314.html#a0cf803d90c1a8e2c80769e08503bdecd">More...</a><br /></td></tr>
+<tr class="separator:a0cf803d90c1a8e2c80769e08503bdecd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>RedTypes is a lib which serves to compress int and char definitions. Copyright (c) 2020-2021 Vladimir Rogozin (<a href="#" onclick="location.href='mai'+'lto:'+'vla'+'di'+'mir'+'20'+'040'+'60'+'9@g'+'ma'+'il.'+'co'+'m'; return false;">vladi<span style="display: none;">.nosp@m.</span>mir2<span style="display: none;">.nosp@m.</span>00406<span style="display: none;">.nosp@m.</span>09@g<span style="display: none;">.nosp@m.</span>mail.<span style="display: none;">.nosp@m.</span>com</a>) </p>
+<div class="textblock"><p>Va1 is encryption/decryption lib. </p>
+<p>Copyright (c) 2020-2021 Vladimir Rogozin (<a href="#" onclick="location.href='mai'+'lto:'+'vla'+'di'+'mir'+'20'+'040'+'60'+'9@g'+'ma'+'il.'+'co'+'m'; return false;">vladi<span style="display: none;">.nosp@m.</span>mir2<span style="display: none;">.nosp@m.</span>00406<span style="display: none;">.nosp@m.</span>09@g<span style="display: none;">.nosp@m.</span>mail.<span style="display: none;">.nosp@m.</span>com</a>)</p>
 <p>Distributed under the MIT License (MIT) (See accompanying file LICENSE.txt or copy at <a href="http://opensource.org/licenses/MIT">http://opensource.org/licenses/MIT</a>) </p>
-</div></div><!-- contents -->
+</div><h2 class="groupheader">Function Documentation</h2>
+<a id="a0cf803d90c1a8e2c80769e08503bdecd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0cf803d90c1a8e2c80769e08503bdecd">&#9670;&nbsp;</a></span>Va1Decode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string * Red::Va1Decode </td>
+          <td>(</td>
+          <td class="paramtype">const std::string *&#160;</td>
+          <td class="paramname"><em>ToDec</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Va1Decode. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ToDec</td><td>String to be decoded.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Decoded string. </dd></dl>
+
+</div>
+</div>
+<a id="a1779c97080202eb4fe6823c14671ae67"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1779c97080202eb4fe6823c14671ae67">&#9670;&nbsp;</a></span>Va1Encode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string * Red::Va1Encode </td>
+          <td>(</td>
+          <td class="paramtype">const std::string *&#160;</td>
+          <td class="paramname"><em>ToEnc</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Va1Encode. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ToEnc</td><td>String to be encoded.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Encoded string. </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1

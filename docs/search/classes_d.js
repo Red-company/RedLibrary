@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['transaction_316',['Transaction',['../a00441.html',1,'Red::RedDataBase']]],
-  ['twolayerdiffiehellman_317',['TwoLayerDiffieHellman',['../a00333.html',1,'Red']]]
+  ['transaction_326',['Transaction',['../a00454.html',1,'Red::RedDataBase']]],
+  ['twolayerdiffiehellman_327',['TwoLayerDiffieHellman',['../a00342.html',1,'Red']]]
 ];

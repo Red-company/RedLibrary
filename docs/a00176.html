@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Red Technologies: /Users/vladimir/Desktop/RedLibrary/Ipv4.h File Reference</title>
+<title>Red Technologies: /Users/vladimir/Desktop/RedLibrary/HashFunctions/Sha512.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -60,60 +60,328 @@ $(function() {
 </iframe>
 </div>
 
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_448a196a236ae8d8a32b2a4ab3ebc0b4.html">HashFunctions</a></li>  </ul>
+</div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
-<a href="#define-members">Macros</a>  </div>
+<a href="#define-members">Macros</a> &#124;
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
-<div class="title">/Users/vladimir/Desktop/RedLibrary/Ipv4.h File Reference</div>  </div>
+<div class="title">Sha512.h File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>Ipv4 is a lib, which has object with Ipv4 address and functions to interact with it.  
+<p>Sha512 is hash function implementation.  
 <a href="#details">More...</a></p>
-<div class="textblock"><code>#include &lt;boost/lexical_cast.hpp&gt;</code><br />
-<code>#include &lt;string&gt;</code><br />
+<div class="textblock"><code>#include &lt;string&gt;</code><br />
+<code>#include &lt;cstring&gt;</code><br />
+<code>#include &lt;fstream&gt;</code><br />
 </div>
 <p><a href="a00176_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00389.html">Red::Ipv4</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00394.html">SHA512</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The <a class="el" href="a00394.html" title="The SHA512 class.">SHA512</a> class.  <a href="a00394.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:ab01fbf699d6d2986e4576b99f59054c8"><td class="memItemLeft" align="right" valign="top"><a id="ab01fbf699d6d2986e4576b99f59054c8"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>REDIPV4_VERSION</b>&#160;&#160;&#160;&quot;1.0&quot;</td></tr>
-<tr class="separator:ab01fbf699d6d2986e4576b99f59054c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afa6208ac61abdd2c2fd9c3213623f0d2"><td class="memItemLeft" align="right" valign="top"><a id="afa6208ac61abdd2c2fd9c3213623f0d2"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>REDIPV4_ALL</b>&#160;&#160;&#160;&quot;all&quot;</td></tr>
-<tr class="separator:afa6208ac61abdd2c2fd9c3213623f0d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5cab1f69f67a3211dc640dea211481e1"><td class="memItemLeft" align="right" valign="top"><a id="a5cab1f69f67a3211dc640dea211481e1"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>REDIPV4_PUBLIC</b>&#160;&#160;&#160;&quot;public&quot;</td></tr>
-<tr class="separator:a5cab1f69f67a3211dc640dea211481e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afab46d1f2990eb2579e1e6851e9388d0"><td class="memItemLeft" align="right" valign="top"><a id="afab46d1f2990eb2579e1e6851e9388d0"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>REDIPV4_192</b>&#160;&#160;&#160;&quot;192&quot;</td></tr>
-<tr class="separator:afab46d1f2990eb2579e1e6851e9388d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aed5fccb29d4fce084748547fb7cd31e8"><td class="memItemLeft" align="right" valign="top"><a id="aed5fccb29d4fce084748547fb7cd31e8"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>REDIPV4_172</b>&#160;&#160;&#160;&quot;172&quot;</td></tr>
-<tr class="separator:aed5fccb29d4fce084748547fb7cd31e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7dc6d8fed2c6156d1e301f939be86175"><td class="memItemLeft" align="right" valign="top"><a id="a7dc6d8fed2c6156d1e301f939be86175"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>REDIPV4_169</b>&#160;&#160;&#160;&quot;169&quot;</td></tr>
-<tr class="separator:a7dc6d8fed2c6156d1e301f939be86175"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a913ae9cbbb6c3ecb15660aaeeed142b3"><td class="memItemLeft" align="right" valign="top"><a id="a913ae9cbbb6c3ecb15660aaeeed142b3"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>REDIPV4_127</b>&#160;&#160;&#160;&quot;127&quot;</td></tr>
-<tr class="separator:a913ae9cbbb6c3ecb15660aaeeed142b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab84edaa86f9ca7844d08e8a12bf6dae1"><td class="memItemLeft" align="right" valign="top"><a id="ab84edaa86f9ca7844d08e8a12bf6dae1"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>REDIPV4_10</b>&#160;&#160;&#160;&quot;10&quot;</td></tr>
-<tr class="separator:ab84edaa86f9ca7844d08e8a12bf6dae1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af9618188699b14b32e3c3e7065d144e1"><td class="memItemLeft" align="right" valign="top"><a id="af9618188699b14b32e3c3e7065d144e1"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>REDSHA512_VERSION</b>&#160;&#160;&#160;&quot;1.0&quot;</td></tr>
+<tr class="separator:af9618188699b14b32e3c3e7065d144e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af08ec37a8c99d747fb60fa15bc28678b"><td class="memItemLeft" align="right" valign="top"><a id="af08ec37a8c99d747fb60fa15bc28678b"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>_CRT_SECURE_NO_WARNINGS</b></td></tr>
+<tr class="separator:af08ec37a8c99d747fb60fa15bc28678b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0a0e7e0d135e9feff1da2e46fa556d50"><td class="memItemLeft" align="right" valign="top"><a id="a0a0e7e0d135e9feff1da2e46fa556d50"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>SHA2_SHFR</b>(x,  n)&#160;&#160;&#160;(x &gt;&gt; n)</td></tr>
+<tr class="separator:a0a0e7e0d135e9feff1da2e46fa556d50"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9509f7c1f927cb12f98d9995ae2f92d3"><td class="memItemLeft" align="right" valign="top"><a id="a9509f7c1f927cb12f98d9995ae2f92d3"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>SHA2_ROTR</b>(x,  n)&#160;&#160;&#160;((x &gt;&gt; n) | (x &lt;&lt; ((sizeof(x) &lt;&lt; 3) - n)))</td></tr>
+<tr class="separator:a9509f7c1f927cb12f98d9995ae2f92d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0fcefdff5f2609b2c5eb1d0f99214199"><td class="memItemLeft" align="right" valign="top"><a id="a0fcefdff5f2609b2c5eb1d0f99214199"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>SHA2_ROTL</b>(x,  n)&#160;&#160;&#160;((x &lt;&lt; n) | (x &gt;&gt; ((sizeof(x) &lt;&lt; 3) - n)))</td></tr>
+<tr class="separator:a0fcefdff5f2609b2c5eb1d0f99214199"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d4a72c3cb3d85b0c82736081042c1a4"><td class="memItemLeft" align="right" valign="top"><a id="a1d4a72c3cb3d85b0c82736081042c1a4"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>SHA2_CH</b>(x,  y,  z)&#160;&#160;&#160;((x &amp; y) ^ (~x &amp; z))</td></tr>
+<tr class="separator:a1d4a72c3cb3d85b0c82736081042c1a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae9222f6c22449097806fb1dac2a58107"><td class="memItemLeft" align="right" valign="top"><a id="ae9222f6c22449097806fb1dac2a58107"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>SHA2_MAJ</b>(x,  y,  z)&#160;&#160;&#160;((x &amp; y) ^ (x &amp; z) ^ (y &amp; z))</td></tr>
+<tr class="separator:ae9222f6c22449097806fb1dac2a58107"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8c65d2c0860cf623b5607b2aec6a870a"><td class="memItemLeft" align="right" valign="top"><a id="a8c65d2c0860cf623b5607b2aec6a870a"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>SHA512_F1</b>(x)&#160;&#160;&#160;(SHA2_ROTR(x, 28) ^ SHA2_ROTR(x, 34) ^ SHA2_ROTR(x, 39))</td></tr>
+<tr class="separator:a8c65d2c0860cf623b5607b2aec6a870a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a41b8a672f8ed1a11ea49acb032550fa6"><td class="memItemLeft" align="right" valign="top"><a id="a41b8a672f8ed1a11ea49acb032550fa6"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>SHA512_F2</b>(x)&#160;&#160;&#160;(SHA2_ROTR(x, 14) ^ SHA2_ROTR(x, 18) ^ SHA2_ROTR(x, 41))</td></tr>
+<tr class="separator:a41b8a672f8ed1a11ea49acb032550fa6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a278e83abc8c71fec8a719065e5d51106"><td class="memItemLeft" align="right" valign="top"><a id="a278e83abc8c71fec8a719065e5d51106"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>SHA512_F3</b>(x)&#160;&#160;&#160;(SHA2_ROTR(x,  1) ^ SHA2_ROTR(x,  8) ^ SHA2_SHFR(x,  7))</td></tr>
+<tr class="separator:a278e83abc8c71fec8a719065e5d51106"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad6d26f67626668a9ec4f113bd05bee2b"><td class="memItemLeft" align="right" valign="top"><a id="ad6d26f67626668a9ec4f113bd05bee2b"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>SHA512_F4</b>(x)&#160;&#160;&#160;(SHA2_ROTR(x, 19) ^ SHA2_ROTR(x, 61) ^ SHA2_SHFR(x,  6))</td></tr>
+<tr class="separator:ad6d26f67626668a9ec4f113bd05bee2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2dc032adc83afe8e265a7941ef11f258"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><b>SHA2_UNPACK32</b>(x,  str)</td></tr>
+<tr class="separator:a2dc032adc83afe8e265a7941ef11f258"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a81e6dc4766f3664c56beb47948d35e23"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><b>SHA2_UNPACK64</b>(x,  str)</td></tr>
+<tr class="separator:a81e6dc4766f3664c56beb47948d35e23"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abfcad1e5762f93ffd8cd566bbe261a19"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><b>SHA2_PACK64</b>(str,  x)</td></tr>
+<tr class="separator:abfcad1e5762f93ffd8cd566bbe261a19"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:acd15871219b5801144539fba76cef948"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00176.html#acd15871219b5801144539fba76cef948">sha512</a> (const void *dat, size_t len)</td></tr>
+<tr class="memdesc:acd15871219b5801144539fba76cef948"><td class="mdescLeft">&#160;</td><td class="mdescRight">sha512  <a href="a00176.html#acd15871219b5801144539fba76cef948">More...</a><br /></td></tr>
+<tr class="separator:acd15871219b5801144539fba76cef948"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abfcf4b0d95f9af3626fcc3b10a250a32"><td class="memItemLeft" align="right" valign="top">std::string *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00176.html#abfcf4b0d95f9af3626fcc3b10a250a32">Red::Sha512</a> (std::string *input)</td></tr>
+<tr class="memdesc:abfcf4b0d95f9af3626fcc3b10a250a32"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sha512.  <a href="a00176.html#abfcf4b0d95f9af3626fcc3b10a250a32">More...</a><br /></td></tr>
+<tr class="separator:abfcf4b0d95f9af3626fcc3b10a250a32"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab5ded9c0a9b0ddcf735aa891908224b2"><td class="memItemLeft" align="right" valign="top">std::string *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00176.html#ab5ded9c0a9b0ddcf735aa891908224b2">Red::Sha512file</a> (std::FILE *file)</td></tr>
+<tr class="memdesc:ab5ded9c0a9b0ddcf735aa891908224b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sha512file.  <a href="a00176.html#ab5ded9c0a9b0ddcf735aa891908224b2">More...</a><br /></td></tr>
+<tr class="separator:ab5ded9c0a9b0ddcf735aa891908224b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9cc3975c275ce42ec635215ba6a2d20c"><td class="memItemLeft" align="right" valign="top">std::string *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00176.html#a9cc3975c275ce42ec635215ba6a2d20c">Red::Sha512file</a> (const char *filename)</td></tr>
+<tr class="memdesc:a9cc3975c275ce42ec635215ba6a2d20c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sha512file.  <a href="a00176.html#a9cc3975c275ce42ec635215ba6a2d20c">More...</a><br /></td></tr>
+<tr class="separator:a9cc3975c275ce42ec635215ba6a2d20c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Ipv4 is a lib, which has object with Ipv4 address and functions to interact with it. </p>
+<div class="textblock"><p>Sha512 is hash function implementation. </p>
 <p>Copyright (c) 2020-2021 Vladimir Rogozin (<a href="#" onclick="location.href='mai'+'lto:'+'vla'+'di'+'mir'+'20'+'040'+'60'+'9@g'+'ma'+'il.'+'co'+'m'; return false;">vladi<span style="display: none;">.nosp@m.</span>mir2<span style="display: none;">.nosp@m.</span>00406<span style="display: none;">.nosp@m.</span>09@g<span style="display: none;">.nosp@m.</span>mail.<span style="display: none;">.nosp@m.</span>com</a>)</p>
 <p>Distributed under the MIT License (MIT) (See accompanying file LICENSE.txt or copy at <a href="http://opensource.org/licenses/MIT">http://opensource.org/licenses/MIT</a>) </p>
-</div></div><!-- contents -->
+</div><h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="abfcad1e5762f93ffd8cd566bbe261a19"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abfcad1e5762f93ffd8cd566bbe261a19">&#9670;&nbsp;</a></span>SHA2_PACK64</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SHA2_PACK64</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">str, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">x&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">{                                             \</div>
+<div class="line">    *(x) =   ((uint64) *((str) + 7)      )    \</div>
+<div class="line">           | ((uint64) *((str) + 6) &lt;&lt;  8)    \</div>
+<div class="line">           | ((uint64) *((str) + 5) &lt;&lt; 16)    \</div>
+<div class="line">           | ((uint64) *((str) + 4) &lt;&lt; 24)    \</div>
+<div class="line">           | ((uint64) *((str) + 3) &lt;&lt; 32)    \</div>
+<div class="line">           | ((uint64) *((str) + 2) &lt;&lt; 40)    \</div>
+<div class="line">           | ((uint64) *((str) + 1) &lt;&lt; 48)    \</div>
+<div class="line">           | ((uint64) *((str) + 0) &lt;&lt; 56);   \</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a2dc032adc83afe8e265a7941ef11f258"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2dc032adc83afe8e265a7941ef11f258">&#9670;&nbsp;</a></span>SHA2_UNPACK32</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SHA2_UNPACK32</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">x, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">str&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">{                                             \</div>
+<div class="line">    *((str) + 3) = (uint8) ((x)      );       \</div>
+<div class="line">    *((str) + 2) = (uint8) ((x) &gt;&gt;  8);       \</div>
+<div class="line">    *((str) + 1) = (uint8) ((x) &gt;&gt; 16);       \</div>
+<div class="line">    *((str) + 0) = (uint8) ((x) &gt;&gt; 24);       \</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a81e6dc4766f3664c56beb47948d35e23"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a81e6dc4766f3664c56beb47948d35e23">&#9670;&nbsp;</a></span>SHA2_UNPACK64</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SHA2_UNPACK64</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">x, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">str&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">{                                             \</div>
+<div class="line">    *((str) + 7) = (uint8) ((x)      );       \</div>
+<div class="line">    *((str) + 6) = (uint8) ((x) &gt;&gt;  8);       \</div>
+<div class="line">    *((str) + 5) = (uint8) ((x) &gt;&gt; 16);       \</div>
+<div class="line">    *((str) + 4) = (uint8) ((x) &gt;&gt; 24);       \</div>
+<div class="line">    *((str) + 3) = (uint8) ((x) &gt;&gt; 32);       \</div>
+<div class="line">    *((str) + 2) = (uint8) ((x) &gt;&gt; 40);       \</div>
+<div class="line">    *((str) + 1) = (uint8) ((x) &gt;&gt; 48);       \</div>
+<div class="line">    *((str) + 0) = (uint8) ((x) &gt;&gt; 56);       \</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="acd15871219b5801144539fba76cef948"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acd15871219b5801144539fba76cef948">&#9670;&nbsp;</a></span>sha512()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string sha512 </td>
+          <td>(</td>
+          <td class="paramtype">const void *&#160;</td>
+          <td class="paramname"><em>dat</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>len</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>sha512 </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dat</td><td>Data to be hashed. </td></tr>
+    <tr><td class="paramname">len</td><td>Length to use.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>sha512 hash. </dd></dl>
+
+</div>
+</div>
+<a id="abfcf4b0d95f9af3626fcc3b10a250a32"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abfcf4b0d95f9af3626fcc3b10a250a32">&#9670;&nbsp;</a></span>Sha512()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string * Red::Sha512 </td>
+          <td>(</td>
+          <td class="paramtype">std::string *&#160;</td>
+          <td class="paramname"><em>input</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sha512. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">input</td><td>Pointer to data to be hashed.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Pointer to a new string with sha512 hash. </dd></dl>
+
+</div>
+</div>
+<a id="a9cc3975c275ce42ec635215ba6a2d20c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9cc3975c275ce42ec635215ba6a2d20c">&#9670;&nbsp;</a></span>Sha512file() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string * Red::Sha512file </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>filename</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sha512file. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">filename</td><td>Pointer to str with filename.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Pointer to a new string with sha512 hash. </dd></dl>
+
+</div>
+</div>
+<a id="ab5ded9c0a9b0ddcf735aa891908224b2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab5ded9c0a9b0ddcf735aa891908224b2">&#9670;&nbsp;</a></span>Sha512file() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string * Red::Sha512file </td>
+          <td>(</td>
+          <td class="paramtype">std::FILE *&#160;</td>
+          <td class="paramname"><em>file</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sha512file. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">file</td><td>Pointer to file to be hashed.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Pointer to a new string with sha512 hash. </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
