@@ -13,6 +13,7 @@ SOURCES += \
     EncryptionAlgorithms/AesECB192.cpp \
     EncryptionAlgorithms/AesECB256.cpp \
     HashFunctions/Sha256.cpp \
+    HashFunctions/Sha512.cpp \
     RedConfig.cpp \
     RedDataBase/Backup.cpp \
     RedDataBase/Column.cpp \
@@ -45,6 +46,7 @@ HEADERS += \
     FastMath/FastSqrt.h \
     FileBuffer.h \
     HashFunctions/Sha256.h \
+    HashFunctions/Sha512.h \
     Hex.h \
     InsensitiveMap.h \
     Ipv4.h \
