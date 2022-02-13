@@ -57,7 +57,11 @@ These libraries are _'ready to work'_, all you need is just write a code. All ex
 
 ##
 **Notes 8(about 2layerDiffieHellman):**
- * Everything about it is [_here_](https://github.com/vladimirrogozin/2layerDiffieHellman)
+ * Everything about it is [_here_](https://github.com/vladimirrogozin/2layerDiffieHellman).
+
+##
+**Notes 6(about Sha512):**
+ * Original repository is [_here_](https://github.com/vladimirrogozin/Sha512).
 
 ##
 **Additional notes:**
