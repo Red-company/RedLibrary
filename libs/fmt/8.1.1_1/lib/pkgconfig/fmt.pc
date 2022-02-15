@@ -1,0 +1,11 @@
+prefix=/usr/local/Cellar/fmt/8.1.1_1
+exec_prefix=/usr/local/Cellar/fmt/8.1.1_1
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: fmt
+Description: A modern formatting library
+Version: 8.1.1
+Libs: -L${libdir} -lfmt
+Cflags: -I${includedir}
+

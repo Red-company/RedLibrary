@@ -1,0 +1,19 @@
+# Process this file with autoconf to produce a pkg-config metadata file.
+# Copyright 2002-2021 Simon Josefsson
+#
+# Copying and distribution of this file, with or without modification,
+# are permitted in any medium without royalty provided the copyright
+# notice and this notice are preserved.
+
+prefix=/usr/local/Cellar/gsasl/1.10.0
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: libgsasl
+Description: GNU Simple Authentication and Security Layer (SASL)
+URL: http://www.gnu.org/software/gsasl/
+Version: 1.10.0
+Libs: -L${libdir} -lgsasl
+Libs.private:   
+Cflags: -I${includedir}

@@ -87,43 +87,45 @@ QMAKE_CXXFLAGS += "-Wno-old-style-cast"
 QMAKE_CXXFLAGS += "-Wreserved-identifiers"
 QMAKE_CXXFLAGS += "-Wzero-as-null-pointer-constant"
 
-macx {
 # Boost.
 QMAKE_CXXFLAGS += -std=c++17
 
-INCLUDEPATH += "/usr/local/Cellar/boost/1.76.0/include/"
-LIBS += -L/usr/local/Cellar/boost/1.76.0/lib/
+INCLUDEPATH += "/libs/boost/1.76.0/include/"
+LIBS += -L/libs/boost/1.76.0/lib/
 ## Use only one of these:
 LIBS += -lboost_filesystem -lboost_system# -lboost_asio# using dynamic lib
 #LIBS += $${_BOOST_PATH}/lib/libboost_chrono-mt.a # using static lib
 
 # Openssl.
-INCLUDEPATH += "/usr/local/Cellar/openssl@1.1/1.1.1m/include/"
-LIBS += -L/usr/local/Cellar/openssl@1.1/1.1.1m/lib/
+INCLUDEPATH += "/libs/openssl@1.1/1.1.1m/include/"
+LIBS += -L/libs/openssl@1.1/1.1.1m/lib/
 LIBS += -lssl
 LIBS += -lcrypto
 
 # Fmt.
-INCLUDEPATH += "/usr/local/Cellar/fmt/8.1.1_1/include/"
-LIBS += -L/usr/local/Cellar/fmt/8.1.1_1/lib/
+INCLUDEPATH += "/libs/fmt/8.1.1_1/include/"
+LIBS += -L/libs/fmt/8.1.1_1/lib/
 LIBS += -lfmt
 
 # Sqlite.
-INCLUDEPATH += "/usr/local/Cellar/sqlite/3.37.2/include/"
-LIBS += -L/usr/local/Cellar/sqlite/3.37.2/lib/
+INCLUDEPATH += "/libs/sqlite/3.37.2/include/"
+LIBS += -L/libs/sqlite/3.37.2/lib/
 LIBS += -lsqlite3
-INCLUDEPATH += "/usr/local/opt/sqlite3/include/"
+
+macx {
+    INCLUDEPATH += "/usr/local/opt/sqlite3/include/"
+}
 
 # Unicode.
-INCLUDEPATH += "/usr/local/Cellar/icu4c/69.1/include/"
-LIBS += -L/usr/local/Cellar/icu4c/69.1/lib/
+INCLUDEPATH += "/libs/icu4c/69.1/include/"
+LIBS += -L/libs/icu4c/69.1/lib/
 LIBS += -licuuc
 
 # Gsasl.
-INCLUDEPATH += "/usr/local/Cellar/gsasl/1.10.0/include/"
-LIBS += -L/usr/local/Cellar/gsasl/1.10.0/lib/
+INCLUDEPATH += "/libs/gsasl/1.10.0/include/"
+LIBS += -L/libs/gsasl/1.10.0/lib/
 LIBS += -lgsasl.7
-}
+
 
 # Default rules for deployment.
 unix {
