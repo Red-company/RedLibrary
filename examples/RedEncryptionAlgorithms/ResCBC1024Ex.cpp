@@ -8,15 +8,20 @@ int main() {
     std::string in  = "0123456789abcdef";
     std::string iv  = "0123456789abcdef";
 
-    std::string EncryptedStr = Red::EncryptResCBC1024(in, key, iv);
-    std::string EncryptedHex = Red::GetHexArray(EncryptedStr);
+    std::string *EncryptedStr = Red::EncryptResCBC1024(in, key, iv);
+    std::string *EncryptedHex = Red::GetHexArray(*EncryptedStr);
 
-    std::cout << "Encrypted(hex): '" << EncryptedHex << "'." << std::endl;
+    std::cout << "Encrypted(hex): '" << *EncryptedHex << "'." << std::endl;
 
-    std::string ForDecrypt = Red::GetStrArray(EncryptedHex);
-    std::string Decrypted  = Red::DecryptResCBC1024(ForDecrypt, key, iv);
+    std::string *ForDecrypt = Red::GetStrArray(*EncryptedHex);
+    std::string *Decrypted  = Red::DecryptResCBC1024(*ForDecrypt, key, iv);
 
-    std::cout << "Decrypted(str): '" << Decrypted << "'." << std::endl;
+    std::cout << "Decrypted(str): '" << *Decrypted << "'." << std::endl;
+    
+    delete EncryptedStr;
+    delete EncryptedHex;
+    delete ForDecrypt;
+    delete Decrypted;
 
     return 0;
 }
