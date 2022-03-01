@@ -18,5 +18,10 @@ int main() {
 
     std::cout << "Decrypted(str): '" << *Decrypted << "'." << std::endl;
 
+    delete EncryptedStr;
+    delete EncryptedHex;
+    delete ForDecrypt;
+    delete Decrypted;
+    
     return 0;
 }
