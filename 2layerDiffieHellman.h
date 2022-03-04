@@ -2,7 +2,7 @@
  * @file    2layerDiffieHellman.h
  * @brief   2layerDiffieHellman is a lib which implements advanced DiffieHellman's key exchange algorithm.
  *
- * Copyright (c) 2020-2021 Vladimir Rogozin (vladimir20040609@gmail.com)
+ * Copyright (c) 2020-forever Vladimir Rogozin (vladimir20040609@gmail.com)
  *
  * Distributed under the MIT License (MIT) (See accompanying file LICENSE.txt
  * or copy at http://opensource.org/licenses/MIT)
@@ -25,21 +25,21 @@
 #include "RedTypes.h"
 
 // Version.
-#define RED2LAYERDIFFIEHELLMAN_VERSION "1.0"
+#define RED2LAYERDIFFIEHELLMAN_VERSION "2.0"
 
 // Kits.
-#define RED_2lDH_140m_AUTO  "auto mode enabled 140m"
-#define RED_2lDH_280m_AUTO  "auto mode enabled 280m"
-#define RED_2lDH_490m_AUTO  "auto mode enabled 490m"
-#define RED_2lDH_693m_AUTO  "auto mode enabled 693m"
-#define RED_2lDH_1543m_AUTO "auto mode enabled 1543m"
+#define RED_2lDH_6k_AUTO  "auto mode enabled 6k"
+#define RED_2lDH_8k_AUTO  "auto mode enabled 8k"
+#define RED_2lDH_11k_AUTO "auto mode enabled 11k"
+#define RED_2lDH_16k_AUTO "auto mode enabled 16k"
+#define RED_2lDH_20k_AUTO "auto mode enabled 20k"
 
 // Rand() setups.
 #define RED_2lDH_RANDOM_A1_KEY_70m   8366
 #define RED_2lDH_RANDOM_A1_KEY_105m  10246
 #define RED_2lDH_RANDOM_A1_KEY_126m  11224
 #define RED_2lDH_RANDOM_A1_KEY_238m  15427
-#define RED_2lDH_RANDOM_A1_KEY_336m  18330
+#define RED_2lDH_RANDOM_A1_KEY_372m  18330
 
 namespace Red {
     /// Creating a template for integers, because we need it to be cross-typed.
@@ -54,7 +54,7 @@ namespace Red {
 
             /// Local vars.
             const INT_SIZE m_G    = 2, // Base for part 1.
-                           m_Pp1  = 5; // P num for part 1.
+                           m_Pp1  = 998; // P num for part 1.
 
             unsigned short int m_base; // Base for part 2.
 
@@ -70,35 +70,20 @@ namespace Red {
 
             std::string m_mode; // Mode of secret key usage.
 
-            /// 140m kit.
-            const unsigned long long int m_range_140m_2  = 8366;
-            const unsigned long long int m_range_140m_4  = 5916;
-            const unsigned long long int m_range_140m_8  = 4582;
-            const unsigned long long int m_range_140m_16 = 3741;
+            /// 6k.
+            const unsigned long long int m_range_6k  = 6000;
 
-            /// 280m kit.
-            const unsigned long long int m_range_280m_2  = 11224;
-            const unsigned long long int m_range_280m_4  = 8366;
-            const unsigned long long int m_range_280m_8  = 7000;
-            const unsigned long long int m_range_280m_16 = 5916;
+            /// 8k.
+            const unsigned long long int m_range_8k  = 8000;
 
-            /// 490m kit.
-            const unsigned long long int m_range_490m_2  = 15427;
-            const unsigned long long int m_range_490m_4  = 10908;
-            const unsigned long long int m_range_490m_8  = 8774;
-            const unsigned long long int m_range_490m_16 = 7483;
+            /// 11k.
+            const unsigned long long int m_range_11k = 11000;
 
-            /// 693m kit.
-            const unsigned long long int m_range_693m_2  = 18330;
-            const unsigned long long int m_range_693m_4  = 12688;
-            const unsigned long long int m_range_693m_8  = 10583;
-            const unsigned long long int m_range_693m_16 = 9165;
+            /// 16k.
+            const unsigned long long int m_range_16k = 16000;
 
-            /// 1543m kit.
-            const unsigned long long int m_range_1543m_2  = 26851;
-            const unsigned long long int m_range_1543m_4  = 19078;
-            const unsigned long long int m_range_1543m_8  = 15427;
-            const unsigned long long int m_range_1543m_16 = 13228;
+            /// 20k.
+            const unsigned long long int m_range_20k = 20000;
 
 
             //
@@ -169,69 +154,6 @@ namespace Red {
             }
 
             /**
-             * @brief powerUSI
-             *
-             * Serves to generate a key using a, b, P.
-             * Uses only in part 1.
-             *
-             * @param a Number which we will modificate.
-             * @param b Chosen private key.
-             * @param P Result number.
-             *
-             * @return Generated key.
-             */
-            inline INT_SIZE * powerUSI(const unsigned short int *a, const INT_SIZE *b, const INT_SIZE *P) const {
-                if (*b == 1) {
-                    INT_SIZE *res = new INT_SIZE;
-                    *res = *a;
-                    return res;
-
-                } else {
-                    // Unfortunately we have to write a lot here, because there is no a good way to write it shorter.
-                    // So, let's do that!
-
-                    /// Need to get cpp_int version of base.
-                    boost::multiprecision::cpp_int a_c = boost::multiprecision::cpp_int(*a);
-
-                    /// And ui version of our exponent.
-                    Red::uint_t b_int = 0;
-
-                    {
-                        std::stringstream ss;
-                        ss << *b;
-                        ss >> b_int;
-                    }
-
-                    /// Let's get exponented 'a'...
-                    boost::multiprecision::cpp_int ab = boost::multiprecision::pow(a_c, b_int);
-
-                    /// Now we need cpp_int version of 'P'.
-                    boost::multiprecision::cpp_int p_c = 0;
-
-                    {
-                        std::stringstream ss;
-                        ss << *P;
-                        ss >> p_c;
-                    }
-
-                    /// Moded expenented 'a' is needed...
-                    boost::multiprecision::cpp_int abp = ab % p_c;
-
-                    /// Now we just need to convert it to the type we need.
-                    INT_SIZE *res = new INT_SIZE;
-
-                    {
-                        std::stringstream ss;
-                        ss << abp;
-                        ss >> *res;
-                    }
-
-                    /// Yay, we finished this.
-                    return res;
-                }
-            }
-
-            /**
              * @brief power_2_pub
              *
              * Serves to generate a key using a, b, P.
@@ -250,19 +172,71 @@ namespace Red {
                 /// Need to get cpp_int version of base.
                 boost::multiprecision::cpp_int a_c = boost::multiprecision::cpp_int(*a);
 
-                /// And ui version of a random(if needed) exponent.
-                srand((unsigned int) time(nullptr));
+                /// And ui version of a random exponent.
+                srand(time(0));
                 Red::uint_t b_int;
 
-                *m_a2 = (unsigned int) rand() % b;
-
-                if ((b - *m_a2) >= 2) {
-                    *m_a2 += 2;
-                }
+                *m_a2 = (unsigned int) rand() % (unsigned int) (b / log2(*a)) + 1;
 
                 {
                    std::stringstream ss;
                    ss << *m_a2;
+                   ss >> b_int;
+                }
+
+                /// Let's get exponented 'a'...
+                boost::multiprecision::cpp_int ab = boost::multiprecision::pow(a_c, b_int);
+
+                /// Now we need cpp_int version of 'P'.
+                boost::multiprecision::cpp_int p_c = 0;
+
+                {
+                    std::stringstream ss;
+                    ss << *P;
+                    ss >> p_c;
+                }
+
+                /// Moded expenented 'a' is needed...
+                boost::multiprecision::cpp_int abp = ab % p_c;
+
+                /// Now we just need to convert it to the type we need.
+                INT_SIZE *res = new INT_SIZE;
+
+                {
+                    std::stringstream ss;
+                    ss << abp;
+                    ss >> *res;
+                }
+
+                /// Yay, we finished this.
+                return res;
+            }
+
+            /**
+             * @brief power_2_sym
+             *
+             * Serves to generate a key using a, b, P.
+             * Used only for getting a public value in part 2.
+             *
+             * @param a Number which we will modificate.
+             * @param b Chosen private key.
+             * @param P Result number.
+             *
+             * @return Generated key.
+             */
+            inline INT_SIZE * power_2_sym(const INT_SIZE *a, const INT_SIZE *b, const INT_SIZE *P) const {
+                // Unfortunately we have to write a lot here, because there is no a good way to write it shorter.
+                // So, let's do that (again)!
+
+                /// Need to get cpp_int version of base.
+                boost::multiprecision::cpp_int a_c = boost::multiprecision::cpp_int(*a);
+
+                /// And ui version of a random exponent.
+                Red::uint_t b_int;
+
+                {
+                   std::stringstream ss;
+                   ss << *b;
                    ss >> b_int;
                 }
 
@@ -309,7 +283,7 @@ namespace Red {
             TwoLayerDiffieHellman(INT_SIZE *ModificatedNum = 0,
                                   INT_SIZE *SecretNum1 = 0,
                                   INT_SIZE *SecretNum2 = 0,
-                                  std::string_view Mode = "manual")
+                                  std::string_view Mode = "auto mode enabled 8k")
                 : m_P(ModificatedNum), m_a1(SecretNum1), m_a2(SecretNum2), m_mode(Mode) {}
 
             /**
@@ -326,7 +300,7 @@ namespace Red {
             void Set(INT_SIZE *ModificatedNum,
                      INT_SIZE *SecretNum1,
                      INT_SIZE *SecretNum2,
-                     std::string_view Mode = "manual") {
+                     std::string_view Mode = "auto mode enabled 8k") {
 
                 this->m_P    = ModificatedNum;
                 this->m_a1   = SecretNum1;
@@ -357,24 +331,19 @@ namespace Red {
             void Part1_GetSymmetricBaseNum(INT_SIZE *x) {
                 INT_SIZE *u;
 
-                u = power(x, this->m_a1, &this->m_Pp1);
-
                 /// Getting a base num.
-                if (*u == 1) {
-                    m_base = 2;
+                u   = power(x, this->m_a1, &this->m_Pp1);
+                *u += 2; // base E [2;1000].
 
-                } else if (*u == 2) {
-                    m_base = 4;
-
-                } else if (*u == 3) {
-                    m_base = 8;
-
-                } else if (*u == 4) {
-                    m_base = 16;
-
-                } else {
-                    throw "[\033[91m2layerDiffieHellman\033[0m]: hello from here!";
+                /// Saving it.
+                {
+                    std::stringstream ss;
+                    ss << *u;
+                    ss >> m_base;
                 }
+
+                /// And must do this.
+                delete u;
             }
 
             /**
@@ -385,94 +354,23 @@ namespace Red {
              * @return Value for public exchange.
              */
             INT_SIZE * Part2_GetPublicValue() const {
-                if (m_mode == "manual") {
-                    return powerUSI(&this->m_base, this->m_a2, this->m_P); // unsigned short int edition.
+                if (m_mode == "auto mode enabled 6k") {
+                    return power_2_pub(&this->m_base, this->m_range_6k, this->m_P);
 
-                } else { // auto mode enabled && wrong usage.
-                    if (m_mode == "auto mode enabled 140m") {
-                        if (m_base == 2) {
-                            return power_2_pub(&this->m_base, this->m_range_140m_2, this->m_P);
+                } else if (m_mode == "auto mode enabled 8k") {
+                    return power_2_pub(&this->m_base, this->m_range_8k, this->m_P);
 
-                        } else if (m_base == 4) {
-                            return power_2_pub(&this->m_base, this->m_range_140m_4, this->m_P);
+                } else if (m_mode == "auto mode enabled 11k") {
+                    return power_2_pub(&this->m_base, this->m_range_11k, this->m_P);
 
-                        } else if (m_base == 8) {
-                            return power_2_pub(&this->m_base, this->m_range_140m_8, this->m_P);
+                } else if (m_mode == "auto mode enabled 16k") {
+                    return power_2_pub(&this->m_base, this->m_range_16k, this->m_P);
 
-                        } else if (m_base == 16) {
-                            return power_2_pub(&this->m_base, this->m_range_140m_16, this->m_P);
-                        }
+                } else if (m_mode == "auto mode enabled 20k") {
+                    return power_2_pub(&this->m_base, this->m_range_20k, this->m_P);
 
-                    } else if (m_mode == "auto mode enabled 280m") {
-                        if (m_base == 2) {
-                            return power_2_pub(&this->m_base, this->m_range_280m_2, this->m_P);
-
-                        } else if (m_base == 4) {
-                            return power_2_pub(&this->m_base, this->m_range_280m_4, this->m_P);
-
-                        } else if (m_base == 8) {
-                            return power_2_pub(&this->m_base, this->m_range_280m_8, this->m_P);
-
-                        } else if (m_base == 16) {
-                            return power_2_pub(&this->m_base, this->m_range_280m_16, this->m_P);
-                        }
-
-                    } else if (m_mode == "auto mode enabled 490m") {
-                        if (m_base == 2) {
-                            return power_2_pub(&this->m_base, this->m_range_490m_2, this->m_P);
-
-                        } else if (m_base == 4) {
-                            return power_2_pub(&this->m_base, this->m_range_490m_4, this->m_P);
-
-                        } else if (m_base == 8) {
-                            return power_2_pub(&this->m_base, this->m_range_490m_8, this->m_P);
-
-                        } else if (m_base == 16) {
-                            return power_2_pub(&this->m_base, this->m_range_490m_16, this->m_P);
-                        }
-
-                    } else if (m_mode == "auto mode enabled 693m") {
-                        if (m_base == 2) {
-                            return power_2_pub(&this->m_base, this->m_range_693m_2, this->m_P);
-
-                        } else if (m_base == 4) {
-                            return power_2_pub(&this->m_base, this->m_range_693m_4, this->m_P);
-
-                        } else if (m_base == 8) {
-                            return power_2_pub(&this->m_base, this->m_range_693m_8, this->m_P);
-
-                        } else if (m_base == 16) {
-                            return power_2_pub(&this->m_base, this->m_range_693m_16, this->m_P);
-                        }
-
-                    } else if (m_mode == "auto mode enabled 1543m") {
-                        if (m_base == 2) {
-                            return power_2_pub(&this->m_base, this->m_range_1543m_2, this->m_P);
-
-                        } else if (m_base == 4) {
-                            return power_2_pub(&this->m_base, this->m_range_1543m_4, this->m_P);
-
-                        } else if (m_base == 8) {
-                            return power_2_pub(&this->m_base, this->m_range_1543m_8, this->m_P);
-
-                        } else if (m_base == 16) {
-                            return power_2_pub(&this->m_base, this->m_range_1543m_16, this->m_P);
-                        }
-
-                    } else { // As 140m mode.
-                        if (m_base == 2) {
-                            return power_2_pub(&this->m_base, this->m_range_140m_2, this->m_P);
-
-                        } else if (m_base == 4) {
-                            return power_2_pub(&this->m_base, this->m_range_140m_4, this->m_P);
-
-                        } else if (m_base == 8) {
-                            return power_2_pub(&this->m_base, this->m_range_140m_8, this->m_P);
-
-                        } else if (m_base == 16) {
-                            return power_2_pub(&this->m_base, this->m_range_140m_16, this->m_P);
-                        }
-                    }
+                } else { // 8k.
+                    return power_2_pub(&this->m_base, this->m_range_8k, this->m_P);
                 }
             }
 
@@ -486,7 +384,7 @@ namespace Red {
              * @return Final num.
              */
             INT_SIZE * Part2_GetSymmetricSecret(INT_SIZE *x) const {
-                return power(x, this->m_a2, this->m_P);
+                return power_2_sym(x, this->m_a2, this->m_P);
             }
 
             // Base dtor.

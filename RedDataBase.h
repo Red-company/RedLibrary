@@ -5,7 +5,7 @@
  *
  * Include this main header file in your project to gain access to all functionality provided by the wrapper.
  *
- * Copyright (c) 2020-2021 Vladimir Rogozin (vladimir20040609@gmail.com)
+ * Copyright (c) 2020-forever Vladimir Rogozin (vladimir20040609@gmail.com)
  *
  * Distributed under the MIT License (MIT) (See accompanying file LICENSE.txt
  * or copy at http://opensource.org/licenses/MIT)

@@ -2,7 +2,7 @@
  * @file    ResECB1536.h
  * @brief   Definition of Res ECB 1536 bits algorithm.
  *
- * Copyright (c) 2020-2021 Vladimir Rogozin (vladimir20040609@gmail.com)
+ * Copyright (c) 2020-forever Vladimir Rogozin (vladimir20040609@gmail.com)
  *
  * Distributed under the MIT License (MIT) (See accompanying file LICENSE.txt
  * or copy at http://opensource.org/licenses/MIT)

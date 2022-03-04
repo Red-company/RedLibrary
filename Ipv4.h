@@ -2,7 +2,7 @@
  * @file    Ipv4.h
  * @brief   Ipv4 is a lib, which has object with Ipv4 address and functions to interact with it.
  *
- * Copyright (c) 2020-2021 Vladimir Rogozin (vladimir20040609@gmail.com)
+ * Copyright (c) 2020-forever Vladimir Rogozin (vladimir20040609@gmail.com)
  *
  * Distributed under the MIT License (MIT) (See accompanying file LICENSE.txt
  * or copy at http://opensource.org/licenses/MIT)
