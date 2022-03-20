@@ -43,25 +43,25 @@ These libraries are _'ready to work'_, all you need is just write a code. All ex
 
 ##
 **Notes 5(about Va1):**
- * Original repository is [_here_](https://github.com/vladimirrogozin/Va1).
+ * Original repository is [_here_](https://github.com/red-sayed/Va1).
 
 ##
 **Notes 6(about Sha256):**
- * Original repository is [_here_](https://github.com/vladimirrogozin/Sha256).
+ * Original repository is [_here_](https://github.com/red-sayed/Sha256).
  * Speed test is [_here_](https://github.com/Red-Laboratory/exp1_sha256-speedtest).
 
 ##
 **Notes 7(about FastSqrt):**
  * Uses inside _long int_ type.
- * Original repository is [_here_](https://github.com/vladimirrogozin/Fast-sqrt).
+ * Original repository is [_here_](https://github.com/red-sayed/Fast-sqrt).
 
 ##
 **Notes 8(about 2layerDiffieHellman):**
- * Everything about it is [_here_](https://github.com/vladimirrogozin/2layerDiffieHellman).
+ * Everything about it is [_here_](https://github.com/red-sayed/2layerDiffieHellman).
 
 ##
 **Notes 6(about Sha512):**
- * Original repository is [_here_](https://github.com/vladimirrogozin/Sha512).
+ * Original repository is [_here_](https://github.com/red-sayed/Sha512).
 
 ##
 **Additional notes:**
