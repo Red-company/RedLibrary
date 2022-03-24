@@ -15,7 +15,7 @@ These libraries are _'ready to work'_, all you need is just write a code. All ex
 ##
 **Notes:**
   * Made in C++17
-  * Requires these libraries:
+  * Uses these libraries(they're already linked):
     * Boost
     * Openssl
     * Fmt
