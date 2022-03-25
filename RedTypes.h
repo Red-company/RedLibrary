@@ -11,7 +11,7 @@
 
 #include <boost/multiprecision/cpp_int.hpp>
 
-#define REDTYPES_VERSION "1.3"
+#define REDTYPES_VERSION "1.4"
 
 namespace Red {
     //
@@ -57,6 +57,24 @@ namespace Red {
     using uint536870912_t = boost::multiprecision::number<boost::multiprecision::cpp_int_backend<536870912, 536870912, boost::multiprecision::unsigned_magnitude, boost::multiprecision::unchecked, void>, boost::multiprecision::et_off>;
     using uint1073741824_t = boost::multiprecision::number<boost::multiprecision::cpp_int_backend<1073741824, 1073741824, boost::multiprecision::unsigned_magnitude, boost::multiprecision::unchecked, void>, boost::multiprecision::et_off>;
     using uint2147483648_t = boost::multiprecision::number<boost::multiprecision::cpp_int_backend<2147483648, 2147483648, boost::multiprecision::unsigned_magnitude, boost::multiprecision::unchecked, void>, boost::multiprecision::et_off>;
+
+    template<class T>
+    boost::multiprecision::cpp_int * power_2(T& y) {
+        boost::multiprecision::cpp_int *res = new boost::multiprecision::cpp_int(y);
+
+        if (*res == 0) {
+            return res;
+
+        } else {
+            *res = 2;
+
+            for (T i = 1; i < y; i++) {
+                *res *= 2;
+            }
+
+            return res;
+        }
+    }
 }
 
 #endif // RED_TYPES_H
