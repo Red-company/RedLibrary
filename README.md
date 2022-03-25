@@ -64,6 +64,10 @@ These libraries are _'ready to work'_, all you need is just write a code. All ex
  * Original repository is [_here_](https://github.com/red-sayed/Sha512).
 
 ##
+**Notes 7(about RedTypes):**
+ * Test can be found [_here_](https://github.com/Red-Laboratory/exp3_RedTypes_max_time)
+
+##
 **Additional notes:**
  * All other libraries can be described by files in _example_ folder.
 
