@@ -14,6 +14,10 @@
 #define REDTYPES_VERSION "1.3"
 
 namespace Red {
+    //
+    // Small nums.
+    //
+
     // Standart size.
     typedef unsigned char           uint8_t;
     typedef unsigned short      int uint16_t;
@@ -23,6 +27,11 @@ namespace Red {
     typedef signed   short      int int16_t;
     typedef signed              int int_t;
     typedef signed   long  long int int32_t;
+
+
+    //
+    // Huge nums.
+    //
 
     // Long size.
     using uint512_t  = boost::multiprecision::number<boost::multiprecision::cpp_int_backend<512,  512,  boost::multiprecision::unsigned_magnitude, boost::multiprecision::unchecked, void>, boost::multiprecision::et_off>;
