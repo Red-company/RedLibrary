@@ -11,7 +11,7 @@
 
 #include <boost/multiprecision/cpp_int.hpp>
 
-#define REDTYPES_VERSION "1.4"
+#define REDTYPES_VERSION "1.5"
 
 namespace Red {
     //
@@ -58,12 +58,23 @@ namespace Red {
     using uint1073741824_t = boost::multiprecision::number<boost::multiprecision::cpp_int_backend<1073741824, 1073741824, boost::multiprecision::unsigned_magnitude, boost::multiprecision::unchecked, void>, boost::multiprecision::et_off>;
     using uint2147483648_t = boost::multiprecision::number<boost::multiprecision::cpp_int_backend<2147483648, 2147483648, boost::multiprecision::unsigned_magnitude, boost::multiprecision::unchecked, void>, boost::multiprecision::et_off>;
 
+
+    //
+    // Others.
+    //
+
+    // Endless number(theoretical).
+    typedef boost::multiprecision::cpp_int number_t;
+
+
     //
     // Functions.
     //
 
     /**
      * @brief power_2
+     *
+     * Works well with small nums, not for long-num usage.
      *
      * @param y 2 ** y
      *
@@ -79,9 +90,7 @@ namespace Red {
         } else {
             *res = 2;
 
-            for (T i = 1; i < y; i++) {
-                *res *= 2;
-            }
+            *res <<= y - 1;
 
             return res;
         }
