@@ -31,7 +31,7 @@ int main() {
             getline(std::cin, inp);
             std::cout << std::endl;
             
-            std::string *r = new std::string(*Red::Va1Encode(&inp));
+            std::string *r = Red::Va1Encode(&inp);
 
             std::cout << "[\033[93mVa1\033[0m] \033[4mEncrypted message:\033[0m" << std::endl << std::endl << *r;
             std::cout << std::endl << std::endl << std::endl << "Press Enter to continue.";
@@ -50,7 +50,7 @@ int main() {
             getline(std::cin, inp);
             std::cout << std::endl;
             
-            std::string *r = new std::string(*Red::Va1Decode(&inp));
+            std::string *r = Red::Va1Decode(&inp);
 
             std::cout << "[\033[93mVa1\033[0m] Decrypted message:" << std::endl << std::endl << *r;
             std::cout << std::endl << std::endl << std::endl << "Press Enter to continue.";
