@@ -19,6 +19,7 @@ int main() {
     
     delete EncryptedStr;
     delete EncryptedHex;
+    
     delete ForDecrypt;
     delete Decrypted;
 

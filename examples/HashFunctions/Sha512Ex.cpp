@@ -15,7 +15,7 @@ int main() {
         getline(std::cin, inp);
         std::cout << std::endl;
 
-        std::string *hs = new std::string(*Red::Sha512(&inp));
+        std::string *hs = Red::Sha512(&inp);
         std::cout << "[\033[93mSha512\033[0m] \033[4mEncrypted message:\033[0m" << std::endl << std::endl << *hs;
         std::cout << std::endl << std::endl << std::endl << "Press Enter to continue.";
 

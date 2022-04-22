@@ -17,6 +17,7 @@ isEmpty(BOOST_INCLUDE_DIR): {
 SOURCES += \
     AES_tests.cpp \
     PassGenerator_tests.cpp \
+    Sha256_tests.cpp \
     Va1_tests.cpp \
     main.cpp
 

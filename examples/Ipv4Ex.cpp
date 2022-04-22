@@ -39,6 +39,7 @@ int main() {
     std::cout << "IpTest3 after gen func: " << IpTest3->Show() << std::endl;
 
     delete IpTest1;
+    delete IpTest3;
 
     return 0;
 }
