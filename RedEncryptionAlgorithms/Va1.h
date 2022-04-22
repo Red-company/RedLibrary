@@ -13,7 +13,7 @@
 #include <string>
 
 // Version.
-#define REDVA1_VERSION "1.2" // There was no v1.0.
+#define REDVA1_VERSION "1.3" // There was no v1.0.
 
 namespace Red {
     /**
