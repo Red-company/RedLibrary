@@ -7,6 +7,7 @@ int main() {
 
     std::cout << "Generated pass: '" << Red::GeneratePassword(PassLength, REDPASSGENERATOR_NUMS_AND_LETTERS) << "'." << std::endl;
     std::cout << "Generated pass: '" << Red::GeneratePassword(PassLength, REDPASSGENERATOR_ONLY_NUMS) << "'." << std::endl;
+    std::cout << "Generated pass: '" << Red::GeneratePassword(PassLength, REDPASSGENERATOR_Va1_MODE) << "'." << std::endl;
 
     return 0;
 }

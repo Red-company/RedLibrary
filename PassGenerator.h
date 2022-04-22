@@ -13,10 +13,11 @@
 #include <string>
 #include <ctime>
 
-#define REDPASSGENERATOR_VERSION "1.0"
+#define REDPASSGENERATOR_VERSION "1.1"
 
 #define REDPASSGENERATOR_ONLY_NUMS        "only nums"
 #define REDPASSGENERATOR_NUMS_AND_LETTERS "nums and letters"
+#define REDPASSGENERATOR_Va1_MODE "Va1 mode"
 
 namespace Red {
     /**
@@ -36,6 +37,13 @@ namespace Red {
 
             for (unsigned short int i = 0; i < PassLen; i++) {
                 Result += alphanum1[(unsigned long long int) rand() % alphanum1.length()];
+            }
+
+        } else if (mode == REDPASSGENERATOR_Va1_MODE) {
+            std::string alphanum3 = "qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM!@#$%^&*()_+1234567890-=[]{};:| /.,<>`~";
+
+            for (unsigned short int i = 0; i < PassLen; i++) {
+                Result += alphanum3[(unsigned long long int) rand() % alphanum3.length()];
             }
 
         } else {
