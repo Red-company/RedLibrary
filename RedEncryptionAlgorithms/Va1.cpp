@@ -20,7 +20,7 @@ class _red_for_Va1 {
         static inline std::string * FirstEncoding(const std::string *RFirst) {
             std::string *Fstep = new std::string;
 
-            for (size_t sybm = 0; sybm < RFirst->length(); sybm++) {
+            for (unsigned long long int sybm = 0; sybm < RFirst->length(); sybm++) {
                 switch ((*RFirst)[sybm]) {
                 case 'l':
                     *Fstep += "00";
@@ -178,7 +178,7 @@ class _red_for_Va1 {
                 case '?':
                     *Fstep += "51";
                     break;
-                case '"':
+                case '\"':
                     *Fstep += "52";
                     break;
                 case ' ':
@@ -298,41 +298,17 @@ class _red_for_Va1 {
                 case 'I':
                     *Fstep += "91";
                     break;
-                case '\r':
+                case '/':
                     *Fstep += "92";
                     break;
-                case '\n':
+                case '\\':
                     *Fstep += "93";
                     break;
-                case '\t':
+                case '\'':
                     *Fstep += "94";
                     break;
-                case '\v':
-                    *Fstep += "95";
-                    break;
-                case '\e':
-                    *Fstep += "96";
-                    break;
-                case '\0':
-                    *Fstep += "97";
-                    break;
-                case '\\':
-                    *Fstep += "98";
-                    break;
-                case '\'':
-                    *Fstep += "99";
-                    break;
-                case '\f':
-                    *Fstep += "0a";
-                    break;
-                case '\a':
-                    *Fstep += "0b";
-                    break;
-                case '\b':
-                    *Fstep += "0c";
-                    break;
                 default:
-                    *Fstep += "42"; // point.
+                    *Fstep += "4242"; // point.
                     break;
                 }
             }
@@ -344,7 +320,7 @@ class _red_for_Va1 {
         static inline std::string * LastDecoding(const std::string *RLast) {
             std::string *Lstep = new std::string;
 
-            for (size_t symb = 0; symb < RLast->length(); symb+=2) {
+            for (unsigned long long int symb = 0; symb < RLast->length(); symb+=2) {
                 switch ((*RLast)[symb]) {
                 case '0':
                     if ((*RLast)[symb+1] == '0') {
@@ -367,12 +343,6 @@ class _red_for_Va1 {
                         *Lstep += "c";
                     } else if ((*RLast)[symb+1] == '9') {
                         *Lstep += "n";
-                    } else if ((*RLast)[symb+1] == 'a') {
-                        *Lstep += "\f";
-                    } else if ((*RLast)[symb+1] == 'b') {
-                        *Lstep += "\\";
-                    } else if ((*RLast)[symb+1] == 'c') {
-                        *Lstep += "\'";
                     }
 
                     break;
@@ -483,7 +453,7 @@ class _red_for_Va1 {
                     } else if ((*RLast)[symb+1] == '1') {
                         *Lstep += "?";
                     } else if ((*RLast)[symb+1] == '2') {
-                        *Lstep += "''";
+                        *Lstep += "\"";
                     } else if ((*RLast)[symb+1] == '3') {
                         *Lstep += " ";
                     } else if ((*RLast)[symb+1] == '4') {
@@ -583,27 +553,17 @@ class _red_for_Va1 {
                     } else if ((*RLast)[symb+1] == '1') {
                         *Lstep += "I";
                     } else if ((*RLast)[symb+1] == '2') {
-                        *Lstep += "\r";
+                        *Lstep += "/";
                     } else if ((*RLast)[symb+1] == '3') {
-                        *Lstep += "\n";
+                        *Lstep += "\\";
                     } else if ((*RLast)[symb+1] == '4') {
-                        *Lstep += "\t";
-                    } else if ((*RLast)[symb+1] == '5') {
-                        *Lstep += "\v";
-                    } else if ((*RLast)[symb+1] == '6') {
-                        *Lstep += "\e";
-                    } else if ((*RLast)[symb+1] == '7') {
-                        *Lstep += "\0";
-                    } else if ((*RLast)[symb+1] == '8') {
-                        *Lstep += "\a";
-                    } else if ((*RLast)[symb+1] == '9') {
-                        *Lstep += "\b";
+                        *Lstep += "\'";
                     }
 
                     break;
 
                 default:
-                    *Lstep += "..";
+                    *Lstep += ".";
                     break;
                 }
             }
