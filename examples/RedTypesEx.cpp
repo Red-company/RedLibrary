@@ -38,7 +38,7 @@ int main() {
     // Red::uint1073741824_t
     // Red::uint2147483648_t
 
-    std::cout << std::endl << c << std::endl << std::endl;
+    std::cout << std::endl << "c = " << c << std::endl << std::endl;
 
 
     //
@@ -47,11 +47,41 @@ int main() {
 
     Red::number_t *e = new Red::number_t(2);
 
-    *e <<= 1024 - 1; // 2 ** 1024.
+    *e <<= 512; // 2 ** 1024.
 
-    std::cout << "e = " << *e << std::endl;
+    std::cout << "e = " << *e << std::endl << std::endl;
 
     delete e;
+
+    //
+    // BigInt.
+    //
+
+    Red::bignum_t *f = new Red::bignum_t(27);
+    Red::bignum_t *s = new Red::bignum_t(5);
+
+    std::cout << "5 == 5:  " << (*f == *s) << std::endl;
+
+    *f /= *s;
+
+    std::cout << "27 / 5: " << *f << std::endl;
+
+    --*f;
+
+    std::cout << "-1: " << *f << std::endl;
+
+    delete f;
+    delete s;
+
+    Red::bignum_t *u = new Red::bignum_t(2);
+    Red::bignum_t *pow = new Red::bignum_t(999 * (999 + 1000000)); // Takes a lot of time.
+
+    *u = *u ^ *pow;
+
+    std::cout << "u = " << *u << std::endl;
+
+    delete u;
+    delete pow;
 
     return 0;
 }
