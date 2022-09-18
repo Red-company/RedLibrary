@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE QtCreatorProject>
-<!-- Written by QtCreator 6.0.1, 2022-04-22T14:52:06. -->
+<!-- Written by QtCreator 6.0.1, 2022-04-23T00:49:43. -->
 <qtcreator>
  <data>
   <variable>EnvironmentId</variable>
@@ -68,6 +68,97 @@
     <value type="bool" key="AutoTest.Framework.QtTest">false</value>
    </valuemap>
    <valuemap type="QVariantMap" key="AutoTest.CheckStates">
+    <value type="Qt::CheckState" key="1@/Users/vladimir/Repositories/RedLibrary/tests/Lib_tests/AES_tests.cpp:AES_CBC_128_128_2sides">Checked</value>
+    <value type="Qt::CheckState" key="1@/Users/vladimir/Repositories/RedLibrary/tests/Lib_tests/AES_tests.cpp:AES_CBC_128_128_dec">Checked</value>
+    <value type="Qt::CheckState" key="1@/Users/vladimir/Repositories/RedLibrary/tests/Lib_tests/AES_tests.cpp:AES_CBC_128_128_enc">Checked</value>
+    <value type="Qt::CheckState" key="1@/Users/vladimir/Repositories/RedLibrary/tests/Lib_tests/AES_tests.cpp:AES_CBC_128_16_2sides">Checked</value>
+    <value type="Qt::CheckState" key="1@/Users/vladimir/Repositories/RedLibrary/tests/Lib_tests/AES_tests.cpp:AES_CBC_128_16_dec">Checked</value>
+    <value type="Qt::CheckState" key="1@/Users/vladimir/Repositories/RedLibrary/tests/Lib_tests/AES_tests.cpp:AES_CBC_128_16_enc">Checked</value>
+    <value type="Qt::CheckState" key="1@/Users/vladimir/Repositories/RedLibrary/tests/Lib_tests/AES_tests.cpp:AES_CBC_128_32_2sides">Checked</value>
+    <value type="Qt::CheckState" key="1@/Users/vladimir/Repositories/RedLibrary/tests/Lib_tests/AES_tests.cpp:AES_CBC_128_32_dec">Checked</value>
+    <value type="Qt::CheckState" key="1@/Users/vladimir/Repositories/RedLibrary/tests/Lib_tests/AES_tests.cpp:AES_CBC_128_32_enc">Checked</value>
+    <value type="Qt::CheckState" key="1@/Users/vladimir/Repositories/RedLibrary/tests/Lib_tests/AES_tests.cpp:AES_CBC_128_64_2sides">Checked</value>
+    <value type="Qt::CheckState" key="1@/Users/vladimir/Repositories/RedLibrary/tests/Lib_tests/AES_tests.cpp:AES_CBC_128_64_dec">Checked</value>
+    <value type="Qt::CheckState" key="1@/Users/vladimir/Repositories/RedLibrary/tests/Lib_tests/AES_tests.cpp:AES_CBC_128_64_enc">Checked</value>
+    <value type="Qt::CheckState" key="1@/Users/vladimir/Repositories/RedLibrary/tests/Lib_tests/AES_tests.cpp:AES_CBC_192_128_2sides">Checked</value>
+    <value type="Qt::CheckState" key="1@/Users/vladimir/Repositories/RedLibrary/tests/Lib_tests/AES_tests.cpp:AES_CBC_192_128_dec">Checked</value>
+    <value type="Qt::CheckState" key="1@/Users/vladimir/Repositories/RedLibrary/tests/Lib_tests/AES_tests.cpp:AES_CBC_192_128_enc">Checked</value>
+    <value type="Qt::CheckState" key="1@/Users/vladimir/Repositories/RedLibrary/tests/Lib_tests/AES_tests.cpp:AES_CBC_192_16_2sides">Checked</value>
+    <value type="Qt::CheckState" key="1@/Users/vladimir/Repositories/RedLibrary/tests/Lib_tests/AES_tests.cpp:AES_CBC_192_16_dec">Checked</value>
+    <value type="Qt::CheckState" key="1@/Users/vladimir/Repositories/RedLibrary/tests/Lib_tests/AES_tests.cpp:AES_CBC_192_16_enc">Checked</value>
+    <value type="Qt::CheckState" key="1@/Users/vladimir/Repositories/RedLibrary/tests/Lib_tests/AES_tests.cpp:AES_CBC_192_32_2sides">Checked</value>
+    <value type="Qt::CheckState" key="1@/Users/vladimir/Repositories/RedLibrary/tests/Lib_tests/AES_tests.cpp:AES_CBC_192_32_dec">Checked</value>
+    <value type="Qt::CheckState" key="1@/Users/vladimir/Repositories/RedLibrary/tests/Lib_tests/AES_tests.cpp:AES_CBC_192_32_enc">Checked</value>
+    <value type="Qt::CheckState" key="1@/Users/vladimir/Repositories/RedLibrary/tests/Lib_tests/AES_tests.cpp:AES_CBC_192_64_2sides">Checked</value>
+    <value type="Qt::CheckState" key="1@/Users/vladimir/Repositories/RedLibrary/tests/Lib_tests/AES_tests.cpp:AES_CBC_192_64_dec">Checked</value>
+    <value type="Qt::CheckState" key="1@/Users/vladimir/Repositories/RedLibrary/tests/Lib_tests/AES_tests.cpp:AES_CBC_192_64_enc">Checked</value>
+    <value type="Qt::CheckState" key="1@/Users/vladimir/Repositories/RedLibrary/tests/Lib_tests/AES_tests.cpp:AES_CBC_256_128_2sides">Checked</value>
+    <value type="Qt::CheckState" key="1@/Users/vladimir/Repositories/RedLibrary/tests/Lib_tests/AES_tests.cpp:AES_CBC_256_128_dec">Checked</value>
+    <value type="Qt::CheckState" key="1@/Users/vladimir/Repositories/RedLibrary/tests/Lib_tests/AES_tests.cpp:AES_CBC_256_128_enc">Checked</value>
+    <value type="Qt::CheckState" key="1@/Users/vladimir/Repositories/RedLibrary/tests/Lib_tests/AES_tests.cpp:AES_CBC_256_16_2sides">Checked</value>
+    <value type="Qt::CheckState" key="1@/Users/vladimir/Repositories/RedLibrary/tests/Lib_tests/AES_tests.cpp:AES_CBC_256_16_dec">Checked</value>
+    <value type="Qt::CheckState" key="1@/Users/vladimir/Repositories/RedLibrary/tests/Lib_tests/AES_tests.cpp:AES_CBC_256_16_enc">Checked</value>
+    <value type="Qt::CheckState" key="1@/Users/vladimir/Repositories/RedLibrary/tests/Lib_tests/AES_tests.cpp:AES_CBC_256_32_2sides">Checked</value>
+    <value type="Qt::CheckState" key="1@/Users/vladimir/Repositories/RedLibrary/tests/Lib_tests/AES_tests.cpp:AES_CBC_256_32_dec">Checked</value>
+    <value type="Qt::CheckState" key="1@/Users/vladimir/Repositories/RedLibrary/tests/Lib_tests/AES_tests.cpp:AES_CBC_256_32_enc">Checked</value>
+    <value type="Qt::CheckState" key="1@/Users/vladimir/Repositories/RedLibrary/tests/Lib_tests/AES_tests.cpp:AES_CBC_256_64_2sides">Checked</value>
+    <value type="Qt::CheckState" key="1@/Users/vladimir/Repositories/RedLibrary/tests/Lib_tests/AES_tests.cpp:AES_CBC_256_64_dec">Checked</value>
+    <value type="Qt::CheckState" key="1@/Users/vladimir/Repositories/RedLibrary/tests/Lib_tests/AES_tests.cpp:AES_CBC_256_64_enc">Checked</value>
+    <value type="Qt::CheckState" key="1@/Users/vladimir/Repositories/RedLibrary/tests/Lib_tests/AES_tests.cpp:AES_ECB_128_128_2sides">Checked</value>
+    <value type="Qt::CheckState" key="1@/Users/vladimir/Repositories/RedLibrary/tests/Lib_tests/AES_tests.cpp:AES_ECB_128_128_dec">Checked</value>
+    <value type="Qt::CheckState" key="1@/Users/vladimir/Repositories/RedLibrary/tests/Lib_tests/AES_tests.cpp:AES_ECB_128_128_enc">Checked</value>
+    <value type="Qt::CheckState" key="1@/Users/vladimir/Repositories/RedLibrary/tests/Lib_tests/AES_tests.cpp:AES_ECB_128_16_2sides">Checked</value>
+    <value type="Qt::CheckState" key="1@/Users/vladimir/Repositories/RedLibrary/tests/Lib_tests/AES_tests.cpp:AES_ECB_128_16_dec">Checked</value>
+    <value type="Qt::CheckState" key="1@/Users/vladimir/Repositories/RedLibrary/tests/Lib_tests/AES_tests.cpp:AES_ECB_128_16_enc">Checked</value>
+    <value type="Qt::CheckState" key="1@/Users/vladimir/Repositories/RedLibrary/tests/Lib_tests/AES_tests.cpp:AES_ECB_128_32_2sides">Checked</value>
+    <value type="Qt::CheckState" key="1@/Users/vladimir/Repositories/RedLibrary/tests/Lib_tests/AES_tests.cpp:AES_ECB_128_32_dec">Checked</value>
+    <value type="Qt::CheckState" key="1@/Users/vladimir/Repositories/RedLibrary/tests/Lib_tests/AES_tests.cpp:AES_ECB_128_32_enc">Checked</value>
+    <value type="Qt::CheckState" key="1@/Users/vladimir/Repositories/RedLibrary/tests/Lib_tests/AES_tests.cpp:AES_ECB_128_64_2sides">Checked</value>
+    <value type="Qt::CheckState" key="1@/Users/vladimir/Repositories/RedLibrary/tests/Lib_tests/AES_tests.cpp:AES_ECB_128_64_dec">Checked</value>
+    <value type="Qt::CheckState" key="1@/Users/vladimir/Repositories/RedLibrary/tests/Lib_tests/AES_tests.cpp:AES_ECB_128_64_enc">Checked</value>
+    <value type="Qt::CheckState" key="1@/Users/vladimir/Repositories/RedLibrary/tests/Lib_tests/AES_tests.cpp:AES_ECB_192_128_2sides">Checked</value>
+    <value type="Qt::CheckState" key="1@/Users/vladimir/Repositories/RedLibrary/tests/Lib_tests/AES_tests.cpp:AES_ECB_192_128_dec">Checked</value>
+    <value type="Qt::CheckState" key="1@/Users/vladimir/Repositories/RedLibrary/tests/Lib_tests/AES_tests.cpp:AES_ECB_192_128_enc">Checked</value>
+    <value type="Qt::CheckState" key="1@/Users/vladimir/Repositories/RedLibrary/tests/Lib_tests/AES_tests.cpp:AES_ECB_192_16_2sides">Checked</value>
+    <value type="Qt::CheckState" key="1@/Users/vladimir/Repositories/RedLibrary/tests/Lib_tests/AES_tests.cpp:AES_ECB_192_16_dec">Checked</value>
+    <value type="Qt::CheckState" key="1@/Users/vladimir/Repositories/RedLibrary/tests/Lib_tests/AES_tests.cpp:AES_ECB_192_16_enc">Checked</value>
+    <value type="Qt::CheckState" key="1@/Users/vladimir/Repositories/RedLibrary/tests/Lib_tests/AES_tests.cpp:AES_ECB_192_32_2sides">Checked</value>
+    <value type="Qt::CheckState" key="1@/Users/vladimir/Repositories/RedLibrary/tests/Lib_tests/AES_tests.cpp:AES_ECB_192_32_dec">Checked</value>
+    <value type="Qt::CheckState" key="1@/Users/vladimir/Repositories/RedLibrary/tests/Lib_tests/AES_tests.cpp:AES_ECB_192_32_enc">Checked</value>
+    <value type="Qt::CheckState" key="1@/Users/vladimir/Repositories/RedLibrary/tests/Lib_tests/AES_tests.cpp:AES_ECB_192_64_2sides">Checked</value>
+    <value type="Qt::CheckState" key="1@/Users/vladimir/Repositories/RedLibrary/tests/Lib_tests/AES_tests.cpp:AES_ECB_192_64_dec">Checked</value>
+    <value type="Qt::CheckState" key="1@/Users/vladimir/Repositories/RedLibrary/tests/Lib_tests/AES_tests.cpp:AES_ECB_192_64_enc">Checked</value>
+    <value type="Qt::CheckState" key="1@/Users/vladimir/Repositories/RedLibrary/tests/Lib_tests/AES_tests.cpp:AES_ECB_256_128_2sides">Checked</value>
+    <value type="Qt::CheckState" key="1@/Users/vladimir/Repositories/RedLibrary/tests/Lib_tests/AES_tests.cpp:AES_ECB_256_128_dec">Checked</value>
+    <value type="Qt::CheckState" key="1@/Users/vladimir/Repositories/RedLibrary/tests/Lib_tests/AES_tests.cpp:AES_ECB_256_128_enc">Checked</value>
+    <value type="Qt::CheckState" key="1@/Users/vladimir/Repositories/RedLibrary/tests/Lib_tests/AES_tests.cpp:AES_ECB_256_16_2sides">Checked</value>
+    <value type="Qt::CheckState" key="1@/Users/vladimir/Repositories/RedLibrary/tests/Lib_tests/AES_tests.cpp:AES_ECB_256_16_dec">Checked</value>
+    <value type="Qt::CheckState" key="1@/Users/vladimir/Repositories/RedLibrary/tests/Lib_tests/AES_tests.cpp:AES_ECB_256_16_enc">Checked</value>
+    <value type="Qt::CheckState" key="1@/Users/vladimir/Repositories/RedLibrary/tests/Lib_tests/AES_tests.cpp:AES_ECB_256_32_2sides">Checked</value>
+    <value type="Qt::CheckState" key="1@/Users/vladimir/Repositories/RedLibrary/tests/Lib_tests/AES_tests.cpp:AES_ECB_256_32_dec">Checked</value>
+    <value type="Qt::CheckState" key="1@/Users/vladimir/Repositories/RedLibrary/tests/Lib_tests/AES_tests.cpp:AES_ECB_256_32_enc">Checked</value>
+    <value type="Qt::CheckState" key="1@/Users/vladimir/Repositories/RedLibrary/tests/Lib_tests/AES_tests.cpp:AES_ECB_256_64_2sides">Checked</value>
+    <value type="Qt::CheckState" key="1@/Users/vladimir/Repositories/RedLibrary/tests/Lib_tests/AES_tests.cpp:AES_ECB_256_64_dec">Checked</value>
+    <value type="Qt::CheckState" key="1@/Users/vladimir/Repositories/RedLibrary/tests/Lib_tests/AES_tests.cpp:AES_ECB_256_64_enc">Checked</value>
+    <value type="Qt::CheckState" key="1@/Users/vladimir/Repositories/RedLibrary/tests/Lib_tests/AES_tests.cpp:AES_tests">Checked</value>
+    <value type="Qt::CheckState" key="1@/Users/vladimir/Repositories/RedLibrary/tests/Lib_tests/PassGenerator_tests.cpp:Nums_and_letters_16">Checked</value>
+    <value type="Qt::CheckState" key="1@/Users/vladimir/Repositories/RedLibrary/tests/Lib_tests/PassGenerator_tests.cpp:Nums_and_letters_32">Checked</value>
+    <value type="Qt::CheckState" key="1@/Users/vladimir/Repositories/RedLibrary/tests/Lib_tests/PassGenerator_tests.cpp:Nums_and_letters_64">Checked</value>
+    <value type="Qt::CheckState" key="1@/Users/vladimir/Repositories/RedLibrary/tests/Lib_tests/PassGenerator_tests.cpp:Nums_and_letters_8">Checked</value>
+    <value type="Qt::CheckState" key="1@/Users/vladimir/Repositories/RedLibrary/tests/Lib_tests/PassGenerator_tests.cpp:Only_nums_16">Checked</value>
+    <value type="Qt::CheckState" key="1@/Users/vladimir/Repositories/RedLibrary/tests/Lib_tests/PassGenerator_tests.cpp:Only_nums_32">Checked</value>
+    <value type="Qt::CheckState" key="1@/Users/vladimir/Repositories/RedLibrary/tests/Lib_tests/PassGenerator_tests.cpp:Only_nums_64">Checked</value>
+    <value type="Qt::CheckState" key="1@/Users/vladimir/Repositories/RedLibrary/tests/Lib_tests/PassGenerator_tests.cpp:Only_nums_8">Checked</value>
+    <value type="Qt::CheckState" key="1@/Users/vladimir/Repositories/RedLibrary/tests/Lib_tests/PassGenerator_tests.cpp:PassGenerator_tests">Checked</value>
+    <value type="Qt::CheckState" key="1@/Users/vladimir/Repositories/RedLibrary/tests/Lib_tests/PassGenerator_tests.cpp:Va1_mode_16">Checked</value>
+    <value type="Qt::CheckState" key="1@/Users/vladimir/Repositories/RedLibrary/tests/Lib_tests/PassGenerator_tests.cpp:Va1_mode_32">Checked</value>
+    <value type="Qt::CheckState" key="1@/Users/vladimir/Repositories/RedLibrary/tests/Lib_tests/PassGenerator_tests.cpp:Va1_mode_64">Checked</value>
+    <value type="Qt::CheckState" key="1@/Users/vladimir/Repositories/RedLibrary/tests/Lib_tests/PassGenerator_tests.cpp:Va1_mode_8">Checked</value>
+    <value type="Qt::CheckState" key="1@/Users/vladimir/Repositories/RedLibrary/tests/Lib_tests/Sha256.cpp:Sha256_1">Checked</value>
+    <value type="Qt::CheckState" key="1@/Users/vladimir/Repositories/RedLibrary/tests/Lib_tests/Sha256.cpp:Sha256_2">Checked</value>
+    <value type="Qt::CheckState" key="1@/Users/vladimir/Repositories/RedLibrary/tests/Lib_tests/Sha256.cpp:Sha256_3">Checked</value>
+    <value type="Qt::CheckState" key="1@/Users/vladimir/Repositories/RedLibrary/tests/Lib_tests/Sha256.cpp:Sha256_4">Checked</value>
+    <value type="Qt::CheckState" key="1@/Users/vladimir/Repositories/RedLibrary/tests/Lib_tests/Sha256.cpp:Sha256_tests">Checked</value>
     <value type="Qt::CheckState" key="1@/Users/vladimir/Repositories/RedLibrary/tests/Lib_tests/Va1_tests.cpp:Va1_tests">Checked</value>
     <value type="Qt::CheckState" key="1@/Users/vladimir/Repositories/RedLibrary/tests/Lib_tests/Va1_tests.cpp:Va_16">Checked</value>
     <value type="Qt::CheckState" key="1@/Users/vladimir/Repositories/RedLibrary/tests/Lib_tests/Va1_tests.cpp:Va_all">Checked</value>
