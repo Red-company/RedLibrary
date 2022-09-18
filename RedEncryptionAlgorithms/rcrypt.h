@@ -80,6 +80,8 @@ namespace Red {
         std::string *hashed = Red::Sha256Hash(crypted);
 
         // Finishing.
+        delete crypted;
+
         return hashed;
     }
 
@@ -141,6 +143,8 @@ namespace Red {
         std::string *hashed = Red::Sha256Hash(crypted);
 
         // Finishing.
+        delete crypted;
+
         return hashed;
     }
 
@@ -202,6 +206,8 @@ namespace Red {
         std::string *hashed = Red::Sha256Hash(crypted);
 
         // Finishing.
+        delete crypted;
+
         return hashed;
     }
 }
