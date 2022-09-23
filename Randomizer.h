@@ -14,7 +14,10 @@
 #include <time.h>
 #include <math.h>
 
-#define REDRANDOMIZER_VERSION "1.1"
+#define REDRANDOMIZER_VERSION "1.2"
+
+#include "RedTypes.h"
+
 
 namespace Red {
     /**
@@ -43,6 +46,40 @@ namespace Red {
 
             *randnumber += power * digits[i];
         }
+
+        return randnumber;
+    }
+
+    /**
+     * @brief Randomizer_custom
+     *
+     * Used to generate a long random number.
+     *
+     * @param len Len of end num.
+     *
+     * @return  Long random number.
+     */
+    inline Red::bignum_t * Randomizer_custom(unsigned long long int *len) {
+        srand((unsigned int) time(nullptr));
+
+        Red::bignum_t *randnumber = new Red::bignum_t();
+        int *digits = new int[20]();
+
+        for (int i = *len; i >= 1; i--) {
+          digits[i] = rand() % 10;
+        }
+
+        for (int i = *len; i >= 1; i--) {
+           unsigned long long power = pow(10, i - 1);
+
+            if (power % 2 != 0 && power != 1) {
+                power++;
+            }
+
+            *randnumber += power * digits[i];
+        }
+
+        delete[] digits;
 
         return randnumber;
     }
