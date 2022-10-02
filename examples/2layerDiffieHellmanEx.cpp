@@ -3,8 +3,8 @@
 #include <random>
 #include <chrono>
 
-#include "2layerDiffieHellman/2layerDiffieHellman.h"
-#include "2layerDiffieHellman/RedTypes.h"
+#include "../RedLibrary/2layerDiffieHellman.h"
+#include "../RedLibrary/RedTypes.h"
 
 int main() {
     Red::uint65536_t P = -1, a1, a2, b1, b2;

@@ -25,7 +25,7 @@
 #include "RedTypes.h"
 
 // Version.
-#define RED2LAYERDIFFIEHELLMAN_VERSION "2.0"
+#define RED2LAYERDIFFIEHELLMAN_VERSION "3.0"
 
 // Kits.
 #define RED_2lDH_6k_AUTO  "auto mode enabled 6k"
@@ -113,7 +113,13 @@ namespace Red {
                     // So, let's do that!
 
                     /// Need to get cpp_int version of base.
-                    boost::multiprecision::cpp_int a_c = boost::multiprecision::cpp_int(*a);
+                    boost::multiprecision::cpp_int a_c;
+
+                    {
+                        std::stringstream ss;
+                        ss << *a;
+                        ss >> a_c;
+                    }
 
                     /// And ui version of our exponent.
                     Red::uint_t b_int = 0;
@@ -170,7 +176,13 @@ namespace Red {
                 // So, let's do that (again)!
 
                 /// Need to get cpp_int version of base.
-                boost::multiprecision::cpp_int a_c = boost::multiprecision::cpp_int(*a);
+                boost::multiprecision::cpp_int a_c;
+
+                {
+                    std::stringstream ss;
+                    ss << *a;
+                    ss >> a_c;
+                }
 
                 /// And ui version of a random exponent.
                 srand(time(0));
@@ -229,7 +241,13 @@ namespace Red {
                 // So, let's do that (again)!
 
                 /// Need to get cpp_int version of base.
-                boost::multiprecision::cpp_int a_c = boost::multiprecision::cpp_int(*a);
+                boost::multiprecision::cpp_int a_c;
+
+                {
+                    std::stringstream ss;
+                    ss << *a;
+                    ss >> a_c;
+                }
 
                 /// And ui version of a random exponent.
                 Red::uint_t b_int;
