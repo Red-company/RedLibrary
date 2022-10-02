@@ -15,7 +15,7 @@
 #include <string>
 #include <bit>
 
-#define REDTYPES_VERSION "1.6"
+#define REDTYPES_VERSION "2.0"
 
 
 namespace Red {
@@ -1210,10 +1210,10 @@ namespace Red {
          */
         std::ostream& operator<<(std::ostream& out, const BigInt& a) {
             for (int i = a.digits.size() - 1; i >= 0; i--) {
-                std::cout << (short)a.digits[i];
+                out << (short)a.digits[i];
             }
 
-            return std::cout;
+            return out;
         }
 
         /// Definition.
