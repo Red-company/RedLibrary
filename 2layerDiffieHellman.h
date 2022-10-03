@@ -25,7 +25,7 @@
 #include "RedTypes.h"
 
 // Version.
-#define RED2LAYERDIFFIEHELLMAN_VERSION "3.1"
+#define RED2LAYERDIFFIEHELLMAN_VERSION "3.2"
 
 // Kits.
 #define RED_2lDH_6k_AUTO  "auto mode enabled 6k"
@@ -110,7 +110,8 @@ namespace Red {
 
 
                 } else {
-                    Red::bignum_t *abP = new Red::bignum_t;(*a);
+                    Red::bignum_t *abP = new Red::bignum_t;
+                                  *abP  = *a;
                                   *abP ^= *b;
                                   *abP %= *P;
 
