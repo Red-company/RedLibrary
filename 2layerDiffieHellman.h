@@ -144,7 +144,6 @@ namespace Red {
                 }
 
                 /// And ui version of a random exponent.
-                srand(time(0));
                 Red::uint_t b_int;
 
                 *m_a2 = (unsigned int) rand() % (unsigned int) (b / log2(*a)) + 1;

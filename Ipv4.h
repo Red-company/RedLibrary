@@ -67,8 +67,6 @@ namespace Red {
              * This function generates ip address using Mode.
              */
             inline void Gen() {
-                srand((unsigned int) time(nullptr));
-
                 IpString.clear();
 
                 IpString += std::to_string(1 + rand() % 255);

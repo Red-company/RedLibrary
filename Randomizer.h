@@ -28,8 +28,6 @@ namespace Red {
      * @return Long random number.
      */
     inline unsigned long long int * Randomize() {
-        srand((unsigned int) time(nullptr));
-
         unsigned long long *randnumber = new unsigned long long int(0);
         int digits[20];
 
@@ -60,8 +58,6 @@ namespace Red {
      * @return  Long random number.
      */
     inline Red::bignum_t * Randomizer_custom(unsigned long long int *len) {
-        srand((unsigned int) time(nullptr));
-
         Red::bignum_t *randnumber = new Red::bignum_t();
         int *digits = new int[20]();
 

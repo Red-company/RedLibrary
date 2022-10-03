@@ -30,8 +30,6 @@ namespace Red {
     std::string GeneratePassword(unsigned short int& PassLen, std::string mode) {
         std::string Result = "";
 
-        srand((unsigned int) time(nullptr));
-
         if (mode == REDPASSGENERATOR_ONLY_NUMS) {
             std::string alphanum1 = "0123456789";
 
