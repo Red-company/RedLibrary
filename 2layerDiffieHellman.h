@@ -25,7 +25,7 @@
 #include "RedTypes.h"
 
 // Version.
-#define RED2LAYERDIFFIEHELLMAN_VERSION "3.2"
+#define RED2LAYERDIFFIEHELLMAN_VERSION "4.0"
 
 // Kits.
 #define RED_2lDH_6k_AUTO  "auto mode enabled 6k"
@@ -53,7 +53,7 @@ namespace Red {
 
             /// Local vars.
             const Red::bignum_t m_G    = 2,   // Base  for part 1.
-                                m_Pp1  = 998; // P num for part 1.
+                                m_Pp1  = 997; // P num for part 1.
 
             unsigned short int m_base; // Base for part 2.
 
@@ -295,7 +295,13 @@ namespace Red {
              * @return Value for public exchange.
              */
             Red::bignum_t * Part1_GetPublicValue() const {
-                return power(&this->m_G, this->m_a1, this->m_P);
+                Red::bignum_t *pv;
+
+                /// Getting the first num in protocol.
+                pv   = power(&this->m_G, this->m_a1, this->m_P);
+                *pv += rand() % 2;
+
+                return pv;
             }
 
             /**
@@ -310,6 +316,7 @@ namespace Red {
 
                 /// Getting a base num.
                 u   = power(x, this->m_a1, &this->m_Pp1);
+                *u += rand() % 2;
                 *u += 2; // base E [2;1000].
 
                 /// Saving it.
