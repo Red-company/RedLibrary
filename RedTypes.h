@@ -1210,7 +1210,7 @@ namespace Red {
          */
         std::ostream& operator<<(std::ostream& out, const BigInt& a) {
             for (int i = a.digits.size() - 1; i >= 0; i--) {
-                out << (short)a.digits[i];
+                out << (short) a.digits[i];
             }
 
             return out;

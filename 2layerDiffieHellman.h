@@ -27,19 +27,14 @@
 // Version.
 #define RED2LAYERDIFFIEHELLMAN_VERSION "4.0"
 
-// Kits.
-#define RED_2lDH_6k_AUTO  "auto mode enabled 6k"
-#define RED_2lDH_8k_AUTO  "auto mode enabled 8k"
-#define RED_2lDH_11k_AUTO "auto mode enabled 11k"
-#define RED_2lDH_16k_AUTO "auto mode enabled 16k"
-#define RED_2lDH_20k_AUTO "auto mode enabled 20k"
-
 // Rand() setups.
-#define RED_2lDH_RANDOM_A1_KEY_70m   8366
-#define RED_2lDH_RANDOM_A1_KEY_105m  10246
-#define RED_2lDH_RANDOM_A1_KEY_126m  11224
-#define RED_2lDH_RANDOM_A1_KEY_238m  15427
-#define RED_2lDH_RANDOM_A1_KEY_372m  18330
+#define RED_2lDH_RANDOM_A1_KEY_70  70
+#define RED_2lDH_RANDOM_A1_KEY_100 100
+#define RED_2lDH_RANDOM_A1_KEY_140 140
+
+// Other.
+static Red::bignum_t *RED_2lDH_P_UNLIMITED = new Red::bignum_t(1);
+
 
 namespace Red {
     /// Creating a template for integers, because we need it to be cross-typed.
@@ -52,37 +47,15 @@ namespace Red {
             /// x = g**a mod P
 
             /// Local vars.
-            const Red::bignum_t m_G    = 2,   // Base  for part 1.
-                                m_Pp1  = 997; // P num for part 1.
+            const Red::bignum_t m_G   = 2,   // Base  for part 1.
+                                m_Pp = 998; // P num for part 1.
 
-            unsigned short int m_base; // Base for part 2.
+            Red::bignum_t *m_base; // Base for part 2.
 
             /// User's vars.
-            Red::bignum_t *m_P,  // Prime  num for part 2.
+            Red::bignum_t *m_P,  // Prime  num.
                           *m_a1, // Secret num for part 1.
                           *m_a2; // Secret num for part 2.
-
-
-            ///
-            /// Different modes.
-            ///
-
-            std::string m_mode; // Mode of secret key usage.
-
-            /// 6k.
-            const unsigned long long int m_range_6k  = 6000;
-
-            /// 8k.
-            const unsigned long long int m_range_8k  = 8000;
-
-            /// 11k.
-            const unsigned long long int m_range_11k = 11000;
-
-            /// 16k.
-            const unsigned long long int m_range_16k = 16000;
-
-            /// 20k.
-            const unsigned long long int m_range_20k = 20000;
 
 
             //
@@ -102,148 +75,21 @@ namespace Red {
              * @return Generated key.
              */
             inline Red::bignum_t * power(const Red::bignum_t *a, const Red::bignum_t *b, const Red::bignum_t *P) const {
-                if (*b == 1) {
-                    Red::bignum_t *res = new Red::bignum_t;
-                                  *res = *a;
-
-                    return res;
-
-
-                } else {
-                    Red::bignum_t *abP = new Red::bignum_t;
-                                  *abP  = *a;
-                                  *abP ^= *b;
-                                  *abP %= *P;
-
-                    return abP;
-                }
-            }
-
-            /**
-             * @brief power_2_pub
-             *
-             * Serves to generate a key using a, b, P.
-             * Used only for getting a public value in part 2.
-             *
-             * @param a Number which we will modificate.
-             * @param b Chosen private key.
-             * @param P Result number.
-             *
-             * @return Generated key.
-             */
-            inline Red::bignum_t * power_2_pub(const unsigned short int *a, const unsigned long long int& b, const Red::bignum_t *P) const {
-                // Unfortunately we have to write a lot here, because there is no a good way to write it shorter.
-                // So, let's do that (again)!
-
-                /// Need to get cpp_int version of base.
-                boost::multiprecision::cpp_int a_c;
-
-                {
-                    std::stringstream ss;
-                    ss << *a;
-                    ss >> a_c;
-                }
-
-                /// And ui version of a random exponent.
-                Red::uint_t b_int;
-
-                *m_a2 = (unsigned int) rand() % (unsigned int) (b / log2(*a)) + 1;
-
-                {
-                   std::stringstream ss;
-                   ss << *m_a2;
-                   ss >> b_int;
-                }
-
-                /// Let's get exponented 'a'...
-                boost::multiprecision::cpp_int ab = boost::multiprecision::pow(a_c, b_int);
-
-                /// Now we need cpp_int version of 'P'.
-                boost::multiprecision::cpp_int p_c = 0;
-
-                {
-                    std::stringstream ss;
-                    ss << *P;
-                    ss >> p_c;
-                }
-
-                /// Moded expenented 'a' is needed...
-                boost::multiprecision::cpp_int abp = ab % p_c;
-
-                /// Now we just need to convert it to the type we need.
                 Red::bignum_t *res = new Red::bignum_t;
 
-                {
-                    std::stringstream ss;
-                    ss << abp;
-                    ss >> *res;
+                *res = *a;
+
+                if (*b != 1) {
+                    *res ^= *b;
+
+                    if (*P != *RED_2lDH_P_UNLIMITED && *res >= *P) {
+                        *res %= *P;
+                    }
                 }
 
-                /// Yay, we finished this.
                 return res;
             }
 
-            /**
-             * @brief power_2_sym
-             *
-             * Serves to generate a key using a, b, P.
-             * Used only for getting a public value in part 2.
-             *
-             * @param a Number which we will modificate.
-             * @param b Chosen private key.
-             * @param P Result number.
-             *
-             * @return Generated key.
-             */
-            inline Red::bignum_t * power_2_sym(const Red::bignum_t *a, const Red::bignum_t *b, const Red::bignum_t *P) const {
-                // Unfortunately we have to write a lot here, because there is no a good way to write it shorter.
-                // So, let's do that (again)!
-
-                /// Need to get cpp_int version of base.
-                boost::multiprecision::cpp_int a_c;
-
-                {
-                    std::stringstream ss;
-                    ss << *a;
-                    ss >> a_c;
-                }
-
-                /// And ui version of a random exponent.
-                Red::uint_t b_int;
-
-                {
-                   std::stringstream ss;
-                   ss << *b;
-                   ss >> b_int;
-                }
-
-                /// Let's get exponented 'a'...
-                boost::multiprecision::cpp_int ab = boost::multiprecision::pow(a_c, b_int);
-
-                /// Now we need cpp_int version of 'P'.
-                boost::multiprecision::cpp_int p_c = 0;
-
-                {
-                    std::stringstream ss;
-                    ss << *P;
-                    ss >> p_c;
-                }
-
-                /// Moded expenented 'a' is needed...
-                boost::multiprecision::cpp_int abp = ab % p_c;
-
-                /// Now we just need to convert it to the type we need.
-                Red::bignum_t *res = new Red::bignum_t;
-
-                {
-                    std::stringstream ss;
-                    ss << abp;
-                    ss >> *res;
-                }
-
-                /// Yay, we finished this.
-                return res;
-            }
 
         public:
             /**
@@ -257,11 +103,10 @@ namespace Red {
              * @param SecretNum2 Secret number 2.
              * @param Mode Mode of secret key usage.
              */
-            TwoLayerDiffieHellman(Red::bignum_t *ModificatedNum = 0,
-                                  Red::bignum_t *SecretNum1 = 0,
-                                  Red::bignum_t *SecretNum2 = 0,
-                                  std::string_view Mode = "auto mode enabled 8k")
-                : m_P(ModificatedNum), m_a1(SecretNum1), m_a2(SecretNum2), m_mode(Mode) {}
+            TwoLayerDiffieHellman(Red::bignum_t *ModificatedNum,
+                                  Red::bignum_t *SecretNum1,
+                                  Red::bignum_t *SecretNum2)
+                : m_P(ModificatedNum), m_a1(SecretNum1), m_a2(SecretNum2) {}
 
             /**
              * @brief Set
@@ -276,15 +121,11 @@ namespace Red {
              */
             void Set(Red::bignum_t *ModificatedNum,
                      Red::bignum_t *SecretNum1,
-                     Red::bignum_t *SecretNum2,
-                     std::string_view Mode = "auto mode enabled 8k") {
+                     Red::bignum_t *SecretNum2) {
 
-                this->m_P    = ModificatedNum;
-                this->m_a1   = SecretNum1;
-                this->m_a2   = SecretNum2;
-                this->m_mode = Mode;
-
-                // m_base clears itself when calculates.
+                this->m_P  = ModificatedNum;
+                this->m_a1 = SecretNum1;
+                this->m_a2 = SecretNum2;
             }
 
             /**
@@ -298,8 +139,7 @@ namespace Red {
                 Red::bignum_t *pv;
 
                 /// Getting the first num in protocol.
-                pv   = power(&this->m_G, this->m_a1, this->m_P);
-                *pv += rand() % 2;
+                pv = power(&this->m_G, this->m_a1, &this->m_Pp);
 
                 return pv;
             }
@@ -312,22 +152,8 @@ namespace Red {
              * @param x Partner's key, which we got after exchange part.
              */
             void Part1_GetSymmetricBaseNum(Red::bignum_t *x) {
-                Red::bignum_t *u;
-
-                /// Getting a base num.
-                u   = power(x, this->m_a1, &this->m_Pp1);
-                *u += rand() % 2;
-                *u += 2; // base E [2;1000].
-
-                /// Saving it.
-                {
-                    std::stringstream ss;
-                    ss << *u;
-                    ss >> m_base;
-                }
-
-                /// And must do this.
-                delete u;
+                m_base   = power(x, this->m_a1, &this->m_Pp);
+                *m_base += 2; // base E [2;1000].
             }
 
             /**
@@ -338,24 +164,7 @@ namespace Red {
              * @return Value for public exchange.
              */
             Red::bignum_t * Part2_GetPublicValue() const {
-                if (m_mode == "auto mode enabled 6k") {
-                    return power_2_pub(&this->m_base, this->m_range_6k, this->m_P);
-
-                } else if (m_mode == "auto mode enabled 8k") {
-                    return power_2_pub(&this->m_base, this->m_range_8k, this->m_P);
-
-                } else if (m_mode == "auto mode enabled 11k") {
-                    return power_2_pub(&this->m_base, this->m_range_11k, this->m_P);
-
-                } else if (m_mode == "auto mode enabled 16k") {
-                    return power_2_pub(&this->m_base, this->m_range_16k, this->m_P);
-
-                } else if (m_mode == "auto mode enabled 20k") {
-                    return power_2_pub(&this->m_base, this->m_range_20k, this->m_P);
-
-                } else { // 8k.
-                    return power_2_pub(&this->m_base, this->m_range_8k, this->m_P);
-                }
+                return power(this->m_base, this->m_a2, this->m_P);
             }
 
             /**
@@ -368,11 +177,13 @@ namespace Red {
              * @return Final num.
              */
             Red::bignum_t * Part2_GetSymmetricSecret(Red::bignum_t *x) const {
-                return power_2_sym(x, this->m_a2, this->m_P);
+                return power(x, this->m_a2, this->m_P);
             }
 
             // Base dtor.
-            ~TwoLayerDiffieHellman() {}
+            ~TwoLayerDiffieHellman() {
+                delete m_base;
+            }
     };
 }
 
