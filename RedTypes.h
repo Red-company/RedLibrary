@@ -101,9 +101,9 @@ namespace Red {
              */
             BigInt(std::string& s) {
                 digits = "";
-                unsigned int n = s.size();
+                int n = s.size();
 
-                for (unsigned int i = n - 1; i >= 0; i--) {
+                for (int i = n - 1; i >= 0; i--) {
                     if (!isdigit(s[i])) {
                         throw("ERROR");
                     }
@@ -120,7 +120,7 @@ namespace Red {
             BigInt(const char *s) {
                 digits = "";
 
-                for (unsigned int i = strlen(s) - 1; i >= 0; i--) {
+                for (int i = strlen(s) - 1; i >= 0; i--) {
                     if (!isdigit(s[i])) {
                         throw("ERROR");
                     }
