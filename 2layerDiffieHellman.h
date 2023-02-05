@@ -2,7 +2,7 @@
  * @file    2layerDiffieHellman.h
  * @brief   2layerDiffieHellman is a lib which implements advanced DiffieHellman's key exchange algorithm.
  *
- * Copyright (c) 2020-forever Vladimir Rogozin (vladimir20040609@gmail.com)
+ * Copyright (c) 2020-forever Vlad Rogozin (vlad.rogozin@bhcc.edu)
  *
  * Distributed under the MIT License (MIT) (See accompanying file LICENSE.txt
  * or copy at http://opensource.org/licenses/MIT)
@@ -35,7 +35,7 @@
 // Other.
 static Red::bignum_t *RED_2lDH_P_UNLIMITED = new Red::bignum_t(1);
 
-
+#include <iostream>
 namespace Red {
     /// Creating a template for integers, because we need it to be cross-typed.
     class TwoLayerDiffieHellman {
@@ -81,12 +81,11 @@ namespace Red {
 
                 if (*b != 1) {
                     *res ^= *b;
-
-                    if (*P != *RED_2lDH_P_UNLIMITED && *res >= *P) {
-                        *res %= *P;
-                    }
                 }
 
+                if (*P != *RED_2lDH_P_UNLIMITED && *res >= *P) {
+                    *res %= *P;
+                }
                 return res;
             }
 
@@ -153,7 +152,13 @@ namespace Red {
              */
             void Part1_GetSymmetricBaseNum(Red::bignum_t *x) {
                 m_base   = power(x, this->m_a1, &this->m_Pp);
+                std::cout << "base_init: " << *m_base << std::endl;
                 *m_base += 2; // base E [2;1000].
+                std::cout << "base_prep: " << *m_base << std::endl;
+                if (*m_base % *REDSASP_BIGNUM_10 == *REDSASP_BIGNUM_0) {
+                    (*m_base)++;
+                }
+                std::cout << "base_endl: " << *m_base << std::endl;
             }
 
             /**
@@ -164,6 +169,8 @@ namespace Red {
              * @return Value for public exchange.
              */
             Red::bignum_t * Part2_GetPublicValue() const {
+                std::cout << "p2 base: " << *m_base << std::endl;
+                std::cout << "p2 a2: " << *m_a2 << std::endl;
                 return power(this->m_base, this->m_a2, this->m_P);
             }
 

@@ -2,7 +2,7 @@
  * @file    rcrypt.h
  * @brief   rcrypt is a lib which is used to encrypt/hash information like passwords.
  *
- * Copyright (c) 2020-forever Vladimir Rogozin (vladimir20040609@gmail.com)
+ * Copyright (c) 2020-forever Vlad Rogozin (vlad.rogozin@bhcc.edu)
  *
  * Distributed under the MIT License (MIT) (See accompanying file LICENSE.txt
  * or copy at http://opensource.org/licenses/MIT)
@@ -17,7 +17,7 @@
 #include "ResECB512.h"
 #include "ResECB1024.h"
 #include "ResECB1536.h"
-#include "../HashFunctions/Sha256.h"
+#include "../HashFunctions/Sha512.h"
 
 // Version.
 #define REDRCRYPT_VERSION "1.0"
@@ -77,7 +77,7 @@ namespace Red {
         rcrypt512_enc(key, crypted);
 
         // Getting the hashed string.
-        std::string *hashed = Red::Sha256Hash(crypted);
+        std::string *hashed = Red::Sha512(crypted);
 
         // Finishing.
         delete crypted;
@@ -140,7 +140,7 @@ namespace Red {
         rcrypt1024_enc(key, crypted);
 
         // Getting the hashed string.
-        std::string *hashed = Red::Sha256Hash(crypted);
+        std::string *hashed = Red::Sha512(crypted);
 
         // Finishing.
         delete crypted;
@@ -203,7 +203,7 @@ namespace Red {
         rcrypt1536_enc(key, crypted);
 
         // Getting the hashed string.
-        std::string *hashed = Red::Sha256Hash(crypted);
+        std::string *hashed = Red::Sha512(crypted);
 
         // Finishing.
         delete crypted;

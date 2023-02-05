@@ -2,7 +2,7 @@
  * @file    Sha512.cpp
  * @brief   Sha512 is hash function implementation.
  *
- * Copyright (c) 2020-forever Vladimir Rogozin (vladimir20040609@gmail.com)
+ * Copyright (c) 2020-forever Vlad Rogozin (vlad.rogozin@bhcc.edu)
  *
  * Distributed under the MIT License (MIT) (See accompanying file LICENSE.txt
  * or copy at http://opensource.org/licenses/MIT)
@@ -237,7 +237,9 @@ std::string * Red::Sha512file(std::FILE* file){
  */
 std::string * Red::Sha512file(const char* filename){
     std::FILE* file = std::fopen(filename, "rb");
-    std::string *res = new std::string(*Red::Sha512file(file));
+    std::string *preres = Red::Sha512file(file);
+    std::string *res = new std::string(*preres);
+    delete preres;
     std::fclose(file);
     return res;
 }

@@ -2,7 +2,7 @@
  * @file    Hex.h
  * @brief   Hex is a lib, which has functions converts string to a string with hex values.
  *
- * Copyright (c) 2020-forever Vladimir Rogozin (vladimir20040609@gmail.com)
+ * Copyright (c) 2020-forever Vlad Rogozin (vlad.rogozin@bhcc.edu)
  *
  * Distributed under the MIT License (MIT) (See accompanying file LICENSE.txt
  * or copy at http://opensource.org/licenses/MIT)

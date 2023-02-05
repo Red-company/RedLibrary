@@ -2,7 +2,7 @@
  * @file    ProgressBar.h
  * @brief   ProgressBar is a lib, that shows a progress bar in terminal.
  *
- * Copyright (c) 2020-forever Vladimir Rogozin (vladimir20040609@gmail.com)
+ * Copyright (c) 2020-forever Vlad Rogozin (vlad.rogozin@bhcc.edu)
  *
  * Distributed under the MIT License (MIT) (See accompanying file LICENSE.txt
  * or copy at http://opensource.org/licenses/MIT)
@@ -13,7 +13,7 @@
 #include <iostream>
 #include <string>
 
-#define REDPROGRESSBAR_VERSION "1.0"
+#define REDPROGRESSBAR_VERSION "1.1"
 
 namespace Red {
     class ProgressBar {
@@ -42,7 +42,7 @@ namespace Red {
              * Uses to show progress bar
              */
             inline void Show() {
-                std::cout << "\r\e[42m";
+                std::cout << "\r[\e[42m";
 
                 Show_main();
 
@@ -55,7 +55,7 @@ namespace Red {
              * Uses to show red progress bar.
              */
             inline void Red_Show() {
-                std::cout << "\r\e[101m";
+                std::cout << "\r[\e[101m";
 
                 Show_main();
 
@@ -85,7 +85,7 @@ namespace Red {
                     std::cout << " ";
                 }
 
-                std::cout << "\e[0m ";
+                std::cout << "\e[0m] ";
 
                 std::cout << Percent << "% ";
             }

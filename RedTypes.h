@@ -1,7 +1,7 @@
 /**
  * @file    RedTypes.h
  * @brief   RedTypes is a lib which serves to compress int and char definitions.
- * Copyright (c) 2020-forever Vladimir Rogozin (vladimir20040609@gmail.com)
+ * Copyright (c) 2020-forever Vlad Rogozin (vlad.rogozin@bhcc.edu)
  *
  * Distributed under the MIT License (MIT) (See accompanying file LICENSE.txt
  * or copy at http://opensource.org/licenses/MIT)
@@ -1218,6 +1218,10 @@ namespace Red {
 
         /// Definition.
         typedef Red::BigInt bignum_t;
+
+
+        static bignum_t *REDSASP_BIGNUM_0  = new bignum_t("0");
+        static bignum_t *REDSASP_BIGNUM_10 = new bignum_t("10");
 
 
         //
